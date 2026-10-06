@@ -1,0 +1,30 @@
+export type Brand = 'gedore-red' | 'gedore-blue' | 'tekbond';
+
+export type Category = 
+  | 'soquetes-chaves'
+  | 'torquimetros'
+  | 'alicates'
+  | 'maletas-carrinhos'
+  | 'adesivos-quimicos'
+  | 'selantes-silicones'
+  | 'sprays-lubrificantes';
+
+export interface Product {
+  id: string;
+  name: string;
+  brand: Brand;
+  brandLabel: string;
+  category: Category;
+  categoryLabel: string;
+  code: string; // Part number / SKU
+  description: string;
+  specs: string[];
+  image: string;
+  featured?: boolean;
+  application: string;
+}
+
+export interface QuoteItem {
+  product: Product;
+  quantity: number;
+}
