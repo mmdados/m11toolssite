@@ -1,9 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
+import { SITE_CONFIG, buildWhatsAppUrl } from '@/config/site';
 import { MessageSquare } from 'lucide-react';
-
-const WHATSAPP_RAW = '5511972931840';
 
 export default function WhatsAppButton() {
   const [hovered, setHovered] = useState(false);
@@ -36,12 +35,12 @@ export default function WhatsAppButton() {
         pointerEvents: 'auto',
       }} className="hide-on-mobile">
         <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#25d366' }} />
-        <span>WhatsApp (11) 97293-1840</span>
+        <span>WhatsApp {SITE_CONFIG.phoneDisplay}</span>
       </div>
 
       {/* Button */}
       <a
-        href={`https://wa.me/${WHATSAPP_RAW}?text=Ol%C3%A1%20M11tools!%20Gostaria%20de%20um%20atendimento%20r%C3%A1pido.`}
+        href={buildWhatsAppUrl('Olá M11tools! Gostaria de um atendimento rápido.')}
         target="_blank"
         rel="noopener noreferrer"
         onMouseEnter={() => setHovered(true)}

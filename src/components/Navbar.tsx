@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useQuote } from '@/context/QuoteContext';
+import { SITE_CONFIG, buildWhatsAppUrl } from '@/config/site';
 import { 
   Phone, 
   MessageSquare, 
@@ -68,11 +69,11 @@ export default function Navbar({ onSearchFocus }: NavbarProps) {
               08h às 18h
             </span>
             <a 
-              href="tel:11972931840" 
+              href={SITE_CONFIG.phoneTel} 
               style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', color: '#ffffff', fontWeight: 700 }}
             >
               <Phone size={12} color="var(--brand-red)" />
-              <span>(11) 97293-1840</span>
+              <span>{SITE_CONFIG.phoneDisplay}</span>
             </a>
           </div>
         </div>
@@ -190,7 +191,7 @@ export default function Navbar({ onSearchFocus }: NavbarProps) {
 
             {/* Direct WhatsApp Action Desktop */}
             <a
-              href="https://wa.me/5511972931840?text=Ol%C3%A1%20M11tools!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20produtos%20Gedore%20e%20Tekbond."
+              href={buildWhatsAppUrl('Olá M11tools! Gostaria de informações sobre produtos Gedore e Tekbond.')}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-whatsapp hide-on-mobile"
@@ -278,14 +279,14 @@ export default function Navbar({ onSearchFocus }: NavbarProps) {
 
             <div style={{ paddingTop: '8px' }}>
               <a
-                href="https://wa.me/5511972931840?text=Ol%C3%A1%20M11tools!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20produtos%20Gedore%20e%20Tekbond."
+                href={buildWhatsAppUrl('Olá M11tools! Gostaria de informações sobre produtos Gedore e Tekbond.')}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp"
                 style={{ width: '100%', padding: '12px' }}
               >
                 <MessageSquare size={18} />
-                Chamar no WhatsApp (11) 97293-1840
+                Chamar no WhatsApp {SITE_CONFIG.phoneDisplay}
               </a>
             </div>
           </div>

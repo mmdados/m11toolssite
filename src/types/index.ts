@@ -22,6 +22,7 @@ export interface Product {
   image: string;
   featured?: boolean;
   application: string;
+  mercadoLivreUrl?: string;
 }
 
 export interface QuoteItem {

@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { useQuote } from '@/context/QuoteContext';
+import { SITE_CONFIG } from '@/config/site';
 import { 
   X, 
   Trash2, 
@@ -362,7 +363,7 @@ export default function QuoteDrawer() {
             </div>
 
             <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)', textAlign: 'center' }}>
-              (11) 97293-1840 • M11 Tools
+              {SITE_CONFIG.phoneDisplay} • {SITE_CONFIG.companyName}
             </div>
           </div>
         )}

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { BRANDS, CATEGORIES, PRODUCTS } from '@/data/products';
 import { Brand, Category, Product } from '@/types';
 import { useQuote } from '@/context/QuoteContext';
+import { SITE_CONFIG, buildWhatsAppUrl, buildMercadoLivreUrl } from '@/config/site';
 import { 
   Search, 
   Plus, 
@@ -12,7 +13,9 @@ import {
   Check, 
   X, 
   Layers,
-  Wrench
+  Wrench,
+  ShoppingBag,
+  ExternalLink
 } from 'lucide-react';
 
 interface CatalogProps {
@@ -242,7 +245,7 @@ export default function Catalog({ selectedBrand, onBrandChange, searchInputRef }
                 Limpar Filtros
               </button>
               <a
-                href={`https://wa.me/5511972931840?text=Ol%C3%A1%20M11tools!%20Procuro%20o%20produto%20${encodeURIComponent(searchTerm || 'Gedore / Tekbond')}%20que%20n%C3%A3o%20encontrei%20no%20site.`}
+                href={buildWhatsAppUrl(`Olá M11tools! Procuro o produto ${searchTerm || 'Gedore / Tekbond'} que não encontrei no site.`)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp"
@@ -360,41 +363,9 @@ export default function Catalog({ selectedBrand, onBrandChange, searchInputRef }
                       </span>
                     </div>
 
-                    {/* Action Buttons */}
+                    {/* Action Buttons: 2 Botoes de Compra solicitados */}
                     <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                      {/* Add to Quote Cart */}
-                      <button
-                        onClick={() => handleAddToCart(product)}
-                        style={{
-                          width: '100%',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          gap: '6px',
-                          background: isAdded ? '#00a651' : 'linear-gradient(135deg, var(--brand-red) 0%, #b8171d 100%)',
-                          color: '#ffffff',
-                          fontWeight: 700,
-                          fontSize: '0.86rem',
-                          padding: '11px 12px',
-                          borderRadius: 'var(--radius-md)',
-                          transition: 'all 0.2s ease',
-                          boxShadow: '0 4px 12px rgba(0,0,0,0.3)'
-                        }}
-                      >
-                        {isAdded ? (
-                          <>
-                            <Check size={15} />
-                            <span>Adicionado!</span>
-                          </>
-                        ) : (
-                          <>
-                            <Plus size={15} />
-                            <span>Adicionar à Cotação</span>
-                          </>
-                        )}
-                      </button>
-
-                      {/* Direct WhatsApp Quote */}
+                      {/* Botao 1: Comprar via WhatsApp */}
                       <a
                         href={directWhatsAppUrl}
                         target="_blank"
@@ -404,20 +375,83 @@ export default function Catalog({ selectedBrand, onBrandChange, searchInputRef }
                           display: 'flex',
                           alignItems: 'center',
                           justifyContent: 'center',
-                          gap: '6px',
-                          background: 'rgba(37, 211, 102, 0.1)',
-                          border: '1px solid rgba(37, 211, 102, 0.3)',
-                          color: '#4ade80',
-                          fontWeight: 600,
-                          fontSize: '0.8rem',
-                          padding: '8px 10px',
+                          gap: '7px',
+                          background: 'linear-gradient(135deg, #25d366 0%, #128c7e 100%)',
+                          color: '#ffffff',
+                          fontWeight: 700,
+                          fontSize: '0.86rem',
+                          padding: '11px 12px',
                           borderRadius: 'var(--radius-md)',
-                          transition: 'all 0.2s ease'
+                          boxShadow: '0 4px 14px rgba(37, 211, 102, 0.3)',
+                          transition: 'all 0.2s ease',
+                          textAlign: 'center'
+                        }}
+                        className="btn-card-whatsapp"
+                      >
+                        <MessageSquare size={16} />
+                        <span>Comprar via WhatsApp</span>
+                      </a>
+
+                      {/* Botao 2: Comprar no Mercado Livre */}
+                      <a
+                        href={buildMercadoLivreUrl(product)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          width: '100%',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          gap: '7px',
+                          background: '#FFE600',
+                          color: '#2D3277',
+                          fontWeight: 800,
+                          fontSize: '0.86rem',
+                          padding: '11px 12px',
+                          borderRadius: 'var(--radius-md)',
+                          boxShadow: '0 4px 14px rgba(255, 230, 0, 0.25)',
+                          transition: 'all 0.2s ease',
+                          border: '1px solid rgba(0, 0, 0, 0.08)',
+                          textAlign: 'center'
+                        }}
+                        className="btn-card-ml"
+                      >
+                        <ShoppingBag size={16} color="#2D3277" />
+                        <span>Comprar no Mercado Livre</span>
+                      </a>
+
+                      {/* Quick Add to B2B Quote */}
+                      <button
+                        onClick={() => handleAddToCart(product)}
+                        style={{
+                          width: '100%',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          gap: '5px',
+                          color: isAdded ? '#00a651' : 'var(--text-secondary)',
+                          background: 'rgba(255, 255, 255, 0.03)',
+                          border: '1px solid var(--border-subtle)',
+                          padding: '6px 10px',
+                          borderRadius: 'var(--radius-sm)',
+                          fontSize: '0.76rem',
+                          fontWeight: 600,
+                          transition: 'all 0.2s ease',
+                          marginTop: '2px'
                         }}
                       >
-                        <MessageSquare size={13} />
-                        <span>Cotar no WhatsApp</span>
-                      </a>
+                        {isAdded ? (
+                          <>
+                            <Check size={13} color="#00a651" />
+                            <span style={{ color: '#00a651' }}>Adicionado à Lista!</span>
+                          </>
+                        ) : (
+                          <>
+                            <Plus size={13} />
+                            <span>+ Adicionar à Cotação PJ</span>
+                          </>
+                        )}
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -532,30 +566,58 @@ export default function Catalog({ selectedBrand, onBrandChange, searchInputRef }
                   <strong style={{ color: '#ffffff' }}>Aplicação:</strong> {selectedModalProduct.application}
                 </div>
 
-                {/* Modal Buttons */}
+                {/* Modal Buttons: WhatsApp, Mercado Livre & Cotação */}
                 <div style={{ display: 'flex', gap: '10px', flexDirection: 'column' }}>
-                  <button
-                    onClick={() => {
-                      handleAddToCart(selectedModalProduct);
-                      setSelectedModalProduct(null);
-                    }}
-                    className="btn-primary"
-                    style={{ width: '100%', padding: '12px' }}
-                  >
-                    <Plus size={16} />
-                    <span>Adicionar à Cotação</span>
-                  </button>
-
+                  {/* Comprar via WhatsApp */}
                   <a
                     href={generateDirectProductWhatsAppLink(selectedModalProduct)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-whatsapp"
-                    style={{ width: '100%', padding: '12px' }}
+                    style={{ width: '100%', padding: '12px', fontSize: '0.92rem' }}
                   >
-                    <MessageSquare size={16} />
-                    <span>Cotar no WhatsApp</span>
+                    <MessageSquare size={17} />
+                    <span>Comprar via WhatsApp</span>
                   </a>
+
+                  {/* Comprar no Mercado Livre */}
+                  <a
+                    href={buildMercadoLivreUrl(selectedModalProduct)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      width: '100%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: '8px',
+                      background: '#FFE600',
+                      color: '#2D3277',
+                      fontWeight: 800,
+                      fontSize: '0.92rem',
+                      padding: '12px',
+                      borderRadius: 'var(--radius-md)',
+                      boxShadow: '0 4px 14px rgba(255, 230, 0, 0.25)',
+                      border: '1px solid rgba(0, 0, 0, 0.08)',
+                      textAlign: 'center'
+                    }}
+                  >
+                    <ShoppingBag size={17} color="#2D3277" />
+                    <span>Comprar no Mercado Livre</span>
+                  </a>
+
+                  {/* Adicionar à Cotação */}
+                  <button
+                    onClick={() => {
+                      handleAddToCart(selectedModalProduct);
+                      setSelectedModalProduct(null);
+                    }}
+                    className="btn-secondary"
+                    style={{ width: '100%', padding: '11px', fontSize: '0.88rem' }}
+                  >
+                    <Plus size={16} />
+                    <span>Adicionar à Lista de Cotação B2B</span>
+                  </button>
                 </div>
               </div>
             </div>

@@ -2,6 +2,7 @@
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { Product, QuoteItem } from '@/types';
+import { SITE_CONFIG, buildWhatsAppUrl } from '@/config/site';
 
 interface QuoteContextType {
   items: QuoteItem[];
@@ -17,8 +18,6 @@ interface QuoteContextType {
 }
 
 const QuoteContext = createContext<QuoteContextType | undefined>(undefined);
-
-const WHATSAPP_PHONE = '5511972931840'; // Contato Lucas / M11tools: 11-9-7293-1840
 
 export function QuoteProvider({ children }: { children: React.ReactNode }) {
   const [items, setItems] = useState<QuoteItem[]>([]);
@@ -107,13 +106,12 @@ export function QuoteProvider({ children }: { children: React.ReactNode }) {
     message += `------------------------------------\n`;
     message += `Por favor, informar valores com impostos, prazo de entrega e condições de faturamento.`;
 
-    const encoded = encodeURIComponent(message);
-    return `https://wa.me/${WHATSAPP_PHONE}?text=${encoded}`;
+    return buildWhatsAppUrl(message);
   };
 
   const generateDirectProductWhatsAppLink = (product: Product) => {
     const message = `*COTAÇÃO RÁPIDA - M11 TOOLS*\nOlá! Tenho interesse no seguinte item do catálogo:\n\n*Item:* ${product.name}\n*Marca:* ${product.brandLabel}\n*Código:* ${product.code}\n\nPoderia me informar o valor e disponibilidade?`;
-    return `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`;
+    return buildWhatsAppUrl(message);
   };
 
   return (

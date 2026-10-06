@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { buildWhatsAppUrl } from '@/config/site';
 import { 
   ArrowRight, 
   MessageSquare, 
@@ -85,7 +86,7 @@ export default function Hero() {
             {/* CTAs */}
             <div className="hero-cta-group">
               <a
-                href="https://wa.me/5511972931840?text=Ol%C3%A1%20M11tools!%20Gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20especial%20para%20minha%20empresa."
+                href={buildWhatsAppUrl('Olá M11tools! Gostaria de solicitar uma cotação especial para minha empresa.')}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp pulse-whatsapp hero-btn"

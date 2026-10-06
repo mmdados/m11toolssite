@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { SITE_CONFIG, buildWhatsAppUrl } from '@/config/site';
 import { 
   MessageSquare, 
   Send, 
@@ -8,9 +9,6 @@ import {
   Clock, 
   FileText 
 } from 'lucide-react';
-
-const CONTACT_PHONE = '(11) 97293-1840';
-const WHATSAPP_RAW = '5511972931840';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -34,7 +32,7 @@ export default function ContactSection() {
     if (formData.email) msg += `*E-mail:* ${formData.email}\n`;
     msg += `\n*Necessidade/Itens Desejados:*\n${formData.message}\n`;
 
-    const url = `https://wa.me/${WHATSAPP_RAW}?text=${encodeURIComponent(msg)}`;
+    const url = buildWhatsAppUrl(msg);
     
     // Open WhatsApp in new tab after 600ms
     setTimeout(() => {
@@ -74,7 +72,7 @@ export default function ContactSection() {
               {/* Channels */}
               <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', marginBottom: '24px' }}>
                 <a
-                  href={`https://wa.me/${WHATSAPP_RAW}?text=Ol%C3%A1%20M11tools!%20Gostaria%20de%20atendimento.`}
+                  href={buildWhatsAppUrl('Olá M11tools! Gostaria de atendimento comercial.')}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="whatsapp-channel-btn"
@@ -97,7 +95,7 @@ export default function ContactSection() {
                       WhatsApp Direto
                     </div>
                     <div style={{ fontSize: '1rem', fontWeight: 700, color: '#ffffff' }}>
-                      {CONTACT_PHONE}
+                      {SITE_CONFIG.phoneDisplay}
                     </div>
                   </div>
                 </a>

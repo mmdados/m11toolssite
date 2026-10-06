@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { SITE_CONFIG, buildWhatsAppUrl } from '@/config/site';
 import { MessageSquare, ShieldCheck, ArrowUp } from 'lucide-react';
 
 export default function Footer() {
@@ -81,13 +82,13 @@ export default function Footer() {
                   WhatsApp / Comercial:
                 </div>
                 <a 
-                  href="https://wa.me/5511972931840" 
+                  href={buildWhatsAppUrl('Olá M11tools! Gostaria de falar com o atendimento comercial.')} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   style={{ color: '#25d366', fontWeight: 700, fontSize: '0.98rem', display: 'flex', alignItems: 'center', gap: '6px', marginTop: '2px' }}
                 >
                   <MessageSquare size={15} />
-                  (11) 97293-1840
+                  {SITE_CONFIG.phoneDisplay}
                 </a>
               </div>
 

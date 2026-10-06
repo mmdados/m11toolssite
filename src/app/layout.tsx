@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { QuoteProvider } from '@/context/QuoteContext';
+import { SITE_CONFIG } from '@/config/site';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -19,9 +20,9 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://m11tools.com.br'),
-  title: 'M11 Tools | Distribuidora Gedore & Tekbond - Ferramentas Profissionais',
-  description: 'Distribuição oficial de ferramentas Gedore Red, Gedore Blue Industrial e químicos Tekbond. Faturamento para empresas (PJ), pronta entrega e cotações rápidas via WhatsApp: (11) 97293-1840.',
+  metadataBase: new URL(SITE_CONFIG.domain),
+  title: `${SITE_CONFIG.companyName} | Distribuidora Gedore & Tekbond - Ferramentas Profissionais`,
+  description: `Distribuição oficial de ferramentas Gedore Red, Gedore Blue Industrial e químicos Tekbond. Faturamento para empresas (PJ), pronta entrega e cotações rápidas via WhatsApp: ${SITE_CONFIG.phoneDisplay}.`,
   keywords: [
     'M11 Tools',
     'Gedore',
