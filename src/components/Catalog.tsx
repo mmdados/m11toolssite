@@ -11,10 +11,8 @@ import {
   MessageSquare, 
   Check, 
   X, 
-  Info, 
   Layers,
-  Wrench,
-  Sparkles
+  Wrench
 } from 'lucide-react';
 
 interface CatalogProps {
@@ -69,12 +67,12 @@ export default function Catalog({ selectedBrand, onBrandChange, searchInputRef }
   };
 
   return (
-    <section id="catalogo" style={{ padding: '70px 0', position: 'relative' }}>
+    <section id="catalogo" style={{ padding: '48px 0', position: 'relative', width: '100%' }}>
       <div className="container">
         {/* Section Header */}
-        <div style={{ textAlign: 'center', marginBottom: '36px' }}>
+        <div style={{ textAlign: 'center', marginBottom: '28px' }}>
           <span style={{
-            fontSize: '0.8rem',
+            fontSize: '0.75rem',
             fontWeight: 800,
             color: 'var(--brand-red)',
             textTransform: 'uppercase',
@@ -83,137 +81,113 @@ export default function Catalog({ selectedBrand, onBrandChange, searchInputRef }
             Catálogo Comercial
           </span>
           <h2 style={{
-            fontSize: 'clamp(1.8rem, 3.2vw, 2.6rem)',
+            fontSize: 'clamp(1.5rem, 5vw, 2.4rem)',
             fontWeight: 800,
             color: '#ffffff',
-            marginTop: '8px',
-            marginBottom: '12px'
+            marginTop: '6px',
+            marginBottom: '10px'
           }}>
-            Ferramentas & Químicos para sua Empresa
+            Ferramentas & Químicos
           </h2>
-          <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', maxWidth: '640px', margin: '0 auto' }}>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', maxWidth: '600px', margin: '0 auto', lineHeight: 1.5 }}>
             Consulte produtos, monte sua lista de cotação ou fale direto no WhatsApp com nossos especialistas.
           </p>
         </div>
 
         {/* Search & Filter Bar */}
-        <div className="glass" style={{
-          padding: '20px',
-          borderRadius: 'var(--radius-lg)',
-          marginBottom: '32px',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '16px'
-        }}>
+        <div className="glass filter-box">
           {/* Search Input */}
           <div style={{ position: 'relative', width: '100%' }}>
             <Search 
-              size={20} 
+              size={18} 
               color="var(--text-muted)" 
-              style={{ position: 'absolute', left: '16px', top: '50%', transform: 'translateY(-50%)' }} 
+              style={{ position: 'absolute', left: '14px', top: '50%', transform: 'translateY(-50%)' }} 
             />
             <input
               ref={searchInputRef as React.LegacyRef<HTMLInputElement>}
               type="text"
-              placeholder="Pesquise por nome da ferramenta, código (ex: R45603172), ou aplicação..."
+              placeholder="Buscar por ferramenta, código (ex: R45603172)..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              style={{
-                width: '100%',
-                background: 'rgba(11, 15, 23, 0.8)',
-                border: '1px solid var(--border-medium)',
-                borderRadius: 'var(--radius-md)',
-                padding: '14px 16px 14px 48px',
-                color: '#ffffff',
-                fontSize: '0.95rem',
-                outline: 'none',
-                transition: 'border-color 0.2s',
-              }}
-              onFocus={(e) => e.target.style.borderColor = 'var(--brand-red)'}
-              onBlur={(e) => e.target.style.borderColor = 'var(--border-medium)'}
+              className="search-input"
             />
             {searchTerm && (
               <button
                 onClick={() => setSearchTerm('')}
                 style={{
                   position: 'absolute',
-                  right: '16px',
+                  right: '12px',
                   top: '50%',
                   transform: 'translateY(-50%)',
                   color: 'var(--text-muted)',
                   display: 'flex',
-                  alignItems: 'center'
+                  alignItems: 'center',
+                  padding: '4px'
                 }}
               >
-                <X size={18} />
+                <X size={16} />
               </button>
             )}
           </div>
 
-          {/* Brand Filter Tabs */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
-            <span style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--text-muted)', marginRight: '6px' }}>
-              Marca:
-            </span>
-            {BRANDS.map((brand) => {
-              const active = selectedBrand === brand.id;
-              return (
-                <button
-                  key={brand.id}
-                  onClick={() => onBrandChange(brand.id as Brand | 'all')}
-                  style={{
-                    padding: '8px 16px',
-                    borderRadius: 'var(--radius-full)',
-                    fontSize: '0.85rem',
-                    fontWeight: 700,
-                    background: active 
-                      ? ('color' in brand ? brand.color : 'var(--brand-red)')
-                      : 'rgba(255, 255, 255, 0.05)',
-                    color: active ? '#ffffff' : 'var(--text-secondary)',
-                    border: active ? '1px solid transparent' : '1px solid var(--border-subtle)',
-                    transition: 'all 0.2s ease',
-                    boxShadow: active ? '0 4px 14px rgba(0,0,0,0.4)' : 'none'
-                  }}
-                >
-                  {brand.label}
-                </button>
-              );
-            })}
+          {/* Brand Filter Tabs (Swipeable on Mobile) */}
+          <div style={{ width: '100%', overflow: 'hidden' }}>
+            <div className="scroll-chips">
+              {BRANDS.map((brand) => {
+                const active = selectedBrand === brand.id;
+                return (
+                  <button
+                    key={brand.id}
+                    onClick={() => onBrandChange(brand.id as Brand | 'all')}
+                    style={{
+                      padding: '7px 14px',
+                      borderRadius: 'var(--radius-full)',
+                      fontSize: '0.8rem',
+                      fontWeight: 700,
+                      whiteSpace: 'nowrap',
+                      flexShrink: 0,
+                      background: active 
+                        ? ('color' in brand ? brand.color : 'var(--brand-red)')
+                        : 'rgba(255, 255, 255, 0.06)',
+                      color: active ? '#ffffff' : 'var(--text-secondary)',
+                      border: active ? '1px solid transparent' : '1px solid var(--border-subtle)',
+                      transition: 'all 0.2s ease',
+                    }}
+                  >
+                    {brand.label}
+                  </button>
+                );
+              })}
+            </div>
           </div>
 
-          {/* Category Filter Pills */}
-          <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '8px',
-            flexWrap: 'wrap',
-            paddingTop: '12px',
-            borderTop: '1px solid var(--border-subtle)'
-          }}>
-            <span style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--text-muted)', marginRight: '6px' }}>
-              Categoria:
-            </span>
-            {CATEGORIES.map((cat) => {
-              const active = selectedCategory === cat.id;
-              return (
-                <button
-                  key={cat.id}
-                  onClick={() => setSelectedCategory(cat.id as Category | 'all')}
-                  style={{
-                    padding: '6px 14px',
-                    borderRadius: 'var(--radius-md)',
-                    fontSize: '0.8rem',
-                    fontWeight: 600,
-                    background: active ? 'rgba(255, 255, 255, 0.15)' : 'rgba(255, 255, 255, 0.03)',
-                    color: active ? '#ffffff' : 'var(--text-muted)',
-                    border: active ? '1px solid rgba(255, 255, 255, 0.3)' : '1px solid var(--border-subtle)',
-                    transition: 'all 0.2s ease'
-                  }}
-                >
-                  {cat.label}
-                </button>
-              );
-            })}
+          {/* Category Filter Pills (Swipeable on Mobile) */}
+          <div style={{ width: '100%', overflow: 'hidden', paddingTop: '8px', borderTop: '1px solid var(--border-subtle)' }}>
+            <div className="scroll-chips">
+              {CATEGORIES.map((cat) => {
+                const active = selectedCategory === cat.id;
+                return (
+                  <button
+                    key={cat.id}
+                    onClick={() => setSelectedCategory(cat.id as Category | 'all')}
+                    style={{
+                      padding: '5px 12px',
+                      borderRadius: 'var(--radius-md)',
+                      fontSize: '0.78rem',
+                      fontWeight: 600,
+                      whiteSpace: 'nowrap',
+                      flexShrink: 0,
+                      background: active ? 'rgba(255, 255, 255, 0.16)' : 'rgba(255, 255, 255, 0.04)',
+                      color: active ? '#ffffff' : 'var(--text-muted)',
+                      border: active ? '1px solid rgba(255, 255, 255, 0.3)' : '1px solid var(--border-subtle)',
+                      transition: 'all 0.2s ease'
+                    }}
+                  >
+                    {cat.label}
+                  </button>
+                );
+              })}
+            </div>
           </div>
         </div>
 
@@ -222,14 +196,12 @@ export default function Catalog({ selectedBrand, onBrandChange, searchInputRef }
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          marginBottom: '20px',
-          fontSize: '0.85rem',
+          marginBottom: '16px',
+          fontSize: '0.82rem',
           color: 'var(--text-secondary)'
         }}>
           <div>
-            Mostrando <strong>{filteredProducts.length}</strong> produto(s)
-            {selectedBrand !== 'all' && <span> na marca selecionada</span>}
-            {searchTerm && <span> para a busca &quot;{searchTerm}&quot;</span>}
+            <strong>{filteredProducts.length}</strong> produto(s) encontrado(s)
           </div>
 
           {(selectedBrand !== 'all' || selectedCategory !== 'all' || searchTerm !== '') && (
@@ -237,13 +209,14 @@ export default function Catalog({ selectedBrand, onBrandChange, searchInputRef }
               onClick={resetFilters}
               style={{
                 color: '#ff6b6b',
-                fontWeight: 600,
+                fontWeight: 700,
                 display: 'inline-flex',
                 alignItems: 'center',
-                gap: '4px'
+                gap: '4px',
+                fontSize: '0.8rem'
               }}
             >
-              <X size={14} /> Limpar filtros
+              <X size={13} /> Limpar filtros
             </button>
           )}
         </div>
@@ -252,20 +225,20 @@ export default function Catalog({ selectedBrand, onBrandChange, searchInputRef }
         {filteredProducts.length === 0 ? (
           <div style={{
             textAlign: 'center',
-            padding: '60px 20px',
+            padding: '48px 16px',
             background: 'var(--bg-card)',
             borderRadius: 'var(--radius-lg)',
             border: '1px solid var(--border-subtle)'
           }}>
-            <Wrench size={48} color="var(--text-muted)" style={{ marginBottom: '16px', opacity: 0.5 }} />
-            <h3 style={{ fontSize: '1.2rem', color: '#ffffff', marginBottom: '8px' }}>
-              Nenhum produto encontrado com os filtros atuais
+            <Wrench size={40} color="var(--text-muted)" style={{ marginBottom: '14px', opacity: 0.5 }} />
+            <h3 style={{ fontSize: '1.15rem', color: '#ffffff', marginBottom: '8px' }}>
+              Nenhum produto encontrado
             </h3>
-            <p style={{ color: 'var(--text-secondary)', marginBottom: '20px', fontSize: '0.9rem' }}>
+            <p style={{ color: 'var(--text-secondary)', marginBottom: '18px', fontSize: '0.88rem' }}>
               Trabalhamos com a linha completa Gedore e Tekbond sob encomenda! Fale direto no nosso WhatsApp para solicitar qualquer código específico.
             </p>
-            <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <button onClick={resetFilters} className="btn-secondary">
+            <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', flexWrap: 'wrap' }}>
+              <button onClick={resetFilters} className="btn-secondary" style={{ padding: '10px 16px', fontSize: '0.88rem' }}>
                 Limpar Filtros
               </button>
               <a
@@ -273,18 +246,15 @@ export default function Catalog({ selectedBrand, onBrandChange, searchInputRef }
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp"
+                style={{ padding: '10px 16px', fontSize: '0.88rem' }}
               >
-                <MessageSquare size={16} />
-                Consultar Código no WhatsApp
+                <MessageSquare size={15} />
+                Consultar no WhatsApp
               </a>
             </div>
           </div>
         ) : (
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-            gap: '24px'
-          }}>
+          <div className="product-grid">
             {filteredProducts.map((product) => {
               const isAdded = addedAnimationId === product.id;
               const directWhatsAppUrl = generateDirectProductWhatsAppLink(product);
@@ -296,21 +266,11 @@ export default function Catalog({ selectedBrand, onBrandChange, searchInputRef }
               return (
                 <div
                   key={product.id}
-                  style={{
-                    background: 'var(--bg-card)',
-                    borderRadius: 'var(--radius-lg)',
-                    border: '1px solid var(--border-subtle)',
-                    overflow: 'hidden',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    transition: 'all 0.25s ease',
-                    boxShadow: 'var(--shadow-sm)'
-                  }}
                   className="product-card"
                 >
                   {/* Image & Top Badges */}
                   <div 
-                    style={{ position: 'relative', height: '190px', width: '100%', background: '#070a0f', cursor: 'pointer' }}
+                    style={{ position: 'relative', height: '170px', width: '100%', background: '#070a0f', cursor: 'pointer' }}
                     onClick={() => setSelectedModalProduct(product)}
                   >
                     <Image
@@ -322,11 +282,11 @@ export default function Catalog({ selectedBrand, onBrandChange, searchInputRef }
                     <div style={{
                       position: 'absolute',
                       inset: 0,
-                      background: 'linear-gradient(to top, rgba(22, 30, 46, 0.8) 0%, transparent 60%)'
+                      background: 'linear-gradient(to top, rgba(22, 30, 46, 0.85) 0%, transparent 60%)'
                     }} />
 
                     {/* Brand Pill */}
-                    <div style={{ position: 'absolute', top: '12px', left: '12px' }}>
+                    <div style={{ position: 'absolute', top: '10px', left: '10px' }}>
                       <span className={`badge ${badgeClass}`}>
                         {product.brandLabel}
                       </span>
@@ -335,14 +295,14 @@ export default function Catalog({ selectedBrand, onBrandChange, searchInputRef }
                     {/* Code Badge */}
                     <div style={{
                       position: 'absolute',
-                      bottom: '10px',
-                      left: '12px',
-                      background: 'rgba(0,0,0,0.7)',
+                      bottom: '8px',
+                      left: '10px',
+                      background: 'rgba(0,0,0,0.75)',
                       backdropFilter: 'blur(4px)',
                       color: 'var(--text-secondary)',
-                      fontSize: '0.75rem',
+                      fontSize: '0.72rem',
                       fontWeight: 700,
-                      padding: '2px 8px',
+                      padding: '2px 7px',
                       borderRadius: 'var(--radius-sm)',
                       border: '1px solid var(--border-subtle)'
                     }}>
@@ -351,38 +311,29 @@ export default function Catalog({ selectedBrand, onBrandChange, searchInputRef }
                   </div>
 
                   {/* Body Content */}
-                  <div style={{ padding: '20px', display: 'flex', flexDirection: 'column', flex: 1 }}>
+                  <div className="product-card-body">
                     <div style={{
-                      fontSize: '0.75rem',
+                      fontSize: '0.72rem',
                       textTransform: 'uppercase',
                       color: 'var(--text-muted)',
                       fontWeight: 700,
-                      marginBottom: '6px'
+                      marginBottom: '4px'
                     }}>
                       {product.categoryLabel}
                     </div>
 
                     <h3 
                       onClick={() => setSelectedModalProduct(product)}
-                      style={{
-                        fontSize: '1.05rem',
-                        fontWeight: 700,
-                        color: '#ffffff',
-                        lineHeight: 1.35,
-                        marginBottom: '10px',
-                        cursor: 'pointer',
-                        transition: 'color 0.2s'
-                      }}
                       className="product-title"
                     >
                       {product.name}
                     </h3>
 
                     <p style={{
-                      fontSize: '0.85rem',
+                      fontSize: '0.82rem',
                       color: 'var(--text-secondary)',
-                      lineHeight: 1.45,
-                      marginBottom: '16px',
+                      lineHeight: 1.4,
+                      marginBottom: '12px',
                       display: '-webkit-box',
                       WebkitLineClamp: 2,
                       WebkitBoxOrient: 'vertical',
@@ -393,17 +344,17 @@ export default function Catalog({ selectedBrand, onBrandChange, searchInputRef }
 
                     {/* Application Tag */}
                     <div style={{
-                      fontSize: '0.75rem',
+                      fontSize: '0.72rem',
                       color: 'var(--text-muted)',
                       background: 'rgba(255, 255, 255, 0.03)',
-                      padding: '6px 10px',
+                      padding: '5px 8px',
                       borderRadius: 'var(--radius-sm)',
-                      marginBottom: '18px',
+                      marginBottom: '16px',
                       display: 'flex',
                       alignItems: 'center',
-                      gap: '6px'
+                      gap: '5px'
                     }}>
-                      <Layers size={13} color="var(--brand-red)" />
+                      <Layers size={12} color="var(--brand-red)" style={{ flexShrink: 0 }} />
                       <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                         {product.application}
                       </span>
@@ -419,25 +370,25 @@ export default function Catalog({ selectedBrand, onBrandChange, searchInputRef }
                           display: 'flex',
                           alignItems: 'center',
                           justifyContent: 'center',
-                          gap: '8px',
+                          gap: '6px',
                           background: isAdded ? '#00a651' : 'linear-gradient(135deg, var(--brand-red) 0%, #b8171d 100%)',
                           color: '#ffffff',
                           fontWeight: 700,
-                          fontSize: '0.88rem',
-                          padding: '10px 14px',
+                          fontSize: '0.86rem',
+                          padding: '11px 12px',
                           borderRadius: 'var(--radius-md)',
                           transition: 'all 0.2s ease',
-                          boxShadow: '0 4px 14px rgba(0,0,0,0.3)'
+                          boxShadow: '0 4px 12px rgba(0,0,0,0.3)'
                         }}
                       >
                         {isAdded ? (
                           <>
-                            <Check size={16} />
-                            <span>Adicionado à Cotação!</span>
+                            <Check size={15} />
+                            <span>Adicionado!</span>
                           </>
                         ) : (
                           <>
-                            <Plus size={16} />
+                            <Plus size={15} />
                             <span>Adicionar à Cotação</span>
                           </>
                         )}
@@ -458,15 +409,14 @@ export default function Catalog({ selectedBrand, onBrandChange, searchInputRef }
                           border: '1px solid rgba(37, 211, 102, 0.3)',
                           color: '#4ade80',
                           fontWeight: 600,
-                          fontSize: '0.82rem',
-                          padding: '8px 12px',
+                          fontSize: '0.8rem',
+                          padding: '8px 10px',
                           borderRadius: 'var(--radius-md)',
                           transition: 'all 0.2s ease'
                         }}
-                        className="btn-item-whatsapp"
                       >
-                        <MessageSquare size={14} />
-                        <span>Cotar Item no WhatsApp</span>
+                        <MessageSquare size={13} />
+                        <span>Cotar no WhatsApp</span>
                       </a>
                     </div>
                   </div>
@@ -481,19 +431,19 @@ export default function Catalog({ selectedBrand, onBrandChange, searchInputRef }
           <div style={{
             position: 'fixed',
             inset: 0,
-            background: 'rgba(0, 0, 0, 0.85)',
+            background: 'rgba(0, 0, 0, 0.88)',
             backdropFilter: 'blur(8px)',
             zIndex: 1000,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            padding: '20px'
+            padding: '16px'
           }}>
             <div style={{
               background: 'var(--bg-surface)',
               borderRadius: 'var(--radius-lg)',
               border: '1px solid var(--border-medium)',
-              maxWidth: '650px',
+              maxWidth: '600px',
               width: '100%',
               maxHeight: '90vh',
               overflowY: 'auto',
@@ -505,12 +455,12 @@ export default function Catalog({ selectedBrand, onBrandChange, searchInputRef }
                 onClick={() => setSelectedModalProduct(null)}
                 style={{
                   position: 'absolute',
-                  top: '16px',
-                  right: '16px',
-                  background: 'rgba(0,0,0,0.6)',
+                  top: '12px',
+                  right: '12px',
+                  background: 'rgba(0,0,0,0.7)',
                   color: '#ffffff',
                   borderRadius: '50%',
-                  padding: '8px',
+                  padding: '7px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -518,11 +468,11 @@ export default function Catalog({ selectedBrand, onBrandChange, searchInputRef }
                   border: '1px solid var(--border-medium)'
                 }}
               >
-                <X size={20} />
+                <X size={18} />
               </button>
 
               {/* Modal Banner */}
-              <div style={{ position: 'relative', height: '260px', width: '100%' }}>
+              <div style={{ position: 'relative', height: '200px', width: '100%' }}>
                 <Image
                   src={selectedModalProduct.image}
                   alt={selectedModalProduct.name}
@@ -534,7 +484,7 @@ export default function Catalog({ selectedBrand, onBrandChange, searchInputRef }
                   inset: 0,
                   background: 'linear-gradient(to top, var(--bg-surface) 5%, transparent 60%)'
                 }} />
-                <div style={{ position: 'absolute', bottom: '16px', left: '24px' }}>
+                <div style={{ position: 'absolute', bottom: '12px', left: '16px' }}>
                   <span className={`badge ${selectedModalProduct.brand === 'gedore-blue' ? 'badge-blue' : selectedModalProduct.brand === 'tekbond' ? 'badge-green' : 'badge-red'}`}>
                     {selectedModalProduct.brandLabel}
                   </span>
@@ -542,27 +492,27 @@ export default function Catalog({ selectedBrand, onBrandChange, searchInputRef }
               </div>
 
               {/* Modal Details */}
-              <div style={{ padding: '24px' }}>
-                <div style={{ color: 'var(--text-muted)', fontSize: '0.85rem', fontWeight: 700, marginBottom: '6px' }}>
-                  Código de Referência: <span style={{ color: '#ffffff' }}>{selectedModalProduct.code}</span>
+              <div style={{ padding: '20px' }}>
+                <div style={{ color: 'var(--text-muted)', fontSize: '0.8rem', fontWeight: 700, marginBottom: '4px' }}>
+                  Código: <span style={{ color: '#ffffff' }}>{selectedModalProduct.code}</span>
                 </div>
 
-                <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#ffffff', marginBottom: '14px' }}>
+                <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#ffffff', marginBottom: '12px' }}>
                   {selectedModalProduct.name}
                 </h3>
 
-                <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '20px', fontSize: '0.95rem' }}>
+                <p style={{ color: 'var(--text-secondary)', lineHeight: 1.5, marginBottom: '18px', fontSize: '0.9rem' }}>
                   {selectedModalProduct.description}
                 </p>
 
                 {/* Specs List */}
-                <div style={{ marginBottom: '24px' }}>
-                  <h4 style={{ fontSize: '0.9rem', color: '#ffffff', textTransform: 'uppercase', marginBottom: '10px', letterSpacing: '0.5px' }}>
+                <div style={{ marginBottom: '20px' }}>
+                  <h4 style={{ fontSize: '0.85rem', color: '#ffffff', textTransform: 'uppercase', marginBottom: '8px', letterSpacing: '0.5px' }}>
                     Especificações Técnicas:
                   </h4>
-                  <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '6px' }}>
                     {selectedModalProduct.specs.map((spec, i) => (
-                      <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', fontSize: '0.88rem', color: 'var(--text-secondary)' }}>
+                      <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '7px', fontSize: '0.82rem', color: 'var(--text-secondary)' }}>
                         <span style={{ color: 'var(--brand-red)', fontWeight: 800 }}>•</span>
                         <span>{spec}</span>
                       </li>
@@ -573,27 +523,27 @@ export default function Catalog({ selectedBrand, onBrandChange, searchInputRef }
                 {/* Application */}
                 <div style={{
                   background: 'rgba(255, 255, 255, 0.04)',
-                  padding: '12px 16px',
+                  padding: '10px 14px',
                   borderRadius: 'var(--radius-md)',
-                  marginBottom: '24px',
-                  fontSize: '0.85rem',
+                  marginBottom: '20px',
+                  fontSize: '0.82rem',
                   color: 'var(--text-secondary)'
                 }}>
-                  <strong style={{ color: '#ffffff' }}>Aplicação Recomendada:</strong> {selectedModalProduct.application}
+                  <strong style={{ color: '#ffffff' }}>Aplicação:</strong> {selectedModalProduct.application}
                 </div>
 
                 {/* Modal Buttons */}
-                <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+                <div style={{ display: 'flex', gap: '10px', flexDirection: 'column' }}>
                   <button
                     onClick={() => {
                       handleAddToCart(selectedModalProduct);
                       setSelectedModalProduct(null);
                     }}
                     className="btn-primary"
-                    style={{ flex: 1, padding: '12px 20px' }}
+                    style={{ width: '100%', padding: '12px' }}
                   >
-                    <Plus size={18} />
-                    <span>Adicionar à Lista de Cotação</span>
+                    <Plus size={16} />
+                    <span>Adicionar à Cotação</span>
                   </button>
 
                   <a
@@ -601,9 +551,9 @@ export default function Catalog({ selectedBrand, onBrandChange, searchInputRef }
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-whatsapp"
-                    style={{ flex: 1, padding: '12px 20px' }}
+                    style={{ width: '100%', padding: '12px' }}
                   >
-                    <MessageSquare size={18} />
+                    <MessageSquare size={16} />
                     <span>Cotar no WhatsApp</span>
                   </a>
                 </div>
@@ -614,17 +564,68 @@ export default function Catalog({ selectedBrand, onBrandChange, searchInputRef }
       </div>
 
       <style jsx>{`
-        .product-card:hover {
-          transform: translateY(-4px);
-          border-color: rgba(229, 36, 42, 0.4);
-          box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+        .filter-box {
+          padding: 16px;
+          border-radius: var(--radius-lg);
+          margin-bottom: 24px;
+          display: flex;
+          flex-direction: column;
+          gap: 14px;
         }
-        .product-title:hover {
-          color: var(--brand-red) !important;
+        .search-input {
+          width: 100%;
+          background: rgba(11, 15, 23, 0.85);
+          border: 1px solid var(--border-medium);
+          border-radius: var(--radius-md);
+          padding: 12px 14px 12px 42px;
+          color: #ffffff;
+          font-size: 0.92rem;
+          outline: none;
+          transition: border-color 0.2s;
         }
-        .btn-item-whatsapp:hover {
-          background: rgba(37, 211, 102, 0.2) !important;
-          border-color: #25d366 !important;
+        .search-input:focus {
+          border-color: var(--brand-red);
+        }
+        .product-grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 18px;
+        }
+        .product-card {
+          background: var(--bg-card);
+          border-radius: var(--radius-lg);
+          border: 1px solid var(--border-subtle);
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          box-shadow: var(--shadow-sm);
+        }
+        .product-card-body {
+          padding: 16px;
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+        }
+        .product-title {
+          font-size: 0.98rem;
+          font-weight: 700;
+          color: #ffffff;
+          line-height: 1.35;
+          margin-bottom: 8px;
+          cursor: pointer;
+        }
+
+        @media (min-width: 560px) {
+          .product-grid {
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 22px;
+          }
+          .filter-box {
+            padding: 20px;
+          }
+          .product-card-body {
+            padding: 20px;
+          }
         }
       `}</style>
     </section>

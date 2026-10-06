@@ -58,6 +58,7 @@ export default function QuoteDrawer() {
       zIndex: 1000,
       display: 'flex',
       justifyContent: 'flex-end',
+      width: '100%',
     }}>
       {/* Backdrop */}
       <div
@@ -65,29 +66,16 @@ export default function QuoteDrawer() {
         style={{
           position: 'absolute',
           inset: 0,
-          background: 'rgba(0, 0, 0, 0.7)',
+          background: 'rgba(0, 0, 0, 0.75)',
           backdropFilter: 'blur(4px)',
-          animation: 'fadeIn 0.2s ease',
         }}
       />
 
       {/* Slide Drawer */}
-      <div style={{
-        position: 'relative',
-        width: '100%',
-        maxWidth: '480px',
-        height: '100%',
-        background: 'var(--bg-surface)',
-        borderLeft: '1px solid var(--border-medium)',
-        display: 'flex',
-        flexDirection: 'column',
-        boxShadow: 'var(--shadow-lg)',
-        zIndex: 10,
-        animation: 'slideIn 0.25s ease',
-      }}>
+      <div className="drawer-panel">
         {/* Drawer Header */}
         <div style={{
-          padding: '20px 24px',
+          padding: '16px 18px',
           borderBottom: '1px solid var(--border-subtle)',
           display: 'flex',
           alignItems: 'center',
@@ -98,17 +86,17 @@ export default function QuoteDrawer() {
             <div style={{
               background: 'rgba(229, 36, 42, 0.15)',
               color: 'var(--brand-red)',
-              padding: '8px',
+              padding: '6px',
               borderRadius: 'var(--radius-md)'
             }}>
-              <ShoppingBag size={20} />
+              <ShoppingBag size={18} />
             </div>
             <div>
-              <h3 style={{ fontSize: '1.1rem', fontWeight: 800, color: '#ffffff' }}>
+              <h3 style={{ fontSize: '1rem', fontWeight: 800, color: '#ffffff' }}>
                 Lista de Cotação
               </h3>
-              <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
-                {totalItems} item(ns) selecionado(s)
+              <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
+                {totalItems} item(ns)
               </span>
             </div>
           </div>
@@ -123,8 +111,9 @@ export default function QuoteDrawer() {
               alignItems: 'center',
               justifyContent: 'center'
             }}
+            aria-label="Fechar gaveta"
           >
-            <X size={22} />
+            <X size={20} />
           </button>
         </div>
 
@@ -132,10 +121,10 @@ export default function QuoteDrawer() {
         <div style={{
           flex: 1,
           overflowY: 'auto',
-          padding: '20px 24px',
+          padding: '16px',
           display: 'flex',
           flexDirection: 'column',
-          gap: '16px'
+          gap: '14px'
         }}>
           {items.length === 0 ? (
             <div style={{
@@ -144,37 +133,37 @@ export default function QuoteDrawer() {
               color: 'var(--text-secondary)'
             }}>
               <div style={{
-                width: '64px',
-                height: '64px',
+                width: '56px',
+                height: '56px',
                 borderRadius: '50%',
                 background: 'rgba(255,255,255,0.04)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                margin: '0 auto 16px',
+                margin: '0 auto 14px',
                 color: 'var(--text-muted)'
               }}>
-                <ShoppingBag size={30} />
+                <ShoppingBag size={26} />
               </div>
-              <h4 style={{ fontSize: '1.05rem', color: '#ffffff', marginBottom: '8px' }}>
+              <h4 style={{ fontSize: '1rem', color: '#ffffff', marginBottom: '6px' }}>
                 Sua lista está vazia
               </h4>
-              <p style={{ fontSize: '0.85rem', marginBottom: '24px' }}>
-                Navegue pelo catálogo e clique em &quot;Adicionar à Cotação&quot; para orçar múltiplos produtos de uma só vez.
+              <p style={{ fontSize: '0.82rem', marginBottom: '20px' }}>
+                Navegue pelo catálogo e adicione as ferramentas que precisa.
               </p>
               <button
                 onClick={() => setIsDrawerOpen(false)}
                 className="btn-secondary"
-                style={{ width: '100%' }}
+                style={{ width: '100%', padding: '11px' }}
               >
-                <span>Ver Produtos no Catálogo</span>
-                <ArrowRight size={16} />
+                <span>Ver Produtos</span>
+                <ArrowRight size={15} />
               </button>
             </div>
           ) : (
             <>
               {/* Product List */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                 {items.map(({ product, quantity }) => (
                   <div
                     key={product.id}
@@ -182,17 +171,17 @@ export default function QuoteDrawer() {
                       background: 'var(--bg-card)',
                       borderRadius: 'var(--radius-md)',
                       border: '1px solid var(--border-subtle)',
-                      padding: '12px',
+                      padding: '10px',
                       display: 'flex',
-                      gap: '12px',
+                      gap: '10px',
                       alignItems: 'center'
                     }}
                   >
                     {/* Thumbnail */}
                     <div style={{
                       position: 'relative',
-                      width: '60px',
-                      height: '60px',
+                      width: '52px',
+                      height: '52px',
                       borderRadius: 'var(--radius-sm)',
                       overflow: 'hidden',
                       flexShrink: 0,
@@ -208,11 +197,11 @@ export default function QuoteDrawer() {
 
                     {/* Info */}
                     <div style={{ flex: 1, minWidth: 0 }}>
-                      <div style={{ fontSize: '0.72rem', color: 'var(--brand-red)', fontWeight: 700 }}>
+                      <div style={{ fontSize: '0.7rem', color: 'var(--brand-red)', fontWeight: 700 }}>
                         {product.brandLabel}
                       </div>
                       <div style={{
-                        fontSize: '0.85rem',
+                        fontSize: '0.82rem',
                         fontWeight: 700,
                         color: '#ffffff',
                         overflow: 'hidden',
@@ -221,7 +210,7 @@ export default function QuoteDrawer() {
                       }}>
                         {product.name}
                       </div>
-                      <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
+                      <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>
                         Cód: {product.code}
                       </div>
 
@@ -230,7 +219,7 @@ export default function QuoteDrawer() {
                         display: 'flex',
                         alignItems: 'center',
                         gap: '8px',
-                        marginTop: '8px'
+                        marginTop: '6px'
                       }}>
                         <div style={{
                           display: 'inline-flex',
@@ -241,20 +230,20 @@ export default function QuoteDrawer() {
                         }}>
                           <button
                             onClick={() => updateQuantity(product.id, quantity - 1)}
-                            style={{ padding: '3px 7px', color: '#ffffff' }}
+                            style={{ padding: '4px 8px', color: '#ffffff' }}
                             title="Diminuir"
                           >
-                            <Minus size={13} />
+                            <Minus size={12} />
                           </button>
-                          <span style={{ fontSize: '0.85rem', fontWeight: 700, minWidth: '24px', textAlign: 'center' }}>
+                          <span style={{ fontSize: '0.82rem', fontWeight: 700, minWidth: '22px', textAlign: 'center' }}>
                             {quantity}
                           </span>
                           <button
                             onClick={() => updateQuantity(product.id, quantity + 1)}
-                            style={{ padding: '3px 7px', color: '#ffffff' }}
+                            style={{ padding: '4px 8px', color: '#ffffff' }}
                             title="Aumentar"
                           >
-                            <Plus size={13} />
+                            <Plus size={12} />
                           </button>
                         </div>
 
@@ -269,7 +258,7 @@ export default function QuoteDrawer() {
                           }}
                           title="Remover item"
                         >
-                          <Trash2 size={15} />
+                          <Trash2 size={14} />
                         </button>
                       </div>
                     </div>
@@ -282,13 +271,13 @@ export default function QuoteDrawer() {
                 background: 'rgba(255, 255, 255, 0.02)',
                 border: '1px solid var(--border-subtle)',
                 borderRadius: 'var(--radius-md)',
-                padding: '14px',
+                padding: '12px',
                 display: 'flex',
                 flexDirection: 'column',
-                gap: '10px'
+                gap: '8px'
               }}>
-                <div style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--text-secondary)' }}>
-                  Dados para Agilizar o Orçamento (Opcional):
+                <div style={{ fontSize: '0.78rem', fontWeight: 700, color: 'var(--text-secondary)' }}>
+                  Dados para Cotação (Opcional):
                 </div>
                 <input
                   type="text"
@@ -300,7 +289,7 @@ export default function QuoteDrawer() {
                     background: 'var(--bg-main)',
                     border: '1px solid var(--border-subtle)',
                     borderRadius: 'var(--radius-sm)',
-                    padding: '8px 12px',
+                    padding: '8px 10px',
                     color: '#ffffff',
                     fontSize: '0.82rem'
                   }}
@@ -315,7 +304,7 @@ export default function QuoteDrawer() {
                     background: 'var(--bg-main)',
                     border: '1px solid var(--border-subtle)',
                     borderRadius: 'var(--radius-sm)',
-                    padding: '8px 12px',
+                    padding: '8px 10px',
                     color: '#ffffff',
                     fontSize: '0.82rem'
                   }}
@@ -328,12 +317,12 @@ export default function QuoteDrawer() {
         {/* Drawer Footer Actions */}
         {items.length > 0 && (
           <div style={{
-            padding: '20px 24px',
+            padding: '16px',
             borderTop: '1px solid var(--border-subtle)',
             background: 'var(--bg-card)',
             display: 'flex',
             flexDirection: 'column',
-            gap: '10px'
+            gap: '8px'
           }}>
             {/* WhatsApp Send Button */}
             <a
@@ -341,9 +330,9 @@ export default function QuoteDrawer() {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-whatsapp"
-              style={{ width: '100%', padding: '14px 20px', fontSize: '0.95rem' }}
+              style={{ width: '100%', padding: '12px 16px', fontSize: '0.9rem' }}
             >
-              <MessageSquare size={18} />
+              <MessageSquare size={17} />
               <span>Enviar Cotação pelo WhatsApp</span>
             </a>
 
@@ -352,7 +341,7 @@ export default function QuoteDrawer() {
               <button
                 onClick={handleCopy}
                 className="btn-secondary"
-                style={{ flex: 1, padding: '10px', fontSize: '0.82rem' }}
+                style={{ flex: 1, padding: '9px', fontSize: '0.8rem' }}
               >
                 {copied ? <Check size={14} color="#00a651" /> : <Copy size={14} />}
                 <span>{copied ? 'Copiado!' : 'Copiar Lista'}</span>
@@ -361,9 +350,9 @@ export default function QuoteDrawer() {
               <button
                 onClick={clearQuote}
                 style={{
-                  padding: '10px 14px',
+                  padding: '9px 12px',
                   color: 'var(--text-muted)',
-                  fontSize: '0.82rem',
+                  fontSize: '0.8rem',
                   border: '1px solid var(--border-subtle)',
                   borderRadius: 'var(--radius-md)'
                 }}
@@ -372,28 +361,30 @@ export default function QuoteDrawer() {
               </button>
             </div>
 
-            <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textAlign: 'center', marginTop: '4px' }}>
-              Atendimento direto: (11) 97293-1840 • M11 Tools
+            <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)', textAlign: 'center' }}>
+              (11) 97293-1840 • M11 Tools
             </div>
           </div>
         )}
       </div>
 
       <style jsx>{`
-        @keyframes slideIn {
-          from {
-            transform: translateX(100%);
-          }
-          to {
-            transform: translateX(0);
-          }
+        .drawer-panel {
+          position: relative;
+          width: 100%;
+          max-width: 100vw;
+          height: 100%;
+          background: var(--bg-surface);
+          border-left: 1px solid var(--border-medium);
+          display: flex;
+          flex-direction: column;
+          box-shadow: var(--shadow-lg);
+          z-index: 10;
         }
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
+
+        @media (min-width: 500px) {
+          .drawer-panel {
+            max-width: 440px;
           }
         }
       `}</style>

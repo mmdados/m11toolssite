@@ -47,66 +47,52 @@ export const BRANDS_INFO = [
 
 export default function BrandCards({ onSelectBrand }: BrandCardsProps) {
   return (
-    <section style={{ padding: '60px 0', background: 'rgba(18, 24, 36, 0.5)' }}>
+    <section style={{ padding: '48px 0', background: 'rgba(18, 24, 36, 0.5)' }}>
       <div className="container">
         {/* Section Heading */}
-        <div style={{ textAlign: 'center', marginBottom: '48px' }}>
+        <div style={{ textAlign: 'center', marginBottom: '32px' }}>
           <span style={{
             display: 'inline-block',
-            fontSize: '0.8rem',
+            fontSize: '0.75rem',
             fontWeight: 800,
             color: 'var(--brand-red)',
             textTransform: 'uppercase',
             letterSpacing: '1px',
-            marginBottom: '8px'
+            marginBottom: '6px'
           }}>
             Nossas Linhas Oficiais
           </span>
           <h2 style={{
-            fontSize: 'clamp(1.8rem, 3.2vw, 2.5rem)',
+            fontSize: 'clamp(1.5rem, 5vw, 2.3rem)',
             fontWeight: 800,
             color: '#ffffff',
-            marginBottom: '14px'
+            marginBottom: '10px'
           }}>
-            Especialistas nas Melhores Marcas do Mercado
+            Especialistas nas Melhores Marcas
           </h2>
           <p style={{
             color: 'var(--text-secondary)',
-            fontSize: '1.05rem',
-            maxWidth: '680px',
-            margin: '0 auto'
+            fontSize: '0.95rem',
+            maxWidth: '640px',
+            margin: '0 auto',
+            lineHeight: 1.5
           }}>
-            Distribuição com procedência garantida, estoque abastecido e suporte técnico para selecionar a ferramenta certa para sua equipe.
+            Distribuição com procedência garantida, estoque abastecido e suporte técnico para sua operação.
           </p>
         </div>
 
-        {/* 3 Brand Cards Grid */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-          gap: '24px'
-        }}>
+        {/* Brand Cards Grid */}
+        <div className="brands-grid">
           {BRANDS_INFO.map((b) => {
             const Icon = b.icon;
             return (
               <div
                 key={b.id}
                 id={b.id}
-                style={{
-                  background: 'var(--bg-card)',
-                  borderRadius: 'var(--radius-lg)',
-                  border: '1px solid var(--border-subtle)',
-                  overflow: 'hidden',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  transition: 'transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease',
-                  boxShadow: 'var(--shadow-sm)',
-                  position: 'relative'
-                }}
                 className="brand-card"
               >
                 {/* Brand Visual Banner */}
-                <div style={{ position: 'relative', height: '200px', width: '100%', overflow: 'hidden' }}>
+                <div style={{ position: 'relative', height: '170px', width: '100%', overflow: 'hidden' }}>
                   <Image
                     src={b.image}
                     alt={b.name}
@@ -116,40 +102,40 @@ export default function BrandCards({ onSelectBrand }: BrandCardsProps) {
                   <div style={{
                     position: 'absolute',
                     inset: 0,
-                    background: `linear-gradient(to top, var(--bg-card) 5%, transparent 60%), linear-gradient(135deg, ${b.color}40 0%, transparent 60%)`
+                    background: `linear-gradient(to top, var(--bg-card) 5%, transparent 60%), linear-gradient(135deg, ${b.color}35 0%, transparent 60%)`
                   }} />
 
                   {/* Badge */}
                   <div style={{
                     position: 'absolute',
-                    top: '14px',
-                    left: '14px',
-                    background: 'rgba(11, 15, 23, 0.85)',
+                    top: '12px',
+                    left: '12px',
+                    background: 'rgba(11, 15, 23, 0.88)',
                     backdropFilter: 'blur(8px)',
                     border: `1px solid ${b.color}80`,
                     borderRadius: 'var(--radius-full)',
-                    padding: '4px 12px',
-                    fontSize: '0.75rem',
+                    padding: '4px 10px',
+                    fontSize: '0.72rem',
                     fontWeight: 700,
                     color: '#ffffff',
                     display: 'flex',
                     alignItems: 'center',
-                    gap: '6px'
+                    gap: '5px'
                   }}>
-                    <Icon size={13} color={b.color} />
+                    <Icon size={12} color={b.color} />
                     <span>{b.badge}</span>
                   </div>
                 </div>
 
                 {/* Content */}
-                <div style={{ padding: '24px', display: 'flex', flexDirection: 'column', flex: 1 }}>
-                  <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#ffffff', marginBottom: '4px' }}>
+                <div className="brand-content">
+                  <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#ffffff', marginBottom: '3px' }}>
                     {b.name}
                   </h3>
-                  <div style={{ fontSize: '0.85rem', fontWeight: 600, color: b.color, marginBottom: '12px' }}>
+                  <div style={{ fontSize: '0.82rem', fontWeight: 600, color: b.color, marginBottom: '10px' }}>
                     {b.subtitle}
                   </div>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: 1.5, marginBottom: '18px' }}>
+                  <p style={{ fontSize: '0.86rem', color: 'var(--text-secondary)', lineHeight: 1.5, marginBottom: '16px' }}>
                     {b.description}
                   </p>
 
@@ -158,42 +144,28 @@ export default function BrandCards({ onSelectBrand }: BrandCardsProps) {
                     listStyle: 'none',
                     display: 'flex',
                     flexDirection: 'column',
-                    gap: '8px',
-                    marginBottom: '24px',
-                    fontSize: '0.85rem',
+                    gap: '7px',
+                    marginBottom: '20px',
+                    fontSize: '0.82rem',
                     color: 'var(--text-secondary)'
                   }}>
                     {b.items.map((item, i) => (
                       <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                        <span style={{ width: '5px', height: '5px', borderRadius: '50%', background: b.color }} />
+                        <span style={{ width: '5px', height: '5px', borderRadius: '50%', background: b.color, flexShrink: 0 }} />
                         <span>{item}</span>
                       </li>
                     ))}
                   </ul>
 
                   {/* Action Button */}
-                  <div style={{ marginTop: 'auto', paddingTop: '16px', borderTop: '1px solid var(--border-subtle)' }}>
+                  <div style={{ marginTop: 'auto', paddingTop: '14px', borderTop: '1px solid var(--border-subtle)' }}>
                     <a
                       href="#catalogo"
                       onClick={() => onSelectBrand(b.id)}
-                      style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'space-between',
-                        width: '100%',
-                        padding: '12px 18px',
-                        background: 'rgba(255, 255, 255, 0.04)',
-                        border: '1px solid var(--border-medium)',
-                        borderRadius: 'var(--radius-md)',
-                        color: '#ffffff',
-                        fontWeight: 700,
-                        fontSize: '0.9rem',
-                        transition: 'all 0.2s ease'
-                      }}
                       className="brand-action-btn"
                     >
                       <span>Ver Produtos {b.name}</span>
-                      <ArrowRight size={16} />
+                      <ArrowRight size={15} />
                     </a>
                   </div>
                 </div>
@@ -204,14 +176,49 @@ export default function BrandCards({ onSelectBrand }: BrandCardsProps) {
       </div>
 
       <style jsx>{`
-        .brand-card:hover {
-          transform: translateY(-4px);
-          border-color: rgba(255, 255, 255, 0.25);
-          box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
+        .brands-grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 20px;
         }
-        .brand-action-btn:hover {
-          background: rgba(255, 255, 255, 0.1);
-          border-color: #ffffff;
+        .brand-card {
+          background: var(--bg-card);
+          border-radius: var(--radius-lg);
+          border: 1px solid var(--border-subtle);
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          box-shadow: var(--shadow-sm);
+        }
+        .brand-content {
+          padding: 18px;
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+        }
+        .brand-action-btn {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          padding: 11px 16px;
+          background: rgba(255, 255, 255, 0.05);
+          border: 1px solid var(--border-medium);
+          border-radius: var(--radius-md);
+          color: #ffffff;
+          font-weight: 700;
+          font-size: 0.88rem;
+          transition: all 0.2s ease;
+        }
+
+        @media (min-width: 680px) {
+          .brands-grid {
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 24px;
+          }
+          .brand-content {
+            padding: 24px;
+          }
         }
       `}</style>
     </section>

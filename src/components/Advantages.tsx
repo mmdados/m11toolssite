@@ -26,13 +26,13 @@ const ADVANTAGES = [
   {
     icon: ShieldCheck,
     title: 'Procedência 100% Original',
-    description: 'Garantia total contra defeitos de fabricação. Todos os produtos são originais de fábrica, com rastreabilidade e certificados de calibração para itens de precisão.',
+    description: 'Garantia total contra defeitos de fabricação. Todos os produtos são originais de fábrica com certificados de calibração para itens de precisão.',
     color: '#4ade80'
   },
   {
     icon: Truck,
     title: 'Logística Ágil para Todo o Brasil',
-    description: 'Envio rápido via transportadoras parceiras ou Sedex. Agilidade no processamento de pedidos para que a sua operação e linha de produção nunca parem.',
+    description: 'Envio rápido via transportadoras parceiras ou Sedex. Agilidade no despacho para que a sua operação e linha de produção nunca parem.',
     color: '#f59e0b'
   },
   {
@@ -44,19 +44,19 @@ const ADVANTAGES = [
   {
     icon: Clock,
     title: 'Cotações em Minutos',
-    description: 'Sem burocracia ou espera demorada. Envie sua lista de peças ou planilha e receba a proposta comercial diretamente no WhatsApp ou por e-mail.',
+    description: 'Sem burocracia ou espera. Envie sua lista de peças ou planilha e receba a proposta comercial diretamente no WhatsApp ou por e-mail.',
     color: '#ec4899'
   }
 ];
 
 export default function Advantages() {
   return (
-    <section id="diferenciais" style={{ padding: '80px 0', background: 'rgba(11, 15, 23, 0.7)' }}>
+    <section id="diferenciais" style={{ padding: '54px 0', background: 'rgba(11, 15, 23, 0.7)' }}>
       <div className="container">
         {/* Title */}
-        <div style={{ textAlign: 'center', marginBottom: '50px' }}>
+        <div style={{ textAlign: 'center', marginBottom: '32px' }}>
           <span style={{
-            fontSize: '0.8rem',
+            fontSize: '0.75rem',
             fontWeight: 800,
             color: 'var(--brand-red)',
             textTransform: 'uppercase',
@@ -65,62 +65,50 @@ export default function Advantages() {
             Vantagens Corporativas
           </span>
           <h2 style={{
-            fontSize: 'clamp(1.8rem, 3.2vw, 2.6rem)',
+            fontSize: 'clamp(1.5rem, 5vw, 2.4rem)',
             fontWeight: 800,
             color: '#ffffff',
-            marginTop: '8px',
-            marginBottom: '12px'
+            marginTop: '6px',
+            marginBottom: '10px'
           }}>
-            Por que a sua Empresa Escolhe a M11 Tools?
+            Por que a M11 Tools?
           </h2>
-          <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', maxWidth: '640px', margin: '0 auto' }}>
-            Unimos o melhor fornecimento industrial a um atendimento humano, descomplicado e focado nas necessidades do comprador e do mecânico.
+          <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', maxWidth: '600px', margin: '0 auto', lineHeight: 1.5 }}>
+            O melhor fornecimento industrial com atendimento humano, descomplicado e ágil.
           </p>
         </div>
 
-        {/* 6 Grid items */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-          gap: '24px'
-        }}>
+        {/* Grid items */}
+        <div className="advantages-grid">
           {ADVANTAGES.map((adv, index) => {
             const Icon = adv.icon;
             return (
               <div
                 key={index}
-                style={{
-                  background: 'var(--bg-card)',
-                  borderRadius: 'var(--radius-lg)',
-                  border: '1px solid var(--border-subtle)',
-                  padding: '30px 24px',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: '16px',
-                  transition: 'all 0.25s ease'
-                }}
                 className="adv-card"
               >
                 <div style={{
-                  width: '52px',
-                  height: '52px',
+                  width: '46px',
+                  height: '46px',
                   borderRadius: 'var(--radius-md)',
                   background: 'rgba(255, 255, 255, 0.04)',
                   border: `1px solid ${adv.color}40`,
                   display: 'flex',
                   alignItems: 'center',
-                  justifyContent: 'center'
+                  justifyContent: 'center',
+                  flexShrink: 0
                 }}>
-                  <Icon size={26} color={adv.color} />
+                  <Icon size={22} color={adv.color} />
                 </div>
 
-                <h3 style={{ fontSize: '1.2rem', fontWeight: 700, color: '#ffffff' }}>
-                  {adv.title}
-                </h3>
-
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.92rem', lineHeight: 1.6 }}>
-                  {adv.description}
-                </p>
+                <div>
+                  <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: '#ffffff', marginBottom: '6px' }}>
+                    {adv.title}
+                  </h3>
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.86rem', lineHeight: 1.5 }}>
+                    {adv.description}
+                  </p>
+                </div>
               </div>
             );
           })}
@@ -128,10 +116,36 @@ export default function Advantages() {
       </div>
 
       <style jsx>{`
-        .adv-card:hover {
-          transform: translateY(-4px);
-          border-color: rgba(255, 255, 255, 0.2);
-          box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+        .advantages-grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+        .adv-card {
+          background: var(--bg-card);
+          border-radius: var(--radius-lg);
+          border: 1px solid var(--border-subtle);
+          padding: 20px 18px;
+          display: flex;
+          align-items: flex-start;
+          gap: 14px;
+        }
+
+        @media (min-width: 640px) {
+          .advantages-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+          }
+        }
+
+        @media (min-width: 1024px) {
+          .advantages-grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+          }
+          .adv-card {
+            padding: 26px 22px;
+          }
         }
       `}</style>
     </section>

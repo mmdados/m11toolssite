@@ -2,8 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
-import { Phone, MessageSquare, ShieldCheck, ArrowUp } from 'lucide-react';
+import { MessageSquare, ShieldCheck, ArrowUp } from 'lucide-react';
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -14,20 +13,16 @@ export default function Footer() {
     <footer style={{
       background: '#070a0f',
       borderTop: '1px solid var(--border-medium)',
-      paddingTop: '60px',
-      paddingBottom: '30px',
+      paddingTop: '48px',
+      paddingBottom: '24px',
       color: 'var(--text-secondary)',
-      fontSize: '0.9rem',
-      position: 'relative'
+      fontSize: '0.88rem',
+      position: 'relative',
+      width: '100%'
     }}>
       <div className="container">
         {/* Main Footer Grid */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-          gap: '40px',
-          marginBottom: '50px'
-        }}>
+        <div className="footer-grid">
           {/* Brand Info */}
           <div>
             <div style={{
@@ -38,94 +33,78 @@ export default function Footer() {
               border: '1px solid rgba(229, 36, 42, 0.4)',
               background: '#000',
               padding: '2px 4px',
-              marginBottom: '18px'
+              marginBottom: '14px'
             }}>
               <Image 
                 src="/logo.jpg" 
                 alt="M11 Tools - Distribuidora Gedore e Tekbond" 
-                width={150} 
-                height={40} 
+                width={130} 
+                height={35} 
                 style={{ objectFit: 'contain', display: 'block' }}
               />
             </div>
 
-            <p style={{ lineHeight: 1.6, color: 'var(--text-secondary)', marginBottom: '18px', fontSize: '0.88rem' }}>
-              Distribuição e fornecimento de ferramentas industriais e químicas de alta performance. 
+            <p style={{ lineHeight: 1.5, color: 'var(--text-secondary)', marginBottom: '14px', fontSize: '0.85rem' }}>
+              Distribuição e fornecimento de ferramentas industriais e soluções químicas de alta performance. 
               Especialistas em linhas Gedore Red, Gedore Blue e Tekbond com atendimento corporativo e faturamento B2B.
             </p>
 
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#00a651', fontSize: '0.82rem', fontWeight: 600 }}>
-              <ShieldCheck size={16} />
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#00a651', fontSize: '0.8rem', fontWeight: 600 }}>
+              <ShieldCheck size={15} style={{ flexShrink: 0 }} />
               <span>Garantia de Fábrica & Procedência 100% Original</span>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 style={{ color: '#ffffff', fontSize: '1rem', fontWeight: 700, marginBottom: '18px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-              Navegação Rápida
+            <h4 style={{ color: '#ffffff', fontSize: '0.92rem', fontWeight: 700, marginBottom: '14px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+              Navegação
             </h4>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px' }}>
-              <li><a href="#catalogo" style={{ transition: 'color 0.2s' }} className="footer-link">Catálogo de Produtos</a></li>
-              <li><a href="#gedore-red" style={{ transition: 'color 0.2s' }} className="footer-link">Linha Gedore Red</a></li>
-              <li><a href="#gedore-blue" style={{ transition: 'color 0.2s' }} className="footer-link">Gedore Industrial / Blue</a></li>
-              <li><a href="#tekbond" style={{ transition: 'color 0.2s' }} className="footer-link">Linha Tekbond Químicos</a></li>
-              <li><a href="#diferenciais" style={{ transition: 'color 0.2s' }} className="footer-link">Faturamento PJ & Benefícios</a></li>
-              <li><a href="#contato" style={{ transition: 'color 0.2s' }} className="footer-link">Solicitar Orçamento</a></li>
-            </ul>
-          </div>
-
-          {/* Lines & Categories */}
-          <div>
-            <h4 style={{ color: '#ffffff', fontSize: '1rem', fontWeight: 700, marginBottom: '18px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-              Principais Soluções
-            </h4>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '0.88rem' }}>
-              <li>Jogos de Soquetes & Catracas</li>
-              <li>Torquímetros de Estalo & Relógio</li>
-              <li>Chaves Combinadas & Estrela</li>
-              <li>Alicates Isolados 1000V & Universais</li>
-              <li>Adesivos Instantâneos Tekbond (793/200)</li>
-              <li>Trava-Roscas & Formadores de Juntas</li>
-              <li>Sprays Desengripantes & Limpa Contato</li>
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '9px', fontSize: '0.85rem' }}>
+              <li><a href="#catalogo" className="footer-link">Catálogo Geral</a></li>
+              <li><a href="#gedore-red" className="footer-link">Linha Gedore Red</a></li>
+              <li><a href="#gedore-blue" className="footer-link">Gedore Industrial</a></li>
+              <li><a href="#tekbond" className="footer-link">Tekbond Químicos</a></li>
+              <li><a href="#diferenciais" className="footer-link">Faturamento PJ & Benefícios</a></li>
+              <li><a href="#contato" className="footer-link">Solicitar Orçamento</a></li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 style={{ color: '#ffffff', fontSize: '1rem', fontWeight: 700, marginBottom: '18px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+            <h4 style={{ color: '#ffffff', fontSize: '0.92rem', fontWeight: 700, marginBottom: '14px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
               Atendimento Direto
             </h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
               <div>
-                <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 700 }}>
+                <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 700 }}>
                   WhatsApp / Comercial:
                 </div>
                 <a 
                   href="https://wa.me/5511972931840" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  style={{ color: '#25d366', fontWeight: 700, fontSize: '1.05rem', display: 'flex', alignItems: 'center', gap: '6px', marginTop: '2px' }}
+                  style={{ color: '#25d366', fontWeight: 700, fontSize: '0.98rem', display: 'flex', alignItems: 'center', gap: '6px', marginTop: '2px' }}
                 >
-                  <MessageSquare size={16} />
+                  <MessageSquare size={15} />
                   (11) 97293-1840
                 </a>
               </div>
 
               <div>
-                <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 700 }}>
-                  Horário de Atendimento:
+                <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 700 }}>
+                  Horário:
                 </div>
-                <div style={{ color: '#ffffff', fontSize: '0.9rem', marginTop: '2px' }}>
+                <div style={{ color: '#ffffff', fontSize: '0.85rem' }}>
                   Segunda a Sexta: 08:00 às 18:00
                 </div>
               </div>
 
               <div>
-                <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 700 }}>
-                  Envio e Entrega:
+                <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 700 }}>
+                  Envio:
                 </div>
-                <div style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', marginTop: '2px' }}>
+                <div style={{ color: 'var(--text-secondary)', fontSize: '0.82rem' }}>
                   Despacho nacional via transportadoras parceiras e frete dedicado.
                 </div>
               </div>
@@ -136,17 +115,16 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div style={{
           borderTop: '1px solid var(--border-subtle)',
-          paddingTop: '24px',
+          paddingTop: '20px',
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
           flexWrap: 'wrap',
-          gap: '16px',
-          fontSize: '0.8rem'
+          gap: '12px',
+          fontSize: '0.78rem'
         }}>
           <div>
-            &copy; 2026 <strong>M11 Tools</strong>. Todos os direitos reservados. 
-            Distribuidora de ferramentas e produtos químicos industriais.
+            &copy; 2026 <strong>M11 Tools</strong>. Todos os direitos reservados.
           </div>
 
           <button
@@ -154,24 +132,37 @@ export default function Footer() {
             style={{
               display: 'flex',
               alignItems: 'center',
-              gap: '6px',
+              gap: '5px',
               color: 'var(--text-secondary)',
               background: 'rgba(255, 255, 255, 0.05)',
-              padding: '6px 12px',
+              padding: '5px 10px',
               borderRadius: 'var(--radius-sm)',
-              border: '1px solid var(--border-subtle)'
+              border: '1px solid var(--border-subtle)',
+              fontSize: '0.78rem'
             }}
           >
-            <span>Voltar ao topo</span>
-            <ArrowUp size={14} />
+            <span>Topo</span>
+            <ArrowUp size={12} />
           </button>
         </div>
       </div>
 
       <style jsx>{`
+        .footer-grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 28px;
+          margin-bottom: 36px;
+        }
         .footer-link:hover {
           color: #ffffff !important;
-          transform: translateX(2px);
+        }
+
+        @media (min-width: 640px) {
+          .footer-grid {
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 36px;
+          }
         }
       `}</style>
     </footer>

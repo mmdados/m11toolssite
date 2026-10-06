@@ -25,43 +25,54 @@ export default function Navbar({ onSearchFocus }: NavbarProps) {
 
   return (
     <header style={{ position: 'sticky', top: 0, zIndex: 100, width: '100%' }}>
-      {/* Top Bar */}
+      {/* Top Announcement Bar */}
       <div style={{
-        background: 'linear-gradient(90deg, #0b0f17 0%, #171d2b 50%, #0b0f17 100%)',
+        background: 'linear-gradient(90deg, #090d14 0%, #141b27 50%, #090d14 100%)',
         borderBottom: '1px solid var(--border-subtle)',
-        fontSize: '0.8rem',
+        fontSize: '0.78rem',
         color: 'var(--text-secondary)',
-        padding: '6px 0',
+        padding: '5px 0',
       }}>
         <div className="container" style={{
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          flexWrap: 'wrap',
           gap: '8px'
         }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-            <span style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#ff4d4f', fontWeight: 600 }}>
-              <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#ff4d4f', display: 'inline-block' }} />
-              Distribuidores Especializados Gedore & Tekbond
+          {/* Left badge */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', overflow: 'hidden' }}>
+            <span style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '5px',
+              color: '#ff4d4f',
+              fontWeight: 700,
+              whiteSpace: 'nowrap',
+              overflow: 'hidden',
+              textOverflow: 'ellipsis'
+            }}>
+              <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#ff4d4f', display: 'inline-block', flexShrink: 0 }} />
+              Gedore & Tekbond Distribuidora
             </span>
-            <span style={{ display: 'none', alignItems: 'center', gap: '6px' }} className="d-md-flex">
-              <ShieldCheck size={14} color="#00a651" />
-              Faturamento para Empresas (PJ) & NF-e
+            <span style={{ color: 'var(--text-muted)' }} className="hide-on-mobile">•</span>
+            <span style={{ display: 'none', alignItems: 'center', gap: '5px' }} className="d-md-flex">
+              <ShieldCheck size={13} color="#00a651" />
+              Faturamento PJ (Boleto)
             </span>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-            <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <Clock size={13} />
-              Seg a Sex: 08h às 18h
+          {/* Right phone */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexShrink: 0 }}>
+            <span style={{ display: 'none', alignItems: 'center', gap: '5px' }} className="d-md-flex">
+              <Clock size={12} />
+              08h às 18h
             </span>
             <a 
               href="tel:11972931840" 
-              style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#ffffff', fontWeight: 600 }}
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', color: '#ffffff', fontWeight: 700 }}
             >
-              <Phone size={13} color="var(--brand-red)" />
-              (11) 97293-1840
+              <Phone size={12} color="var(--brand-red)" />
+              <span>(11) 97293-1840</span>
             </a>
           </div>
         </div>
@@ -73,27 +84,27 @@ export default function Navbar({ onSearchFocus }: NavbarProps) {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          paddingTop: '12px',
-          paddingBottom: '12px',
-          gap: '20px'
+          paddingTop: '10px',
+          paddingBottom: '10px',
+          gap: '12px'
         }}>
           {/* Logo */}
-          <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <Link href="/" style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
             <div style={{
               position: 'relative',
-              borderRadius: '8px',
+              borderRadius: '7px',
               overflow: 'hidden',
-              boxShadow: '0 4px 15px rgba(0,0,0,0.5)',
+              boxShadow: '0 3px 12px rgba(0,0,0,0.5)',
               border: '1px solid rgba(229, 36, 42, 0.4)',
               background: '#000',
-              padding: '2px 4px'
+              padding: '2px 3px'
             }}>
               <Image 
                 src="/logo.jpg" 
                 alt="M11 Tools - Distribuidora Gedore e Tekbond" 
-                width={160} 
-                height={42} 
-                style={{ objectFit: 'contain', display: 'block' }}
+                width={130} 
+                height={35} 
+                style={{ objectFit: 'contain', display: 'block', maxWidth: '130px', height: 'auto' }}
                 priority
               />
             </div>
@@ -101,23 +112,24 @@ export default function Navbar({ onSearchFocus }: NavbarProps) {
 
           {/* Desktop Nav Links */}
           <div style={{
-            display: 'flex',
+            display: 'none',
             alignItems: 'center',
-            gap: '22px',
-            fontSize: '0.92rem',
+            gap: '20px',
+            fontSize: '0.9rem',
             fontWeight: 600,
             color: 'var(--text-secondary)',
           }} className="desktop-nav">
-            <a href="#catalogo" style={{ transition: 'color 0.2s' }} className="nav-link">Catálogo Geral</a>
-            <a href="#gedore-red" style={{ transition: 'color 0.2s' }} className="nav-link">Gedore Red</a>
-            <a href="#gedore-blue" style={{ transition: 'color 0.2s' }} className="nav-link">Gedore Industrial</a>
-            <a href="#tekbond" style={{ transition: 'color 0.2s' }} className="nav-link">Tekbond</a>
-            <a href="#diferenciais" style={{ transition: 'color 0.2s' }} className="nav-link">Diferenciais</a>
-            <a href="#contato" style={{ transition: 'color 0.2s' }} className="nav-link">Contato</a>
+            <a href="#catalogo" className="nav-link">Catálogo</a>
+            <a href="#gedore-red" className="nav-link">Gedore Red</a>
+            <a href="#gedore-blue" className="nav-link">Gedore Industrial</a>
+            <a href="#tekbond" className="nav-link">Tekbond</a>
+            <a href="#diferenciais" className="nav-link">Diferenciais</a>
+            <a href="#contato" className="nav-link">Contato</a>
           </div>
 
           {/* Right Action Buttons */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexShrink: 0 }}>
+            {/* Search Button */}
             {onSearchFocus && (
               <button
                 onClick={onSearchFocus}
@@ -127,15 +139,15 @@ export default function Navbar({ onSearchFocus }: NavbarProps) {
                   gap: '6px',
                   background: 'rgba(255,255,255,0.06)',
                   border: '1px solid var(--border-subtle)',
-                  padding: '8px 14px',
+                  padding: '7px 10px',
                   borderRadius: 'var(--radius-md)',
                   color: 'var(--text-secondary)',
-                  fontSize: '0.85rem'
+                  fontSize: '0.82rem'
                 }}
                 title="Buscar no catálogo"
               >
                 <Search size={16} />
-                <span className="d-md-inline" style={{ display: 'none' }}>Buscar ferramenta...</span>
+                <span className="hide-on-mobile">Buscar...</span>
               </button>
             )}
 
@@ -146,130 +158,136 @@ export default function Navbar({ onSearchFocus }: NavbarProps) {
                 position: 'relative',
                 display: 'flex',
                 alignItems: 'center',
-                gap: '8px',
-                background: totalItems > 0 ? 'rgba(229, 36, 42, 0.2)' : 'rgba(255,255,255,0.06)',
+                gap: '6px',
+                background: totalItems > 0 ? 'rgba(229, 36, 42, 0.22)' : 'rgba(255,255,255,0.06)',
                 border: totalItems > 0 ? '1px solid var(--brand-red)' : '1px solid var(--border-medium)',
                 color: totalItems > 0 ? '#ff6b6b' : '#ffffff',
-                padding: '9px 16px',
+                padding: '7px 12px',
                 borderRadius: 'var(--radius-md)',
                 fontWeight: 700,
-                fontSize: '0.9rem',
+                fontSize: '0.85rem',
                 transition: 'all 0.2s ease'
               }}
+              aria-label="Abrir cotação"
             >
-              <ShoppingBag size={18} />
-              <span className="d-md-inline">Cotação</span>
+              <ShoppingBag size={17} />
+              <span className="hide-on-mobile">Cotação</span>
               {totalItems > 0 && (
                 <span style={{
                   background: 'var(--brand-red)',
                   color: '#ffffff',
-                  fontSize: '0.75rem',
+                  fontSize: '0.72rem',
                   fontWeight: 800,
                   borderRadius: '999px',
-                  padding: '1px 7px',
-                  minWidth: '20px',
+                  padding: '1px 6px',
+                  minWidth: '18px',
                   textAlign: 'center',
-                  boxShadow: '0 2px 6px rgba(229, 36, 42, 0.8)'
                 }}>
                   {totalItems}
                 </span>
               )}
             </button>
 
-            {/* Direct WhatsApp Action */}
+            {/* Direct WhatsApp Action Desktop */}
             <a
               href="https://wa.me/5511972931840?text=Ol%C3%A1%20M11tools!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20produtos%20Gedore%20e%20Tekbond."
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-whatsapp d-md-flex"
-              style={{ padding: '9px 16px', fontSize: '0.85rem', display: 'none' }}
+              className="btn-whatsapp hide-on-mobile"
+              style={{ padding: '7px 14px', fontSize: '0.82rem' }}
             >
-              <MessageSquare size={16} />
+              <MessageSquare size={15} />
               <span>WhatsApp</span>
             </a>
 
-            {/* Mobile Hamburger */}
+            {/* Mobile Hamburger Toggle */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               style={{
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                padding: '8px',
+                padding: '7px 9px',
                 borderRadius: 'var(--radius-sm)',
                 color: '#ffffff',
-                background: 'rgba(255,255,255,0.08)'
+                background: 'rgba(255,255,255,0.08)',
+                border: '1px solid var(--border-subtle)'
               }}
               className="mobile-toggle"
-              aria-label="Abrir menu móvel"
+              aria-label="Menu de navegação"
             >
-              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
         </div>
 
-        {/* Mobile Dropdown Menu */}
+        {/* Mobile Dropdown Menu with Smooth Layout */}
         {mobileMenuOpen && (
           <div style={{
             background: 'var(--bg-surface)',
             borderTop: '1px solid var(--border-subtle)',
-            padding: '16px 20px',
+            padding: '16px',
             display: 'flex',
             flexDirection: 'column',
-            gap: '14px',
+            gap: '12px',
+            maxHeight: '80vh',
+            overflowY: 'auto'
           }}>
             <a 
               href="#catalogo" 
               onClick={() => setMobileMenuOpen(false)}
-              style={{ padding: '8px 0', borderBottom: '1px solid var(--border-subtle)', fontWeight: 600 }}
+              style={{ padding: '10px 0', borderBottom: '1px solid var(--border-subtle)', fontWeight: 600, fontSize: '0.95rem' }}
             >
-              Catálogo Geral
+              📦 Catálogo Geral
             </a>
             <a 
               href="#gedore-red" 
               onClick={() => setMobileMenuOpen(false)}
-              style={{ padding: '8px 0', borderBottom: '1px solid var(--border-subtle)', fontWeight: 600, color: '#ff6b6b' }}
+              style={{ padding: '10px 0', borderBottom: '1px solid var(--border-subtle)', fontWeight: 600, color: '#ff6b6b', fontSize: '0.95rem' }}
             >
-              Linha Gedore Red
+              🔴 Linha Gedore Red
             </a>
             <a 
               href="#gedore-blue" 
               onClick={() => setMobileMenuOpen(false)}
-              style={{ padding: '8px 0', borderBottom: '1px solid var(--border-subtle)', fontWeight: 600, color: '#4da6ff' }}
+              style={{ padding: '10px 0', borderBottom: '1px solid var(--border-subtle)', fontWeight: 600, color: '#4da6ff', fontSize: '0.95rem' }}
             >
-              Linha Gedore Industrial / Blue
+              🔵 Linha Gedore Industrial (Blue)
             </a>
             <a 
               href="#tekbond" 
               onClick={() => setMobileMenuOpen(false)}
-              style={{ padding: '8px 0', borderBottom: '1px solid var(--border-subtle)', fontWeight: 600, color: '#4ade80' }}
+              style={{ padding: '10px 0', borderBottom: '1px solid var(--border-subtle)', fontWeight: 600, color: '#4ade80', fontSize: '0.95rem' }}
             >
-              Linha Tekbond Químicos
+              🟢 Linha Tekbond Químicos
             </a>
             <a 
               href="#diferenciais" 
               onClick={() => setMobileMenuOpen(false)}
-              style={{ padding: '8px 0', borderBottom: '1px solid var(--border-subtle)', fontWeight: 600 }}
+              style={{ padding: '10px 0', borderBottom: '1px solid var(--border-subtle)', fontWeight: 600, fontSize: '0.95rem' }}
             >
-              Vantagens & Faturamento PJ
+              ⭐ Vantagens & Faturamento PJ
             </a>
             <a 
               href="#contato" 
               onClick={() => setMobileMenuOpen(false)}
-              style={{ padding: '8px 0', fontWeight: 600 }}
+              style={{ padding: '10px 0', fontWeight: 600, fontSize: '0.95rem' }}
             >
-              Fale com um Consultor
+              📞 Fale com um Consultor
             </a>
-            <a
-              href="https://wa.me/5511972931840?text=Ol%C3%A1%20M11tools!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20produtos%20Gedore%20e%20Tekbond."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-whatsapp"
-              style={{ width: '100%', marginTop: '6px' }}
-            >
-              <MessageSquare size={18} />
-              Conversar no WhatsApp (11) 97293-1840
-            </a>
+
+            <div style={{ paddingTop: '8px' }}>
+              <a
+                href="https://wa.me/5511972931840?text=Ol%C3%A1%20M11tools!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20produtos%20Gedore%20e%20Tekbond."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-whatsapp"
+                style={{ width: '100%', padding: '12px' }}
+              >
+                <MessageSquare size={18} />
+                Chamar no WhatsApp (11) 97293-1840
+              </a>
+            </div>
           </div>
         )}
       </nav>
@@ -287,9 +305,6 @@ export default function Navbar({ onSearchFocus }: NavbarProps) {
           }
           .d-md-flex {
             display: flex !important;
-          }
-          .d-md-inline {
-            display: inline !important;
           }
         }
         @media (max-width: 899px) {

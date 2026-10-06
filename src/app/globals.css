@@ -25,7 +25,6 @@
   --brand-green-hover: #00c761;
   --brand-green-glow: rgba(0, 166, 81, 0.3);
 
-  --accent-gold: #f59e0b;
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 16px;
@@ -48,10 +47,14 @@ html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   background-color: var(--bg-main);
   color: var(--text-primary);
+  width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
 }
 
 body {
+  width: 100%;
+  max-width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -64,6 +67,7 @@ body {
   background-attachment: fixed;
   color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 a {
@@ -76,13 +80,14 @@ button {
   cursor: pointer;
   border: none;
   background: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 input, textarea, select {
   font-family: inherit;
+  font-size: 16px; /* Prevents auto-zoom on iOS Safari */
 }
 
-/* Carbon & Tech Accents */
 .carbon-grid {
   background-size: 24px 24px;
   background-image: 
@@ -95,15 +100,22 @@ input, textarea, select {
   max-width: 1240px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }
 
 /* Glassmorphism */
 .glass {
-  background: rgba(18, 24, 36, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(18, 24, 36, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--border-subtle);
 }
 
@@ -117,17 +129,16 @@ input, textarea, select {
   color: #ffffff;
   font-weight: 700;
   font-size: 0.95rem;
-  padding: 12px 24px;
+  padding: 13px 22px;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-red);
   transition: all 0.25s ease;
   border: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
 }
 
-.btn-primary:hover {
-  background: linear-gradient(135deg, var(--brand-red-hover) 0%, var(--brand-red) 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(229, 36, 42, 0.5);
+.btn-primary:active {
+  transform: scale(0.98);
 }
 
 .btn-secondary {
@@ -139,16 +150,15 @@ input, textarea, select {
   color: #ffffff;
   font-weight: 600;
   font-size: 0.95rem;
-  padding: 12px 22px;
+  padding: 13px 20px;
   border-radius: var(--radius-md);
   border: 1px solid var(--border-medium);
   transition: all 0.2s ease;
+  text-align: center;
 }
 
-.btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.3);
-  transform: translateY(-1px);
+.btn-secondary:active {
+  transform: scale(0.98);
 }
 
 .btn-whatsapp {
@@ -159,16 +169,16 @@ input, textarea, select {
   background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
   color: #ffffff;
   font-weight: 700;
-  padding: 12px 24px;
+  padding: 13px 22px;
   border-radius: var(--radius-md);
   box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
   transition: all 0.25s ease;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
 }
 
-.btn-whatsapp:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
+.btn-whatsapp:active {
+  transform: scale(0.98);
 }
 
 /* Badges */
@@ -176,10 +186,10 @@ input, textarea, select {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
   padding: 4px 10px;
   border-radius: var(--radius-full);
 }
@@ -202,6 +212,20 @@ input, textarea, select {
   border: 1px solid rgba(0, 166, 81, 0.35);
 }
 
+/* Horizontal scroll styling for mobile chips */
+.scroll-chips {
+  display: flex;
+  overflow-x: auto;
+  gap: 8px;
+  padding-bottom: 6px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.scroll-chips::-webkit-scrollbar {
+  display: none;
+}
+
 /* Animations */
 @keyframes pulseGlow {
   0%, 100% {
@@ -209,8 +233,8 @@ input, textarea, select {
     box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);
   }
   50% {
-    transform: scale(1.04);
-    box-shadow: 0 0 25px rgba(37, 211, 102, 0.7);
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(37, 211, 102, 0.75);
   }
 }
 
@@ -218,10 +242,26 @@ input, textarea, select {
   animation: pulseGlow 2.5s infinite;
 }
 
+/* Responsive Utilities */
+@media (max-width: 767px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+  .full-width-mobile {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .hide-on-desktop {
+    display: none !important;
+  }
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {

@@ -2,10 +2,7 @@
 
 import React, { useState } from 'react';
 import { 
-  Phone, 
   MessageSquare, 
-  Mail, 
-  MapPin, 
   Send, 
   CheckCircle2, 
   Clock, 
@@ -39,34 +36,21 @@ export default function ContactSection() {
 
     const url = `https://wa.me/${WHATSAPP_RAW}?text=${encodeURIComponent(msg)}`;
     
-    // Open WhatsApp in new tab after 800ms
+    // Open WhatsApp in new tab after 600ms
     setTimeout(() => {
       window.open(url, '_blank');
     }, 600);
   };
 
   return (
-    <section id="contato" style={{ padding: '80px 0', position: 'relative' }}>
+    <section id="contato" style={{ padding: '54px 0', position: 'relative', width: '100%' }}>
       <div className="container">
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-          gap: '40px',
-          alignItems: 'stretch'
-        }}>
+        <div className="contact-grid">
           {/* Left: Contact Info & Channels */}
-          <div style={{
-            background: 'var(--bg-card)',
-            borderRadius: 'var(--radius-lg)',
-            border: '1px solid var(--border-subtle)',
-            padding: '36px',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-between'
-          }}>
+          <div className="contact-card">
             <div>
               <span style={{
-                fontSize: '0.8rem',
+                fontSize: '0.75rem',
                 fontWeight: 800,
                 color: 'var(--brand-red)',
                 textTransform: 'uppercase',
@@ -75,100 +59,93 @@ export default function ContactSection() {
                 Atendimento Comercial
               </span>
               <h2 style={{
-                fontSize: 'clamp(1.8rem, 2.8vw, 2.3rem)',
+                fontSize: 'clamp(1.5rem, 5vw, 2.2rem)',
                 fontWeight: 800,
                 color: '#ffffff',
-                marginTop: '8px',
-                marginBottom: '16px'
+                marginTop: '6px',
+                marginBottom: '12px'
               }}>
                 Fale com a M11 Tools
               </h2>
-              <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '32px', fontSize: '0.98rem' }}>
-                Precisa de uma cotação para sua indústria, oficina ou revenda? Entre em contato agora mesmo pelo WhatsApp ou telefone.
+              <p style={{ color: 'var(--text-secondary)', lineHeight: 1.5, marginBottom: '24px', fontSize: '0.92rem' }}>
+                Precisa de uma cotação para sua indústria, oficina ou revenda? Fale com a gente pelo WhatsApp ou telefone.
               </p>
 
-              {/* Contact list */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginBottom: '36px' }}>
+              {/* Channels */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', marginBottom: '24px' }}>
                 <a
                   href={`https://wa.me/${WHATSAPP_RAW}?text=Ol%C3%A1%20M11tools!%20Gostaria%20de%20atendimento.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '14px',
-                    padding: '14px',
-                    background: 'rgba(37, 211, 102, 0.08)',
-                    border: '1px solid rgba(37, 211, 102, 0.25)',
-                    borderRadius: 'var(--radius-md)',
-                    transition: 'all 0.2s'
-                  }}
-                  className="contact-channel"
+                  className="whatsapp-channel-btn"
                 >
                   <div style={{
-                    width: '44px',
-                    height: '44px',
+                    width: '40px',
+                    height: '40px',
                     borderRadius: '50%',
                     background: '#25d366',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    color: '#ffffff'
+                    color: '#ffffff',
+                    flexShrink: 0
                   }}>
-                    <MessageSquare size={22} />
+                    <MessageSquare size={20} />
                   </div>
                   <div>
-                    <div style={{ fontSize: '0.78rem', color: '#4ade80', fontWeight: 700, textTransform: 'uppercase' }}>
+                    <div style={{ fontSize: '0.72rem', color: '#4ade80', fontWeight: 700, textTransform: 'uppercase' }}>
                       WhatsApp Direto
                     </div>
-                    <div style={{ fontSize: '1.05rem', fontWeight: 700, color: '#ffffff' }}>
+                    <div style={{ fontSize: '1rem', fontWeight: 700, color: '#ffffff' }}>
                       {CONTACT_PHONE}
                     </div>
                   </div>
                 </a>
 
-                <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                   <div style={{
-                    width: '44px',
-                    height: '44px',
+                    width: '38px',
+                    height: '38px',
                     borderRadius: '50%',
                     background: 'rgba(255, 255, 255, 0.06)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    color: 'var(--brand-red)'
+                    color: 'var(--brand-red)',
+                    flexShrink: 0
                   }}>
-                    <Clock size={20} />
+                    <Clock size={18} />
                   </div>
                   <div>
-                    <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', fontWeight: 700, textTransform: 'uppercase' }}>
+                    <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)', fontWeight: 700, textTransform: 'uppercase' }}>
                       Horário de Funcionamento
                     </div>
-                    <div style={{ fontSize: '0.95rem', fontWeight: 600, color: '#ffffff' }}>
+                    <div style={{ fontSize: '0.88rem', fontWeight: 600, color: '#ffffff' }}>
                       Segunda a Sexta: 08:00 às 18:00
                     </div>
                   </div>
                 </div>
 
-                <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                   <div style={{
-                    width: '44px',
-                    height: '44px',
+                    width: '38px',
+                    height: '38px',
                     borderRadius: '50%',
                     background: 'rgba(255, 255, 255, 0.06)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    color: '#4da6ff'
+                    color: '#4da6ff',
+                    flexShrink: 0
                   }}>
-                    <FileText size={20} />
+                    <FileText size={18} />
                   </div>
                   <div>
-                    <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', fontWeight: 700, textTransform: 'uppercase' }}>
-                      Atendimento B2B & CNPJ
+                    <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)', fontWeight: 700, textTransform: 'uppercase' }}>
+                      Atendimento B2B & PJ
                     </div>
-                    <div style={{ fontSize: '0.95rem', fontWeight: 600, color: '#ffffff' }}>
-                      Envio de planilhas e ordens de compra
+                    <div style={{ fontSize: '0.88rem', fontWeight: 600, color: '#ffffff' }}>
+                      Faturamento em boleto e envio de planilhas
                     </div>
                   </div>
                 </div>
@@ -176,37 +153,29 @@ export default function ContactSection() {
             </div>
 
             <div style={{
-              padding: '16px',
+              padding: '14px',
               background: 'rgba(255, 255, 255, 0.03)',
               borderRadius: 'var(--radius-md)',
               border: '1px solid var(--border-subtle)',
-              fontSize: '0.85rem',
+              fontSize: '0.82rem',
               color: 'var(--text-secondary)'
             }}>
-              Distribuímos a linha completa de ferramentas <strong>Gedore</strong> e químicos <strong>Tekbond</strong> para oficinas, indústrias e frotistas em todo o Brasil.
+              Distribuímos a linha completa <strong>Gedore</strong> e <strong>Tekbond</strong> com entrega rápida em todo o Brasil.
             </div>
           </div>
 
           {/* Right: Form */}
-          <div style={{
-            background: 'var(--bg-surface)',
-            borderRadius: 'var(--radius-lg)',
-            border: '1px solid var(--border-medium)',
-            padding: '36px',
-            display: 'flex',
-            flexDirection: 'column',
-            boxShadow: 'var(--shadow-md)'
-          }}>
-            <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#ffffff', marginBottom: '8px' }}>
+          <div className="contact-card">
+            <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#ffffff', marginBottom: '6px' }}>
               Solicitar Proposta Comercial
             </h3>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '24px' }}>
-              Preencha os campos abaixo e nosso consultor responderá com a cotação detalhada.
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.86rem', marginBottom: '18px' }}>
+              Preencha os campos abaixo para receber a cotação com condições para sua empresa.
             </p>
 
             {submitted ? (
               <div style={{
-                padding: '30px 20px',
+                padding: '24px 16px',
                 textAlign: 'center',
                 background: 'rgba(0, 166, 81, 0.1)',
                 border: '1px solid rgba(0, 166, 81, 0.3)',
@@ -215,147 +184,97 @@ export default function ContactSection() {
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
-                gap: '12px'
+                gap: '10px'
               }}>
-                <CheckCircle2 size={44} color="#00a651" />
-                <h4 style={{ fontSize: '1.2rem', fontWeight: 700 }}>Solicitação Enviada com Sucesso!</h4>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-                  Abrindo o atendimento no WhatsApp para envio imediato dos dados à nossa equipe comercial...
+                <CheckCircle2 size={38} color="#00a651" />
+                <h4 style={{ fontSize: '1.1rem', fontWeight: 700 }}>Solicitação Enviada!</h4>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem' }}>
+                  Abrindo o atendimento no WhatsApp para envio imediato dos dados à nossa equipe...
                 </p>
                 <button
                   onClick={() => setSubmitted(false)}
                   className="btn-secondary"
-                  style={{ marginTop: '12px' }}
+                  style={{ marginTop: '8px', padding: '10px 16px', fontSize: '0.85rem' }}
                 >
                   Enviar Outra Mensagem
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '14px' }}>
+              <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                <div className="form-row">
                   <div>
-                    <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: 'var(--text-secondary)', marginBottom: '6px' }}>
-                      Seu Nome *
-                    </label>
+                    <label className="form-label">Seu Nome *</label>
                     <input
                       type="text"
                       required
                       placeholder="Ex: Carlos Silva"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      style={{
-                        width: '100%',
-                        background: 'var(--bg-main)',
-                        border: '1px solid var(--border-medium)',
-                        borderRadius: 'var(--radius-md)',
-                        padding: '11px 14px',
-                        color: '#ffffff',
-                        fontSize: '0.9rem'
-                      }}
+                      className="form-input"
                     />
                   </div>
 
                   <div>
-                    <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: 'var(--text-secondary)', marginBottom: '6px' }}>
-                      Empresa ou CNPJ (Opcional)
-                    </label>
+                    <label className="form-label">Empresa ou CNPJ (Opcional)</label>
                     <input
                       type="text"
                       placeholder="Ex: Mecânica Silva Ltda"
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                      style={{
-                        width: '100%',
-                        background: 'var(--bg-main)',
-                        border: '1px solid var(--border-medium)',
-                        borderRadius: 'var(--radius-md)',
-                        padding: '11px 14px',
-                        color: '#ffffff',
-                        fontSize: '0.9rem'
-                      }}
+                      className="form-input"
                     />
                   </div>
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '14px' }}>
+                <div className="form-row">
                   <div>
-                    <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: 'var(--text-secondary)', marginBottom: '6px' }}>
-                      Telefone / WhatsApp *
-                    </label>
+                    <label className="form-label">WhatsApp *</label>
                     <input
                       type="tel"
                       required
                       placeholder="(11) 99999-9999"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      style={{
-                        width: '100%',
-                        background: 'var(--bg-main)',
-                        border: '1px solid var(--border-medium)',
-                        borderRadius: 'var(--radius-md)',
-                        padding: '11px 14px',
-                        color: '#ffffff',
-                        fontSize: '0.9rem'
-                      }}
+                      className="form-input"
                     />
                   </div>
 
                   <div>
-                    <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: 'var(--text-secondary)', marginBottom: '6px' }}>
-                      E-mail Corporativo
-                    </label>
+                    <label className="form-label">E-mail Corporativo</label>
                     <input
                       type="email"
                       placeholder="compras@suaempresa.com.br"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      style={{
-                        width: '100%',
-                        background: 'var(--bg-main)',
-                        border: '1px solid var(--border-medium)',
-                        borderRadius: 'var(--radius-md)',
-                        padding: '11px 14px',
-                        color: '#ffffff',
-                        fontSize: '0.9rem'
-                      }}
+                      className="form-input"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: 'var(--text-secondary)', marginBottom: '6px' }}>
-                    Itens Desejados, Códigos ou Dúvida *
-                  </label>
+                  <label className="form-label">Itens Desejados ou Códigos *</label>
                   <textarea
                     required
-                    rows={4}
-                    placeholder="Descreva as ferramentas ou químicos necessários, quantidades ou códigos específicos Gedore/Tekbond..."
+                    rows={3}
+                    placeholder="Ferramentas ou químicos necessários, quantidades ou códigos Gedore/Tekbond..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    style={{
-                      width: '100%',
-                      background: 'var(--bg-main)',
-                      border: '1px solid var(--border-medium)',
-                      borderRadius: 'var(--radius-md)',
-                      padding: '12px 14px',
-                      color: '#ffffff',
-                      fontSize: '0.9rem',
-                      resize: 'vertical'
-                    }}
+                    className="form-input"
+                    style={{ resize: 'vertical' }}
                   />
                 </div>
 
                 <button
                   type="submit"
                   className="btn-primary"
-                  style={{ width: '100%', padding: '14px', marginTop: '8px' }}
+                  style={{ width: '100%', padding: '13px' }}
                 >
-                  <Send size={18} />
+                  <Send size={16} />
                   <span>Enviar Solicitação de Cotação</span>
                 </button>
 
-                <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textAlign: 'center' }}>
-                  Ao enviar, sua solicitação será direcionada ao nosso atendimento no WhatsApp para resposta ágil.
+                <p style={{ fontSize: '0.72rem', color: 'var(--text-muted)', textAlign: 'center' }}>
+                  Sua solicitação é direcionada ao nosso WhatsApp para resposta em minutos.
                 </p>
               </form>
             )}
@@ -364,10 +283,70 @@ export default function ContactSection() {
       </div>
 
       <style jsx>{`
-        .contact-channel:hover {
-          background: rgba(37, 211, 102, 0.15) !important;
-          border-color: #25d366 !important;
-          transform: translateY(-2px);
+        .contact-grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+        .contact-card {
+          background: var(--bg-card);
+          border-radius: var(--radius-lg);
+          border: 1px solid var(--border-subtle);
+          padding: 20px 16px;
+          display: flex;
+          flex-direction: column;
+          justifyContent: space-between;
+        }
+        .whatsapp-channel-btn {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          padding: 12px 14px;
+          background: rgba(37, 211, 102, 0.08);
+          border: 1px solid rgba(37, 211, 102, 0.25);
+          border-radius: var(--radius-md);
+          transition: all 0.2s;
+        }
+        .form-row {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 12px;
+        }
+        .form-label {
+          display: block;
+          font-size: 0.78rem;
+          font-weight: 700;
+          color: var(--text-secondary);
+          margin-bottom: 5px;
+        }
+        .form-input {
+          width: 100%;
+          background: var(--bg-main);
+          border: 1px solid var(--border-medium);
+          border-radius: var(--radius-md);
+          padding: 11px 12px;
+          color: #ffffff;
+          font-size: 0.9rem;
+          outline: none;
+        }
+        .form-input:focus {
+          border-color: var(--brand-red);
+        }
+
+        @media (min-width: 600px) {
+          .form-row {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        @media (min-width: 900px) {
+          .contact-grid {
+            grid-template-columns: 1fr 1.1fr;
+            gap: 28px;
+          }
+          .contact-card {
+            padding: 30px;
+          }
         }
       `}</style>
     </section>
