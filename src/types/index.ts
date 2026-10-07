@@ -18,8 +18,12 @@ export interface Product {
   categoryLabel: string;
   code: string; // Part number / SKU
   description: string;
+  detailedDescription?: string;
+  properties?: string[];
   specs: string[];
-  image: string;
+  instructions?: string[];
+  image: string; // Main image
+  images: string[]; // Multiple gallery images (FuelTech style)
   featured?: boolean;
   application: string;
   mercadoLivreUrl?: string;
