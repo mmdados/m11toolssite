@@ -281,34 +281,6 @@ export default function Navbar({ onSearchFocus }: NavbarProps) {
           </div>
         )}
       </nav>
-
-      <style jsx>{`
-        .nav-link {
-          transition: color 0.15s ease;
-        }
-        .nav-link:hover {
-          color: #e5242a;
-        }
-        @media (min-width: 900px) {
-          .desktop-nav {
-            display: flex !important;
-          }
-          .mobile-toggle {
-            display: none !important;
-          }
-          .d-md-flex {
-            display: flex !important;
-          }
-        }
-        @media (max-width: 899px) {
-          .desktop-nav {
-            display: none !important;
-          }
-          .mobile-toggle {
-            display: flex !important;
-          }
-        }
-      `}</style>
     </header>
   );
 }

@@ -213,65 +213,6 @@ export default function ContactSection() {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        .contact-grid {
-          display: grid;
-          grid-template-columns: 1fr;
-          gap: 24px;
-        }
-
-        .contact-info-card {
-          display: flex;
-          flex-direction: column;
-          justifyContent: space-between;
-        }
-
-        .contact-form-card {
-          background: #ffffff;
-          border: 1px solid #e5e7eb;
-          border-radius: 2px;
-          padding: 24px;
-        }
-
-        .whatsapp-channel-btn {
-          display: flex;
-          align-items: center;
-          gap: 12px;
-          padding: 12px 14px;
-          background: #ffffff;
-          border: 1px solid #e5e7eb;
-          border-radius: 2px;
-          transition: border-color 0.15s ease;
-        }
-
-        .whatsapp-channel-btn:hover {
-          border-color: #25d366;
-        }
-
-        .form-input {
-          width: 100%;
-          background: #ffffff;
-          border: 1px solid #d1d5db;
-          border-radius: 2px;
-          padding: 9px 12px;
-          color: #111827;
-          font-size: 0.85rem;
-          outline: none;
-          transition: border-color 0.15s ease;
-        }
-
-        .form-input:focus {
-          border-color: #e5242a;
-        }
-
-        @media (min-width: 860px) {
-          .contact-grid {
-            grid-template-columns: 1fr 1fr;
-            gap: 36px;
-          }
-        }
-      `}</style>
     </section>
   );
 }

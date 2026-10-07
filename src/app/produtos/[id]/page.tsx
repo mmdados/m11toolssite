@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { PRODUCTS } from '@/data/products';
@@ -22,8 +21,7 @@ import {
   Truck, 
   FileText, 
   Layers, 
-  ChevronRight,
-  ExternalLink
+  ChevronRight
 } from 'lucide-react';
 
 export default function ProductDetailPage() {
@@ -102,7 +100,7 @@ export default function ProductDetailPage() {
       <Navbar />
 
       <main style={{ paddingBottom: '60px', width: '100%', overflowX: 'hidden', background: '#ffffff' }}>
-        {/* Breadcrumb Navigation - Chapado e Limpo */}
+        {/* Breadcrumb Navigation */}
         <div style={{
           background: '#f9fafb',
           borderBottom: '1px solid #e5e7eb',
@@ -116,7 +114,7 @@ export default function ProductDetailPage() {
             </Link>
             <ChevronRight size={13} />
             <Link href="/#catalogo" style={{ color: '#4b5563', transition: 'color 0.15s' }}>
-              Catálogo de Produtos
+              Produtos
             </Link>
             <ChevronRight size={13} />
             <span style={{ color: '#6b7280' }}>
@@ -129,20 +127,35 @@ export default function ProductDetailPage() {
           </div>
         </div>
 
-        {/* Product Main Section (FuelTech Style 2-Columns Chapado em Fundo Branco) */}
+        {/* Product Main Section (FuelTech Style 2-Columns) */}
         <div className="container" style={{ paddingTop: '28px' }}>
           <div className="product-layout-grid">
             
             {/* LEFT COLUMN: Gallery with multiple images */}
             <div className="gallery-col">
-              {/* Main Image em FUNDO BRANCO PURO */}
-              <div className="main-image-wrapper">
-                <Image
+              {/* Main Image Container */}
+              <div style={{
+                position: 'relative',
+                width: '100%',
+                height: '380px',
+                background: '#ffffff',
+                border: '1px solid #e5e7eb',
+                borderRadius: '2px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: '16px',
+                overflow: 'hidden'
+              }}>
+                <img
                   src={productImages[selectedImageIndex]}
                   alt={`${product.name} - Imagem ${selectedImageIndex + 1}`}
-                  fill
-                  style={{ objectFit: 'contain', padding: '20px' }}
-                  priority
+                  style={{
+                    maxWidth: '100%',
+                    maxHeight: '340px',
+                    objectFit: 'contain',
+                    display: 'block'
+                  }}
                 />
                 
                 {/* Brand Badge */}
@@ -178,21 +191,33 @@ export default function ProductDetailPage() {
                 </div>
               </div>
 
-              {/* Thumbnails Row (FuelTech Style Chapado) */}
+              {/* Thumbnails Row (FuelTech Style) */}
               {productImages.length > 1 && (
                 <div className="thumbnails-row">
                   {productImages.map((img, idx) => (
                     <button
                       key={idx}
                       onClick={() => setSelectedImageIndex(idx)}
-                      className={`thumbnail-btn ${selectedImageIndex === idx ? 'active' : ''}`}
+                      style={{
+                        position: 'relative',
+                        width: '74px',
+                        height: '74px',
+                        background: '#ffffff',
+                        border: selectedImageIndex === idx ? '2px solid #e5242a' : '1px solid #e5e7eb',
+                        borderRadius: '2px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        padding: '4px',
+                        cursor: 'pointer',
+                        flexShrink: 0
+                      }}
                       aria-label={`Ver foto ${idx + 1}`}
                     >
-                      <Image
+                      <img
                         src={img}
                         alt={`Miniatura ${idx + 1}`}
-                        fill
-                        style={{ objectFit: 'contain', padding: '6px' }}
+                        style={{ maxWidth: '100%', maxHeight: '64px', objectFit: 'contain' }}
                       />
                     </button>
                   ))}
@@ -200,7 +225,7 @@ export default function ProductDetailPage() {
               )}
             </div>
 
-            {/* RIGHT COLUMN: Product Information & 2 Purchase Buttons */}
+            {/* RIGHT COLUMN: Product Information & Purchase Buttons */}
             <div className="info-col">
               {/* Category & SKU */}
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '8px', marginBottom: '8px' }}>
@@ -286,29 +311,15 @@ export default function ProductDetailPage() {
                 <span><strong>Aplicação:</strong> {product.application}</span>
               </div>
 
-              {/* OS 2 BOTÕES DE COMPRA SOLICITADOS (Preservados e Chapados) */}
+              {/* OS 2 BOTÕES DE COMPRA SOLICITADOS */}
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '24px' }}>
                 {/* Botão 1: Comprar via WhatsApp */}
                 <a
                   href={directWhatsAppUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{
-                    width: '100%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    gap: '8px',
-                    background: '#25d366',
-                    color: '#ffffff',
-                    fontWeight: 700,
-                    fontSize: '0.95rem',
-                    padding: '13px 20px',
-                    borderRadius: '2px',
-                    transition: 'background 0.2s ease',
-                    textAlign: 'center'
-                  }}
                   className="btn-product-whatsapp"
+                  style={{ padding: '13px 20px', fontSize: '0.95rem' }}
                 >
                   <MessageSquare size={18} />
                   <span>Comprar via WhatsApp</span>
@@ -319,23 +330,8 @@ export default function ProductDetailPage() {
                   href={buildMercadoLivreUrl(product)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{
-                    width: '100%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    gap: '8px',
-                    background: '#FFE600',
-                    color: '#2D3277',
-                    fontWeight: 800,
-                    fontSize: '0.95rem',
-                    padding: '13px 20px',
-                    borderRadius: '2px',
-                    border: '1px solid rgba(0, 0, 0, 0.1)',
-                    transition: 'background 0.2s ease',
-                    textAlign: 'center'
-                  }}
                   className="btn-product-ml"
+                  style={{ padding: '13px 20px', fontSize: '0.95rem' }}
                 >
                   <ShoppingBag size={18} color="#2D3277" />
                   <span>Comprar no Mercado Livre</span>
@@ -380,15 +376,15 @@ export default function ProductDetailPage() {
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                   <ShieldCheck size={16} color="#16a34a" style={{ flexShrink: 0 }} />
-                  <span>Produto 100% original com garantia e nota fiscal emitida</span>
+                  <span>Produto 100% original com nota fiscal e garantia oficial</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                   <FileText size={16} color="#e5242a" style={{ flexShrink: 0 }} />
-                  <span>Faturamento em boleto para empresas (PJ) mediante cadastro</span>
+                  <span>Faturamento em boleto bancário para empresas (PJ)</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                   <Truck size={16} color="#005baa" style={{ flexShrink: 0 }} />
-                  <span>Despacho ágil via transportadoras e Correios para todo o Brasil</span>
+                  <span>Despacho ágil via transportadoras parceiras e Correios</span>
                 </div>
               </div>
             </div>
@@ -396,7 +392,6 @@ export default function ProductDetailPage() {
 
           {/* BELOW THE FOLD: Tabs inspiradas em Tekbond & FuelTech */}
           <div style={{ marginTop: '44px' }}>
-            {/* Tabs Header */}
             <div className="details-tabs-header">
               <button
                 onClick={() => setActiveTab('descricao')}
@@ -424,9 +419,7 @@ export default function ProductDetailPage() {
               </button>
             </div>
 
-            {/* Tabs Content Card Chapado */}
             <div className="tab-content-card">
-              {/* Tab 1: Descrição */}
               {activeTab === 'descricao' && (
                 <div>
                   <h3 style={{ fontSize: '1.15rem', fontWeight: 800, color: '#111827', marginBottom: '12px' }}>
@@ -454,7 +447,6 @@ export default function ProductDetailPage() {
                 </div>
               )}
 
-              {/* Tab 2: Especificações Técnicas */}
               {activeTab === 'especificacoes' && (
                 <div>
                   <h3 style={{ fontSize: '1.15rem', fontWeight: 800, color: '#111827', marginBottom: '14px' }}>
@@ -491,7 +483,6 @@ export default function ProductDetailPage() {
                 </div>
               )}
 
-              {/* Tab 3: Aplicações */}
               {activeTab === 'aplicacoes' && (
                 <div>
                   <h3 style={{ fontSize: '1.15rem', fontWeight: 800, color: '#111827', marginBottom: '12px' }}>
@@ -516,7 +507,6 @@ export default function ProductDetailPage() {
                 </div>
               )}
 
-              {/* Tab 4: Instruções & Cuidados */}
               {activeTab === 'instrucoes' && (
                 <div>
                   <h3 style={{ fontSize: '1.15rem', fontWeight: 800, color: '#111827', marginBottom: '12px' }}>
@@ -569,24 +559,35 @@ export default function ProductDetailPage() {
                 </Link>
               </div>
 
-              <div className="related-grid">
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px' }}>
                 {relatedProducts.map((rel) => (
-                  <div key={rel.id} className="related-card">
-                    <Link href={`/produtos/${rel.id}`} style={{ position: 'relative', height: '170px', background: '#ffffff', display: 'block', borderBottom: '1px solid #f3f4f6' }}>
-                      <Image
+                  <div key={rel.id} className="tekbond-card">
+                    <Link
+                      href={`/produtos/${rel.id}`}
+                      style={{
+                        position: 'relative',
+                        height: '160px',
+                        background: '#ffffff',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        borderBottom: '1px solid #f3f4f6',
+                        padding: '10px'
+                      }}
+                    >
+                      <img
                         src={rel.image}
                         alt={rel.name}
-                        fill
-                        style={{ objectFit: 'contain', padding: '12px' }}
+                        style={{ maxWidth: '100%', maxHeight: '140px', objectFit: 'contain' }}
                       />
                     </Link>
 
-                    <div style={{ padding: '14px', display: 'flex', flexDirection: 'column', flex: 1 }}>
+                    <div style={{ padding: '12px', display: 'flex', flexDirection: 'column', flex: 1 }}>
                       <span style={{ fontSize: '0.7rem', color: '#6b7280', textTransform: 'uppercase', fontWeight: 700, marginBottom: '2px' }}>
                         {rel.brandLabel}
                       </span>
                       <Link href={`/produtos/${rel.id}`}>
-                        <h4 style={{ fontSize: '0.88rem', fontWeight: 700, color: '#111827', lineHeight: 1.35, marginBottom: '8px' }}>
+                        <h4 style={{ fontSize: '0.86rem', fontWeight: 700, color: '#111827', lineHeight: 1.35, marginBottom: '8px' }}>
                           {rel.name}
                         </h4>
                       </Link>
@@ -595,7 +596,7 @@ export default function ProductDetailPage() {
                         <Link
                           href={`/produtos/${rel.id}`}
                           className="btn-secondary"
-                          style={{ flex: 1, padding: '7px 8px', fontSize: '0.78rem' }}
+                          style={{ flex: 1, padding: '7px 8px', fontSize: '0.76rem' }}
                         >
                           Ver Detalhes
                         </Link>
@@ -604,10 +605,10 @@ export default function ProductDetailPage() {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="btn-whatsapp"
-                          style={{ padding: '7px 10px', fontSize: '0.78rem' }}
+                          style={{ padding: '7px 10px', fontSize: '0.76rem' }}
                           title="WhatsApp"
                         >
-                          <MessageSquare size={14} />
+                          <MessageSquare size={13} />
                         </a>
                       </div>
                     </div>
@@ -623,134 +624,6 @@ export default function ProductDetailPage() {
       <Footer />
       <QuoteDrawer />
       <WhatsAppButton />
-
-      <style jsx>{`
-        .product-layout-grid {
-          display: grid;
-          grid-template-columns: 1fr;
-          gap: 28px;
-          align-items: start;
-        }
-
-        .main-image-wrapper {
-          position: relative;
-          width: 100%;
-          height: 380px;
-          border-radius: 2px;
-          overflow: hidden;
-          background: #ffffff;
-          border: 1px solid #e5e7eb;
-        }
-
-        .thumbnails-row {
-          display: flex;
-          gap: 8px;
-          margin-top: 10px;
-          overflow-x: auto;
-          padding-bottom: 4px;
-        }
-
-        .thumbnail-btn {
-          position: relative;
-          width: 72px;
-          height: 72px;
-          border-radius: 2px;
-          overflow: hidden;
-          background: #ffffff;
-          border: 1px solid #e5e7eb;
-          flex-shrink: 0;
-          cursor: pointer;
-          transition: border-color 0.15s ease;
-        }
-
-        .thumbnail-btn.active {
-          border-color: #e5242a;
-          border-width: 2px;
-        }
-
-        .details-tabs-header {
-          display: flex;
-          gap: 4px;
-          border-bottom: 1px solid #e5e7eb;
-          overflow-x: auto;
-          scrollbar-width: none;
-        }
-
-        .details-tabs-header::-webkit-scrollbar {
-          display: none;
-        }
-
-        .tab-btn {
-          padding: 10px 16px;
-          color: '#4b5563';
-          font-weight: 600;
-          font-size: 0.85rem;
-          white-space: nowrap;
-          border-bottom: 2px solid transparent;
-          transition: all 0.15s ease;
-        }
-
-        .tab-btn:hover {
-          color: #111827;
-        }
-
-        .tab-btn.active {
-          color: #e5242a;
-          border-bottom-color: #e5242a;
-          font-weight: 700;
-        }
-
-        .tab-content-card {
-          padding: 22px;
-          background: #ffffff;
-          border: 1px solid #e5e7eb;
-          border-top: none;
-          border-radius: 0 0 2px 2px;
-        }
-
-        .related-grid {
-          display: grid;
-          grid-template-columns: 1fr;
-          gap: 16px;
-        }
-
-        .related-card {
-          background: #ffffff;
-          border: 1px solid #e5e7eb;
-          border-radius: 2px;
-          overflow: hidden;
-          display: flex;
-          flex-direction: column;
-        }
-
-        .btn-product-whatsapp:hover {
-          background: #20bd5a !important;
-        }
-
-        .btn-product-ml:hover {
-          background: #fadb00 !important;
-        }
-
-        @media (min-width: 600px) {
-          .related-grid {
-            grid-template-columns: repeat(3, 1fr);
-          }
-        }
-
-        @media (min-width: 860px) {
-          .product-layout-grid {
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-          }
-          .main-image-wrapper {
-            height: 460px;
-          }
-          .thumbnail-btn {
-            width: 84px;
-            height: 84px;
-          }
-        }
-      `}</style>
     </>
   );
 }

@@ -348,27 +348,6 @@ export default function QuoteDrawer() {
           </div>
         )}
       </div>
-
-      <style jsx>{`
-        .drawer-panel {
-          position: relative;
-          width: 100%;
-          max-width: 100vw;
-          height: 100%;
-          background: #ffffff;
-          border-left: 1px solid #e5e7eb;
-          display: flex;
-          flex-direction: column;
-          box-shadow: -4px 0 16px rgba(0, 0, 0, 0.1);
-          z-index: 10;
-        }
-
-        @media (min-width: 500px) {
-          .drawer-panel {
-            max-width: 420px;
-          }
-        }
-      `}</style>
     </div>
   );
 }

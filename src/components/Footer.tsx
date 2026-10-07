@@ -142,28 +142,6 @@ export default function Footer() {
           </button>
         </div>
       </div>
-
-      <style jsx>{`
-        .footer-grid {
-          display: grid;
-          grid-template-columns: 1fr;
-          gap: 24px;
-          margin-bottom: 28px;
-        }
-        .footer-link {
-          color: #9ca3af;
-          transition: color 0.15s ease;
-        }
-        .footer-link:hover {
-          color: #ffffff !important;
-        }
-        @media (min-width: 768px) {
-          .footer-grid {
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 36px;
-          }
-        }
-      `}</style>
     </footer>
   );
 }

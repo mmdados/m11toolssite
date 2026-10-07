@@ -2,8 +2,6 @@
 
 import React, { useState, useRef } from 'react';
 import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
-import BrandCards from '@/components/BrandCards';
 import Catalog from '@/components/Catalog';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
@@ -14,10 +12,6 @@ import { Brand } from '@/types';
 export default function Home() {
   const [selectedBrand, setSelectedBrand] = useState<Brand | 'all'>('all');
   const searchInputRef = useRef<HTMLInputElement>(null);
-
-  const handleSelectBrand = (brand: Brand | 'all') => {
-    setSelectedBrand(brand);
-  };
 
   const handleSearchFocus = () => {
     if (searchInputRef.current) {
@@ -30,9 +24,7 @@ export default function Home() {
     <>
       <Navbar onSearchFocus={handleSearchFocus} />
       
-      <main>
-        <Hero />
-        <BrandCards onSelectBrand={handleSelectBrand} />
+      <main style={{ minHeight: '80vh', background: '#ffffff' }}>
         <Catalog 
           selectedBrand={selectedBrand} 
           onBrandChange={setSelectedBrand} 
