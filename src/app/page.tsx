@@ -5,7 +5,6 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import BrandCards from '@/components/BrandCards';
 import Catalog from '@/components/Catalog';
-import Advantages from '@/components/Advantages';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 import QuoteDrawer from '@/components/QuoteDrawer';
@@ -39,7 +38,6 @@ export default function Home() {
           onBrandChange={setSelectedBrand} 
           searchInputRef={searchInputRef}
         />
-        <Advantages />
         <ContactSection />
       </main>
 

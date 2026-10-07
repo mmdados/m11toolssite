@@ -13,75 +13,75 @@ export const BRANDS_INFO = [
   {
     id: 'gedore-red' as Brand,
     name: 'Gedore Red',
-    subtitle: 'Linha Vermelha Automotiva & Oficinas',
-    description: 'Desenvolvida para mecânicos exigentes e centros automotivos que buscam a precisão e robustez Gedore com custo-benefício imbatível.',
+    subtitle: 'Linha Automotiva & Oficinas Mecânicas',
+    description: 'Jogos de soquetes, catracas de 72 dentes e ferramentas manuais forjadas em aço cromo-vanádio.',
     image: '/images/gedore-red.jpg',
     color: '#e5242a',
-    badge: 'Alta Performance & Acessibilidade',
+    badge: 'Uso Profissional',
     icon: Wrench,
-    items: ['Jogos de soquetes 1/4" a 1/2"', 'Chaves combinadas com catraca', 'Alicates isolados e universais', 'Carrinhos de ferramentas']
+    items: ['Jogos de soquetes 172 peças', 'Chaves combinadas com catraca', 'Alicates isolados e de corte', 'Maletas reforçadas']
   },
   {
     id: 'gedore-blue' as Brand,
-    name: 'Gedore Industrial (Blue)',
+    name: 'Gedore Industrial',
     subtitle: 'Engenharia Alemã para Indústria Pesada',
-    description: 'O padrão ouro global em aperto crítico, calibração e montagens industriais. Aço Gedore-Vanadium forjado para suportar as condições mais severas.',
-    image: '/images/hero-tools.jpg',
+    description: 'Padrão ouro em torquímetros de alta precisão (Dremometer), chaves industriais e aperto crítico.',
+    image: '/images/gedore-torque-detail.jpg',
     color: '#005baa',
-    badge: 'Máxima Precisão & Dureza',
+    badge: 'Alta Precisão',
     icon: Shield,
-    items: ['Torquímetros Dremometer e de Estalo', 'Chaves ajustáveis e de bater', 'Multiplicadores de torque', 'Ferramental sob normas DIN/ISO']
+    items: ['Torquímetros Dremometer e de Estalo', 'Chaves ajustáveis industriais', 'Alicates de pressão reforçados', 'Chaves L hexagonais abauladas']
   },
   {
     id: 'tekbond' as Brand,
     name: 'Tekbond Químicos',
     subtitle: 'Adesivos, Selantes e Sprays Técnicos',
-    description: 'A mais completa linha de soluções químicas para travamento de roscas, colagens instantâneas de alta resistência, juntas de motores e lubrificação.',
+    description: 'Químicos industriais de alta performance para travamento de roscas, colagem instantânea e vedação de motores.',
     image: '/images/tekbond.jpg',
     color: '#00a651',
-    badge: 'Fixação & Vedação Profissional',
+    badge: 'Química Industrial',
     icon: Sparkles,
-    items: ['Adesivos instantâneos (793, 200, 725)', 'Trava-roscas anaeróbicos (177, 115)', 'Silicones de alta temperatura', 'Desengripantes e limpa-contatos']
+    items: ['Adesivo Instantâneo 793', 'Trava-roscas anaeróbicos 177 / 242', 'Silicones neutros e oxímicos 280g', 'Desengripantes e limpa-contatos']
   }
 ];
 
 export default function BrandCards({ onSelectBrand }: BrandCardsProps) {
   return (
-    <section style={{ padding: '48px 0', background: 'rgba(18, 24, 36, 0.5)' }}>
+    <section style={{ padding: '36px 0', background: '#f9fafb', borderBottom: '1px solid #e5e7eb' }}>
       <div className="container">
         {/* Section Heading */}
-        <div style={{ textAlign: 'center', marginBottom: '32px' }}>
+        <div style={{ textAlign: 'center', marginBottom: '28px' }}>
           <span style={{
             display: 'inline-block',
             fontSize: '0.75rem',
             fontWeight: 800,
-            color: 'var(--brand-red)',
+            color: '#e5242a',
             textTransform: 'uppercase',
             letterSpacing: '1px',
-            marginBottom: '6px'
+            marginBottom: '4px'
           }}>
-            Nossas Linhas Oficiais
+            Linhas Oficiais Comercializadas
           </span>
           <h2 style={{
-            fontSize: 'clamp(1.5rem, 5vw, 2.3rem)',
+            fontSize: 'clamp(1.4rem, 4vw, 2rem)',
             fontWeight: 800,
-            color: '#ffffff',
-            marginBottom: '10px'
+            color: '#111827',
+            marginBottom: '8px'
           }}>
-            Especialistas nas Melhores Marcas
+            Escolha por Marca ou Categoria
           </h2>
           <p style={{
-            color: 'var(--text-secondary)',
-            fontSize: '0.95rem',
+            color: '#4b5563',
+            fontSize: '0.92rem',
             maxWidth: '640px',
             margin: '0 auto',
             lineHeight: 1.5
           }}>
-            Distribuição com procedência garantida, estoque abastecido e suporte técnico para sua operação.
+            A <strong>M11 Tools</strong> distribui produtos 100% originais com garantia de procedência, nota fiscal e faturamento para empresas.
           </p>
         </div>
 
-        {/* Brand Cards Grid */}
+        {/* Brand Cards Grid - Chapado e Reto */}
         <div className="brands-grid">
           {BRANDS_INFO.map((b) => {
             const Icon = b.icon;
@@ -91,36 +91,41 @@ export default function BrandCards({ onSelectBrand }: BrandCardsProps) {
                 id={b.id}
                 className="brand-card"
               >
-                {/* Brand Visual Banner */}
-                <div style={{ position: 'relative', height: '170px', width: '100%', overflow: 'hidden' }}>
+                {/* Brand Visual Banner em Fundo Branco Puro */}
+                <div style={{
+                  position: 'relative',
+                  height: '180px',
+                  width: '100%',
+                  background: '#ffffff',
+                  borderBottom: '1px solid #e5e7eb',
+                  padding: '12px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}>
                   <Image
                     src={b.image}
                     alt={b.name}
-                    fill
-                    style={{ objectFit: 'cover' }}
+                    width={220}
+                    height={160}
+                    style={{ objectFit: 'contain', maxHeight: '100%', maxWidth: '100%' }}
                   />
-                  <div style={{
-                    position: 'absolute',
-                    inset: 0,
-                    background: `linear-gradient(to top, var(--bg-card) 5%, transparent 60%), linear-gradient(135deg, ${b.color}35 0%, transparent 60%)`
-                  }} />
 
                   {/* Badge */}
                   <div style={{
                     position: 'absolute',
-                    top: '12px',
-                    left: '12px',
-                    background: 'rgba(11, 15, 23, 0.88)',
-                    backdropFilter: 'blur(8px)',
-                    border: `1px solid ${b.color}80`,
-                    borderRadius: 'var(--radius-full)',
-                    padding: '4px 10px',
-                    fontSize: '0.72rem',
+                    top: '10px',
+                    left: '10px',
+                    background: '#ffffff',
+                    border: `1px solid ${b.color}`,
+                    borderRadius: '2px',
+                    padding: '3px 8px',
+                    fontSize: '0.7rem',
                     fontWeight: 700,
-                    color: '#ffffff',
+                    color: b.color,
                     display: 'flex',
                     alignItems: 'center',
-                    gap: '5px'
+                    gap: '4px'
                   }}>
                     <Icon size={12} color={b.color} />
                     <span>{b.badge}</span>
@@ -129,13 +134,13 @@ export default function BrandCards({ onSelectBrand }: BrandCardsProps) {
 
                 {/* Content */}
                 <div className="brand-content">
-                  <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#ffffff', marginBottom: '3px' }}>
+                  <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#111827', marginBottom: '2px' }}>
                     {b.name}
                   </h3>
-                  <div style={{ fontSize: '0.82rem', fontWeight: 600, color: b.color, marginBottom: '10px' }}>
+                  <div style={{ fontSize: '0.8rem', fontWeight: 700, color: b.color, marginBottom: '8px' }}>
                     {b.subtitle}
                   </div>
-                  <p style={{ fontSize: '0.86rem', color: 'var(--text-secondary)', lineHeight: 1.5, marginBottom: '16px' }}>
+                  <p style={{ fontSize: '0.85rem', color: '#4b5563', lineHeight: 1.45, marginBottom: '14px' }}>
                     {b.description}
                   </p>
 
@@ -144,30 +149,38 @@ export default function BrandCards({ onSelectBrand }: BrandCardsProps) {
                     listStyle: 'none',
                     display: 'flex',
                     flexDirection: 'column',
-                    gap: '7px',
-                    marginBottom: '20px',
+                    gap: '6px',
+                    marginBottom: '18px',
                     fontSize: '0.82rem',
-                    color: 'var(--text-secondary)'
+                    color: '#374151'
                   }}>
                     {b.items.map((item, i) => (
                       <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                        <span style={{ width: '5px', height: '5px', borderRadius: '50%', background: b.color, flexShrink: 0 }} />
+                        <span style={{ width: '4px', height: '4px', background: b.color, flexShrink: 0 }} />
                         <span>{item}</span>
                       </li>
                     ))}
                   </ul>
 
                   {/* Action Button */}
-                  <div style={{ marginTop: 'auto', paddingTop: '14px', borderTop: '1px solid var(--border-subtle)' }}>
-                    <a
-                      href="#catalogo"
-                      onClick={() => onSelectBrand(b.id)}
-                      className="brand-action-btn"
-                    >
-                      <span>Ver Produtos {b.name}</span>
-                      <ArrowRight size={15} />
-                    </a>
-                  </div>
+                  <a
+                    href="#catalogo"
+                    onClick={() => onSelectBrand(b.id)}
+                    className="brand-cta"
+                    style={{
+                      borderTop: '1px solid #e5e7eb',
+                      paddingTop: '12px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                      fontWeight: 700,
+                      fontSize: '0.85rem',
+                      color: b.color
+                    }}
+                  >
+                    <span>Ver Produtos {b.name}</span>
+                    <ArrowRight size={15} />
+                  </a>
                 </div>
               </div>
             );
@@ -181,43 +194,32 @@ export default function BrandCards({ onSelectBrand }: BrandCardsProps) {
           grid-template-columns: 1fr;
           gap: 20px;
         }
+
         .brand-card {
-          background: var(--bg-card);
-          border-radius: var(--radius-lg);
-          border: 1px solid var(--border-subtle);
+          background: #ffffff;
+          border: 1px solid #e5e7eb;
+          border-radius: 2px;
           overflow: hidden;
           display: flex;
           flex-direction: column;
-          box-shadow: var(--shadow-sm);
+          transition: border-color 0.2s ease, box-shadow 0.2s ease;
         }
+
+        .brand-card:hover {
+          border-color: #9ca3af;
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
         .brand-content {
           padding: 18px;
           display: flex;
           flex-direction: column;
           flex: 1;
         }
-        .brand-action-btn {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          width: 100%;
-          padding: 11px 16px;
-          background: rgba(255, 255, 255, 0.05);
-          border: 1px solid var(--border-medium);
-          border-radius: var(--radius-md);
-          color: #ffffff;
-          font-weight: 700;
-          font-size: 0.88rem;
-          transition: all 0.2s ease;
-        }
 
-        @media (min-width: 680px) {
+        @media (min-width: 768px) {
           .brands-grid {
-            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-            gap: 24px;
-          }
-          .brand-content {
-            padding: 24px;
+            grid-template-columns: repeat(3, 1fr);
           }
         }
       `}</style>

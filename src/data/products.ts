@@ -3,7 +3,7 @@ import { Product } from '@/types';
 export const BRANDS = [
   { id: 'all', label: 'Todas as Marcas' },
   { id: 'gedore-red', label: 'Gedore Red', color: '#e5242a' },
-  { id: 'gedore-blue', label: 'Gedore Industrial / Blue', color: '#005baa' },
+  { id: 'gedore-blue', label: 'Gedore Industrial', color: '#005baa' },
   { id: 'tekbond', label: 'Tekbond Químicos', color: '#00a651' },
 ] as const;
 
@@ -54,8 +54,7 @@ export const PRODUCTS: Product[] = [
     image: '/images/gedore-red.jpg',
     images: [
       '/images/gedore-red.jpg',
-      '/images/gedore-red-detail.jpg',
-      '/images/hero-tools.jpg'
+      '/images/gedore-red-detail.jpg'
     ],
     featured: true,
     application: 'Automotivo, Linha Pesada, Centros de Usinagem e Manutenção Industrial'
@@ -84,9 +83,9 @@ export const PRODUCTS: Product[] = [
       'Nunca bata com martelo na haste da chave combinada.',
       'Para soltar porcas muito travadas, utilize o lado estrela para maior área de contato.'
     ],
-    image: '/images/hero-tools.jpg',
+    image: '/images/gedore-chaves.jpg',
     images: [
-      '/images/hero-tools.jpg',
+      '/images/gedore-chaves.jpg',
       '/images/gedore-red-detail.jpg',
       '/images/gedore-red.jpg'
     ],
@@ -123,7 +122,6 @@ export const PRODUCTS: Product[] = [
     image: '/images/gedore-torque-detail.jpg',
     images: [
       '/images/gedore-torque-detail.jpg',
-      '/images/hero-tools.jpg',
       '/images/gedore-red.jpg'
     ],
     featured: true,
@@ -153,11 +151,10 @@ export const PRODUCTS: Product[] = [
       'Inspecione periodicamente o cabo isolado antes de realizar trabalhos sob tensão elétrica.',
       'Não utilize ferramentas isoladas que apresentem cortes ou danos na camada plástica.'
     ],
-    image: '/images/gedore-red.jpg',
+    image: '/images/gedore-red-detail.jpg',
     images: [
-      '/images/gedore-red.jpg',
       '/images/gedore-red-detail.jpg',
-      '/images/hero-tools.jpg'
+      '/images/gedore-red.jpg'
     ],
     featured: false,
     application: 'Instalações Elétricas, Quadros de Comando, Manutenção Predial e Industrial'
@@ -191,7 +188,6 @@ export const PRODUCTS: Product[] = [
     image: '/images/gedore-red.jpg',
     images: [
       '/images/gedore-red.jpg',
-      '/images/hero-tools.jpg',
       '/images/gedore-red-detail.jpg'
     ],
     featured: true,
@@ -203,7 +199,7 @@ export const PRODUCTS: Product[] = [
     id: 'gb-torquimetro-dremometer-a',
     name: 'Torquímetro Dremometer A 1/2" (20 a 120 N.m) Gedore',
     brand: 'gedore-blue',
-    brandLabel: 'Gedore Blue / Industrial',
+    brandLabel: 'Gedore Industrial',
     category: 'torquimetros',
     categoryLabel: 'Torquímetros & Aperto',
     code: '047.010',
@@ -211,7 +207,7 @@ export const PRODUCTS: Product[] = [
     detailedDescription: 'O torquímetro Dremometer da GEDORE é uma obra-prima da engenharia alemã. O corpo em liga leve forjada garante extrema resistência contra quedas e esforços laterais. Seu sistema mecânico patenteado opera por alavanca com desarme suave que não causa impacto nos pulsos do operador.',
     properties: [
       'Precisão de ±3% calibrado e rastreável pelo Inmetro/RBC',
-      'Construção em alumínio aeronáutico monobloco com pintura azul Gedore',
+      'Construção em alumínio aeronáutico monobloco com acabamento Gedore Industrial',
       'Princípio de alavanca com desarme livre: o ponto de aplicação da força não interfere no valor do torque',
       'Encaixe quadrado de 1/2" intercambiável'
     ],
@@ -229,7 +225,6 @@ export const PRODUCTS: Product[] = [
     image: '/images/gedore-torque-detail.jpg',
     images: [
       '/images/gedore-torque-detail.jpg',
-      '/images/hero-tools.jpg',
       '/images/gedore-red.jpg'
     ],
     featured: true,
@@ -239,7 +234,7 @@ export const PRODUCTS: Product[] = [
     id: 'gb-chave-ajustavel-sueca-12',
     name: 'Chave Ajustável Sueca 12" Gedore Industrial',
     brand: 'gedore-blue',
-    brandLabel: 'Gedore Blue / Industrial',
+    brandLabel: 'Gedore Industrial',
     category: 'soquetes-chaves',
     categoryLabel: 'Chaves & Soquetes',
     code: '028.004',
@@ -258,11 +253,10 @@ export const PRODUCTS: Product[] = [
     instructions: [
       'Aplique a força sempre na direção do mordente móvel para evitar fadiga mecânica prematura.'
     ],
-    image: '/images/hero-tools.jpg',
+    image: '/images/gedore-chaves.jpg',
     images: [
-      '/images/hero-tools.jpg',
-      '/images/gedore-torque-detail.jpg',
-      '/images/gedore-red.jpg'
+      '/images/gedore-chaves.jpg',
+      '/images/gedore-torque-detail.jpg'
     ],
     featured: false,
     application: 'Usinagem, Tubulações Industriais, Caldeiraria e Manutenção Geral'
@@ -271,7 +265,7 @@ export const PRODUCTS: Product[] = [
     id: 'gb-alicate-pressao-10',
     name: 'Alicate de Pressão Mordente Curvo 10" Gedore',
     brand: 'gedore-blue',
-    brandLabel: 'Gedore Blue / Industrial',
+    brandLabel: 'Gedore Industrial',
     category: 'alicates',
     categoryLabel: 'Alicates & Corte',
     code: '029.010',
@@ -290,11 +284,10 @@ export const PRODUCTS: Product[] = [
     instructions: [
       'Ajuste o parafuso traseiro antes de travar a alavanca para obter a pressão exata sem sobrecarregar a estrutura.'
     ],
-    image: '/images/hero-tools.jpg',
+    image: '/images/gedore-red-detail.jpg',
     images: [
-      '/images/hero-tools.jpg',
-      '/images/gedore-red.jpg',
-      '/images/gedore-red-detail.jpg'
+      '/images/gedore-red-detail.jpg',
+      '/images/gedore-torque-detail.jpg'
     ],
     featured: true,
     application: 'Serralheria, Soldagem, Funilaria e Travamento Mecânico'
@@ -303,7 +296,7 @@ export const PRODUCTS: Product[] = [
     id: 'gb-jogo-chaves-allen-l-10',
     name: 'Jogo de Chaves L Hexagonais Abauladas 1,5 a 10mm - 9 Peças',
     brand: 'gedore-blue',
-    brandLabel: 'Gedore Blue / Industrial',
+    brandLabel: 'Gedore Industrial',
     category: 'soquetes-chaves',
     categoryLabel: 'Chaves & Soquetes',
     code: '012.153',
@@ -322,11 +315,10 @@ export const PRODUCTS: Product[] = [
     instructions: [
       'Utilize o lado curto da chave para aplicar o torque de aperto final e o lado longo esférico para aproximação rápida.'
     ],
-    image: '/images/hero-tools.jpg',
+    image: '/images/gedore-chaves.jpg',
     images: [
-      '/images/hero-tools.jpg',
-      '/images/gedore-torque-detail.jpg',
-      '/images/gedore-red.jpg'
+      '/images/gedore-chaves.jpg',
+      '/images/gedore-red-detail.jpg'
     ],
     featured: false,
     application: 'Manutenção de Máquinas CNC, Robótica, Moldes e Ferramentaria'
@@ -362,18 +354,17 @@ export const PRODUCTS: Product[] = [
       'Mantenha as peças pressionadas sob contato firme por 15 a 30 segundos.',
       'Após o uso, limpe o bico e tampe o frasco, armazenando em local fresco e seco.'
     ],
-    image: '/images/tekbond-793-detail.jpg',
+    image: '/images/tekbond.jpg',
     images: [
-      '/images/tekbond-793-detail.jpg',
       '/images/tekbond.jpg',
-      '/images/hero-tools.jpg'
+      '/images/tekbond-793-detail.jpg'
     ],
     featured: true,
     application: 'Linhas de Montagem, Indústria Moveleira, Reparos Rápidos e Manutenção'
   },
   {
     id: 'tb-trava-roscas-alto-torque-177',
-    name: 'Trava Roscas Alto Torque Tekbond 177 (Vermelho) - 50g',
+    name: 'Trava Roscas Alto Torque Tekbond 177 / 242 - 50g',
     brand: 'tekbond',
     brandLabel: 'Tekbond Químicos',
     category: 'adesivos-quimicos',
@@ -395,20 +386,19 @@ export const PRODUCTS: Product[] = [
     instructions: [
       'Aplique gotas suficientes cobrindo toda a extensão do filete de rosca do parafuso.',
       'Monte e aperte com o torque especificado pelo fabricante do equipamento.',
-      'Para desmontagem futura, aplique calor localizado (cerca de 250°C) com soprador térmico.'
+      'Para desmontagem futura, aplique calor localizado com soprador térmico.'
     ],
-    image: '/images/tekbond.jpg',
+    image: '/images/tekbond-trava-roscas.jpg',
     images: [
-      '/images/tekbond.jpg',
-      '/images/tekbond-793-detail.jpg',
-      '/images/hero-tools.jpg'
+      '/images/tekbond-trava-roscas.jpg',
+      '/images/tekbond.jpg'
     ],
     featured: true,
     application: 'Blocos de Motor, Suspensões Pesadas, Caixas de Câmbio e Prensas Industriais'
   },
   {
     id: 'tb-silicone-neutro-alta-temperatura',
-    name: 'Silicone Neutro Formador de Juntas Alta Temp Cinza / Preto - 280g',
+    name: 'Silicone Neutro Formador de Juntas 280g - Tekbond',
     brand: 'tekbond',
     brandLabel: 'Tekbond Químicos',
     category: 'selantes-silicones',
@@ -432,11 +422,10 @@ export const PRODUCTS: Product[] = [
       'Aplique um cordão contínuo e uniforme de 2 a 3 mm ao redor dos furos dos parafusos.',
       'Una as superfícies antes da formação de película e aperte os parafusos manualmente.'
     ],
-    image: '/images/tekbond.jpg',
+    image: '/images/tekbond-silicone.jpg',
     images: [
-      '/images/tekbond.jpg',
-      '/images/tekbond-793-detail.jpg',
-      '/images/hero-tools.jpg'
+      '/images/tekbond-silicone.jpg',
+      '/images/tekbond.jpg'
     ],
     featured: true,
     application: 'Cárteres, Tampas de Válvulas, Termostatos, Caixas de Marcha e Flanges'
@@ -469,8 +458,7 @@ export const PRODUCTS: Product[] = [
     image: '/images/tekbond.jpg',
     images: [
       '/images/tekbond.jpg',
-      '/images/tekbond-793-detail.jpg',
-      '/images/hero-tools.jpg'
+      '/images/tekbond-793-detail.jpg'
     ],
     featured: false,
     application: 'Oficinas, Máquinas Agrícolas, Barcos, Indústrias Metalúrgicas e Manutenção'
@@ -502,8 +490,7 @@ export const PRODUCTS: Product[] = [
     image: '/images/tekbond.jpg',
     images: [
       '/images/tekbond.jpg',
-      '/images/tekbond-793-detail.jpg',
-      '/images/hero-tools.jpg'
+      '/images/tekbond-793-detail.jpg'
     ],
     featured: false,
     application: 'Painéis Elétricos, Alternadores, Centrais Eletrônicas, Relés e Chicotes'
@@ -532,11 +519,10 @@ export const PRODUCTS: Product[] = [
       'Aplique em superfícies secas e isentas de pó.',
       'Faça o acabamento com espátula úmida em água e sabão neutro logo após a aplicação.'
     ],
-    image: '/images/tekbond.jpg',
+    image: '/images/tekbond-silicone.jpg',
     images: [
-      '/images/tekbond.jpg',
-      '/images/tekbond-793-detail.jpg',
-      '/images/hero-tools.jpg'
+      '/images/tekbond-silicone.jpg',
+      '/images/tekbond.jpg'
     ],
     featured: false,
     application: 'Boxes de Banheiro, Esquadrias de Alumínio, Pias, Vitrines e Vedação Geral'

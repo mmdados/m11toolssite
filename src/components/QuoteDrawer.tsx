@@ -12,8 +12,7 @@ import {
   MessageSquare, 
   Copy, 
   Check, 
-  ShoppingBag, 
-  ArrowRight 
+  ShoppingBag
 } from 'lucide-react';
 
 export default function QuoteDrawer() {
@@ -67,8 +66,7 @@ export default function QuoteDrawer() {
         style={{
           position: 'absolute',
           inset: 0,
-          background: 'rgba(0, 0, 0, 0.75)',
-          backdropFilter: 'blur(4px)',
+          background: 'rgba(0, 0, 0, 0.5)',
         }}
       />
 
@@ -76,28 +74,28 @@ export default function QuoteDrawer() {
       <div className="drawer-panel">
         {/* Drawer Header */}
         <div style={{
-          padding: '16px 18px',
-          borderBottom: '1px solid var(--border-subtle)',
+          padding: '16px 20px',
+          borderBottom: '1px solid #e5e7eb',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          background: 'var(--bg-card)'
+          background: '#ffffff'
         }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             <div style={{
-              background: 'rgba(229, 36, 42, 0.15)',
-              color: 'var(--brand-red)',
+              background: '#fee2e2',
+              color: '#b91c1c',
               padding: '6px',
-              borderRadius: 'var(--radius-md)'
+              borderRadius: '2px'
             }}>
               <ShoppingBag size={18} />
             </div>
             <div>
-              <h3 style={{ fontSize: '1rem', fontWeight: 800, color: '#ffffff' }}>
-                Lista de Cotação
+              <h3 style={{ fontSize: '1rem', fontWeight: 800, color: '#111827' }}>
+                Lista de Cotação PJ
               </h3>
-              <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
-                {totalItems} item(ns)
+              <span style={{ fontSize: '0.75rem', color: '#6b7280' }}>
+                {totalItems} item(ns) selecionado(s)
               </span>
             </div>
           </div>
@@ -105,9 +103,9 @@ export default function QuoteDrawer() {
           <button
             onClick={() => setIsDrawerOpen(false)}
             style={{
-              color: 'var(--text-muted)',
+              color: '#6b7280',
               padding: '6px',
-              borderRadius: 'var(--radius-sm)',
+              borderRadius: '2px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center'
@@ -118,181 +116,161 @@ export default function QuoteDrawer() {
           </button>
         </div>
 
-        {/* Drawer Body */}
+        {/* Items List */}
         <div style={{
           flex: 1,
           overflowY: 'auto',
           padding: '16px',
           display: 'flex',
           flexDirection: 'column',
-          gap: '14px'
+          gap: '12px',
+          background: '#f9fafb'
         }}>
           {items.length === 0 ? (
             <div style={{
               textAlign: 'center',
-              padding: '40px 10px',
-              color: 'var(--text-secondary)'
+              padding: '60px 20px',
+              color: '#6b7280',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              gap: '12px'
             }}>
-              <div style={{
-                width: '56px',
-                height: '56px',
-                borderRadius: '50%',
-                background: 'rgba(255,255,255,0.04)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                margin: '0 auto 14px',
-                color: 'var(--text-muted)'
-              }}>
-                <ShoppingBag size={26} />
-              </div>
-              <h4 style={{ fontSize: '1rem', color: '#ffffff', marginBottom: '6px' }}>
-                Sua lista está vazia
-              </h4>
-              <p style={{ fontSize: '0.82rem', marginBottom: '20px' }}>
-                Navegue pelo catálogo e adicione as ferramentas que precisa.
+              <ShoppingBag size={44} color="#9ca3af" />
+              <p style={{ fontSize: '0.9rem', color: '#374151', fontWeight: 600 }}>
+                Sua lista de cotação está vazia.
+              </p>
+              <p style={{ fontSize: '0.8rem', color: '#6b7280' }}>
+                Navegue pelo catálogo e clique em "+ Cotação PJ" nos produtos desejados.
               </p>
               <button
                 onClick={() => setIsDrawerOpen(false)}
-                className="btn-secondary"
-                style={{ width: '100%', padding: '11px' }}
+                className="btn-primary"
+                style={{ padding: '8px 16px', fontSize: '0.82rem', marginTop: '8px' }}
               >
-                <span>Ver Produtos</span>
-                <ArrowRight size={15} />
+                Ver Catálogo
               </button>
             </div>
           ) : (
             <>
-              {/* Product List */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                {items.map(({ product, quantity }) => (
-                  <div
-                    key={product.id}
-                    style={{
-                      background: 'var(--bg-card)',
-                      borderRadius: 'var(--radius-md)',
-                      border: '1px solid var(--border-subtle)',
-                      padding: '10px',
-                      display: 'flex',
-                      gap: '10px',
-                      alignItems: 'center'
-                    }}
-                  >
-                    {/* Thumbnail */}
+              {items.map((item) => (
+                <div
+                  key={item.product.id}
+                  style={{
+                    background: '#ffffff',
+                    borderRadius: '2px',
+                    border: '1px solid #e5e7eb',
+                    padding: '12px',
+                    display: 'flex',
+                    gap: '12px',
+                    alignItems: 'center'
+                  }}
+                >
+                  {/* Thumbnail em fundo branco */}
+                  <div style={{
+                    position: 'relative',
+                    width: '60px',
+                    height: '60px',
+                    borderRadius: '2px',
+                    overflow: 'hidden',
+                    background: '#ffffff',
+                    border: '1px solid #f3f4f6',
+                    flexShrink: 0
+                  }}>
+                    <Image
+                      src={item.product.image}
+                      alt={item.product.name}
+                      fill
+                      style={{ objectFit: 'contain', padding: '4px' }}
+                    />
+                  </div>
+
+                  {/* Info */}
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div style={{ fontSize: '0.68rem', color: '#b91c1c', fontWeight: 700, textTransform: 'uppercase' }}>
+                      {item.product.brandLabel}
+                    </div>
                     <div style={{
-                      position: 'relative',
-                      width: '52px',
-                      height: '52px',
-                      borderRadius: 'var(--radius-sm)',
+                      fontSize: '0.82rem',
+                      fontWeight: 700,
+                      color: '#111827',
+                      whiteSpace: 'nowrap',
                       overflow: 'hidden',
-                      flexShrink: 0,
-                      background: '#070a0f'
+                      textOverflow: 'ellipsis',
+                      marginBottom: '2px'
                     }}>
-                      <Image
-                        src={product.image}
-                        alt={product.name}
-                        fill
-                        style={{ objectFit: 'cover' }}
-                      />
+                      {item.product.name}
+                    </div>
+                    <div style={{ fontSize: '0.72rem', color: '#6b7280' }}>
+                      Cód: {item.product.code}
                     </div>
 
-                    {/* Info */}
-                    <div style={{ flex: 1, minWidth: 0 }}>
-                      <div style={{ fontSize: '0.7rem', color: 'var(--brand-red)', fontWeight: 700 }}>
-                        {product.brandLabel}
-                      </div>
-                      <div style={{
-                        fontSize: '0.82rem',
-                        fontWeight: 700,
-                        color: '#ffffff',
-                        overflow: 'hidden',
-                        textOverflow: 'ellipsis',
-                        whiteSpace: 'nowrap'
-                      }}>
-                        {product.name}
-                      </div>
-                      <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>
-                        Cód: {product.code}
-                      </div>
-
-                      {/* Quantity Controls */}
+                    {/* Quantity Selector */}
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginTop: '8px' }}>
                       <div style={{
                         display: 'flex',
                         alignItems: 'center',
-                        gap: '8px',
-                        marginTop: '6px'
+                        background: '#f3f4f6',
+                        borderRadius: '2px',
+                        border: '1px solid #e5e7eb'
                       }}>
-                        <div style={{
-                          display: 'inline-flex',
-                          alignItems: 'center',
-                          background: 'rgba(255,255,255,0.06)',
-                          borderRadius: 'var(--radius-sm)',
-                          border: '1px solid var(--border-subtle)'
-                        }}>
-                          <button
-                            onClick={() => updateQuantity(product.id, quantity - 1)}
-                            style={{ padding: '4px 8px', color: '#ffffff' }}
-                            title="Diminuir"
-                          >
-                            <Minus size={12} />
-                          </button>
-                          <span style={{ fontSize: '0.82rem', fontWeight: 700, minWidth: '22px', textAlign: 'center' }}>
-                            {quantity}
-                          </span>
-                          <button
-                            onClick={() => updateQuantity(product.id, quantity + 1)}
-                            style={{ padding: '4px 8px', color: '#ffffff' }}
-                            title="Aumentar"
-                          >
-                            <Plus size={12} />
-                          </button>
-                        </div>
-
                         <button
-                          onClick={() => removeFromQuote(product.id)}
-                          style={{
-                            color: 'var(--text-muted)',
-                            padding: '4px',
-                            display: 'flex',
-                            alignItems: 'center',
-                            marginLeft: 'auto'
-                          }}
-                          title="Remover item"
+                          onClick={() => updateQuantity(item.product.id, item.quantity - 1)}
+                          style={{ padding: '4px 8px', color: '#4b5563' }}
+                          aria-label="Diminuir"
                         >
-                          <Trash2 size={14} />
+                          <Minus size={12} />
+                        </button>
+                        <span style={{ fontSize: '0.8rem', fontWeight: 700, padding: '0 6px', color: '#111827' }}>
+                          {item.quantity}
+                        </span>
+                        <button
+                          onClick={() => updateQuantity(item.product.id, item.quantity + 1)}
+                          style={{ padding: '4px 8px', color: '#4b5563' }}
+                          aria-label="Aumentar"
+                        >
+                          <Plus size={12} />
                         </button>
                       </div>
+
+                      <button
+                        onClick={() => removeFromQuote(item.product.id)}
+                        style={{ color: '#ef4444', padding: '4px' }}
+                        title="Remover item"
+                      >
+                        <Trash2 size={14} />
+                      </button>
                     </div>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
 
-              {/* Optional Buyer Info */}
+              {/* Form de identificação */}
               <div style={{
-                background: 'rgba(255, 255, 255, 0.02)',
-                border: '1px solid var(--border-subtle)',
-                borderRadius: 'var(--radius-md)',
-                padding: '12px',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '8px'
+                background: '#ffffff',
+                border: '1px solid #e5e7eb',
+                borderRadius: '2px',
+                padding: '14px',
+                marginTop: '8px'
               }}>
-                <div style={{ fontSize: '0.78rem', fontWeight: 700, color: 'var(--text-secondary)' }}>
-                  Dados para Cotação (Opcional):
+                <div style={{ fontSize: '0.78rem', fontWeight: 700, color: '#111827', marginBottom: '8px' }}>
+                  Identificação para Faturamento (Opcional)
                 </div>
                 <input
                   type="text"
-                  placeholder="Seu Nome / Comprador"
+                  placeholder="Seu nome"
                   value={customerName}
                   onChange={(e) => setCustomerName(e.target.value)}
                   style={{
                     width: '100%',
-                    background: 'var(--bg-main)',
-                    border: '1px solid var(--border-subtle)',
-                    borderRadius: 'var(--radius-sm)',
+                    background: '#ffffff',
+                    border: '1px solid #d1d5db',
+                    borderRadius: '2px',
                     padding: '8px 10px',
-                    color: '#ffffff',
-                    fontSize: '0.82rem'
+                    color: '#111827',
+                    fontSize: '0.82rem',
+                    marginBottom: '8px',
+                    outline: 'none'
                   }}
                 />
                 <input
@@ -302,12 +280,13 @@ export default function QuoteDrawer() {
                   onChange={(e) => setCustomerCompany(e.target.value)}
                   style={{
                     width: '100%',
-                    background: 'var(--bg-main)',
-                    border: '1px solid var(--border-subtle)',
-                    borderRadius: 'var(--radius-sm)',
+                    background: '#ffffff',
+                    border: '1px solid #d1d5db',
+                    borderRadius: '2px',
                     padding: '8px 10px',
-                    color: '#ffffff',
-                    fontSize: '0.82rem'
+                    color: '#111827',
+                    fontSize: '0.82rem',
+                    outline: 'none'
                   }}
                 />
               </div>
@@ -319,8 +298,8 @@ export default function QuoteDrawer() {
         {items.length > 0 && (
           <div style={{
             padding: '16px',
-            borderTop: '1px solid var(--border-subtle)',
-            background: 'var(--bg-card)',
+            borderTop: '1px solid #e5e7eb',
+            background: '#ffffff',
             display: 'flex',
             flexDirection: 'column',
             gap: '8px'
@@ -342,27 +321,28 @@ export default function QuoteDrawer() {
               <button
                 onClick={handleCopy}
                 className="btn-secondary"
-                style={{ flex: 1, padding: '9px', fontSize: '0.8rem' }}
+                style={{ flex: 1, padding: '8px', fontSize: '0.8rem' }}
               >
-                {copied ? <Check size={14} color="#00a651" /> : <Copy size={14} />}
+                {copied ? <Check size={14} color="#16a34a" /> : <Copy size={14} />}
                 <span>{copied ? 'Copiado!' : 'Copiar Lista'}</span>
               </button>
 
               <button
                 onClick={clearQuote}
                 style={{
-                  padding: '9px 12px',
-                  color: 'var(--text-muted)',
+                  padding: '8px 12px',
+                  color: '#6b7280',
                   fontSize: '0.8rem',
-                  border: '1px solid var(--border-subtle)',
-                  borderRadius: 'var(--radius-md)'
+                  border: '1px solid #e5e7eb',
+                  borderRadius: '2px',
+                  background: '#f9fafb'
                 }}
               >
                 Limpar
               </button>
             </div>
 
-            <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)', textAlign: 'center' }}>
+            <div style={{ fontSize: '0.72rem', color: '#6b7280', textAlign: 'center' }}>
               {SITE_CONFIG.phoneDisplay} • {SITE_CONFIG.companyName}
             </div>
           </div>
@@ -375,17 +355,17 @@ export default function QuoteDrawer() {
           width: 100%;
           max-width: 100vw;
           height: 100%;
-          background: var(--bg-surface);
-          border-left: 1px solid var(--border-medium);
+          background: #ffffff;
+          border-left: 1px solid #e5e7eb;
           display: flex;
           flex-direction: column;
-          box-shadow: var(--shadow-lg);
+          box-shadow: -4px 0 16px rgba(0, 0, 0, 0.1);
           z-index: 10;
         }
 
         @media (min-width: 500px) {
           .drawer-panel {
-            max-width: 440px;
+            max-width: 420px;
           }
         }
       `}</style>

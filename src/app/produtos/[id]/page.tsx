@@ -3,7 +3,7 @@
 import React, { useState, useMemo } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useParams, notFound } from 'next/navigation';
+import { useParams } from 'next/navigation';
 import { PRODUCTS } from '@/data/products';
 import { useQuote } from '@/context/QuoteContext';
 import { SITE_CONFIG, buildWhatsAppUrl, buildMercadoLivreUrl } from '@/config/site';
@@ -23,28 +23,40 @@ import {
   FileText, 
   Layers, 
   ChevronRight,
-  ExternalLink,
-  Sparkles
+  ExternalLink
 } from 'lucide-react';
 
 export default function ProductDetailPage() {
   const params = useParams();
   const productId = params?.id as string;
-  const { addToQuote, generateDirectProductWhatsAppLink } = useQuote();
+  const { addToQuote } = useQuote();
 
   const product = useMemo(() => {
     return PRODUCTS.find((p) => p.id === productId);
   }, [productId]);
 
+  // Gallery state (FuelTech style)
+  const productImages = product?.images && product.images.length > 0 ? product.images : (product ? [product.image] : []);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [copiedCode, setCopiedCode] = useState(false);
+  const [activeTab, setActiveTab] = useState<'descricao' | 'especificacoes' | 'aplicacoes' | 'instrucoes'>('descricao');
+  const [addedAnimation, setAddedAnimation] = useState(false);
+
+  // Related products
+  const relatedProducts = useMemo(() => {
+    if (!product) return [];
+    return PRODUCTS.filter((p) => p.id !== product.id && (p.brand === product.brand || p.category === product.category)).slice(0, 3);
+  }, [product]);
+
   if (!product) {
     return (
       <>
         <Navbar />
-        <div className="container" style={{ padding: '80px 20px', textAlign: 'center', minHeight: '60vh' }}>
-          <h1 style={{ fontSize: '1.8rem', color: '#ffffff', marginBottom: '16px' }}>
+        <div className="container" style={{ padding: '80px 20px', textAlign: 'center', minHeight: '60vh', background: '#ffffff' }}>
+          <h1 style={{ fontSize: '1.8rem', color: '#111827', marginBottom: '16px' }}>
             Produto não encontrado
           </h1>
-          <p style={{ color: 'var(--text-secondary)', marginBottom: '24px' }}>
+          <p style={{ color: '#4b5563', marginBottom: '24px' }}>
             O produto solicitado não foi localizado em nosso catálogo.
           </p>
           <Link href="/#catalogo" className="btn-primary">
@@ -58,18 +70,6 @@ export default function ProductDetailPage() {
       </>
     );
   }
-
-  // Gallery state (FuelTech style)
-  const productImages = product.images && product.images.length > 0 ? product.images : [product.image];
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [copiedCode, setCopiedCode] = useState(false);
-  const [activeTab, setActiveTab] = useState<'descricao' | 'especificacoes' | 'aplicacoes' | 'instrucoes'>('descricao');
-  const [addedAnimation, setAddedAnimation] = useState(false);
-
-  // Related products
-  const relatedProducts = useMemo(() => {
-    return PRODUCTS.filter((p) => p.id !== product.id && (p.brand === product.brand || p.category === product.category)).slice(0, 3);
-  }, [product]);
 
   const handleCopyCode = () => {
     navigator.clipboard.writeText(product.code);
@@ -87,61 +87,75 @@ export default function ProductDetailPage() {
     `*INTERESSE EM PRODUTO - M11 TOOLS*\nOlá! Gostaria de comprar / cotar o seguinte item:\n\n*Item:* ${product.name}\n*Marca:* ${product.brandLabel}\n*Código:* ${product.code}\n\nPoderia me passar valores, condições de faturamento e prazo de entrega?`
   );
 
-  let brandBadgeClass = 'badge-red';
-  if (product.brand === 'gedore-blue') brandBadgeClass = 'badge-blue';
-  if (product.brand === 'tekbond') brandBadgeClass = 'badge-green';
+  let badgeColor = '#b91c1c';
+  let badgeBg = '#fee2e2';
+  if (product.brand === 'gedore-blue') {
+    badgeColor = '#0369a1';
+    badgeBg = '#e0f2fe';
+  } else if (product.brand === 'tekbond') {
+    badgeColor = '#15803d';
+    badgeBg = '#dcfce7';
+  }
 
   return (
     <>
       <Navbar />
 
-      <main style={{ paddingBottom: '70px', width: '100%', overflowX: 'hidden' }}>
-        {/* Breadcrumb Navigation */}
+      <main style={{ paddingBottom: '60px', width: '100%', overflowX: 'hidden', background: '#ffffff' }}>
+        {/* Breadcrumb Navigation - Chapado e Limpo */}
         <div style={{
-          background: 'rgba(11, 15, 23, 0.6)',
-          borderBottom: '1px solid var(--border-subtle)',
-          padding: '12px 0',
+          background: '#f9fafb',
+          borderBottom: '1px solid #e5e7eb',
+          padding: '10px 0',
           fontSize: '0.82rem',
-          color: 'var(--text-muted)'
+          color: '#6b7280'
         }}>
           <div className="container" style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
-            <Link href="/" style={{ color: 'var(--text-secondary)', transition: 'color 0.2s' }}>
+            <Link href="/" style={{ color: '#4b5563', transition: 'color 0.15s' }}>
               Início
             </Link>
-            <ChevronRight size={14} />
-            <Link href="/#catalogo" style={{ color: 'var(--text-secondary)', transition: 'color 0.2s' }}>
+            <ChevronRight size={13} />
+            <Link href="/#catalogo" style={{ color: '#4b5563', transition: 'color 0.15s' }}>
               Catálogo de Produtos
             </Link>
-            <ChevronRight size={14} />
-            <span style={{ color: 'var(--text-secondary)' }}>
+            <ChevronRight size={13} />
+            <span style={{ color: '#6b7280' }}>
               {product.categoryLabel}
             </span>
-            <ChevronRight size={14} />
-            <span style={{ color: '#ffffff', fontWeight: 600 }}>
+            <ChevronRight size={13} />
+            <span style={{ color: '#111827', fontWeight: 700 }}>
               {product.name}
             </span>
           </div>
         </div>
 
-        {/* Product Main Section (FuelTech Style 2-Columns) */}
-        <div className="container" style={{ paddingTop: '32px' }}>
+        {/* Product Main Section (FuelTech Style 2-Columns Chapado em Fundo Branco) */}
+        <div className="container" style={{ paddingTop: '28px' }}>
           <div className="product-layout-grid">
             
             {/* LEFT COLUMN: Gallery with multiple images */}
             <div className="gallery-col">
-              {/* Main Image */}
+              {/* Main Image em FUNDO BRANCO PURO */}
               <div className="main-image-wrapper">
                 <Image
                   src={productImages[selectedImageIndex]}
                   alt={`${product.name} - Imagem ${selectedImageIndex + 1}`}
                   fill
-                  style={{ objectFit: 'cover' }}
+                  style={{ objectFit: 'contain', padding: '20px' }}
                   priority
                 />
                 
                 {/* Brand Badge */}
-                <div style={{ position: 'absolute', top: '16px', left: '16px', zIndex: 2 }}>
-                  <span className={`badge ${brandBadgeClass}`}>
+                <div style={{ position: 'absolute', top: '12px', left: '12px', zIndex: 2 }}>
+                  <span style={{
+                    fontSize: '0.72rem',
+                    fontWeight: 700,
+                    color: badgeColor,
+                    background: badgeBg,
+                    padding: '3px 8px',
+                    borderRadius: '2px',
+                    border: '1px solid rgba(0,0,0,0.06)'
+                  }}>
                     {product.brandLabel}
                   </span>
                 </div>
@@ -149,23 +163,22 @@ export default function ProductDetailPage() {
                 {/* Image Index Counter */}
                 <div style={{
                   position: 'absolute',
-                  bottom: '14px',
-                  right: '14px',
-                  background: 'rgba(0, 0, 0, 0.75)',
-                  backdropFilter: 'blur(6px)',
-                  color: 'var(--text-secondary)',
-                  fontSize: '0.75rem',
+                  bottom: '12px',
+                  right: '12px',
+                  background: '#f3f4f6',
+                  color: '#374151',
+                  fontSize: '0.72rem',
                   fontWeight: 700,
-                  padding: '3px 9px',
-                  borderRadius: 'var(--radius-sm)',
-                  border: '1px solid var(--border-subtle)',
+                  padding: '2px 8px',
+                  borderRadius: '2px',
+                  border: '1px solid #e5e7eb',
                   zIndex: 2
                 }}>
                   {selectedImageIndex + 1} / {productImages.length}
                 </div>
               </div>
 
-              {/* Thumbnails Row (FuelTech Style) */}
+              {/* Thumbnails Row (FuelTech Style Chapado) */}
               {productImages.length > 1 && (
                 <div className="thumbnails-row">
                   {productImages.map((img, idx) => (
@@ -179,7 +192,7 @@ export default function ProductDetailPage() {
                         src={img}
                         alt={`Miniatura ${idx + 1}`}
                         fill
-                        style={{ objectFit: 'cover' }}
+                        style={{ objectFit: 'contain', padding: '6px' }}
                       />
                     </button>
                   ))}
@@ -191,7 +204,7 @@ export default function ProductDetailPage() {
             <div className="info-col">
               {/* Category & SKU */}
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '8px', marginBottom: '8px' }}>
-                <span style={{ fontSize: '0.78rem', textTransform: 'uppercase', color: 'var(--text-muted)', fontWeight: 800 }}>
+                <span style={{ fontSize: '0.76rem', textTransform: 'uppercase', color: '#6b7280', fontWeight: 800 }}>
                   {product.categoryLabel}
                 </span>
 
@@ -202,27 +215,27 @@ export default function ProductDetailPage() {
                     alignItems: 'center',
                     gap: '5px',
                     fontSize: '0.75rem',
-                    color: 'var(--text-secondary)',
-                    background: 'rgba(255, 255, 255, 0.05)',
+                    color: '#374151',
+                    background: '#f3f4f6',
                     padding: '3px 8px',
-                    borderRadius: 'var(--radius-sm)',
-                    border: '1px solid var(--border-subtle)'
+                    borderRadius: '2px',
+                    border: '1px solid #e5e7eb'
                   }}
                   title="Copiar código"
                 >
-                  <span style={{ color: 'var(--text-muted)' }}>Cód:</span>
-                  <strong style={{ color: '#ffffff' }}>{product.code}</strong>
-                  {copiedCode ? <Check size={12} color="#00a651" /> : <Copy size={12} />}
+                  <span style={{ color: '#6b7280' }}>Cód:</span>
+                  <strong style={{ color: '#111827' }}>{product.code}</strong>
+                  {copiedCode ? <Check size={12} color="#16a34a" /> : <Copy size={12} />}
                 </button>
               </div>
 
               {/* Title */}
               <h1 style={{
-                fontSize: 'clamp(1.5rem, 4vw, 2.2rem)',
+                fontSize: 'clamp(1.5rem, 3.5vw, 2.1rem)',
                 fontWeight: 800,
-                color: '#ffffff',
+                color: '#111827',
                 lineHeight: 1.25,
-                marginBottom: '14px',
+                marginBottom: '12px',
                 letterSpacing: '-0.3px'
               }}>
                 {product.name}
@@ -232,49 +245,49 @@ export default function ProductDetailPage() {
               <div style={{
                 display: 'inline-flex',
                 alignItems: 'center',
-                gap: '7px',
-                background: 'rgba(0, 166, 81, 0.1)',
-                border: '1px solid rgba(0, 166, 81, 0.3)',
-                borderRadius: 'var(--radius-full)',
-                padding: '4px 12px',
-                fontSize: '0.78rem',
-                color: '#4ade80',
+                gap: '6px',
+                background: '#dcfce7',
+                border: '1px solid #bbf7d0',
+                borderRadius: '2px',
+                padding: '4px 10px',
+                fontSize: '0.76rem',
+                color: '#15803d',
                 fontWeight: 700,
                 marginBottom: '16px'
               }}>
-                <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#00a651', display: 'inline-block' }} />
+                <span style={{ width: '6px', height: '6px', background: '#16a34a', display: 'inline-block' }} />
                 <span>Disponível para Faturamento PJ & Venda Direta</span>
               </div>
 
               {/* Short Description */}
               <p style={{
-                fontSize: '0.94rem',
-                color: 'var(--text-secondary)',
+                fontSize: '0.92rem',
+                color: '#4b5563',
                 lineHeight: 1.6,
-                marginBottom: '22px'
+                marginBottom: '18px'
               }}>
                 {product.description}
               </p>
 
               {/* Application Tag */}
               <div style={{
-                background: 'rgba(255, 255, 255, 0.03)',
-                border: '1px solid var(--border-subtle)',
-                borderRadius: 'var(--radius-md)',
-                padding: '10px 14px',
+                background: '#f9fafb',
+                border: '1px solid #e5e7eb',
+                borderRadius: '2px',
+                padding: '10px 12px',
                 display: 'flex',
                 alignItems: 'center',
                 gap: '8px',
                 fontSize: '0.82rem',
-                color: 'var(--text-secondary)',
-                marginBottom: '26px'
+                color: '#374151',
+                marginBottom: '22px'
               }}>
-                <Layers size={16} color="var(--brand-red)" style={{ flexShrink: 0 }} />
+                <Layers size={16} color="#e5242a" style={{ flexShrink: 0 }} />
                 <span><strong>Aplicação:</strong> {product.application}</span>
               </div>
 
-              {/* ACTION BUTTONS: Os 2 botões de compra solicitados */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '28px' }}>
+              {/* OS 2 BOTÕES DE COMPRA SOLICITADOS (Preservados e Chapados) */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '24px' }}>
                 {/* Botão 1: Comprar via WhatsApp */}
                 <a
                   href={directWhatsAppUrl}
@@ -286,19 +299,18 @@ export default function ProductDetailPage() {
                     alignItems: 'center',
                     justifyContent: 'center',
                     gap: '8px',
-                    background: 'linear-gradient(135deg, #25d366 0%, #128c7e 100%)',
+                    background: '#25d366',
                     color: '#ffffff',
                     fontWeight: 700,
-                    fontSize: '0.98rem',
-                    padding: '14px 20px',
-                    borderRadius: 'var(--radius-md)',
-                    boxShadow: '0 6px 20px rgba(37, 211, 102, 0.35)',
-                    transition: 'all 0.25s ease',
+                    fontSize: '0.95rem',
+                    padding: '13px 20px',
+                    borderRadius: '2px',
+                    transition: 'background 0.2s ease',
                     textAlign: 'center'
                   }}
                   className="btn-product-whatsapp"
                 >
-                  <MessageSquare size={19} />
+                  <MessageSquare size={18} />
                   <span>Comprar via WhatsApp</span>
                 </a>
 
@@ -316,17 +328,16 @@ export default function ProductDetailPage() {
                     background: '#FFE600',
                     color: '#2D3277',
                     fontWeight: 800,
-                    fontSize: '0.98rem',
-                    padding: '14px 20px',
-                    borderRadius: 'var(--radius-md)',
-                    boxShadow: '0 6px 20px rgba(255, 230, 0, 0.25)',
+                    fontSize: '0.95rem',
+                    padding: '13px 20px',
+                    borderRadius: '2px',
                     border: '1px solid rgba(0, 0, 0, 0.1)',
-                    transition: 'all 0.25s ease',
+                    transition: 'background 0.2s ease',
                     textAlign: 'center'
                   }}
                   className="btn-product-ml"
                 >
-                  <ShoppingBag size={19} color="#2D3277" />
+                  <ShoppingBag size={18} color="#2D3277" />
                   <span>Comprar no Mercado Livre</span>
                 </a>
 
@@ -336,15 +347,15 @@ export default function ProductDetailPage() {
                   className="btn-secondary"
                   style={{
                     width: '100%',
-                    padding: '12px 18px',
-                    fontSize: '0.88rem',
-                    marginTop: '4px'
+                    padding: '11px 18px',
+                    fontSize: '0.86rem',
+                    marginTop: '2px'
                   }}
                 >
                   {addedAnimation ? (
                     <>
-                      <Check size={16} color="#00a651" />
-                      <span style={{ color: '#00a651' }}>Adicionado à Lista de Cotação!</span>
+                      <Check size={16} color="#15803d" />
+                      <span style={{ color: '#15803d' }}>Adicionado à Lista de Cotação!</span>
                     </>
                   ) : (
                     <>
@@ -355,36 +366,36 @@ export default function ProductDetailPage() {
                 </button>
               </div>
 
-              {/* Trust Box (FuelTech / Tekbond style) */}
+              {/* Trust Box Chapado */}
               <div style={{
-                background: 'rgba(18, 24, 36, 0.7)',
-                borderRadius: 'var(--radius-md)',
-                border: '1px solid var(--border-subtle)',
-                padding: '16px 20px',
+                background: '#f9fafb',
+                borderRadius: '2px',
+                border: '1px solid #e5e7eb',
+                padding: '14px 18px',
                 display: 'grid',
                 gridTemplateColumns: '1fr',
-                gap: '12px',
-                fontSize: '0.84rem',
-                color: 'var(--text-secondary)'
+                gap: '10px',
+                fontSize: '0.82rem',
+                color: '#4b5563'
               }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                  <ShieldCheck size={18} color="#00a651" style={{ flexShrink: 0 }} />
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <ShieldCheck size={16} color="#16a34a" style={{ flexShrink: 0 }} />
                   <span>Produto 100% original com garantia e nota fiscal emitida</span>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                  <FileText size={18} color="var(--brand-red)" style={{ flexShrink: 0 }} />
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <FileText size={16} color="#e5242a" style={{ flexShrink: 0 }} />
                   <span>Faturamento em boleto para empresas (PJ) mediante cadastro</span>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                  <Truck size={18} color="#4da6ff" style={{ flexShrink: 0 }} />
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <Truck size={16} color="#005baa" style={{ flexShrink: 0 }} />
                   <span>Despacho ágil via transportadoras e Correios para todo o Brasil</span>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* BELOW THE FOLD: Tabs inspired by Tekbond & FuelTech */}
-          <div style={{ marginTop: '54px' }}>
+          {/* BELOW THE FOLD: Tabs inspiradas em Tekbond & FuelTech */}
+          <div style={{ marginTop: '44px' }}>
             {/* Tabs Header */}
             <div className="details-tabs-header">
               <button
@@ -413,27 +424,27 @@ export default function ProductDetailPage() {
               </button>
             </div>
 
-            {/* Tabs Content */}
-            <div className="glass tab-content-card">
+            {/* Tabs Content Card Chapado */}
+            <div className="tab-content-card">
               {/* Tab 1: Descrição */}
               {activeTab === 'descricao' && (
                 <div>
-                  <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#ffffff', marginBottom: '14px' }}>
+                  <h3 style={{ fontSize: '1.15rem', fontWeight: 800, color: '#111827', marginBottom: '12px' }}>
                     Propriedades e Características do Produto
                   </h3>
-                  <p style={{ color: 'var(--text-secondary)', lineHeight: 1.7, fontSize: '0.94rem', marginBottom: '22px' }}>
+                  <p style={{ color: '#4b5563', lineHeight: 1.7, fontSize: '0.92rem', marginBottom: '20px' }}>
                     {product.detailedDescription || product.description}
                   </p>
 
                   {product.properties && product.properties.length > 0 && (
                     <div>
-                      <h4 style={{ fontSize: '0.9rem', color: '#ffffff', textTransform: 'uppercase', marginBottom: '12px', letterSpacing: '0.5px' }}>
+                      <h4 style={{ fontSize: '0.85rem', color: '#111827', textTransform: 'uppercase', marginBottom: '10px', letterSpacing: '0.5px' }}>
                         Destaques de Fabricação:
                       </h4>
-                      <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                      <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '8px' }}>
                         {product.properties.map((prop, i) => (
-                          <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-                            <span style={{ color: 'var(--brand-red)', fontWeight: 800 }}>•</span>
+                          <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', fontSize: '0.88rem', color: '#374151' }}>
+                            <span style={{ color: '#e5242a', fontWeight: 800 }}>•</span>
                             <span>{prop}</span>
                           </li>
                         ))}
@@ -446,29 +457,36 @@ export default function ProductDetailPage() {
               {/* Tab 2: Especificações Técnicas */}
               {activeTab === 'especificacoes' && (
                 <div>
-                  <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#ffffff', marginBottom: '16px' }}>
+                  <h3 style={{ fontSize: '1.15rem', fontWeight: 800, color: '#111827', marginBottom: '14px' }}>
                     Ficha Técnica Completa
                   </h3>
                   
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                    {product.specs.map((spec, i) => (
-                      <div
-                        key={i}
-                        style={{
-                          padding: '10px 14px',
-                          background: i % 2 === 0 ? 'rgba(255, 255, 255, 0.03)' : 'transparent',
-                          borderRadius: 'var(--radius-sm)',
-                          display: 'flex',
-                          alignItems: 'center',
-                          gap: '10px',
-                          fontSize: '0.88rem',
-                          color: 'var(--text-secondary)'
-                        }}
-                      >
-                        <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--brand-red)', flexShrink: 0 }} />
-                        <span>{spec}</span>
-                      </div>
-                    ))}
+                  <div style={{ border: '1px solid #e5e7eb', borderRadius: '2px', overflow: 'hidden' }}>
+                    {product.specs.map((spec, i) => {
+                      const parts = spec.split(':');
+                      const label = parts[0];
+                      const val = parts.slice(1).join(':');
+                      return (
+                        <div
+                          key={i}
+                          style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'minmax(140px, 1fr) 2fr',
+                            padding: '10px 14px',
+                            background: i % 2 === 0 ? '#f9fafb' : '#ffffff',
+                            borderBottom: i < product.specs.length - 1 ? '1px solid #e5e7eb' : 'none',
+                            fontSize: '0.86rem'
+                          }}
+                        >
+                          <span style={{ fontWeight: 700, color: '#111827' }}>
+                            {label}
+                          </span>
+                          <span style={{ color: '#4b5563' }}>
+                            {val ? val.trim() : label}
+                          </span>
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
               )}
@@ -476,44 +494,62 @@ export default function ProductDetailPage() {
               {/* Tab 3: Aplicações */}
               {activeTab === 'aplicacoes' && (
                 <div>
-                  <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#ffffff', marginBottom: '14px' }}>
+                  <h3 style={{ fontSize: '1.15rem', fontWeight: 800, color: '#111827', marginBottom: '12px' }}>
                     Onde e Como Utilizar
                   </h3>
-                  <p style={{ color: 'var(--text-secondary)', lineHeight: 1.7, fontSize: '0.94rem', marginBottom: '16px' }}>
-                    Ferramenta recomendada para profissionais que buscam confiabilidade absoluta nas seguintes operações:
+                  <p style={{ color: '#4b5563', lineHeight: 1.6, fontSize: '0.92rem', marginBottom: '16px' }}>
+                    Desenvolvido e homologado especificamente para: <strong>{product.application}</strong>.
                   </p>
                   <div style={{
-                    background: 'rgba(255, 255, 255, 0.03)',
-                    border: '1px solid var(--border-subtle)',
-                    borderRadius: 'var(--radius-md)',
-                    padding: '18px',
-                    color: '#ffffff',
-                    fontSize: '0.92rem',
-                    fontWeight: 600
+                    background: '#f9fafb',
+                    border: '1px solid #e5e7eb',
+                    borderRadius: '2px',
+                    padding: '16px'
                   }}>
-                    {product.application}
+                    <div style={{ fontSize: '0.85rem', fontWeight: 700, color: '#111827', marginBottom: '6px' }}>
+                      Recomendado para:
+                    </div>
+                    <p style={{ fontSize: '0.85rem', color: '#4b5563', lineHeight: 1.5 }}>
+                      Manutenção de frotas e centros automotivos, indústrias metalúrgicas, montagens de precisão, caldeiraria, marcenarias e prestadores de serviços de montagem e reparo.
+                    </p>
                   </div>
                 </div>
               )}
 
-              {/* Tab 4: Instruções de Uso */}
+              {/* Tab 4: Instruções & Cuidados */}
               {activeTab === 'instrucoes' && (
                 <div>
-                  <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#ffffff', marginBottom: '14px' }}>
-                    Instruções de Uso & Cuidados com a Ferramenta
+                  <h3 style={{ fontSize: '1.15rem', fontWeight: 800, color: '#111827', marginBottom: '12px' }}>
+                    Instruções de Uso & Segurança
                   </h3>
+
                   {product.instructions && product.instructions.length > 0 ? (
-                    <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                    <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px' }}>
                       {product.instructions.map((inst, i) => (
-                        <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-                          <span style={{ color: '#4ade80', fontWeight: 800 }}>✓</span>
-                          <span>{inst}</span>
+                        <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '0.88rem', color: '#374151' }}>
+                          <span style={{
+                            width: '20px',
+                            height: '20px',
+                            borderRadius: '2px',
+                            background: '#fee2e2',
+                            color: '#b91c1c',
+                            fontWeight: 800,
+                            fontSize: '0.75rem',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            flexShrink: 0,
+                            marginTop: '2px'
+                          }}>
+                            {i + 1}
+                          </span>
+                          <span style={{ lineHeight: 1.5 }}>{inst}</span>
                         </li>
                       ))}
                     </ul>
                   ) : (
-                    <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-                      Mantenha a ferramenta limpa e armazenada em local protegido contra umidade e poeira para garantir sua máxima vida útil.
+                    <p style={{ color: '#4b5563', fontSize: '0.88rem' }}>
+                      Siga sempre os procedimentos recomendados pelo fabricante e utilize os EPIs adequados para manuseio.
                     </p>
                   )}
                 </div>
@@ -521,82 +557,57 @@ export default function ProductDetailPage() {
             </div>
           </div>
 
-          {/* RELATED PRODUCTS (FuelTech style: "Você também pode se interessar") */}
+          {/* Related Products Section */}
           {relatedProducts.length > 0 && (
-            <div style={{ marginTop: '64px' }}>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '24px' }}>
-                <h3 style={{ fontSize: '1.3rem', fontWeight: 800, color: '#ffffff' }}>
-                  Você Também Pode se Interessar
+            <div style={{ marginTop: '50px', borderTop: '1px solid #e5e7eb', paddingTop: '32px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '18px' }}>
+                <h3 style={{ fontSize: '1.3rem', fontWeight: 800, color: '#111827' }}>
+                  Produtos Relacionados
                 </h3>
-                <Link href="/#catalogo" style={{ fontSize: '0.85rem', color: 'var(--brand-red)', fontWeight: 700 }}>
-                  Ver Todo o Catálogo &rarr;
+                <Link href="/#catalogo" style={{ fontSize: '0.82rem', color: '#e5242a', fontWeight: 700 }}>
+                  Ver catálogo completo &rarr;
                 </Link>
               </div>
 
               <div className="related-grid">
                 {relatedProducts.map((rel) => (
                   <div key={rel.id} className="related-card">
-                    <Link href={`/produtos/${rel.id}`} style={{ position: 'relative', height: '170px', width: '100%', display: 'block', background: '#070a0f' }}>
+                    <Link href={`/produtos/${rel.id}`} style={{ position: 'relative', height: '170px', background: '#ffffff', display: 'block', borderBottom: '1px solid #f3f4f6' }}>
                       <Image
                         src={rel.image}
                         alt={rel.name}
                         fill
-                        style={{ objectFit: 'cover' }}
+                        style={{ objectFit: 'contain', padding: '12px' }}
                       />
                     </Link>
 
-                    <div style={{ padding: '16px', display: 'flex', flexDirection: 'column', flex: 1 }}>
-                      <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)', fontWeight: 700, marginBottom: '4px' }}>
-                        {rel.brandLabel} • Cód: {rel.code}
-                      </div>
+                    <div style={{ padding: '14px', display: 'flex', flexDirection: 'column', flex: 1 }}>
+                      <span style={{ fontSize: '0.7rem', color: '#6b7280', textTransform: 'uppercase', fontWeight: 700, marginBottom: '2px' }}>
+                        {rel.brandLabel}
+                      </span>
                       <Link href={`/produtos/${rel.id}`}>
-                        <h4 style={{ fontSize: '0.92rem', fontWeight: 700, color: '#ffffff', lineHeight: 1.35, marginBottom: '14px' }}>
+                        <h4 style={{ fontSize: '0.88rem', fontWeight: 700, color: '#111827', lineHeight: 1.35, marginBottom: '8px' }}>
                           {rel.name}
                         </h4>
                       </Link>
 
-                      <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                      <div style={{ marginTop: 'auto', display: 'flex', gap: '6px' }}>
+                        <Link
+                          href={`/produtos/${rel.id}`}
+                          className="btn-secondary"
+                          style={{ flex: 1, padding: '7px 8px', fontSize: '0.78rem' }}
+                        >
+                          Ver Detalhes
+                        </Link>
                         <a
-                          href={generateDirectProductWhatsAppLink(rel)}
+                          href={buildWhatsAppUrl(`Olá! Tenho interesse no item ${rel.name} (Cód: ${rel.code}).`)}
                           target="_blank"
                           rel="noopener noreferrer"
-                          style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            gap: '6px',
-                            background: 'rgba(37, 211, 102, 0.12)',
-                            color: '#4ade80',
-                            border: '1px solid rgba(37, 211, 102, 0.3)',
-                            padding: '8px',
-                            borderRadius: 'var(--radius-sm)',
-                            fontSize: '0.78rem',
-                            fontWeight: 700
-                          }}
+                          className="btn-whatsapp"
+                          style={{ padding: '7px 10px', fontSize: '0.78rem' }}
+                          title="WhatsApp"
                         >
-                          <MessageSquare size={13} />
-                          <span>Comprar via WhatsApp</span>
-                        </a>
-
-                        <a
-                          href={buildMercadoLivreUrl(rel)}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            gap: '6px',
-                            background: '#FFE600',
-                            color: '#2D3277',
-                            padding: '8px',
-                            borderRadius: 'var(--radius-sm)',
-                            fontSize: '0.78rem',
-                            fontWeight: 800
-                          }}
-                        >
-                          <ShoppingBag size={13} color="#2D3277" />
-                          <span>Comprar no Mercado Livre</span>
+                          <MessageSquare size={14} />
                         </a>
                       </div>
                     </div>
@@ -605,6 +616,7 @@ export default function ProductDetailPage() {
               </div>
             </div>
           )}
+
         </div>
       </main>
 
@@ -616,7 +628,7 @@ export default function ProductDetailPage() {
         .product-layout-grid {
           display: grid;
           grid-template-columns: 1fr;
-          gap: 32px;
+          gap: 28px;
           align-items: start;
         }
 
@@ -624,44 +636,42 @@ export default function ProductDetailPage() {
           position: relative;
           width: 100%;
           height: 380px;
-          border-radius: var(--radius-lg);
+          border-radius: 2px;
           overflow: hidden;
-          background: #070a0f;
-          border: 1px solid var(--border-subtle);
-          box-shadow: var(--shadow-md);
+          background: #ffffff;
+          border: 1px solid #e5e7eb;
         }
 
         .thumbnails-row {
           display: flex;
-          gap: 10px;
-          margin-top: 12px;
+          gap: 8px;
+          margin-top: 10px;
           overflow-x: auto;
           padding-bottom: 4px;
         }
 
         .thumbnail-btn {
           position: relative;
-          width: 76px;
-          height: 76px;
-          border-radius: var(--radius-md);
+          width: 72px;
+          height: 72px;
+          border-radius: 2px;
           overflow: hidden;
-          background: #070a0f;
-          border: 2px solid var(--border-subtle);
+          background: #ffffff;
+          border: 1px solid #e5e7eb;
           flex-shrink: 0;
           cursor: pointer;
-          transition: all 0.2s ease;
+          transition: border-color 0.15s ease;
         }
 
         .thumbnail-btn.active {
-          border-color: var(--brand-red);
-          transform: translateY(-2px);
-          box-shadow: 0 4px 12px rgba(229, 36, 42, 0.4);
+          border-color: #e5242a;
+          border-width: 2px;
         }
 
         .details-tabs-header {
           display: flex;
-          gap: 6px;
-          border-bottom: 1px solid var(--border-medium);
+          gap: 4px;
+          border-bottom: 1px solid #e5e7eb;
           overflow-x: auto;
           scrollbar-width: none;
         }
@@ -671,39 +681,54 @@ export default function ProductDetailPage() {
         }
 
         .tab-btn {
-          padding: 12px 18px;
-          color: var(--text-secondary);
-          font-weight: 700;
-          font-size: 0.88rem;
+          padding: 10px 16px;
+          color: '#4b5563';
+          font-weight: 600;
+          font-size: 0.85rem;
           white-space: nowrap;
           border-bottom: 2px solid transparent;
-          transition: all 0.2s ease;
+          transition: all 0.15s ease;
+        }
+
+        .tab-btn:hover {
+          color: #111827;
         }
 
         .tab-btn.active {
-          color: #ffffff;
-          border-bottom-color: var(--brand-red);
+          color: #e5242a;
+          border-bottom-color: #e5242a;
+          font-weight: 700;
         }
 
         .tab-content-card {
-          padding: 24px;
-          border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+          padding: 22px;
+          background: #ffffff;
+          border: 1px solid #e5e7eb;
           border-top: none;
+          border-radius: 0 0 2px 2px;
         }
 
         .related-grid {
           display: grid;
           grid-template-columns: 1fr;
-          gap: 18px;
+          gap: 16px;
         }
 
         .related-card {
-          background: var(--bg-card);
-          border: 1px solid var(--border-subtle);
-          border-radius: var(--radius-md);
+          background: #ffffff;
+          border: 1px solid #e5e7eb;
+          border-radius: 2px;
           overflow: hidden;
           display: flex;
           flex-direction: column;
+        }
+
+        .btn-product-whatsapp:hover {
+          background: #20bd5a !important;
+        }
+
+        .btn-product-ml:hover {
+          background: #fadb00 !important;
         }
 
         @media (min-width: 600px) {
@@ -715,14 +740,14 @@ export default function ProductDetailPage() {
         @media (min-width: 860px) {
           .product-layout-grid {
             grid-template-columns: 1fr 1fr;
-            gap: 48px;
+            gap: 40px;
           }
           .main-image-wrapper {
-            height: 480px;
+            height: 460px;
           }
           .thumbnail-btn {
-            width: 88px;
-            height: 88px;
+            width: 84px;
+            height: 84px;
           }
         }
       `}</style>

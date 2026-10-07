@@ -20,11 +20,11 @@ export default function WhatsAppButton() {
     }}>
       {/* Tooltip bubble on desktop */}
       <div style={{
-        background: 'var(--bg-surface)',
+        background: '#111827',
         color: '#ffffff',
-        border: '1px solid var(--border-medium)',
-        borderRadius: 'var(--radius-full)',
-        padding: '6px 14px',
+        border: '1px solid #374151',
+        borderRadius: '2px',
+        padding: '6px 12px',
         boxShadow: 'var(--shadow-md)',
         fontSize: '0.8rem',
         fontWeight: 700,

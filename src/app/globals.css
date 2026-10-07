@@ -1,39 +1,36 @@
 :root {
-  --bg-main: #0b0f17;
-  --bg-surface: #121824;
-  --bg-card: #161e2e;
-  --bg-card-hover: #1c263b;
-  --bg-elevated: #222d42;
+  --bg-main: #ffffff;
+  --bg-surface: #f9fafb;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f3f4f6;
+  --bg-elevated: #ffffff;
 
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-medium: rgba(255, 255, 255, 0.16);
-  --border-active: rgba(229, 36, 42, 0.5);
+  --border-subtle: #e5e7eb;
+  --border-medium: #d1d5db;
+  --border-active: #e5242a;
 
-  --text-primary: #ffffff;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
 
   --brand-red: #e5242a;
-  --brand-red-hover: #ff383f;
-  --brand-red-glow: rgba(229, 36, 42, 0.35);
+  --brand-red-hover: #cc1f24;
 
   --brand-blue: #005baa;
-  --brand-blue-hover: #0070d1;
-  --brand-blue-glow: rgba(0, 91, 170, 0.3);
+  --brand-blue-hover: #004c8c;
 
   --brand-green: #00a651;
-  --brand-green-hover: #00c761;
-  --brand-green-glow: rgba(0, 166, 81, 0.3);
+  --brand-green-hover: #008f45;
 
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
-  --radius-full: 9999px;
+  /* Cantos retos e chapados conforme solicitado (estilo Tekbond) */
+  --radius-sm: 2px;
+  --radius-md: 2px;
+  --radius-lg: 3px;
+  --radius-full: 2px;
 
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
-  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.7);
-  --shadow-red: 0 8px 25px rgba(229, 36, 42, 0.35);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
 }
 
 * {
@@ -45,7 +42,7 @@
 html {
   scroll-behavior: smooth;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  background-color: var(--bg-main);
+  background-color: #ffffff;
   color: var(--text-primary);
   width: 100%;
   max-width: 100%;
@@ -58,13 +55,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: var(--bg-main);
-  background-image: 
-    radial-gradient(circle at 15% 10%, rgba(229, 36, 42, 0.08) 0%, transparent 40%),
-    radial-gradient(circle at 85% 30%, rgba(0, 91, 170, 0.08) 0%, transparent 40%),
-    radial-gradient(circle at 50% 85%, rgba(0, 166, 81, 0.05) 0%, transparent 50%),
-    linear-gradient(to bottom, #0b0f17, #0d121c);
-  background-attachment: fixed;
+  background-color: #ffffff;
   color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
@@ -85,14 +76,7 @@ button {
 
 input, textarea, select {
   font-family: inherit;
-  font-size: 16px; /* Prevents auto-zoom on iOS Safari */
-}
-
-.carbon-grid {
-  background-size: 24px 24px;
-  background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  font-size: 16px;
 }
 
 .container {
@@ -111,34 +95,31 @@ input, textarea, select {
   }
 }
 
-/* Glassmorphism */
+/* Design Chapado / Flat Cards */
 .glass {
-  background: rgba(18, 24, 36, 0.88);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: #ffffff;
   border: 1px solid var(--border-subtle);
 }
 
-/* Buttons */
+/* Buttons - Retos e Chapados */
 .btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background: linear-gradient(135deg, var(--brand-red) 0%, #c4181e 100%);
+  background: var(--brand-red);
   color: #ffffff;
   font-weight: 700;
-  font-size: 0.95rem;
-  padding: 13px 22px;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-red);
-  transition: all 0.25s ease;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.92rem;
+  padding: 12px 20px;
+  border-radius: var(--radius-sm);
+  transition: background 0.2s ease;
+  border: 1px solid transparent;
   text-align: center;
 }
 
-.btn-primary:active {
-  transform: scale(0.98);
+.btn-primary:hover {
+  background: var(--brand-red-hover);
 }
 
 .btn-secondary {
@@ -146,19 +127,19 @@ input, textarea, select {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background: rgba(255, 255, 255, 0.06);
-  color: #ffffff;
+  background: #f3f4f6;
+  color: #111827;
   font-weight: 600;
-  font-size: 0.95rem;
-  padding: 13px 20px;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border-medium);
+  font-size: 0.92rem;
+  padding: 12px 18px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
   transition: all 0.2s ease;
   text-align: center;
 }
 
-.btn-secondary:active {
-  transform: scale(0.98);
+.btn-secondary:hover {
+  background: #e5e7eb;
 }
 
 .btn-whatsapp {
@@ -166,22 +147,21 @@ input, textarea, select {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  background: #25d366;
   color: #ffffff;
   font-weight: 700;
-  padding: 13px 22px;
-  border-radius: var(--radius-md);
-  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
-  transition: all 0.25s ease;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 12px 20px;
+  border-radius: var(--radius-sm);
+  transition: background 0.2s ease;
+  border: none;
   text-align: center;
 }
 
-.btn-whatsapp:active {
-  transform: scale(0.98);
+.btn-whatsapp:hover {
+  background: #20bd5a;
 }
 
-/* Badges */
+/* Badges retas */
 .badge {
   display: inline-flex;
   align-items: center;
@@ -190,26 +170,26 @@ input, textarea, select {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.4px;
-  padding: 4px 10px;
-  border-radius: var(--radius-full);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
 }
 
 .badge-red {
-  background: rgba(229, 36, 42, 0.15);
-  color: #ff5757;
-  border: 1px solid rgba(229, 36, 42, 0.35);
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fca5a5;
 }
 
 .badge-blue {
-  background: rgba(0, 91, 170, 0.18);
-  color: #4da6ff;
-  border: 1px solid rgba(0, 91, 170, 0.4);
+  background: #e0f2fe;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
 }
 
 .badge-green {
-  background: rgba(0, 166, 81, 0.15);
-  color: #4ade80;
-  border: 1px solid rgba(0, 166, 81, 0.35);
+  background: #dcfce7;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
 }
 
 /* Horizontal scroll styling for mobile chips */
@@ -224,22 +204,6 @@ input, textarea, select {
 
 .scroll-chips::-webkit-scrollbar {
   display: none;
-}
-
-/* Animations */
-@keyframes pulseGlow {
-  0%, 100% {
-    transform: scale(1);
-    box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);
-  }
-  50% {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(37, 211, 102, 0.75);
-  }
-}
-
-.pulse-whatsapp {
-  animation: pulseGlow 2.5s infinite;
 }
 
 /* Responsive Utilities */
@@ -258,21 +222,21 @@ input, textarea, select {
   }
 }
 
-/* Scrollbar */
+/* Scrollbar limpo */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0b0f17;
+  background: #f1f5f9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #232d40;
-  border-radius: 4px;
+  background: #cbd5e1;
+  border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--brand-red);
+  background: #94a3b8;
 }

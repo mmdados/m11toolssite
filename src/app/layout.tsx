@@ -42,16 +42,16 @@ export const metadata: Metadata = {
     icon: '/logo.jpg',
   },
   openGraph: {
-    title: 'M11 Tools | Distribuidora Gedore & Tekbond',
-    description: 'Catálogo de ferramentas manuais, torquímetros e químicos de alta performance com faturamento para empresas.',
+    title: 'M11 Tools | Catálogo Comercial Gedore & Tekbond',
+    description: 'Distribuição oficial de ferramentas Gedore Red, Gedore Blue Industrial e químicos Tekbond com faturamento PJ.',
     url: 'https://m11tools.com.br',
     siteName: 'M11 Tools',
     images: [
       {
-        url: '/images/hero-tools.jpg',
+        url: '/images/gedore-red.jpg',
         width: 1200,
         height: 630,
-        alt: 'M11 Tools - Distribuidora Gedore & Tekbond',
+        alt: 'M11 Tools - Catálogo Oficial Gedore & Tekbond',
       },
     ],
     locale: 'pt_BR',
@@ -66,7 +66,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body className="carbon-grid">
+      <body>
         <QuoteProvider>
           {children}
         </QuoteProvider>
