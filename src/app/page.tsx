@@ -2,6 +2,7 @@
 
 import React, { useState, useRef } from 'react';
 import Navbar from '@/components/Navbar';
+import BrandCards from '@/components/BrandCards';
 import Catalog from '@/components/Catalog';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
@@ -25,11 +26,19 @@ export default function Home() {
       <Navbar onSearchFocus={handleSearchFocus} />
       
       <main style={{ minHeight: '80vh', background: '#ffffff' }}>
+        {/* Card Destaque Gedore Red com Logo Oficial */}
+        <BrandCards 
+          selectedBrand={selectedBrand} 
+          onSelectBrand={setSelectedBrand} 
+        />
+
+        {/* Catálogo com Barra de Pesquisa de Referência e Grid do Anúncio */}
         <Catalog 
           selectedBrand={selectedBrand} 
           onBrandChange={setSelectedBrand} 
           searchInputRef={searchInputRef}
         />
+        
         <ContactSection />
       </main>
 

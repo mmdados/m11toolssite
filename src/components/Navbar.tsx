@@ -118,10 +118,8 @@ export default function Navbar({ onSearchFocus }: NavbarProps) {
             fontWeight: 600,
             color: '#374151',
           }} className="desktop-nav">
-            <a href="/#catalogo" className="nav-link">Catálogo</a>
-            <a href="/#gedore-red" className="nav-link">Gedore Red</a>
-            <a href="/#gedore-blue" className="nav-link">Gedore Industrial</a>
-            <a href="/#tekbond" className="nav-link">Tekbond</a>
+            <a href="/#catalogo" className="nav-link">Anúncios</a>
+            <a href="/#catalogo" className="nav-link">Gedore Red</a>
             <a href="/#contato" className="nav-link">Fale Conosco</a>
           </div>
 
@@ -238,25 +236,18 @@ export default function Navbar({ onSearchFocus }: NavbarProps) {
               📦 Catálogo de Produtos
             </a>
             <a 
-              href="/#gedore-red" 
+              href="/#catalogo" 
+              onClick={() => setMobileMenuOpen(false)}
+              style={{ padding: '10px 12px', borderBottom: '1px solid #f3f4f6', fontWeight: 600, color: '#111827', fontSize: '0.92rem' }}
+            >
+              📋 Todos os Anúncios
+            </a>
+            <a 
+              href="/#catalogo" 
               onClick={() => setMobileMenuOpen(false)}
               style={{ padding: '10px 12px', borderBottom: '1px solid #f3f4f6', fontWeight: 600, color: '#dc2626', fontSize: '0.92rem' }}
             >
               🔴 Linha Gedore Red
-            </a>
-            <a 
-              href="/#gedore-blue" 
-              onClick={() => setMobileMenuOpen(false)}
-              style={{ padding: '10px 12px', borderBottom: '1px solid #f3f4f6', fontWeight: 600, color: '#0284c7', fontSize: '0.92rem' }}
-            >
-              🔵 Linha Gedore Industrial
-            </a>
-            <a 
-              href="/#tekbond" 
-              onClick={() => setMobileMenuOpen(false)}
-              style={{ padding: '10px 12px', borderBottom: '1px solid #f3f4f6', fontWeight: 600, color: '#16a34a', fontSize: '0.92rem' }}
-            >
-              🟢 Linha Tekbond Químicos
             </a>
             <a 
               href="/#contato" 

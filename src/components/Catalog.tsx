@@ -2,20 +2,22 @@
 
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { BRANDS, CATEGORIES, PRODUCTS } from '@/data/products';
-import { Brand, Category, Product } from '@/types';
+import { Brand, Category, ItemType, Product } from '@/types';
 import { useQuote } from '@/context/QuoteContext';
 import { buildMercadoLivreUrl } from '@/config/site';
 import { 
   Search, 
-  Plus, 
   MessageSquare, 
-  Check, 
+  ShoppingBag, 
+  ChevronRight, 
   X, 
-  Layers,
   Wrench,
-  ShoppingBag,
-  ChevronRight
+  Layers,
+  Sparkles,
+  CheckCircle2,
+  Tag
 } from 'lucide-react';
 
 interface CatalogProps {
@@ -25,12 +27,12 @@ interface CatalogProps {
 }
 
 export default function Catalog({ selectedBrand, onBrandChange, searchInputRef }: CatalogProps) {
-  const { addToQuote, generateDirectProductWhatsAppLink } = useQuote();
+  const { generateDirectProductWhatsAppLink } = useQuote();
   const [selectedCategory, setSelectedCategory] = useState<Category | 'all'>('all');
+  const [selectedItemType, setSelectedItemType] = useState<ItemType | 'all'>('all');
   const [searchTerm, setSearchTerm] = useState('');
-  const [addedAnimationId, setAddedAnimationId] = useState<string | null>(null);
 
-  // Filter products
+  // Filter products by brand, category, itemType and search query
   const filteredProducts = useMemo(() => {
     return PRODUCTS.filter((product) => {
       if (selectedBrand !== 'all' && product.brand !== selectedBrand) {
@@ -39,451 +41,556 @@ export default function Catalog({ selectedBrand, onBrandChange, searchInputRef }
       if (selectedCategory !== 'all' && product.category !== selectedCategory) {
         return false;
       }
+      if (selectedItemType !== 'all' && product.itemType !== selectedItemType) {
+        return false;
+      }
       if (searchTerm.trim() !== '') {
-        const query = searchTerm.toLowerCase();
+        const query = searchTerm.toLowerCase().trim();
         const matchesName = product.name.toLowerCase().includes(query);
         const matchesCode = product.code.toLowerCase().includes(query);
+        const matchesTechCode = product.technicalCode?.toLowerCase().includes(query) || false;
         const matchesDesc = product.description.toLowerCase().includes(query);
         const matchesApp = product.application.toLowerCase().includes(query);
-        return matchesName || matchesCode || matchesDesc || matchesApp;
+        const matchesType = product.itemTypeLabel?.toLowerCase().includes(query) || false;
+        const matchesComposition = product.composition?.some((c) => c.toLowerCase().includes(query)) || false;
+        return matchesName || matchesCode || matchesTechCode || matchesDesc || matchesApp || matchesType || matchesComposition;
       }
       return true;
     });
-  }, [selectedBrand, selectedCategory, searchTerm]);
-
-  const handleAddToCart = (product: Product, e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    addToQuote(product, 1);
-    setAddedAnimationId(product.id);
-    setTimeout(() => {
-      setAddedAnimationId(null);
-    }, 1500);
-  };
+  }, [selectedBrand, selectedCategory, selectedItemType, searchTerm]);
 
   const resetFilters = () => {
     onBrandChange('all');
     setSelectedCategory('all');
+    setSelectedItemType('all');
     setSearchTerm('');
   };
 
   return (
-    <section id="catalogo" style={{ padding: '24px 0 60px', background: '#ffffff', width: '100%' }}>
+    <section id="catalogo" style={{ padding: '32px 0 64px', background: '#ffffff', width: '100%' }}>
       <div className="container">
-        {/* Section Header - Simples e Direto Estilo Tekbond */}
-        <div style={{ marginBottom: '20px', borderBottom: '1px solid #e5e7eb', paddingBottom: '14px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.8rem', color: '#6b7280', marginBottom: '6px' }}>
-            <Link href="/" style={{ color: '#4b5563' }}>Início</Link>
+        {/* Breadcrumb e Cabeçalho do Catálogo */}
+        <div style={{ marginBottom: '24px', borderBottom: '1px solid #e2e8f0', paddingBottom: '16px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.8rem', color: '#64748b', marginBottom: '8px' }}>
+            <Link href="/" style={{ color: '#475569' }}>Início</Link>
             <ChevronRight size={13} />
-            <span style={{ color: '#e5242a', fontWeight: 700 }}>Produtos</span>
+            <span style={{ color: '#e5242a', fontWeight: 700 }}>Catálogo de Produtos</span>
           </div>
 
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '12px' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '14px' }}>
             <div>
               <h1 style={{
                 fontSize: 'clamp(1.5rem, 4vw, 2.1rem)',
                 fontWeight: 800,
-                color: '#111827',
+                color: '#0f172a',
                 lineHeight: 1.2
               }}>
-                Produtos
+                Anúncios Oficiais
               </h1>
-              <p style={{ color: '#4b5563', fontSize: '0.88rem', marginTop: '4px' }}>
-                Catálogo comercial oficial Gedore Red, Gedore Industrial e Tekbond.
+              <p style={{ color: '#64748b', fontSize: '0.9rem', marginTop: '4px' }}>
+                Produtos com fotos reais, dados técnicos de fábrica e procedência garantida.
               </p>
             </div>
 
-            {/* Total count badge */}
+            {/* Totalizador de itens */}
             <div style={{
-              background: '#f9fafb',
-              border: '1px solid #e5e7eb',
-              borderRadius: '2px',
+              background: '#f8fafc',
+              border: '1px solid #cbd5e1',
+              borderRadius: '4px',
               padding: '6px 14px',
               fontSize: '0.82rem',
-              color: '#374151'
+              color: '#334155'
             }}>
-              Exibindo <strong style={{ color: '#111827' }}>{filteredProducts.length}</strong> de {PRODUCTS.length} itens
+              Exibindo <strong style={{ color: '#0f172a' }}>{filteredProducts.length}</strong> de {PRODUCTS.length} anúncio(s)
             </div>
           </div>
         </div>
 
-        {/* Layout Tekbond (Sidebar de Filtros + Vitrine de Produtos) */}
-        <div className="tekbond-layout">
-          {/* SIDEBAR ESQUERDA: Filtros Técnicos */}
-          <aside className="tekbond-sidebar">
-            {/* Campo de Busca */}
-            <div style={{ position: 'relative', marginBottom: '18px' }}>
+        {/* BARRA DE PESQUISA PRINCIPAL PROEMINENTE (Por Referência / Código / Nome) */}
+        <div style={{
+          background: '#f8fafc',
+          border: '1px solid #e2e8f0',
+          borderRadius: '6px',
+          padding: '16px',
+          marginBottom: '28px'
+        }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            {/* Input de busca */}
+            <div style={{ position: 'relative', width: '100%' }}>
               <Search 
-                size={16} 
-                color="#6b7280" 
-                style={{ position: 'absolute', left: '10px', top: '50%', transform: 'translateY(-50%)' }} 
+                size={18} 
+                color="#64748b" 
+                style={{ position: 'absolute', left: '14px', top: '50%', transform: 'translateY(-50%)' }} 
               />
               <input
                 ref={searchInputRef as React.LegacyRef<HTMLInputElement>}
                 type="text"
-                placeholder="Buscar produto ou código..."
+                placeholder="Buscar por referência (ex: R46023100), código (ex: 3300246) ou nome..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 style={{
                   width: '100%',
                   background: '#ffffff',
-                  border: '1px solid #d1d5db',
-                  borderRadius: '2px',
-                  padding: '8px 12px 8px 34px',
-                  color: '#111827',
-                  fontSize: '0.82rem',
-                  outline: 'none'
+                  border: '1px solid #cbd5e1',
+                  borderRadius: '4px',
+                  padding: '12px 40px 12px 42px',
+                  color: '#0f172a',
+                  fontSize: '0.92rem',
+                  fontWeight: 500,
+                  outline: 'none',
+                  boxShadow: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+                  transition: 'border-color 0.15s ease'
                 }}
               />
               {searchTerm && (
                 <button
                   onClick={() => setSearchTerm('')}
-                  style={{ position: 'absolute', right: '8px', top: '50%', transform: 'translateY(-50%)', color: '#6b7280' }}
+                  style={{
+                    position: 'absolute',
+                    right: '12px',
+                    top: '50%',
+                    transform: 'translateY(-50%)',
+                    background: 'none',
+                    border: 'none',
+                    color: '#94a3b8',
+                    cursor: 'pointer',
+                    padding: '4px'
+                  }}
+                  title="Limpar busca"
                 >
-                  <X size={14} />
+                  <X size={16} />
                 </button>
               )}
             </div>
 
-            {/* Marcas */}
-            <div className="filter-group">
-              <h3 className="filter-group-title">
-                Marcas
-              </h3>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '3px' }}>
-                {BRANDS.map((brand) => {
-                  const active = selectedBrand === brand.id;
-                  return (
-                    <button
-                      key={brand.id}
-                      onClick={() => onBrandChange(brand.id as Brand | 'all')}
-                      className={`filter-item-btn ${active ? 'active' : ''}`}
-                    >
-                      <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                        {'color' in brand && (
-                          <span style={{ width: '7px', height: '7px', background: brand.color, flexShrink: 0 }} />
-                        )}
-                        <span>{brand.label}</span>
-                      </span>
-                      {active && <Check size={14} color="#e5242a" />}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
+            {/* Filtros Rápidos (Pills): Marcas & Tipo (Jogo ou Peça) */}
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '10px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+                <span style={{ fontSize: '0.78rem', fontWeight: 700, color: '#475569', textTransform: 'uppercase' }}>
+                  Filtros:
+                </span>
 
-            {/* Categorias */}
-            <div className="filter-group" style={{ marginTop: '18px' }}>
-              <h3 className="filter-group-title">
-                Categorias
-              </h3>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '3px' }}>
-                {CATEGORIES.map((cat) => {
-                  const active = selectedCategory === cat.id;
-                  return (
-                    <button
-                      key={cat.id}
-                      onClick={() => setSelectedCategory(cat.id as Category | 'all')}
-                      className={`filter-item-btn ${active ? 'active' : ''}`}
-                    >
-                      <span>{cat.label}</span>
-                      <span style={{
-                        fontSize: '0.72rem',
-                        color: active ? '#e5242a' : '#6b7280',
-                        fontWeight: active ? 700 : 500
-                      }}>
-                        {cat.count}
-                      </span>
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
+                {/* Filtro: Todas */}
+                <button
+                  onClick={() => { onBrandChange('all'); setSelectedItemType('all'); }}
+                  style={{
+                    padding: '5px 12px',
+                    borderRadius: '4px',
+                    fontSize: '0.78rem',
+                    fontWeight: selectedBrand === 'all' && selectedItemType === 'all' ? 700 : 500,
+                    background: selectedBrand === 'all' && selectedItemType === 'all' ? '#0f172a' : '#ffffff',
+                    color: selectedBrand === 'all' && selectedItemType === 'all' ? '#ffffff' : '#334155',
+                    border: '1px solid #cbd5e1',
+                    cursor: 'pointer',
+                    transition: 'all 0.15s ease'
+                  }}
+                >
+                  Todos
+                </button>
 
-            {/* Reset Filters */}
-            {(selectedBrand !== 'all' || selectedCategory !== 'all' || searchTerm !== '') && (
-              <button
-                onClick={resetFilters}
-                style={{
-                  marginTop: '16px',
-                  width: '100%',
-                  padding: '7px',
-                  fontSize: '0.78rem',
-                  fontWeight: 600,
-                  color: '#dc2626',
-                  background: '#fef2f2',
-                  border: '1px solid #fecaca',
-                  borderRadius: '2px',
-                  cursor: 'pointer'
-                }}
-              >
-                Limpar filtros
-              </button>
-            )}
-          </aside>
+                {/* Filtro: Gedore Red */}
+                <button
+                  onClick={() => onBrandChange(selectedBrand === 'gedore-red' ? 'all' : 'gedore-red')}
+                  style={{
+                    padding: '5px 12px',
+                    borderRadius: '4px',
+                    fontSize: '0.78rem',
+                    fontWeight: selectedBrand === 'gedore-red' ? 700 : 500,
+                    background: selectedBrand === 'gedore-red' ? '#e5242a' : '#ffffff',
+                    color: selectedBrand === 'gedore-red' ? '#ffffff' : '#334155',
+                    border: selectedBrand === 'gedore-red' ? '1px solid #e5242a' : '1px solid #cbd5e1',
+                    cursor: 'pointer',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '5px'
+                  }}
+                >
+                  <span style={{ width: '6px', height: '6px', background: selectedBrand === 'gedore-red' ? '#ffffff' : '#e5242a', borderRadius: '50%' }} />
+                  Gedore Red
+                </button>
 
-          {/* ÁREA DIREITA: Grid de Produtos */}
-          <div className="tekbond-products-area">
-            {/* Mobile Scroll Chips */}
-            <div className="mobile-filter-chips hide-on-desktop">
-              <div className="scroll-chips" style={{ marginBottom: '14px' }}>
-                {BRANDS.map((b) => (
-                  <button
-                    key={b.id}
-                    onClick={() => onBrandChange(b.id as Brand | 'all')}
-                    style={{
-                      padding: '6px 12px',
-                      borderRadius: '2px',
-                      fontSize: '0.76rem',
-                      fontWeight: 700,
-                      whiteSpace: 'nowrap',
-                      flexShrink: 0,
-                      background: selectedBrand === b.id ? '#e5242a' : '#f3f4f6',
-                      color: selectedBrand === b.id ? '#ffffff' : '#374151',
-                      border: '1px solid #e5e7eb'
-                    }}
-                  >
-                    {b.label}
-                  </button>
-                ))}
-              </div>
-            </div>
+                {/* Filtro: Tipo Jogo */}
+                <button
+                  onClick={() => setSelectedItemType(selectedItemType === 'jogo' ? 'all' : 'jogo')}
+                  style={{
+                    padding: '5px 12px',
+                    borderRadius: '4px',
+                    fontSize: '0.78rem',
+                    fontWeight: selectedItemType === 'jogo' ? 700 : 500,
+                    background: selectedItemType === 'jogo' ? '#0f172a' : '#ffffff',
+                    color: selectedItemType === 'jogo' ? '#ffffff' : '#334155',
+                    border: '1px solid #cbd5e1',
+                    cursor: 'pointer'
+                  }}
+                >
+                  Tipo: Jogo
+                </button>
 
-            {filteredProducts.length === 0 ? (
-              <div style={{
-                textAlign: 'center',
-                padding: '48px 20px',
-                background: '#f9fafb',
-                borderRadius: '2px',
-                border: '1px solid #e5e7eb'
-              }}>
-                <Wrench size={38} color="#9ca3af" style={{ marginBottom: '12px' }} />
-                <h3 style={{ fontSize: '1.1rem', color: '#111827', marginBottom: '6px' }}>
-                  Nenhum produto encontrado
-                </h3>
-                <p style={{ color: '#4b5563', marginBottom: '16px', fontSize: '0.85rem' }}>
-                  Tente alterar os filtros ou consultar nossa equipe no WhatsApp.
-                </p>
-                <button onClick={resetFilters} className="btn-secondary" style={{ padding: '8px 16px', fontSize: '0.84rem' }}>
-                  Limpar Filtros
+                {/* Filtro: Tipo Peça */}
+                <button
+                  onClick={() => setSelectedItemType(selectedItemType === 'peca' ? 'all' : 'peca')}
+                  style={{
+                    padding: '5px 12px',
+                    borderRadius: '4px',
+                    fontSize: '0.78rem',
+                    fontWeight: selectedItemType === 'peca' ? 700 : 500,
+                    background: selectedItemType === 'peca' ? '#0f172a' : '#ffffff',
+                    color: selectedItemType === 'peca' ? '#ffffff' : '#334155',
+                    border: '1px solid #cbd5e1',
+                    cursor: 'pointer'
+                  }}
+                >
+                  Tipo: Peça
                 </button>
               </div>
-            ) : (
-              <div className="tekbond-grid">
-                {filteredProducts.map((product) => {
-                  const isAdded = addedAnimationId === product.id;
-                  const directWhatsAppUrl = generateDirectProductWhatsAppLink(product);
 
-                  let badgeColor = '#b91c1c';
-                  let badgeBg = '#fee2e2';
-                  if (product.brand === 'gedore-blue') {
-                    badgeColor = '#0369a1';
-                    badgeBg = '#e0f2fe';
-                  } else if (product.brand === 'tekbond') {
-                    badgeColor = '#15803d';
-                    badgeBg = '#dcfce7';
-                  }
+              {(selectedBrand !== 'all' || selectedItemType !== 'all' || searchTerm.trim() !== '') && (
+                <button
+                  onClick={resetFilters}
+                  style={{
+                    fontSize: '0.78rem',
+                    color: '#e5242a',
+                    background: 'none',
+                    border: 'none',
+                    cursor: 'pointer',
+                    fontWeight: 600,
+                    textDecoration: 'underline'
+                  }}
+                >
+                  Limpar todos os filtros
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
 
-                  return (
-                    <div key={product.id} className="tekbond-card">
-                      {/* CONTAINER DE IMAGEM 100% BLINDADO E COM ALTURA FIXA */}
-                      <Link
-                        href={`/produtos/${product.id}`}
+        {/* VITRINE DE PRODUTOS */}
+        {filteredProducts.length === 0 ? (
+          <div style={{
+            textAlign: 'center',
+            padding: '56px 20px',
+            background: '#f8fafc',
+            borderRadius: '6px',
+            border: '1px dashed #cbd5e1'
+          }}>
+            <Wrench size={42} color="#94a3b8" style={{ marginBottom: '12px' }} />
+            <h3 style={{ fontSize: '1.2rem', color: '#0f172a', marginBottom: '6px', fontWeight: 700 }}>
+              Nenhum produto localizado
+            </h3>
+            <p style={{ color: '#64748b', marginBottom: '16px', fontSize: '0.88rem', maxWidth: '440px', margin: '0 auto 16px' }}>
+              Não encontramos nenhum anúncio correspondente ao termo "{searchTerm}". Tente buscar por "R46023100" ou limpar os filtros.
+            </p>
+            <button 
+              onClick={resetFilters} 
+              style={{
+                background: '#e5242a',
+                color: '#ffffff',
+                border: 'none',
+                padding: '8px 18px',
+                borderRadius: '4px',
+                fontSize: '0.84rem',
+                fontWeight: 700,
+                cursor: 'pointer'
+              }}
+            >
+              Ver todos os anúncios
+            </button>
+          </div>
+        ) : (
+          <div className="products-grid">
+            {filteredProducts.map((product) => {
+              const directWhatsAppUrl = generateDirectProductWhatsAppLink(product);
+
+              return (
+                <div key={product.id} className="product-card">
+                  {/* Container de Imagem com badges e contador */}
+                  <Link
+                    href={`/produtos/${product.id}`}
+                    style={{
+                      position: 'relative',
+                      width: '100%',
+                      height: '260px',
+                      background: '#ffffff',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      overflow: 'hidden',
+                      borderBottom: '1px solid #f1f5f9',
+                      padding: '16px'
+                    }}
+                  >
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      style={{
+                        maxWidth: '100%',
+                        maxHeight: '220px',
+                        objectFit: 'contain',
+                        display: 'block',
+                        transition: 'transform 0.3s ease'
+                      }}
+                      className="product-card-img"
+                    />
+
+                    {/* Badge da Marca */}
+                    <div style={{ position: 'absolute', top: '10px', left: '10px', display: 'flex', gap: '6px' }}>
+                      <span style={{
+                        fontSize: '0.72rem',
+                        fontWeight: 800,
+                        color: '#ffffff',
+                        background: '#e5242a',
+                        padding: '3px 8px',
+                        borderRadius: '3px',
+                        boxShadow: '0 2px 4px rgba(229, 36, 42, 0.2)'
+                      }}>
+                        {product.brandLabel}
+                      </span>
+                      {product.itemTypeLabel && (
+                        <span style={{
+                          fontSize: '0.72rem',
+                          fontWeight: 700,
+                          color: '#0f172a',
+                          background: '#f1f5f9',
+                          border: '1px solid #e2e8f0',
+                          padding: '3px 8px',
+                          borderRadius: '3px'
+                        }}>
+                          {product.itemTypeLabel}
+                        </span>
+                      )}
+                    </div>
+
+                    {/* Referência e Código SKU */}
+                    <div style={{
+                      position: 'absolute',
+                      bottom: '10px',
+                      left: '10px',
+                      background: '#0f172a',
+                      color: '#ffffff',
+                      fontSize: '0.72rem',
+                      fontWeight: 700,
+                      padding: '3px 8px',
+                      borderRadius: '3px',
+                      letterSpacing: '0.5px'
+                    }}>
+                      Ref: {product.code}
+                    </div>
+
+                    {/* Indicador de Quantidade de Fotos */}
+                    {product.images && product.images.length > 1 && (
+                      <div style={{
+                        position: 'absolute',
+                        bottom: '10px',
+                        right: '10px',
+                        background: '#ffffff',
+                        color: '#0f172a',
+                        fontSize: '0.7rem',
+                        fontWeight: 700,
+                        padding: '3px 8px',
+                        borderRadius: '3px',
+                        border: '1px solid #cbd5e1',
+                        boxShadow: '0 1px 3px rgba(0,0,0,0.05)'
+                      }}>
+                        {product.images.length} fotos reais
+                      </div>
+                    )}
+                  </Link>
+
+                  {/* Corpo do Anúncio */}
+                  <div className="product-card-body">
+                    {/* Código Técnico GEDORE */}
+                    {product.technicalCode && (
+                      <div style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '6px',
+                        fontSize: '0.72rem',
+                        color: '#64748b',
+                        fontWeight: 600,
+                        marginBottom: '4px'
+                      }}>
+                        <Tag size={12} color="#e5242a" />
+                        <span>Código GEDORE: <strong>{product.technicalCode}</strong></span>
+                      </div>
+                    )}
+
+                    {/* Título Principal */}
+                    <Link href={`/produtos/${product.id}`}>
+                      <h2 style={{
+                        fontSize: '1.08rem',
+                        fontWeight: 800,
+                        color: '#0f172a',
+                        lineHeight: 1.35,
+                        marginBottom: '8px',
+                        transition: 'color 0.15s ease'
+                      }} className="card-title-hover">
+                        {product.name}
+                      </h2>
+                    </Link>
+
+                    {/* Descrição Curta */}
+                    <p style={{
+                      fontSize: '0.84rem',
+                      color: '#475569',
+                      lineHeight: 1.5,
+                      marginBottom: '14px',
+                      display: '-webkit-box',
+                      WebkitLineClamp: 2,
+                      WebkitBoxOrient: 'vertical',
+                      overflow: 'hidden'
+                    }}>
+                      {product.description}
+                    </p>
+
+                    {/* Badge de Aplicação */}
+                    <div style={{
+                      fontSize: '0.76rem',
+                      color: '#334155',
+                      background: '#f8fafc',
+                      border: '1px solid #e2e8f0',
+                      padding: '6px 10px',
+                      borderRadius: '4px',
+                      marginBottom: '16px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '6px'
+                    }}>
+                      <Layers size={13} color="#e5242a" style={{ flexShrink: 0 }} />
+                      <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                        {product.application}
+                      </span>
+                    </div>
+
+                    {/* BOTÕES DE COMPRA E DETALHES (Sem botão de Cotação PJ conforme solicitado) */}
+                    <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {/* Botão 1: Comprar via WhatsApp */}
+                      <a
+                        href={directWhatsAppUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-product-whatsapp"
                         style={{
-                          position: 'relative',
-                          width: '100%',
-                          height: '190px',
-                          background: '#ffffff',
                           display: 'flex',
                           alignItems: 'center',
                           justifyContent: 'center',
-                          overflow: 'hidden',
-                          borderBottom: '1px solid #f3f4f6',
-                          padding: '12px'
+                          gap: '8px',
+                          background: '#25D366',
+                          color: '#ffffff',
+                          fontWeight: 700,
+                          fontSize: '0.85rem',
+                          padding: '10px 14px',
+                          borderRadius: '4px',
+                          textDecoration: 'none',
+                          boxShadow: '0 2px 4px rgba(37, 211, 102, 0.2)',
+                          transition: 'background 0.15s ease'
                         }}
                       >
-                        <img
-                          src={product.image}
-                          alt={product.name}
-                          style={{
-                            maxWidth: '100%',
-                            maxHeight: '160px',
-                            objectFit: 'contain',
-                            display: 'block'
-                          }}
-                        />
+                        <MessageSquare size={16} />
+                        <span>Comprar via WhatsApp</span>
+                      </a>
 
-                        {/* Brand Badge */}
-                        <div style={{ position: 'absolute', top: '8px', left: '8px' }}>
-                          <span style={{
-                            fontSize: '0.68rem',
-                            fontWeight: 700,
-                            color: badgeColor,
-                            background: badgeBg,
-                            padding: '2px 6px',
-                            borderRadius: '2px'
-                          }}>
-                            {product.brandLabel}
-                          </span>
-                        </div>
-
-                        {/* SKU Reference */}
-                        <div style={{
-                          position: 'absolute',
-                          bottom: '8px',
-                          left: '8px',
-                          background: '#f3f4f6',
-                          color: '#374151',
-                          fontSize: '0.7rem',
-                          fontWeight: 700,
-                          padding: '2px 6px',
-                          borderRadius: '2px',
-                          border: '1px solid #e5e7eb'
-                        }}>
-                          Cód: {product.code}
-                        </div>
-
-                        {/* Multiple photos indicator */}
-                        {product.images && product.images.length > 1 && (
-                          <div style={{
-                            position: 'absolute',
-                            bottom: '8px',
-                            right: '8px',
-                            background: '#ffffff',
-                            color: '#111827',
-                            fontSize: '0.68rem',
-                            fontWeight: 700,
-                            padding: '2px 6px',
-                            borderRadius: '2px',
-                            border: '1px solid #e5e7eb'
-                          }}>
-                            +{product.images.length} fotos
-                          </div>
-                        )}
-                      </Link>
-
-                      {/* Card Body Chapado */}
-                      <div className="tekbond-body">
-                        <div style={{ fontSize: '0.7rem', textTransform: 'uppercase', color: '#6b7280', fontWeight: 700, marginBottom: '3px' }}>
-                          {product.categoryLabel}
-                        </div>
-
-                        <Link href={`/produtos/${product.id}`}>
-                          <h3 className="tekbond-title">
-                            {product.name}
-                          </h3>
-                        </Link>
-
-                        <p className="tekbond-desc">
-                          {product.description}
-                        </p>
-
-                        {/* Application Tag */}
-                        <div style={{
-                          fontSize: '0.74rem',
-                          color: '#4b5563',
-                          background: '#f9fafb',
-                          border: '1px solid #f3f4f6',
-                          padding: '4px 7px',
-                          borderRadius: '2px',
-                          marginBottom: '14px',
+                      {/* Botão 2: Comprar no Mercado Livre */}
+                      <a
+                        href={buildMercadoLivreUrl(product)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-product-ml"
+                        style={{
                           display: 'flex',
                           alignItems: 'center',
-                          gap: '5px'
-                        }}>
-                          <Layers size={12} color="#e5242a" style={{ flexShrink: 0 }} />
-                          <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                            {product.application}
-                          </span>
-                        </div>
+                          justifyContent: 'center',
+                          gap: '8px',
+                          background: '#FFE600',
+                          color: '#2D3277',
+                          fontWeight: 700,
+                          fontSize: '0.85rem',
+                          padding: '10px 14px',
+                          borderRadius: '4px',
+                          textDecoration: 'none',
+                          border: '1px solid rgba(0,0,0,0.06)',
+                          transition: 'background 0.15s ease'
+                        }}
+                      >
+                        <ShoppingBag size={16} color="#2D3277" />
+                        <span>Comprar no Mercado Livre</span>
+                      </a>
 
-                        {/* OS BOTÕES DE COMPRA PRESERVADOS */}
-                        <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                          {/* Botão 1: Comprar via WhatsApp */}
-                          <a
-                            href={directWhatsAppUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn-product-whatsapp"
-                          >
-                            <MessageSquare size={15} />
-                            <span>Comprar via WhatsApp</span>
-                          </a>
-
-                          {/* Botão 2: Comprar no Mercado Livre */}
-                          <a
-                            href={buildMercadoLivreUrl(product)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn-product-ml"
-                          >
-                            <ShoppingBag size={15} color="#2D3277" />
-                            <span>Comprar no Mercado Livre</span>
-                          </a>
-
-                          {/* Botão 3: Cotação PJ & Detalhes */}
-                          <div style={{ display: 'flex', gap: '6px', marginTop: '2px' }}>
-                            <button
-                              onClick={(e) => handleAddToCart(product, e)}
-                              style={{
-                                flex: 1,
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                gap: '4px',
-                                background: isAdded ? '#dcfce7' : '#f3f4f6',
-                                color: isAdded ? '#15803d' : '#374151',
-                                border: '1px solid #e5e7eb',
-                                borderRadius: '2px',
-                                padding: '7px 8px',
-                                fontSize: '0.74rem',
-                                fontWeight: 700,
-                                transition: 'background 0.15s ease'
-                              }}
-                            >
-                              {isAdded ? (
-                                <>
-                                  <Check size={13} color="#15803d" />
-                                  <span>Adicionado!</span>
-                                </>
-                              ) : (
-                                <>
-                                  <Plus size={13} />
-                                  <span>Cotação PJ</span>
-                                </>
-                              )}
-                            </button>
-
-                            <Link
-                              href={`/produtos/${product.id}`}
-                              style={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                gap: '4px',
-                                background: '#ffffff',
-                                color: '#111827',
-                                border: '1px solid #d1d5db',
-                                borderRadius: '2px',
-                                padding: '7px 10px',
-                                fontSize: '0.74rem',
-                                fontWeight: 600
-                              }}
-                            >
-                              <span>Detalhes</span>
-                              <ChevronRight size={13} />
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
+                      {/* Botão 3: Ver Detalhes do Anúncio */}
+                      <Link
+                        href={`/produtos/${product.id}`}
+                        style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          gap: '6px',
+                          background: '#f8fafc',
+                          color: '#0f172a',
+                          border: '1px solid #cbd5e1',
+                          borderRadius: '4px',
+                          padding: '9px 12px',
+                          fontSize: '0.82rem',
+                          fontWeight: 700,
+                          textDecoration: 'none',
+                          transition: 'all 0.15s ease'
+                        }}
+                      >
+                        <span>Ver Fotos & Ficha Técnica Completa</span>
+                        <ChevronRight size={14} />
+                      </Link>
                     </div>
-                  );
-                })}
-              </div>
-            )}
+                  </div>
+                </div>
+              );
+            })}
           </div>
-        </div>
+        )}
       </div>
+
+      <style jsx>{`
+        .products-grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 24px;
+        }
+
+        .product-card {
+          background: #ffffff;
+          border: 1px solid #cbd5e1;
+          border-radius: 6px;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+          transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .product-card:hover {
+          border-color: #94a3b8;
+          box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.08);
+          transform: translateY(-2px);
+        }
+
+        .product-card:hover .product-card-img {
+          transform: scale(1.03);
+        }
+
+        .card-title-hover:hover {
+          color: #e5242a !important;
+        }
+
+        .product-card-body {
+          padding: 18px;
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+        }
+
+        @media (min-width: 640px) {
+          .products-grid {
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+          }
+        }
+      `}</style>
     </section>
   );
 }
