@@ -1,4 +1,4 @@
-export type Brand = 'gedore-red' | 'gedore-blue' | 'tekbond';
+export type Brand = 'gedore-red' | 'gedore-blue' | 'gedore-robust' | 'tekbond';
 
 export type ItemType = 'jogo' | 'peca';
 

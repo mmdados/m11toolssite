@@ -300,39 +300,6 @@ export default function ProductDetailPage() {
                 {product.description}
               </p>
 
-              {/* Box de Informações Rápidas da Maleta */}
-              {product.technicalSpecs && (
-                <div style={{
-                  background: '#f8fafc',
-                  border: '1px solid #e2e8f0',
-                  borderRadius: '6px',
-                  padding: '12px 16px',
-                  marginBottom: '20px',
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))',
-                  gap: '10px'
-                }}>
-                  <div>
-                    <div style={{ fontSize: '0.7rem', color: '#64748b', textTransform: 'uppercase', fontWeight: 700 }}>Código GEDORE</div>
-                    <div style={{ fontSize: '0.88rem', fontWeight: 800, color: '#0f172a' }}>{product.technicalSpecs.codigoGedore}</div>
-                  </div>
-                  <div>
-                    <div style={{ fontSize: '0.7rem', color: '#64748b', textTransform: 'uppercase', fontWeight: 700 }}>Quantidade</div>
-                    <div style={{ fontSize: '0.88rem', fontWeight: 800, color: '#0f172a' }}>{product.technicalSpecs.pecas} Peças</div>
-                  </div>
-                  <div>
-                    <div style={{ fontSize: '0.7rem', color: '#64748b', textTransform: 'uppercase', fontWeight: 700 }}>Peso Total</div>
-                    <div style={{ fontSize: '0.88rem', fontWeight: 800, color: '#0f172a' }}>{product.technicalSpecs.pesoKg}</div>
-                  </div>
-                  <div>
-                    <div style={{ fontSize: '0.7rem', color: '#64748b', textTransform: 'uppercase', fontWeight: 700 }}>Dimensões Maleta</div>
-                    <div style={{ fontSize: '0.82rem', fontWeight: 700, color: '#0f172a' }}>
-                      {product.technicalSpecs.comprimentoMaleta} x {product.technicalSpecs.larguraMaleta} x {product.technicalSpecs.alturaMaleta}
-                    </div>
-                  </div>
-                </div>
-              )}
-
               {/* Aplicação Recomendada */}
               <div style={{
                 background: '#ffffff',
@@ -350,7 +317,7 @@ export default function ProductDetailPage() {
                 <span><strong>Aplicação:</strong> {product.application}</span>
               </div>
 
-              {/* BOTÕES DE COMPRA DIRETOS (Sem botão de Cotação B2B conforme solicitado) */}
+              {/* BOTÕES DE COMPRA */}
               <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '24px' }}>
                 {/* Botão 1: Comprar via WhatsApp */}
                 <a
@@ -378,31 +345,29 @@ export default function ProductDetailPage() {
                   <span>Comprar via WhatsApp (Atendimento Imediato)</span>
                 </a>
 
-                {/* Botão 2: Comprar no Mercado Livre */}
-                <a
-                  href={buildMercadoLivreUrl(product)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-product-ml"
+                {/* Botão 2: Comprar no Mercado Livre (Apagado / Em breve) */}
+                <div
                   style={{
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     gap: '10px',
-                    background: '#FFE600',
-                    color: '#2D3277',
-                    fontWeight: 700,
-                    fontSize: '0.95rem',
-                    padding: '13px 20px',
+                    background: '#f1f5f9',
+                    color: '#94a3b8',
+                    fontWeight: 600,
+                    fontSize: '0.92rem',
+                    padding: '12px 20px',
                     borderRadius: '4px',
-                    textDecoration: 'none',
-                    border: '1px solid rgba(0,0,0,0.06)',
-                    transition: 'all 0.15s ease'
+                    border: '1px solid #e2e8f0',
+                    cursor: 'not-allowed',
+                    opacity: 0.65,
+                    userSelect: 'none'
                   }}
+                  title="Vendas via Mercado Livre estarão disponíveis em breve"
                 >
-                  <ShoppingBag size={19} color="#2D3277" />
-                  <span>Comprar no Mercado Livre com Frete Rápido</span>
-                </a>
+                  <ShoppingBag size={18} color="#94a3b8" />
+                  <span>Comprar no Mercado Livre (Em Breve)</span>
+                </div>
               </div>
 
               {/* Box de Confiança e Garantia */}
@@ -573,36 +538,6 @@ export default function ProductDetailPage() {
                         </tr>
                       </tbody>
                     </table>
-                  </div>
-
-                  {/* Exibição do Print Original da Tabela */}
-                  <div style={{ marginTop: '20px' }}>
-                    <div style={{
-                      fontSize: '0.82rem',
-                      fontWeight: 700,
-                      color: '#475569',
-                      textTransform: 'uppercase',
-                      marginBottom: '8px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '6px'
-                    }}>
-                      <FileSpreadsheet size={15} color="#e5242a" />
-                      <span>Print Original do Catálogo Gedore Red:</span>
-                    </div>
-                    <div style={{
-                      background: '#ffffff',
-                      border: '1px solid #cbd5e1',
-                      borderRadius: '4px',
-                      padding: '12px',
-                      maxWidth: '820px'
-                    }}>
-                      <img
-                        src="/images/products/r46023100-tabela.png"
-                        alt="Tabela de Informações Técnicas GEDORE red R46023100"
-                        style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '2px' }}
-                      />
-                    </div>
                   </div>
                 </div>
               )}

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { ArrowRight, Wrench, CheckCircle2, Layers } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Layers } from 'lucide-react';
 import { Brand } from '@/types';
 
 interface BrandCardsProps {
@@ -15,28 +15,54 @@ export const BRANDS_INFO = [
     id: 'gedore-red' as Brand,
     name: 'Gedore Red',
     badge: 'Linha Oficial',
-    subtitle: 'Ferramentas Profissionais & Automotivas',
-    description: 'Jogos de soquetes, catracas de alta velocidade, chaves combinadas e ferramentas forjadas em aço Cromo-Vanádio.',
-    logo: '/images/gedore-red-logo.png',
+    subtitle: 'Linha Automotiva & Oficinas',
+    description: 'Jogos de soquetes, catracas de alta velocidade e ferramentas manuais forjadas em aço Cromo-Vanádio.',
+    logo: '/images/logos/gedore-red.png',
     accentColor: '#e5242a',
     productCount: 1,
-    highlights: [
-      'Jogo de Ferramentas R46023100 (100 Peças)',
-      'Aço Cromo-Vanádio de altíssima tenacidade',
-      'Catracas reversíveis de troca rápida',
-      'Maleta de transporte com travas metálicas'
-    ]
+    statusText: '1 produto disponível'
+  },
+  {
+    id: 'gedore-blue' as Brand,
+    name: 'Gedore Industrial',
+    badge: 'Alta Precisão',
+    subtitle: 'Engenharia & Indústria Pesada',
+    description: 'Padrão ouro em torquímetros de estalo, chaves industriais e aperto crítico para alta performance.',
+    logo: '/images/logos/gedore-blue.jpg',
+    accentColor: '#005baa',
+    productCount: 0,
+    statusText: 'Em breve lançamentos'
+  },
+  {
+    id: 'gedore-robust' as Brand,
+    name: 'Robust',
+    badge: 'Grupo Gedore',
+    subtitle: 'Linha Profissional Pesada',
+    description: 'Robustez mecânica, alta durabilidade e excelente ergonomia para o dia a dia da oficina.',
+    logo: '/images/logos/gedore-robust.jpeg',
+    accentColor: '#ea580c',
+    productCount: 0,
+    statusText: 'Em breve lançamentos'
+  },
+  {
+    id: 'tekbond' as Brand,
+    name: 'Tekbond',
+    badge: 'Química Industrial',
+    subtitle: 'Adesivos & Selantes Técnicos',
+    description: 'Químicos de alta performance para colagem instantânea, vedação de motores e trava-roscas anaeróbicos.',
+    logo: '/images/logos/tekbond.png',
+    accentColor: '#00a651',
+    productCount: 0,
+    statusText: 'Em breve lançamentos'
   }
 ];
 
 export default function BrandCards({ selectedBrand, onSelectBrand }: BrandCardsProps) {
-  const isGedoreRedActive = selectedBrand === 'gedore-red';
-
   return (
-    <section style={{ padding: '32px 0 24px', background: '#f8fafc', borderBottom: '1px solid #e2e8f0' }}>
+    <section id="linhas" style={{ padding: '36px 0 28px', background: '#f8fafc', borderBottom: '1px solid #e2e8f0' }}>
       <div className="container">
         {/* Header da Seção */}
-        <div style={{ textAlign: 'center', marginBottom: '24px' }}>
+        <div style={{ textAlign: 'center', marginBottom: '26px' }}>
           <span style={{
             display: 'inline-flex',
             alignItems: 'center',
@@ -48,36 +74,35 @@ export default function BrandCards({ selectedBrand, onSelectBrand }: BrandCardsP
             letterSpacing: '1px',
             background: '#fee2e2',
             padding: '4px 10px',
-            borderRadius: '2px',
+            borderRadius: '4px',
             marginBottom: '8px'
           }}>
-            <Wrench size={12} color="#e5242a" />
-            Navegue por Linhas & Marcas
+            Linhas Comercializadas
           </span>
           <h2 style={{
-            fontSize: 'clamp(1.4rem, 3.5vw, 1.85rem)',
+            fontSize: 'clamp(1.4rem, 3.5vw, 1.9rem)',
             fontWeight: 800,
             color: '#0f172a',
             marginBottom: '6px',
             letterSpacing: '-0.3px'
           }}>
-            Catálogo Oficial de Anúncios
+            Escolha por Marca ou Linha
           </h2>
           <p style={{
             color: '#475569',
             fontSize: '0.88rem',
-            maxWidth: '600px',
+            maxWidth: '640px',
             margin: '0 auto',
             lineHeight: 1.5
           }}>
-            Clique no card abaixo para filtrar exclusivamente os produtos e jogos da linha <strong>Gedore Red</strong>.
+            Clique em um dos cards abaixo para filtrar instantaneamente os produtos da linha correspondente:
           </p>
         </div>
 
-        {/* Card Gedore Red em Destaque */}
-        <div style={{ maxWidth: '640px', margin: '0 auto' }}>
+        {/* Grid de 4 Marcas Oficiais */}
+        <div className="brands-showcase-grid">
           {BRANDS_INFO.map((brand) => {
-            const active = isGedoreRedActive;
+            const active = selectedBrand === brand.id;
 
             return (
               <div
@@ -91,135 +116,115 @@ export default function BrandCards({ selectedBrand, onSelectBrand }: BrandCardsP
                   const el = document.getElementById('catalogo');
                   if (el) el.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className={`brand-showcase-card ${active ? 'is-active' : ''}`}
+                className={`brand-card ${active ? 'is-active' : ''}`}
                 role="button"
                 tabIndex={0}
                 style={{
                   background: '#ffffff',
-                  border: active ? '2px solid #e5242a' : '1px solid #cbd5e1',
+                  border: active ? `2px solid ${brand.accentColor}` : '1px solid #cbd5e1',
                   borderRadius: '6px',
                   boxShadow: active 
-                    ? '0 10px 25px -5px rgba(229, 36, 42, 0.15), 0 8px 10px -6px rgba(229, 36, 42, 0.1)' 
-                    : '0 4px 6px -1px rgba(0, 0, 0, 0.05)',
+                    ? `0 10px 20px -5px ${brand.accentColor}25, 0 4px 6px -2px ${brand.accentColor}15` 
+                    : '0 2px 4px rgba(0, 0, 0, 0.04)',
                   cursor: 'pointer',
                   overflow: 'hidden',
+                  display: 'flex',
+                  flexDirection: 'column',
                   transition: 'all 0.2s cubic-bezier(0.16, 1, 0.3, 1)'
                 }}
               >
-                {/* Top Banner com Logo Real Oficial Gedore Red */}
+                {/* Logo da Marca Centralizado com Fundo Branco Puro */}
                 <div style={{
-                  padding: '24px 20px',
+                  height: '110px',
                   background: '#ffffff',
                   borderBottom: '1px solid #f1f5f9',
+                  padding: '16px',
                   display: 'flex',
                   alignItems: 'center',
-                  justifyContent: 'space-between',
-                  flexWrap: 'wrap',
-                  gap: '16px'
+                  justifyContent: 'center',
+                  position: 'relative'
                 }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-                    <div style={{
-                      position: 'relative',
-                      width: '180px',
-                      height: '42px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'flex-start'
-                    }}>
-                      <Image
-                        src={brand.logo}
-                        alt="GEDORE red Oficial"
-                        width={180}
-                        height={42}
-                        style={{ objectFit: 'contain', width: 'auto', height: '36px' }}
-                        priority
-                      />
-                    </div>
+                  <div style={{ position: 'relative', width: '100%', height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <Image
+                      src={brand.logo}
+                      alt={brand.name}
+                      width={160}
+                      height={65}
+                      style={{ objectFit: 'contain', maxHeight: '100%', maxWidth: '100%' }}
+                    />
                   </div>
 
-                  {/* Status Badge */}
-                  <div style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '6px',
-                    background: active ? '#e5242a' : '#f8fafc',
-                    color: active ? '#ffffff' : '#334155',
-                    border: `1px solid ${active ? '#e5242a' : '#e2e8f0'}`,
-                    padding: '5px 10px',
-                    borderRadius: '4px',
-                    fontSize: '0.74rem',
-                    fontWeight: 700
-                  }}>
-                    {active ? (
-                      <>
-                        <CheckCircle2 size={13} color="#ffffff" />
-                        <span>Filtro Ativado</span>
-                      </>
-                    ) : (
-                      <>
-                        <Layers size={13} color="#e5242a" />
-                        <span>{brand.productCount} anúncio disponível</span>
-                      </>
-                    )}
-                  </div>
+                  {/* Badge de status ativo */}
+                  {active && (
+                    <div style={{
+                      position: 'absolute',
+                      top: '8px',
+                      right: '8px',
+                      background: brand.accentColor,
+                      color: '#ffffff',
+                      borderRadius: '4px',
+                      padding: '2px 6px',
+                      fontSize: '0.68rem',
+                      fontWeight: 800,
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '4px'
+                    }}>
+                      <CheckCircle2 size={11} color="#ffffff" />
+                      <span>Ativo</span>
+                    </div>
+                  )}
                 </div>
 
                 {/* Conteúdo do Card */}
-                <div style={{ padding: '20px' }}>
-                  <div style={{
-                    fontSize: '0.78rem',
-                    fontWeight: 800,
-                    color: brand.accentColor,
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.5px',
-                    marginBottom: '4px'
-                  }}>
+                <div style={{ padding: '14px 16px', display: 'flex', flexDirection: 'column', flex: 1 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '4px' }}>
+                    <h3 style={{ fontSize: '1rem', fontWeight: 800, color: '#0f172a' }}>
+                      {brand.name}
+                    </h3>
+                    <span style={{
+                      fontSize: '0.68rem',
+                      fontWeight: 700,
+                      color: brand.productCount > 0 ? '#15803d' : '#64748b',
+                      background: brand.productCount > 0 ? '#dcfce7' : '#f1f5f9',
+                      padding: '2px 6px',
+                      borderRadius: '3px'
+                    }}>
+                      {brand.statusText}
+                    </span>
+                  </div>
+
+                  <div style={{ fontSize: '0.74rem', fontWeight: 700, color: brand.accentColor, marginBottom: '6px' }}>
                     {brand.subtitle}
                   </div>
 
                   <p style={{
-                    fontSize: '0.88rem',
-                    color: '#475569',
-                    lineHeight: 1.5,
-                    marginBottom: '14px'
+                    fontSize: '0.78rem',
+                    color: '#64748b',
+                    lineHeight: 1.45,
+                    marginBottom: '12px',
+                    display: '-webkit-box',
+                    WebkitLineClamp: 2,
+                    WebkitBoxOrient: 'vertical',
+                    overflow: 'hidden'
                   }}>
                     {brand.description}
                   </p>
 
-                  {/* Lista de destaques */}
+                  {/* Botão de Filtrar */}
                   <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-                    gap: '8px',
-                    background: '#f8fafc',
-                    padding: '12px 14px',
-                    borderRadius: '4px',
-                    border: '1px solid #e2e8f0',
-                    marginBottom: '16px'
-                  }}>
-                    {brand.highlights.map((h, i) => (
-                      <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.8rem', color: '#1e293b' }}>
-                        <span style={{ width: '6px', height: '6px', background: '#e5242a', borderRadius: '50%', flexShrink: 0 }} />
-                        <span>{h}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Botão de Ação do Card */}
-                  <div style={{
+                    marginTop: 'auto',
+                    paddingTop: '10px',
+                    borderTop: '1px solid #f1f5f9',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'space-between',
-                    paddingTop: '12px',
-                    borderTop: '1px solid #f1f5f9',
-                    fontSize: '0.86rem',
+                    fontSize: '0.78rem',
                     fontWeight: 700,
-                    color: active ? '#b91c1c' : '#e5242a'
+                    color: active ? brand.accentColor : '#475569'
                   }}>
-                    <span>
-                      {active ? 'Exibindo produtos Gedore Red (clique para limpar)' : 'Clique para ver produtos Gedore Red'}
-                    </span>
-                    <ArrowRight size={16} style={{ transform: active ? 'rotate(90deg)' : 'none', transition: 'transform 0.2s ease' }} />
+                    <span>{active ? 'Filtro ativado (limpar)' : 'Ver produtos'}</span>
+                    <ArrowRight size={14} color={active ? brand.accentColor : '#94a3b8'} />
                   </div>
                 </div>
               </div>
@@ -227,31 +232,51 @@ export default function BrandCards({ selectedBrand, onSelectBrand }: BrandCardsP
           })}
         </div>
 
-        {/* Botão para limpar filtro se ativo */}
-        {isGedoreRedActive && (
-          <div style={{ textAlign: 'center', marginTop: '14px' }}>
+        {/* Opção para limpar filtro se houver algum selecionado */}
+        {selectedBrand !== 'all' && (
+          <div style={{ textAlign: 'center', marginTop: '16px' }}>
             <button
               onClick={() => onSelectBrand('all')}
               style={{
-                background: 'none',
-                border: 'none',
-                color: '#64748b',
+                background: '#ffffff',
+                border: '1px solid #cbd5e1',
+                padding: '6px 14px',
+                borderRadius: '4px',
+                color: '#e5242a',
                 fontSize: '0.8rem',
-                fontWeight: 600,
-                textDecoration: 'underline',
+                fontWeight: 700,
                 cursor: 'pointer'
               }}
             >
-              Exibir todas as marcas
+              Exibir todas as linhas
             </button>
           </div>
         )}
       </div>
 
       <style jsx>{`
-        .brand-showcase-card:hover {
+        .brands-showcase-grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+
+        .brand-card:hover {
           transform: translateY(-2px);
-          border-color: #e5242a !important;
+          border-color: #94a3b8;
+          box-shadow: 0 6px 12px -2px rgba(0, 0, 0, 0.08);
+        }
+
+        @media (min-width: 640px) {
+          .brands-showcase-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        @media (min-width: 1024px) {
+          .brands-showcase-grid {
+            grid-template-columns: repeat(4, 1fr);
+          }
         }
       `}</style>
     </section>

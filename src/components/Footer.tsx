@@ -44,12 +44,12 @@ export default function Footer() {
 
             <p style={{ lineHeight: 1.5, color: '#9ca3af', marginBottom: '12px', fontSize: '0.83rem' }}>
               Distribuição comercial de ferramentas manuais e químicos de alta performance. 
-              Trabalhamos com produtos 100% originais das marcas Gedore Red, Gedore Blue Industrial e Tekbond.
+              Trabalhamos com produtos 100% originais das marcas Gedore Red, Gedore Industrial, Robust e Tekbond.
             </p>
 
             <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#22c55e', fontSize: '0.78rem', fontWeight: 600 }}>
               <ShieldCheck size={14} style={{ flexShrink: 0 }} />
-              <span>Garantia de Procedência & Faturamento PJ</span>
+              <span>Garantia de Procedência & Produtos 100% Originais</span>
             </div>
           </div>
 
@@ -59,10 +59,9 @@ export default function Footer() {
               Navegação
             </h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '0.82rem' }}>
-              <li><a href="/#catalogo" className="footer-link">Catálogo Completo</a></li>
-              <li><a href="/#gedore-red" className="footer-link">Linha Gedore Red</a></li>
-              <li><a href="/#gedore-blue" className="footer-link">Gedore Industrial</a></li>
-              <li><a href="/#tekbond" className="footer-link">Tekbond Químicos</a></li>
+              <li><a href="/" className="footer-link">Início</a></li>
+              <li><a href="/#mais-buscados" className="footer-link">Itens Mais Buscados</a></li>
+              <li><a href="/#linhas" className="footer-link">Linhas Oficiais</a></li>
               <li><a href="/#contato" className="footer-link">Fale Conosco</a></li>
             </ul>
           </div>

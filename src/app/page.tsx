@@ -6,7 +6,6 @@ import BrandCards from '@/components/BrandCards';
 import Catalog from '@/components/Catalog';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
-import QuoteDrawer from '@/components/QuoteDrawer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { Brand } from '@/types';
 
@@ -23,16 +22,20 @@ export default function Home() {
 
   return (
     <>
-      <Navbar onSearchFocus={handleSearchFocus} />
+      <Navbar 
+        onSearchFocus={handleSearchFocus} 
+        onSelectBrand={setSelectedBrand}
+        selectedBrand={selectedBrand}
+      />
       
       <main style={{ minHeight: '80vh', background: '#ffffff' }}>
-        {/* Card Destaque Gedore Red com Logo Oficial */}
+        {/* Linhas Oficiais com os 4 Logos das Marcas */}
         <BrandCards 
           selectedBrand={selectedBrand} 
           onSelectBrand={setSelectedBrand} 
         />
 
-        {/* Catálogo com Barra de Pesquisa de Referência e Grid do Anúncio */}
+        {/* Itens Mais Buscados com Menu Lateral para PC e Layout Padrão de Loja */}
         <Catalog 
           selectedBrand={selectedBrand} 
           onBrandChange={setSelectedBrand} 
@@ -43,7 +46,6 @@ export default function Home() {
       </main>
 
       <Footer />
-      <QuoteDrawer />
       <WhatsAppButton />
     </>
   );

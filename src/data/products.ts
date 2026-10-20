@@ -3,15 +3,43 @@ import { Product } from '@/types';
 export const BRANDS = [
   { 
     id: 'all', 
-    label: 'Todas as Marcas' 
+    label: 'Todas as Linhas',
+    color: '#0f172a',
+    logo: '',
+    tagline: 'Todas as Marcas Oficiais',
+    description: 'Catálogo completo M11 Tools com ferramentas e químicos industriais.'
   },
   { 
     id: 'gedore-red', 
     label: 'Gedore Red', 
     color: '#e5242a',
-    logo: '/images/gedore-red-logo.png',
-    tagline: 'Linha Oficial Gedore Red',
-    description: 'Ferramentas manuais profissionais forjadas com excelência para oficinas e centros automotivos.'
+    logo: '/images/logos/gedore-red.png',
+    tagline: 'Linha Automotiva & Oficinas',
+    description: 'Jogos de soquetes, catracas de alta velocidade e ferramentas forjadas em aço Cromo-Vanádio.'
+  },
+  { 
+    id: 'gedore-blue', 
+    label: 'Gedore Industrial', 
+    color: '#005baa',
+    logo: '/images/logos/gedore-blue.jpg',
+    tagline: 'Linha Industrial de Alta Precisão',
+    description: 'Torquímetros de precisão, chaves industriais e aperto crítico para alta performance.'
+  },
+  { 
+    id: 'gedore-robust', 
+    label: 'Robust', 
+    color: '#ea580c',
+    logo: '/images/logos/gedore-robust.jpeg',
+    tagline: 'Linha Robust / Grupo Gedore',
+    description: 'Robustez, ergonomia e excelente durabilidade para aplicações pesadas.'
+  },
+  { 
+    id: 'tekbond', 
+    label: 'Tekbond', 
+    color: '#00a651',
+    logo: '/images/logos/tekbond.png',
+    tagline: 'Adesivos & Químicos Industriais',
+    description: 'Adesivos instantâneos, trava-roscas anaeróbicos, silicones e sprays técnicos.'
   },
 ] as const;
 
