@@ -363,7 +363,7 @@ export default function Catalog({ selectedBrand, onBrandChange, searchInputRef }
                   fontSize: '0.8rem',
                   color: '#334155'
                 }}>
-                  Mostrando <strong style={{ color: '#0f172a' }}>{filteredProducts.length}</strong> de {PRODUCTS.length} anúncio(s)
+                  Mostrando <strong style={{ color: '#0f172a' }}>{filteredProducts.length}</strong> de {PRODUCTS.length} produto(s)
                 </div>
               </div>
 
@@ -505,8 +505,8 @@ export default function Catalog({ selectedBrand, onBrandChange, searchInputRef }
                 </h3>
                 <p style={{ color: '#64748b', marginBottom: '18px', fontSize: '0.86rem', maxWidth: '440px', margin: '0 auto 18px' }}>
                   {selectedBrand !== 'all' && selectedBrand !== 'gedore-red'
-                    ? `Estamos preparando o lançamento dos anúncios oficiais da linha ${selectedBrandObj?.label}. Se precisar de qualquer item agora, consulte nossa equipe via WhatsApp.`
-                    : `Não encontramos anúncios correspondentes aos filtros selecionados. Tente buscar por "R46023100" ou limpar os filtros.`}
+                    ? `Estamos preparando o catálogo oficial da linha ${selectedBrandObj?.label}. Se precisar de qualquer item agora, consulte nossa equipe via WhatsApp.`
+                    : `Não encontramos produtos correspondentes aos filtros selecionados. Tente buscar por "R46023100" ou limpar os filtros.`}
                 </p>
                 
                 <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', flexWrap: 'wrap' }}>
@@ -523,7 +523,7 @@ export default function Catalog({ selectedBrand, onBrandChange, searchInputRef }
                       cursor: 'pointer'
                     }}
                   >
-                    Ver todos os anúncios
+                    Ver todos os produtos
                   </button>
                   <a
                     href={buildWhatsAppUrl(`Olá M11 Tools! Gostaria de consultar itens e cotação da linha ${selectedBrandObj?.label || 'de ferramentas'}.`)}

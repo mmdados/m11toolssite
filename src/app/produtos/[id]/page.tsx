@@ -24,7 +24,8 @@ import {
   FileSpreadsheet,
   CheckCircle2,
   Wrench,
-  Tag
+  Tag,
+  Camera
 } from 'lucide-react';
 
 export default function ProductDetailPage() {
@@ -47,14 +48,14 @@ export default function ProductDetailPage() {
         <Navbar />
         <div className="container" style={{ padding: '80px 20px', textAlign: 'center', minHeight: '60vh', background: '#ffffff' }}>
           <h1 style={{ fontSize: '1.8rem', color: '#0f172a', marginBottom: '16px' }}>
-            Anúncio não encontrado
+            Produto não encontrado
           </h1>
           <p style={{ color: '#475569', marginBottom: '24px' }}>
-            O anúncio solicitado não foi localizado em nossa base atualizada.
+            O produto solicitado não foi localizado em nossa base atualizada.
           </p>
           <Link href="/#catalogo" className="btn-primary">
             <ArrowLeft size={16} />
-            <span>Voltar aos Anúncios</span>
+            <span>Voltar ao Catálogo</span>
           </Link>
         </div>
         <Footer />
@@ -71,7 +72,7 @@ export default function ProductDetailPage() {
   };
 
   const directWhatsAppUrl = buildWhatsAppUrl(
-    `*INTERESSE NO ANÚNCIO - M11 TOOLS*\nOlá! Gostaria de comprar o seguinte item:\n\n*Produto:* ${product.name}\n*Linha:* ${product.brandLabel}\n*Referência:* ${product.code}\n*Código GEDORE:* ${product.technicalCode || '3300246'}\n\nPoderia me informar as condições de envio e valor para fechamento?`
+    `*INTERESSE NO PRODUTO - M11 TOOLS*\nOlá! Gostaria de comprar o seguinte item:\n\n*Produto:* ${product.name}\n*Linha:* ${product.brandLabel}\n*Referência:* ${product.code}\n*Código GEDORE:* ${product.technicalCode || '3300246'}\n\nPoderia me informar as condições de envio e valor para fechamento?`
   );
 
   return (
@@ -79,7 +80,7 @@ export default function ProductDetailPage() {
       <Navbar />
 
       <main style={{ paddingBottom: '60px', width: '100%', overflowX: 'hidden', background: '#ffffff' }}>
-        {/* Navegação Breadcrumb */}
+        {/* Navegação Breadcrumb Limpa Sem 'Anúncios' */}
         <div style={{
           background: '#f8fafc',
           borderBottom: '1px solid #e2e8f0',
@@ -90,10 +91,6 @@ export default function ProductDetailPage() {
           <div className="container" style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
             <Link href="/" style={{ color: '#475569', textDecoration: 'none' }}>
               Início
-            </Link>
-            <ChevronRight size={13} />
-            <Link href="/#catalogo" style={{ color: '#475569', textDecoration: 'none' }}>
-              Anúncios
             </Link>
             <ChevronRight size={13} />
             <span style={{ color: '#64748b' }}>
@@ -116,29 +113,31 @@ export default function ProductDetailPage() {
               <div style={{
                 position: 'relative',
                 width: '100%',
-                height: '420px',
+                aspectRatio: '1 / 1',
+                maxHeight: '440px',
                 background: '#ffffff',
                 border: '1px solid #cbd5e1',
                 borderRadius: '6px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                padding: '20px',
-                overflow: 'hidden'
+                padding: '16px',
+                overflow: 'hidden',
+                boxSizing: 'border-box'
               }}>
                 <img
                   src={productImages[selectedImageIndex]}
                   alt={`${product.name} - Foto ${selectedImageIndex + 1}`}
                   style={{
                     maxWidth: '100%',
-                    maxHeight: '380px',
+                    maxHeight: '100%',
                     objectFit: 'contain',
                     display: 'block'
                   }}
                 />
                 
                 {/* Badge da Marca no Canto Superior Esquerdo */}
-                <div style={{ position: 'absolute', top: '12px', left: '12px', zIndex: 2 }}>
+                <div style={{ position: 'absolute', top: '10px', left: '10px', zIndex: 2 }}>
                   <span style={{
                     fontSize: '0.74rem',
                     fontWeight: 800,
@@ -152,20 +151,26 @@ export default function ProductDetailPage() {
                   </span>
                 </div>
 
-                {/* Contador de Foto Atual */}
+                {/* Contador de Foto Atual com Ícone de Câmera */}
                 <div style={{
                   position: 'absolute',
-                  bottom: '12px',
-                  right: '12px',
-                  background: '#0f172a',
+                  bottom: '10px',
+                  right: '10px',
+                  background: 'rgba(15, 23, 42, 0.85)',
+                  backdropFilter: 'blur(4px)',
                   color: '#ffffff',
                   fontSize: '0.74rem',
                   fontWeight: 700,
-                  padding: '3px 10px',
+                  padding: '4px 8px',
                   borderRadius: '4px',
-                  zIndex: 2
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '5px',
+                  zIndex: 2,
+                  boxShadow: '0 2px 4px rgba(0,0,0,0.15)'
                 }}>
-                  Foto {selectedImageIndex + 1} de {productImages.length}
+                  <Camera size={13} />
+                  <span>{selectedImageIndex + 1} / {productImages.length}</span>
                 </div>
               </div>
 
@@ -209,7 +214,7 @@ export default function ProductDetailPage() {
             <div className="info-col">
               {/* Código de Referência e Tipo */}
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '8px', marginBottom: '8px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
                   <span style={{
                     fontSize: '0.74rem',
                     textTransform: 'uppercase',
@@ -217,7 +222,8 @@ export default function ProductDetailPage() {
                     fontWeight: 800,
                     background: '#fee2e2',
                     padding: '2px 8px',
-                    borderRadius: '3px'
+                    borderRadius: '3px',
+                    flexShrink: 0
                   }}>
                     {product.brandLabel}
                   </span>
@@ -229,7 +235,8 @@ export default function ProductDetailPage() {
                       background: '#f1f5f9',
                       padding: '2px 8px',
                       borderRadius: '3px',
-                      border: '1px solid #e2e8f0'
+                      border: '1px solid #e2e8f0',
+                      flexShrink: 0
                     }}>
                       Tipo: {product.itemTypeLabel}
                     </span>
@@ -249,7 +256,8 @@ export default function ProductDetailPage() {
                     padding: '4px 10px',
                     borderRadius: '4px',
                     border: '1px solid #cbd5e1',
-                    cursor: 'pointer'
+                    cursor: 'pointer',
+                    flexShrink: 0
                   }}
                   title="Copiar código de referência"
                 >
@@ -333,15 +341,18 @@ export default function ProductDetailPage() {
                     background: '#25D366',
                     color: '#ffffff',
                     fontWeight: 700,
-                    fontSize: '1rem',
-                    padding: '14px 20px',
+                    fontSize: 'clamp(0.88rem, 3.5vw, 1rem)',
+                    padding: '13px 16px',
                     borderRadius: '4px',
                     textDecoration: 'none',
                     boxShadow: '0 4px 10px rgba(37, 211, 102, 0.25)',
-                    transition: 'all 0.15s ease'
+                    transition: 'all 0.15s ease',
+                    boxSizing: 'border-box',
+                    maxWidth: '100%',
+                    textAlign: 'center'
                   }}
                 >
-                  <MessageSquare size={19} />
+                  <MessageSquare size={19} style={{ flexShrink: 0 }} />
                   <span>Comprar via WhatsApp (Atendimento Imediato)</span>
                 </a>
 
@@ -355,17 +366,20 @@ export default function ProductDetailPage() {
                     background: '#f1f5f9',
                     color: '#94a3b8',
                     fontWeight: 600,
-                    fontSize: '0.92rem',
-                    padding: '12px 20px',
+                    fontSize: 'clamp(0.82rem, 3vw, 0.92rem)',
+                    padding: '12px 16px',
                     borderRadius: '4px',
                     border: '1px solid #e2e8f0',
                     cursor: 'not-allowed',
                     opacity: 0.65,
-                    userSelect: 'none'
+                    userSelect: 'none',
+                    boxSizing: 'border-box',
+                    maxWidth: '100%',
+                    textAlign: 'center'
                   }}
                   title="Vendas via Mercado Livre estarão disponíveis em breve"
                 >
-                  <ShoppingBag size={18} color="#94a3b8" />
+                  <ShoppingBag size={18} color="#94a3b8" style={{ flexShrink: 0 }} />
                   <span>Comprar no Mercado Livre (Em Breve)</span>
                 </div>
               </div>
@@ -456,7 +470,7 @@ export default function ProductDetailPage() {
                   {product.composition && product.composition.length > 0 && (
                     <div style={{
                       display: 'grid',
-                      gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                      gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))',
                       gap: '10px'
                     }}>
                       {product.composition.map((item, idx) => (
@@ -616,25 +630,32 @@ export default function ProductDetailPage() {
         .product-layout-grid {
           display: grid;
           grid-template-columns: 1fr;
-          gap: 36px;
+          gap: 28px;
+          min-width: 0;
+          width: 100%;
         }
 
         .gallery-col {
           display: flex;
           flex-direction: column;
-          gap: 14px;
+          gap: 12px;
+          min-width: 0;
+          width: 100%;
         }
 
         .thumbnails-row {
           display: flex;
-          gap: 10px;
+          gap: 8px;
           overflow-x: auto;
           padding-bottom: 6px;
+          max-width: 100%;
         }
 
         .info-col {
           display: flex;
           flex-direction: column;
+          min-width: 0;
+          width: 100%;
         }
 
         .details-tabs-header {
@@ -643,15 +664,16 @@ export default function ProductDetailPage() {
           border-bottom: 2px solid #e2e8f0;
           overflow-x: auto;
           padding-bottom: 2px;
+          max-width: 100%;
         }
 
         .tab-btn {
           background: none;
           border: none;
-          padding: 12px 18px;
-          font-size: 0.9rem;
+          padding: 10px 14px;
+          font-size: 0.88rem;
           font-weight: 700;
-          color: '#64748b';
+          color: #64748b;
           cursor: pointer;
           border-bottom: 3px solid transparent;
           margin-bottom: -2px;
@@ -669,13 +691,25 @@ export default function ProductDetailPage() {
           border: 1px solid #e2e8f0;
           border-top: none;
           border-radius: 0 0 6px 6px;
-          padding: 28px;
+          padding: 16px;
+          min-width: 0;
+        }
+
+        @media (min-width: 768px) {
+          .tab-content-card {
+            padding: 28px;
+          }
+          .tab-btn {
+            padding: 12px 18px;
+            font-size: 0.9rem;
+          }
         }
 
         @media (min-width: 900px) {
           .product-layout-grid {
             grid-template-columns: 1.1fr 1fr;
             align-items: start;
+            gap: 40px;
           }
         }
       `}</style>

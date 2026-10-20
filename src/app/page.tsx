@@ -7,6 +7,7 @@ import Catalog from '@/components/Catalog';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import QuoteDrawer from '@/components/QuoteDrawer';
 import { Brand } from '@/types';
 
 export default function Home() {
@@ -45,6 +46,7 @@ export default function Home() {
         <ContactSection />
       </main>
 
+      <QuoteDrawer />
       <Footer />
       <WhatsAppButton />
     </>
