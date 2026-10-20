@@ -21,20 +21,20 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.domain),
-  title: `${SITE_CONFIG.companyName} | Distribuidora Gedore & Tekbond - Ferramentas Profissionais`,
-  description: `Distribuição oficial de ferramentas Gedore Red, Gedore Blue Industrial e químicos Tekbond. Faturamento para empresas (PJ), pronta entrega e cotações rápidas via WhatsApp: ${SITE_CONFIG.phoneDisplay}.`,
+  title: `${SITE_CONFIG.companyName} | Distribuidora Oficial Gedore, Robust & Tekbond`,
+  description: `Distribuição oficial de ferramentas Gedore Red, Gedore Industrial, Robust e químicos Tekbond. Pronta entrega e atendimento rápido via WhatsApp: ${SITE_CONFIG.phoneDisplay}.`,
   keywords: [
     'M11 Tools',
     'Gedore',
     'Gedore Red',
-    'Gedore Blue',
+    'Gedore Industrial',
+    'Robust',
     'Tekbond',
-    'ferramentas industriais',
+    'ferramentas manuais',
+    'jogos de ferramentas',
     'torquímetro',
     'jogo de soquetes',
     'adesivo 793',
-    'trava roscas',
-    'faturamento PJ',
     'distribuidora de ferramentas'
   ],
   authors: [{ name: 'M11 Tools' }],
@@ -42,8 +42,8 @@ export const metadata: Metadata = {
     icon: '/logo.jpg',
   },
   openGraph: {
-    title: 'M11 Tools | Catálogo Comercial Gedore & Tekbond',
-    description: 'Distribuição oficial de ferramentas Gedore Red, Gedore Blue Industrial e químicos Tekbond com faturamento PJ.',
+    title: 'M11 Tools | Catálogo Oficial Gedore, Robust & Tekbond',
+    description: 'Distribuição oficial de ferramentas Gedore Red, Gedore Industrial, Robust e químicos Tekbond.',
     url: 'https://m11tools.com.br',
     siteName: 'M11 Tools',
     images: [
