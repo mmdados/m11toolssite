@@ -445,70 +445,65 @@ export default function ProductDetailPage() {
               {/* TAB 1: Composição Completa detalhada do produto */}
               {activeTab === 'composicao' && (
                 <div>
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '12px', marginBottom: '18px' }}>
-                    <div>
-                      <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#0f172a', marginBottom: '4px' }}>
-                        Itens Inclusos no Jogo de Ferramentas
-                      </h3>
-                      <p style={{ color: '#64748b', fontSize: '0.88rem' }}>
-                        Confira a relação de todas as 100 ferramentas e acessórios que compõem a maleta:
-                      </p>
-                    </div>
-
-                    <span style={{
-                      background: '#fee2e2',
-                      color: '#b91c1c',
-                      fontSize: '0.78rem',
-                      fontWeight: 800,
-                      padding: '4px 10px',
-                      borderRadius: '4px'
-                    }}>
-                      Total: 100 Peças
-                    </span>
+                  <div style={{ marginBottom: '18px' }}>
+                    <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#0f172a', marginBottom: '4px' }}>
+                      {product.itemType === 'jogo' ? 'Itens Inclusos na Composição' : 'Especificações e Componentes do Produto'}
+                    </h3>
+                    <p style={{ color: '#64748b', fontSize: '0.88rem' }}>
+                      {product.itemType === 'jogo' 
+                        ? 'Confira a relação detalhada dos itens e ferramentas que compõem o conjunto:'
+                        : 'Confira as características construtivas e itens integrados ao produto:'}
+                    </p>
                   </div>
 
-                  {product.composition && product.composition.length > 0 && (
-                    <div style={{
-                      display: 'grid',
-                      gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))',
-                      gap: '10px'
-                    }}>
-                      {product.composition.map((item, idx) => (
-                        <div
-                          key={idx}
-                          style={{
-                            display: 'flex',
-                            alignItems: 'flex-start',
-                            gap: '10px',
-                            background: '#f8fafc',
-                            border: '1px solid #e2e8f0',
-                            borderRadius: '4px',
-                            padding: '10px 14px',
-                            fontSize: '0.86rem',
-                            color: '#1e293b'
-                          }}
-                        >
-                          <span style={{
-                            width: '20px',
-                            height: '20px',
-                            borderRadius: '50%',
-                            background: '#e5242a',
-                            color: '#ffffff',
-                            fontWeight: 800,
-                            fontSize: '0.72rem',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            flexShrink: 0,
-                            marginTop: '1px'
-                          }}>
-                            {idx + 1}
-                          </span>
-                          <span style={{ lineHeight: 1.45 }}>{item}</span>
-                        </div>
-                      ))}
-                    </div>
-                  )}
+                  {product.composition && product.composition.length > 0 && (() => {
+                    const cleanComposition = product.composition
+                      .map(it => it.replace(/^[>›•\s]+/, '').trim())
+                      .filter(it => it.length > 2 && !it.match(/^(CONTEÚDO|COMPOSIÇÃO|CONTEUDO|INFORMAÇÕES):?$/i));
+
+                    return (
+                      <div style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))',
+                        gap: '10px'
+                      }}>
+                        {cleanComposition.map((item, idx) => (
+                          <div
+                            key={idx}
+                            style={{
+                              display: 'flex',
+                              alignItems: 'flex-start',
+                              gap: '10px',
+                              background: '#f8fafc',
+                              border: '1px solid #e2e8f0',
+                              borderRadius: '4px',
+                              padding: '10px 14px',
+                              fontSize: '0.86rem',
+                              color: '#1e293b'
+                            }}
+                          >
+                            <span style={{
+                              width: '20px',
+                              height: '20px',
+                              borderRadius: '50%',
+                              background: '#e5242a',
+                              color: '#ffffff',
+                              fontWeight: 800,
+                              fontSize: '0.72rem',
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              flexShrink: 0,
+                              marginTop: '1px'
+                            }}>
+                              {idx + 1}
+                            </span>
+                            <span style={{ lineHeight: 1.45 }}>{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    );
+                  })()}
                 </div>
               )}
 

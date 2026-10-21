@@ -201,7 +201,6 @@ export const PRODUCTS: Product[] = [
       "Bits 5/16″: hexagonais, fenda simples, fenda cruzada PH, TX (perfil hexalobular), TX com guia (perfil hexalobular), conforme DIN ISO 1173 – D 8",
       "Bits 1/4″: TX (perfil hexalobular), TX com guia (perfil hexalobular), TX plus security (perfil hexalobular), Ribe®, multidentado XZN, conforme DIN ISO 1173 – D 6,3",
       "Catracas reversíveis 1/4″+ 3/8″+1/2″: rotação reversível à direita/esquerda através de alavanca, desengate por botão de pressão, dentes finos, cabeça oval, punho de 2 componentes, fácil manuseio, para utilização com soquetes",
-      "CONTEÚDO:"
     ],
     "technicalSpecs": {
       "codigoGedore": "3300058",
@@ -287,7 +286,6 @@ export const PRODUCTS: Product[] = [
       "Adaptador para bits 1/4″: sextavado x quadrado, para bits e ferramentas com encaixe sextavado 1/4″",
       "Maleta de plástico em GEDORE red Design com maior resistência oferecendo uma proteção as ferramentas",
       "Catraca reversível: rotação reversível à direita/esquerda através de alavanca, desengate por botão de pressão, dentes finos, cabeça oval, punho de 2 componentes, fácil manuseio, para utilização com soquetes",
-      "CONTEÚDO:"
     ],
     "technicalSpecs": {
       "codigoGedore": "3300050",
@@ -358,14 +356,14 @@ export const PRODUCTS: Product[] = [
     "description": "Esteira anatômica para mecânico em polietileno de alta densidade (HDPE) com apoio de cabeça acolchoado e 6 rodízios giratórios.",
     "detailedDescription": "A Esteira para Mecânico GEDORE red R19352000 (Código 3301876) foi projetada para oferecer máximo conforto e ergonomia nas manutenções sob veículos. Com corpo anatômico em polietileno (HDPE) de 1.020 mm, encosto de cabeça acolchoado, cavidades laterais para descanso dos braços e porta-ferramentas integrados, permite mobilidade total com seus 6 rodízios giratórios.",
     "composition": [
-      "> Corpo em plástico Polietileno (HDPE) resistente.",
-      "> Comprimento de 1.020 mm permite acomodar toda a coluna do usuário.",
-      "> Encosto de cabeça almofadado",
-      "> Capacidade de até 180 kg.",
-      "> Design anatômico traz ergonomia e conforto na movimentação dos braços.",
-      "> Com 6 rodízios giratórios resistentes que possibilitam manobras ágeis e seguras.",
-      "> Pegador na parte inferior para fácil transporte e movimentação.",
-      "> Compartimento nas duas laterais para acomodação de peças e ferramentas."
+      "Corpo em plástico Polietileno (HDPE) resistente.",
+      "Comprimento de 1.020 mm permite acomodar toda a coluna do usuário.",
+      "Encosto de cabeça almofadado",
+      "Capacidade de até 180 kg.",
+      "Design anatômico traz ergonomia e conforto na movimentação dos braços.",
+      "Com 6 rodízios giratórios resistentes que possibilitam manobras ágeis e seguras.",
+      "Pegador na parte inferior para fácil transporte e movimentação.",
+      "Compartimento nas duas laterais para acomodação de peças e ferramentas."
     ],
     "technicalSpecs": {
       "codigoGedore": "3301876",
@@ -667,19 +665,19 @@ export const PRODUCTS: Product[] = [
     "description": "Carro para ferramentas profissional com 4 gavetas telescópicas, porta frontal rebatível, porta lateral e painéis perfurados.",
     "detailedDescription": "O Carro para Ferramentas GEDORE red PLUS R20150005 (Código 3301653) é a estação de trabalho definitiva para centros automotivos e indústrias. Sua estrutura soldada em chapa de aço reforçada (0,75 a 1,5 mm) garante rigidez estrutural incomparável. Conta com 4 gavetas com corrediças telescópicas macias, compartimento inferior com porta frontal rebatível, armário lateral com porta e fechadura, além de painéis laterais perfurados para ganchos e acessórios. Pintura epóxi vermelha com detalhes pretos padrão GEDORE red.",
     "composition": [
-      "> Estrutura em chapa reforçada de aço especial entre 0,75 e 1,5 mm.",
-      "> Carro resistente e soldado, com grande estabilidade.",
-      "> Dimensão da Gaveta pequena: 460x348x75 mm.",
-      "> As dimensões da estrutura do carro montado são: 921 x 743 x 413 mm.",
-      "> Capacidade de carga das gavetas de 20kg.",
-      "> Capacidade de carga do carro de 300kg.",
-      "> Composto de dois rodízios giratórios, sendo um com freio, e dois rodízios fixos. Rodízios montados na base com 4 parafusos M8 em cada.",
-      "> Porta lateral de 740 mm de altura, 250 mm de largura e 60 mm de profundidade para maior otimização do espaço e armazenamento de peças maiores, como um torquímetro.",
-      "> Painel perfurado em ambas as laterais com furos redondos de 5 mm diâmetro para fixação de ganchos e acessórios.",
-      "> Acompanha um suporte para torquímetro* e 10 ganchos (*Torquímetros GEDORE red de encaixe de 1/2” e 3/4”, R68900100; R68900200; R68900300 e R78900400).",
-      "> Porta inferior rebatível de 330 mm de altura, 500 mm de largura e 390 mm de profundidade permite armazenamento de maiores volumes, como utensílios pessoais.",
-      "> Porta latas e catálogos.",
-      "> Fechaduras de mesmo segredo com duas cópias de chave."
+      "Estrutura em chapa reforçada de aço especial entre 0,75 e 1,5 mm.",
+      "Carro resistente e soldado, com grande estabilidade.",
+      "Dimensão da Gaveta pequena: 460x348x75 mm.",
+      "As dimensões da estrutura do carro montado são: 921 x 743 x 413 mm.",
+      "Capacidade de carga das gavetas de 20kg.",
+      "Capacidade de carga do carro de 300kg.",
+      "Composto de dois rodízios giratórios, sendo um com freio, e dois rodízios fixos. Rodízios montados na base com 4 parafusos M8 em cada.",
+      "Porta lateral de 740 mm de altura, 250 mm de largura e 60 mm de profundidade para maior otimização do espaço e armazenamento de peças maiores, como um torquímetro.",
+      "Painel perfurado em ambas as laterais com furos redondos de 5 mm diâmetro para fixação de ganchos e acessórios.",
+      "Acompanha um suporte para torquímetro* e 10 ganchos (*Torquímetros GEDORE red de encaixe de 1/2” e 3/4”, R68900100; R68900200; R68900300 e R78900400).",
+      "Porta inferior rebatível de 330 mm de altura, 500 mm de largura e 390 mm de profundidade permite armazenamento de maiores volumes, como utensílios pessoais.",
+      "Porta latas e catálogos.",
+      "Fechaduras de mesmo segredo com duas cópias de chave."
     ],
     "technicalSpecs": {
       "codigoGedore": "3301653",
@@ -837,19 +835,19 @@ export const PRODUCTS: Product[] = [
     "description": "Edição especial Black Edition do carro de ferramentas GEDORE red PLUS com pintura eletrostática preta fosca de alta durabilidade.",
     "detailedDescription": "O Carro para Ferramentas GEDORE red PLUS Black Edition R20152005 (Código 3301648) une a consagradas robustez do modelo PLUS a uma estética moderna e imponente em preto acetinado. Construído com chapas de aço selecionadas de até 1,5 mm de espessura, conta com 4 gavetas com trilhos telescópicos de deslizamento suave, porta rebatível frontal, armário lateral com fechadura e painéis perfurados para suporte de ferramentas.",
     "composition": [
-      "> Estrutura em chapa reforçada de aço especial entre 0,75 e 1,5 mm.",
-      "> Carro resistente e soldado, com grande estabilidade.",
-      "> Dimensão da Gaveta pequena: 460x348x75 mm.",
-      "> As dimensões da estrutura do carro montado são: 921 x 743 x 413 mm.",
-      "> Capacidade de carga das gavetas de 20kg.",
-      "> Capacidade de carga do carro de 300kg.",
-      "> Composto de dois rodízios giratórios, sendo um com freio, e dois rodízios fixos. Rodízios montados na base com 4 parafusos M8 em cada.",
-      "> Porta lateral de 740 mm de altura, 250 mm de largura e 60 mm de profundidade para maior otimização do espaço e armazenamento de peças maiores, como um torquímetro.",
-      "> Painel perfurado em ambas as laterais com furos redondos de 5 mm diâmetro para fixação de ganchos e acessórios.",
-      "> Acompanha um suporte para torquímetro* e 10 ganchos (*Torquímetros GEDORE red de encaixe de 1/2” e 3/4”, R68900100; R68900200; R68900300 e R78900400).",
-      "> Porta inferior rebatível de 330 mm de altura, 500 mm de largura e 390 mm de profundidade permite armazenamento de maiores volumes, como utensílios pessoais.",
-      "> Porta latas e catálogos.",
-      "> Fechaduras de mesmo segredo com duas cópias de chave."
+      "Estrutura em chapa reforçada de aço especial entre 0,75 e 1,5 mm.",
+      "Carro resistente e soldado, com grande estabilidade.",
+      "Dimensão da Gaveta pequena: 460x348x75 mm.",
+      "As dimensões da estrutura do carro montado são: 921 x 743 x 413 mm.",
+      "Capacidade de carga das gavetas de 20kg.",
+      "Capacidade de carga do carro de 300kg.",
+      "Composto de dois rodízios giratórios, sendo um com freio, e dois rodízios fixos. Rodízios montados na base com 4 parafusos M8 em cada.",
+      "Porta lateral de 740 mm de altura, 250 mm de largura e 60 mm de profundidade para maior otimização do espaço e armazenamento de peças maiores, como um torquímetro.",
+      "Painel perfurado em ambas as laterais com furos redondos de 5 mm diâmetro para fixação de ganchos e acessórios.",
+      "Acompanha um suporte para torquímetro* e 10 ganchos (*Torquímetros GEDORE red de encaixe de 1/2” e 3/4”, R68900100; R68900200; R68900300 e R78900400).",
+      "Porta inferior rebatível de 330 mm de altura, 500 mm de largura e 390 mm de profundidade permite armazenamento de maiores volumes, como utensílios pessoais.",
+      "Porta latas e catálogos.",
+      "Fechaduras de mesmo segredo com duas cópias de chave."
     ],
     "technicalSpecs": {
       "codigoGedore": "3301648",
