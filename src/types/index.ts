@@ -10,16 +10,24 @@ export type Category =
   | 'maletas-carrinhos'
   | 'adesivos-quimicos'
   | 'selantes-silicones'
-  | 'sprays-lubrificantes';
+  | 'sprays-lubrificantes'
+  | 'automotivo'
+  | 'organizacao-oficina';
+
+export interface ProductTableData {
+  headers: string[];
+  rows: string[][];
+}
 
 export interface TechnicalTableSpecs {
-  codigoGedore: string;
-  referencia: string;
-  comprimentoMaleta: string;
-  larguraMaleta: string;
-  alturaMaleta: string;
-  pecas: number | string;
-  pesoKg: number | string;
+  codigoGedore?: string;
+  referencia?: string;
+  comprimentoMaleta?: string;
+  larguraMaleta?: string;
+  alturaMaleta?: string;
+  pecas?: number | string;
+  pesoKg?: number | string;
+  [key: string]: any;
 }
 
 export interface Product {
@@ -39,6 +47,7 @@ export interface Product {
   properties?: string[];
   specs: string[];
   technicalSpecs?: TechnicalTableSpecs;
+  tableData?: ProductTableData;
   instructions?: string[];
   image: string; // Main image
   images: string[]; // Multiple gallery images (FuelTech style)

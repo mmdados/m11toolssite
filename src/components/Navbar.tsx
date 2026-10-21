@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useQuote } from '@/context/QuoteContext';
 import { SITE_CONFIG, buildWhatsAppUrl } from '@/config/site';
-import { BRANDS } from '@/data/products';
+import { BRANDS, PRODUCTS } from '@/data/products';
 import { Brand } from '@/types';
 import { 
   Phone, 
@@ -431,7 +431,7 @@ export default function Navbar({ onSearchFocus, onSelectBrand, selectedBrand = '
                           color: isGedoreRed ? '#15803d' : '#94a3b8',
                           marginTop: '2px'
                         }}>
-                          {isGedoreRed ? '1 item ativo' : 'Em breve'}
+                          {isGedoreRed ? `${PRODUCTS.filter(p => p.brand === 'gedore-red').length} produtos` : 'Em breve'}
                         </div>
                       </div>
                     </button>

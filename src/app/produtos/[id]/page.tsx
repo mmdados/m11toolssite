@@ -512,47 +512,105 @@ export default function ProductDetailPage() {
                 </div>
               )}
 
-              {/* TAB 2: Tabela de Informações Técnicas (Conforme a imagem / print enviado) */}
+              {/* TAB 2: Tabela de Informações Técnicas */}
               {activeTab === 'especificacoes' && (
                 <div>
                   <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#0f172a', marginBottom: '14px' }}>
                     Tabela de Informações Técnicas
                   </h3>
                   
-                  {/* Tabela Formatada exatamente como o Print Original */}
-                  <div style={{ overflowX: 'auto', marginBottom: '28px' }}>
-                    <table style={{
-                      width: '100%',
-                      borderCollapse: 'collapse',
-                      fontSize: '0.88rem',
-                      textAlign: 'left',
-                      border: '1px solid #cbd5e1',
-                      borderRadius: '4px'
-                    }}>
-                      <thead>
-                        <tr style={{ background: '#0f172a', color: '#ffffff' }}>
-                          <th style={{ padding: '12px 16px', fontWeight: 700 }}>Código</th>
-                          <th style={{ padding: '12px 16px', fontWeight: 700 }}>Referência</th>
-                          <th style={{ padding: '12px 16px', fontWeight: 700 }}>Comprimento maleta</th>
-                          <th style={{ padding: '12px 16px', fontWeight: 700 }}>Largura maleta</th>
-                          <th style={{ padding: '12px 16px', fontWeight: 700 }}>Altura</th>
-                          <th style={{ padding: '12px 16px', fontWeight: 700 }}>Peças</th>
-                          <th style={{ padding: '12px 16px', fontWeight: 700 }}>Peso (kg)</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr style={{ background: '#f8fafc', color: '#0f172a', fontWeight: 600 }}>
-                          <td style={{ padding: '12px 16px', borderBottom: '1px solid #e2e8f0' }}>3300246</td>
-                          <td style={{ padding: '12px 16px', borderBottom: '1px solid #e2e8f0', color: '#e5242a', fontWeight: 800 }}>R46023100</td>
-                          <td style={{ padding: '12px 16px', borderBottom: '1px solid #e2e8f0' }}>525 mm</td>
-                          <td style={{ padding: '12px 16px', borderBottom: '1px solid #e2e8f0' }}>380 mm</td>
-                          <td style={{ padding: '12px 16px', borderBottom: '1px solid #e2e8f0' }}>110 mm</td>
-                          <td style={{ padding: '12px 16px', borderBottom: '1px solid #e2e8f0' }}>100</td>
-                          <td style={{ padding: '12px 16px', borderBottom: '1px solid #e2e8f0' }}>11 kg</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
+                  {product.tableData ? (
+                    <div style={{ overflowX: 'auto', marginBottom: '24px' }}>
+                      <table style={{
+                        width: '100%',
+                        borderCollapse: 'collapse',
+                        fontSize: '0.88rem',
+                        textAlign: 'left',
+                        border: '1px solid #cbd5e1',
+                        borderRadius: '4px'
+                      }}>
+                        <thead>
+                          <tr style={{ background: '#0f172a', color: '#ffffff' }}>
+                            {product.tableData.headers.map((h, i) => (
+                              <th key={i} style={{ padding: '12px 16px', fontWeight: 700 }}>
+                                {h === '0' || !h ? 'Peso' : h}
+                              </th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {product.tableData.rows.map((row, rIdx) => (
+                            <tr key={rIdx} style={{ background: rIdx % 2 === 0 ? '#f8fafc' : '#ffffff', color: '#0f172a', fontWeight: 600 }}>
+                              {row.map((val, cIdx) => (
+                                <td 
+                                  key={cIdx} 
+                                  style={{ 
+                                    padding: '12px 16px', 
+                                    borderBottom: '1px solid #e2e8f0',
+                                    color: cIdx === 1 ? '#e5242a' : '#0f172a',
+                                    fontWeight: cIdx === 1 ? 800 : 600
+                                  }}
+                                >
+                                  {val}
+                                </td>
+                              ))}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  ) : product.technicalSpecs ? (
+                    <div style={{ overflowX: 'auto', marginBottom: '24px' }}>
+                      <table style={{
+                        width: '100%',
+                        borderCollapse: 'collapse',
+                        fontSize: '0.88rem',
+                        textAlign: 'left',
+                        border: '1px solid #cbd5e1',
+                        borderRadius: '4px'
+                      }}>
+                        <thead>
+                          <tr style={{ background: '#0f172a', color: '#ffffff' }}>
+                            <th style={{ padding: '12px 16px', fontWeight: 700 }}>Código</th>
+                            <th style={{ padding: '12px 16px', fontWeight: 700 }}>Referência</th>
+                            {product.technicalSpecs.comprimentoMaleta && <th style={{ padding: '12px 16px', fontWeight: 700 }}>Comprimento maleta</th>}
+                            {product.technicalSpecs.larguraMaleta && <th style={{ padding: '12px 16px', fontWeight: 700 }}>Largura maleta</th>}
+                            {product.technicalSpecs.alturaMaleta && <th style={{ padding: '12px 16px', fontWeight: 700 }}>Altura</th>}
+                            {product.technicalSpecs.pecas && <th style={{ padding: '12px 16px', fontWeight: 700 }}>Peças</th>}
+                            {product.technicalSpecs.pesoKg && <th style={{ padding: '12px 16px', fontWeight: 700 }}>Peso (kg)</th>}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr style={{ background: '#f8fafc', color: '#0f172a', fontWeight: 600 }}>
+                            <td style={{ padding: '12px 16px', borderBottom: '1px solid #e2e8f0' }}>{product.technicalSpecs.codigoGedore || product.technicalCode}</td>
+                            <td style={{ padding: '12px 16px', borderBottom: '1px solid #e2e8f0', color: '#e5242a', fontWeight: 800 }}>{product.technicalSpecs.referencia || product.code}</td>
+                            {product.technicalSpecs.comprimentoMaleta && <td style={{ padding: '12px 16px', borderBottom: '1px solid #e2e8f0' }}>{product.technicalSpecs.comprimentoMaleta}</td>}
+                            {product.technicalSpecs.larguraMaleta && <td style={{ padding: '12px 16px', borderBottom: '1px solid #e2e8f0' }}>{product.technicalSpecs.larguraMaleta}</td>}
+                            {product.technicalSpecs.alturaMaleta && <td style={{ padding: '12px 16px', borderBottom: '1px solid #e2e8f0' }}>{product.technicalSpecs.alturaMaleta}</td>}
+                            {product.technicalSpecs.pecas && <td style={{ padding: '12px 16px', borderBottom: '1px solid #e2e8f0' }}>{product.technicalSpecs.pecas}</td>}
+                            {product.technicalSpecs.pesoKg && <td style={{ padding: '12px 16px', borderBottom: '1px solid #e2e8f0' }}>{product.technicalSpecs.pesoKg}</td>}
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  ) : null}
+
+                  {/* Lista de especificações técnicas em tópicos */}
+                  {product.specs && product.specs.length > 0 && (
+                    <div style={{ marginTop: '16px' }}>
+                      <h4 style={{ fontSize: '0.88rem', color: '#0f172a', fontWeight: 800, marginBottom: '10px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                        Destaques e Características Técnicas:
+                      </h4>
+                      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '8px' }}>
+                        {product.specs.map((spec, sIdx) => (
+                          <div key={sIdx} style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '8px 12px', background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '4px', fontSize: '0.84rem', color: '#334155' }}>
+                            <CheckCircle2 size={14} color="#16a34a" style={{ flexShrink: 0 }} />
+                            <span>{spec}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
               )}
 

@@ -4,58 +4,68 @@ import React from 'react';
 import Image from 'next/image';
 import { ArrowRight, CheckCircle2, Layers } from 'lucide-react';
 import { Brand } from '@/types';
+import { PRODUCTS } from '@/data/products';
 
 interface BrandCardsProps {
   selectedBrand: Brand | 'all';
   onSelectBrand: (brand: Brand | 'all') => void;
 }
 
-export const BRANDS_INFO = [
-  {
-    id: 'gedore-red' as Brand,
-    name: 'Gedore Red',
-    badge: 'Linha Oficial',
-    subtitle: 'Linha Automotiva & Oficinas',
-    description: 'Jogos de soquetes, catracas de alta velocidade e ferramentas manuais forjadas em aço Cromo-Vanádio.',
-    logo: '/images/logos/gedore-red.png',
-    accentColor: '#e5242a',
-    productCount: 1,
-    statusText: '1 produto disponível'
-  },
-  {
-    id: 'gedore-blue' as Brand,
-    name: 'Gedore Industrial',
-    badge: 'Alta Precisão',
-    subtitle: 'Engenharia & Indústria Pesada',
-    description: 'Padrão ouro em torquímetros de estalo, chaves industriais e aperto crítico para alta performance.',
-    logo: '/images/logos/gedore-blue.jpg',
-    accentColor: '#005baa',
-    productCount: 0,
-    statusText: 'Em breve lançamentos'
-  },
-  {
-    id: 'gedore-robust' as Brand,
-    name: 'Robust',
-    badge: 'Grupo Gedore',
-    subtitle: 'Linha Profissional Pesada',
-    description: 'Robustez mecânica, alta durabilidade e excelente ergonomia para o dia a dia da oficina.',
-    logo: '/images/logos/gedore-robust.jpeg',
-    accentColor: '#ea580c',
-    productCount: 0,
-    statusText: 'Em breve lançamentos'
-  },
-  {
-    id: 'tekbond' as Brand,
-    name: 'Tekbond',
-    badge: 'Química Industrial',
-    subtitle: 'Adesivos & Selantes Técnicos',
-    description: 'Químicos de alta performance para colagem instantânea, vedação de motores e trava-roscas anaeróbicos.',
-    logo: '/images/logos/tekbond.png',
-    accentColor: '#00a651',
-    productCount: 0,
-    statusText: 'Em breve lançamentos'
-  }
-];
+export const getBrandsInfo = () => {
+  const gedoreRedCount = PRODUCTS.filter(p => p.brand === 'gedore-red').length;
+  const gedoreBlueCount = PRODUCTS.filter(p => p.brand === 'gedore-blue').length;
+  const robustCount = PRODUCTS.filter(p => p.brand === 'gedore-robust').length;
+  const tekbondCount = PRODUCTS.filter(p => p.brand === 'tekbond').length;
+
+  return [
+    {
+      id: 'gedore-red' as Brand,
+      name: 'Gedore Red',
+      badge: 'Linha Oficial',
+      subtitle: 'Linha Automotiva & Oficinas',
+      description: 'Jogos de soquetes, catracas de alta velocidade e ferramentas manuais forjadas em aço Cromo-Vanádio.',
+      logo: '/images/logos/gedore-red.png',
+      accentColor: '#e5242a',
+      productCount: gedoreRedCount,
+      statusText: `${gedoreRedCount} produtos disponíveis`
+    },
+    {
+      id: 'gedore-blue' as Brand,
+      name: 'Gedore Industrial',
+      badge: 'Alta Precisão',
+      subtitle: 'Engenharia & Indústria Pesada',
+      description: 'Padrão ouro em torquímetros de estalo, chaves industriais e aperto crítico para alta performance.',
+      logo: '/images/logos/gedore-blue.jpg',
+      accentColor: '#005baa',
+      productCount: gedoreBlueCount,
+      statusText: gedoreBlueCount > 0 ? `${gedoreBlueCount} produtos` : 'Em breve lançamentos'
+    },
+    {
+      id: 'gedore-robust' as Brand,
+      name: 'Robust',
+      badge: 'Grupo Gedore',
+      subtitle: 'Linha Profissional Pesada',
+      description: 'Robustez mecânica, alta durabilidade e excelente ergonomia para o dia a dia da oficina.',
+      logo: '/images/logos/gedore-robust.jpeg',
+      accentColor: '#ea580c',
+      productCount: robustCount,
+      statusText: robustCount > 0 ? `${robustCount} produtos` : 'Em breve lançamentos'
+    },
+    {
+      id: 'tekbond' as Brand,
+      name: 'Tekbond',
+      badge: 'Química Industrial',
+      subtitle: 'Adesivos & Selantes Técnicos',
+      description: 'Químicos de alta performance para colagem instantânea, vedação de motores e trava-roscas anaeróbicos.',
+      logo: '/images/logos/tekbond.png',
+      accentColor: '#00a651',
+      productCount: tekbondCount,
+      statusText: tekbondCount > 0 ? `${tekbondCount} produtos` : 'Em breve lançamentos'
+    }
+  ];
+};
+
+export const BRANDS_INFO = getBrandsInfo();
 
 export default function BrandCards({ selectedBrand, onSelectBrand }: BrandCardsProps) {
   return (
