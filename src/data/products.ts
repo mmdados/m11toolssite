@@ -1453,9 +1453,9 @@ export const PRODUCTS: Product[] = [
       "Selecione o tamanho nominal exato em polegadas.",
       "Limpe as chaves após contato com graxas pesadas e fluidos hidráulicos."
     ],
-    "image": "/images/products/r09115016-1.jpeg",
+    "image": "/images/products/r09115016-1.png",
     "images": [
-      "/images/products/r09115016-1.jpeg"
+      "/images/products/r09115016-1.png"
     ],
     "application": "Linha Pesada, Máquinas Agrícolas, Indústrias Químicas e Centros Automotivos",
     "priceFormatted": "Consulte Valor"
@@ -1525,9 +1525,9 @@ export const PRODUCTS: Product[] = [
       "Utilize o lado da catraca para rotação contínua e a boca fixa para torque inicial de desaperto extremo se necessário.",
       "Mantenha o mecanismo lubrificado e livre de limalhas."
     ],
-    "image": "/images/products/r07105005-1.jpeg",
+    "image": "/images/products/r07105005-1.png",
     "images": [
-      "/images/products/r07105005-1.jpeg"
+      "/images/products/r07105005-1.png"
     ],
     "application": "Oficinas Mecânicas, Manutenção Automotiva, Montagem de Motores e Indústria",
     "priceFormatted": "Consulte Valor"
@@ -1737,9 +1737,9 @@ export const PRODUCTS: Product[] = [
       "Aplique força no sentido da tração do operador para segurança.",
       "Guarde no suporte organizador em local seco."
     ],
-    "image": "/images/products/r09105015-1.jpeg",
+    "image": "/images/products/r09105015-1.png",
     "images": [
-      "/images/products/r09105015-1.jpeg",
+      "/images/products/r09105015-1.png",
       "/images/products/r09105015-2.jpeg"
     ],
     "application": "Mecânica Pesada, Centros Automotivos, Tratores, Caminhões e Manutenção Industrial",
@@ -1805,10 +1805,9 @@ export const PRODUCTS: Product[] = [
       "Utilize sempre a ferramenta correspondente à cabeça do fixador.",
       "Mantenha as chaves organizadas no suporte após o trabalho."
     ],
-    "image": "/images/products/r09105024-1.jpeg",
+    "image": "/images/products/r09105024-1.png",
     "images": [
-      "/images/products/r09105024-1.jpeg",
-      "/images/products/r09105024-2.jpeg"
+      "/images/products/r09105024-1.png"
     ],
     "featured": true,
     "application": "Oficinas Mecânicas Completas, Centros de Usinagem, Indústrias Metalúrgicas e Linha Pesada",
@@ -1881,9 +1880,9 @@ export const PRODUCTS: Product[] = [
       "Encaixe a estrela totalmente sobre o fixador antes de aplicar torque.",
       "Não utilize extensões no cabo da ferramenta."
     ],
-    "image": "/images/products/r01185008-1.jpeg",
+    "image": "/images/products/r01185008-1.png",
     "images": [
-      "/images/products/r01185008-1.jpeg",
+      "/images/products/r01185008-1.png",
       "/images/products/r01185008-2.jpeg"
     ],
     "application": "Oficinas Mecânicas, Manutenção de Motores, Sistemas Hidráulicos e Indústria",
@@ -1958,9 +1957,9 @@ export const PRODUCTS: Product[] = [
       "Limpe as superfícies estriadas após o uso em ambientes oleosos.",
       "Utilize sempre a bitola correspondente para evitar folgas."
     ],
-    "image": "/images/products/r01185012-1.jpeg",
+    "image": "/images/products/r01185012-1.png",
     "images": [
-      "/images/products/r01185012-1.jpeg",
+      "/images/products/r01185012-1.png",
       "/images/products/r01185012-2.jpeg"
     ],
     "application": "Centros Automotivos de Linha Pesada, Manutenção Mecânica Industrial e Náutica",
@@ -2032,9 +2031,8 @@ export const PRODUCTS: Product[] = [
       "Verifique sempre a medida em polegadas antes de tracionar.",
       "Mantenha guardada em suporte para rápida identificação visual."
     ],
-    "image": "/images/products/r01195008-1.jpeg",
+    "image": "/images/products/r01195008-2.jpeg",
     "images": [
-      "/images/products/r01195008-1.jpeg",
       "/images/products/r01195008-2.jpeg"
     ],
     "application": "Motores Importados, Máquinas Pesadas, Aeronáutica e Equipamentos Agrícolas",
@@ -2107,9 +2105,8 @@ export const PRODUCTS: Product[] = [
       "Encaixe a boca perfeitamente perpendicular ao fixador.",
       "Não bata com martelos na ferramenta."
     ],
-    "image": "/images/products/r05125008-1.jpeg",
+    "image": "/images/products/r05125008-2.jpeg",
     "images": [
-      "/images/products/r05125008-1.jpeg",
       "/images/products/r05125008-2.jpeg"
     ],
     "application": "Oficinas Mecânicas, Manutenção Geral, Instalações Hidráulicas e Elétricas",
@@ -2185,9 +2182,8 @@ export const PRODUCTS: Product[] = [
       "Mantenha as chaves no suporte plástico para evitar extravios.",
       "Limpe após o trabalho em ambientes com óleo ou poeira abrasiva."
     ],
-    "image": "/images/products/r05125012-1.jpeg",
+    "image": "/images/products/r05125012-2.jpeg",
     "images": [
-      "/images/products/r05125012-1.jpeg",
       "/images/products/r05125012-2.jpeg"
     ],
     "application": "Oficinas Mecânicas, Montagens Industriais, Implementos Agrícolas e Linha Pesada",
