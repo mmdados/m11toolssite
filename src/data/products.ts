@@ -44,9 +44,10 @@ export const BRANDS = [
 ] as const;
 
 export const CATEGORIES = [
-  { id: 'all', label: 'Todas as Categorias', count: 14 },
+  { id: 'all', label: 'Todas as Categorias', count: 36 },
   { id: 'jogos-ferramentas', label: 'Jogos de Ferramentas & Soquetes', count: 3 },
-  { id: 'maletas-carrinhos', label: 'Carros, Bancadas & Mochilas', count: 8 },
+  { id: 'soquetes-chaves', label: 'Chaves de Aperto, Estrela & Tubos', count: 21 },
+  { id: 'maletas-carrinhos', label: 'Carros, Bancadas & Mochilas', count: 9 },
   { id: 'automotivo', label: 'Linha Automotiva & Oficina', count: 3 },
 ] as const;
 
@@ -1213,6 +1214,1646 @@ export const PRODUCTS: Product[] = [
     ],
     "featured": true,
     "application": "Oficinas Mecânicas Pesadas, Retíficas de Motores, Indústrias Metalúrgicas, Centros de Usinagem",
+    "priceFormatted": "Consulte Valor"
+  }
+,
+  {
+    "id": "r20402000",
+    "name": "R20402000 BANCADA BLACK EDITION GEDORE RED",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "maletas-carrinhos",
+    "categoryLabel": "Carros, Bancadas & Mochilas",
+    "code": "R20402000",
+    "technicalCode": "3301674",
+    "description": "Bancada profissional para ferramentas GEDORE red Black Edition com estrutura reforçada de aço e tampo multilaminado para 500kg.",
+    "detailedDescription": "A Bancada GEDORE red Black Edition R20402000 (Código 3301674) foi desenvolvida e produzida no Brasil para atender às mais rigorosas necessidades de organização e espaço de trabalho do usuário profissional. Construída com estrutura em chapa de aço reforçada soldada com pintura eletrostática a pó preta de alta durabilidade e tampo em madeira multilaminada de 25 mm de espessura, oferece estabilidade absoluta e capacidade de carga estática de até 500 kg.",
+    "composition": [
+      "Tampo de madeira multilaminada de alta densidade (1200 x 700 x 25 mm)",
+      "Estrutura soldada em chapa de aço especial reforçada",
+      "Pintura eletrostática a pó na elegante cor preta (Black Edition)",
+      "Pés estruturais robustos com furação para fixação no solo",
+      "Capacidade de carga estática de 500 kg"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3301674",
+      "referencia": "R20402000",
+      "comprimentoTampo": "1200 mm",
+      "larguraTampo": "700 mm",
+      "espessuraTampo": "25 mm",
+      "alturaTotal": "860 mm",
+      "pesoKg": "46,3 kg",
+      "capacidadeCarga": "500 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Descrição",
+        "Dimensões (mm)",
+        "Capacidade",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3301674",
+          "R20402000",
+          "Bancada GEDORE red - Black Edition",
+          "1200 x 700 x 860 mm",
+          "500 kg",
+          "46,3 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3301674",
+      "Referência: R20402000",
+      "Dimensões do Tampo: 1.200 x 700 x 25 mm",
+      "Altura de trabalho: 86 cm (860 mm)",
+      "Capacidade de carga estática: 500 kg",
+      "Peso total: 46,3 kg",
+      "Acabamento: Pintura epóxi preta fosca anticorrosiva",
+      "Tampo: Madeira multilaminada tratada de alta resistência"
+    ],
+    "properties": [
+      "Estrutura soldada de altíssima rigidez que suporta trabalhos mecânicos e industriais pesados",
+      "Tampo robusto com tratamento contra óleos e desgaste superficial",
+      "Furação na base para ancoragem segura no piso da oficina ou indústria"
+    ],
+    "instructions": [
+      "Posicione a bancada em superfície plana e nivelada antes de carregar peso.",
+      "Recomenda-se a fixação ao solo através dos orifícios nos pés para máxima estabilidade.",
+      "Mantenha o tampo de madeira limpo e seco após atividades com derivados de petróleo."
+    ],
+    "image": "/images/products/r20402000-1.png",
+    "images": [
+      "/images/products/r20402000-1.png",
+      "/images/products/r20402000-2.png"
+    ],
+    "featured": true,
+    "application": "Oficinas Mecânicas, Centros Automotivos, Linha Pesada, Serralherias e Manutenção Industrial",
+    "priceFormatted": "Consulte Valor"
+  },
+  {
+    "id": "r09115013",
+    "name": "R09115013 JOGO DE CHAVES COMBINADAS POL. 13 Peças",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Chaves de Aperto",
+    "code": "R09115013",
+    "technicalCode": "3301042",
+    "description": "Jogo de chaves combinadas em polegadas com 13 peças de 1/4\" a 1\", forjadas em aço Cromo-Vanádio com acabamento niquelado e cromado.",
+    "detailedDescription": "O Jogo de Chaves Combinadas GEDORE red R09115013 (Código 3301042) contém 13 peças em polegadas que cobrem de 1/4\" até 1\". Fabricadas em conformidade com as normas DIN 3113 forma A e ISO 3318 / ISO 7738, possuem cabeça com inclinação de 15° na boca e estria com inclinação de 15°, facilitando o acesso a fixadores em locais de difícil alcance.",
+    "composition": [
+      "Chave combinada 1/4\"",
+      "Chave combinada 5/16\"",
+      "Chave combinada 3/8\"",
+      "Chave combinada 7/16\"",
+      "Chave combinada 1/2\"",
+      "Chave combinada 9/16\"",
+      "Chave combinada 5/8\"",
+      "Chave combinada 11/16\"",
+      "Chave combinada 3/4\"",
+      "Chave combinada 13/16\"",
+      "Chave combinada 7/8\"",
+      "Chave combinada 15/16\"",
+      "Chave combinada 1\"",
+      "Suporte especial para acondicionamento e organização"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3301042",
+      "referencia": "R09115013",
+      "pecas": "13",
+      "pesoKg": "2,0 kg",
+      "faixaMedidas": "1/4\" a 1\"",
+      "norma": "DIN 3113 forma A / ISO 3318"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Peças",
+        "Composição",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3301042",
+          "R09115013",
+          "13",
+          "1/4; 5/16; 3/8; 7/16; 1/2; 9/16; 5/8; 11/16; 3/4; 13/16; 7/8; 15/16; 1\"",
+          "2,0 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3301042",
+      "Referência: R09115013",
+      "Quantidade de peças: 13",
+      "Faixa de medidas: 1/4\" a 1\"",
+      "Material: Aço Cromo-Vanádio GEDORE red",
+      "Acabamento: Niquelado e cromado fosco acetinado",
+      "Normas: DIN 3113 forma A, ISO 3318, ISO 7738",
+      "Acompanha suporte organizador"
+    ],
+    "properties": [
+      "Boca com inclinação de 15° para melhor empunhadura e agilidade de giro",
+      "Estria com inclinação de 15° permitindo trabalho livre dos dedos em superfícies planas",
+      "Geometria com perfil unit-drive que distribui o esforço nas faces dos parafusos evitando cantos arredondados"
+    ],
+    "instructions": [
+      "Utilize sempre a chave de bitola idêntica ao fixador em polegadas.",
+      "Não aplique golpes de martelo no corpo das chaves.",
+      "Após o uso, guarde no suporte plástico organizador para preservação do conjunto."
+    ],
+    "image": "/images/products/r09115013-1.jpeg",
+    "images": [
+      "/images/products/r09115013-1.jpeg"
+    ],
+    "application": "Manutenção Industrial, Aviação, Maquinário Agrícola e Oficinas de Veículos Importados",
+    "priceFormatted": "Consulte Valor"
+  },
+  {
+    "id": "r09115016",
+    "name": "R09115016 JOGO DE CHAVES COMBINADAS POL. 16 Peças",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Chaves de Aperto",
+    "code": "R09115016",
+    "technicalCode": "3301043",
+    "description": "Jogo completo de chaves combinadas em polegadas com 16 peças de 1/4\" a 1.1/4\", forjadas em aço cromo-vanádio GEDORE red.",
+    "detailedDescription": "O Jogo de Chaves Combinadas GEDORE red R09115016 (Código 3301043) com 16 peças é a solução mais completa da linha em polegadas, alcançando até 1.1/4\". Produzidas em aço cromo-vanádio com acabamento niquelado cromado, são adequadas para aplicações profissionais pesadas em maquinários, implementos e frotas.",
+    "composition": [
+      "Chave combinada 1/4\"",
+      "Chave combinada 5/16\"",
+      "Chave combinada 3/8\"",
+      "Chave combinada 7/16\"",
+      "Chave combinada 1/2\"",
+      "Chave combinada 9/16\"",
+      "Chave combinada 5/8\"",
+      "Chave combinada 11/16\"",
+      "Chave combinada 3/4\"",
+      "Chave combinada 13/16\"",
+      "Chave combinada 7/8\"",
+      "Chave combinada 15/16\"",
+      "Chave combinada 1\"",
+      "Chave combinada 1.1/16\"",
+      "Chave combinada 1.1/8\"",
+      "Chave combinada 1.1/4\"",
+      "Suporte especial organizador"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3301043",
+      "referencia": "R09115016",
+      "pecas": "16",
+      "pesoKg": "3,5 kg",
+      "faixaMedidas": "1/4\" a 1.1/4\""
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Peças",
+        "Composição",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3301043",
+          "R09115016",
+          "16",
+          "1/4; 5/16; 3/8; 7/16; 1/2; 9/16; 5/8; 11/16; 3/4; 13/16; 7/8; 15/16; 1; 1.1/16; 1.1/8; 1.1/4\"",
+          "3,5 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3301043",
+      "Referência: R09115016",
+      "Quantidade de peças: 16",
+      "Faixa de bitolas: 1/4\" a 1.1/4\"",
+      "Material: Aço Cromo-Vanádio GEDORE red",
+      "Acabamento: Niquelado e cromado",
+      "Peso total: 3,5 kg"
+    ],
+    "properties": [
+      "Gama ampliada que atende desde pequenos parafusos até grandes eixos de 1.1/4\"",
+      "Boca e estria inclinadas a 15°",
+      "Acompanha suporte de bancada/parede com travamento individual das peças"
+    ],
+    "instructions": [
+      "Selecione o tamanho nominal exato em polegadas.",
+      "Limpe as chaves após contato com graxas pesadas e fluidos hidráulicos."
+    ],
+    "image": "/images/products/r09115016-1.jpeg",
+    "images": [
+      "/images/products/r09115016-1.jpeg"
+    ],
+    "application": "Linha Pesada, Máquinas Agrícolas, Indústrias Químicas e Centros Automotivos",
+    "priceFormatted": "Consulte Valor"
+  },
+  {
+    "id": "r07105005",
+    "name": "R07105005 JOGO DE CHAVES COMBINADAS COM CATRACA 8-19mm 5 Peças",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Chaves de Aperto",
+    "code": "R07105005",
+    "technicalCode": "3300849",
+    "description": "Jogo com 5 chaves combinadas com catraca de 72 dentes e ângulo de retorno de apenas 5°, medidas 8, 10, 13, 17 e 19 mm.",
+    "detailedDescription": "O Jogo de Chaves Combinadas com Catraca GEDORE red R07105005 (Código 3300849) é composto pelas medidas essenciais da mecânica (8, 10, 13, 17 e 19 mm). Seu mecanismo de catraca de 72 dentes com ângulo de trabalho de 5° permite agilidade ímpar em espaços confinados, dispensando a retirada da chave a cada volta.",
+    "composition": [
+      "Chave combinada com catraca 8 mm",
+      "Chave combinada com catraca 10 mm",
+      "Chave combinada com catraca 13 mm",
+      "Chave combinada com catraca 17 mm",
+      "Chave combinada com catraca 19 mm",
+      "Suporte especial organizador de encaixe rápido"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3300849",
+      "referencia": "R07105005",
+      "pecas": "5",
+      "pesoKg": "0,699 kg",
+      "dentesCatraca": "72 dentes",
+      "anguloRetorno": "5°"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Peças",
+        "Composição (mm)",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3300849",
+          "R07105005",
+          "5",
+          "8; 10; 13; 17; 19 mm",
+          "0,699 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3300849",
+      "Referência: R07105005",
+      "Quantidade de peças: 5",
+      "Medidas: 8, 10, 13, 17 e 19 mm",
+      "Mecanismo de catraca: 72 dentes",
+      "Ângulo de trabalho: 5°",
+      "Acabamento: Cromado polido espelhado de alta qualidade"
+    ],
+    "properties": [
+      "Produtividade até 10x superior a uma chave convencional em locais apertados",
+      "Acabamento polido de fácil higienização",
+      "Aço cromo-vanádio forjado e temperado"
+    ],
+    "instructions": [
+      "Utilize o lado da catraca para rotação contínua e a boca fixa para torque inicial de desaperto extremo se necessário.",
+      "Mantenha o mecanismo lubrificado e livre de limalhas."
+    ],
+    "image": "/images/products/r07105005-1.jpeg",
+    "images": [
+      "/images/products/r07105005-1.jpeg"
+    ],
+    "application": "Oficinas Mecânicas, Manutenção Automotiva, Montagem de Motores e Indústria",
+    "priceFormatted": "Consulte Valor"
+  },
+  {
+    "id": "r07105012",
+    "name": "R07105012 JOGO DE CHAVES COMBINADAS COM CATRACA 8-19mm 12 Peças",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Chaves de Aperto",
+    "code": "R07105012",
+    "technicalCode": "3300850",
+    "description": "Jogo profissional com 12 chaves combinadas com catraca de 72 dentes e acabamento cromado polido, medidas de 8 a 19 mm.",
+    "detailedDescription": "O Jogo de Chaves Combinadas com Catraca GEDORE red R07105012 (Código 3300850) oferece uma escala completa milimétrica contínua do 8 ao 19 mm (sem saltos). Construídas em aço cromo-vanádio com polimento espelhado premium, suas catracas de 72 dentes proporcionam giro suave e confiável.",
+    "composition": [
+      "Chave combinada com catraca 8 mm",
+      "Chave combinada com catraca 9 mm",
+      "Chave combinada com catraca 10 mm",
+      "Chave combinada com catraca 11 mm",
+      "Chave combinada com catraca 12 mm",
+      "Chave combinada com catraca 13 mm",
+      "Chave combinada com catraca 14 mm",
+      "Chave combinada com catraca 15 mm",
+      "Chave combinada com catraca 16 mm",
+      "Chave combinada com catraca 17 mm",
+      "Chave combinada com catraca 18 mm",
+      "Chave combinada com catraca 19 mm",
+      "Estojo organizador prático"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3300850",
+      "referencia": "R07105012",
+      "pecas": "12",
+      "pesoKg": "1,569 kg",
+      "dentesCatraca": "72 dentes",
+      "anguloRetorno": "5°"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Peças",
+        "Composição (mm)",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3300850",
+          "R07105012",
+          "12",
+          "8; 9; 10; 11; 12; 13; 14; 15; 16; 17; 18; 19 mm",
+          "1,569 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3300850",
+      "Referência: R07105012",
+      "Quantidade de peças: 12",
+      "Medidas: 8 a 19 mm contínuos",
+      "Catraca: 72 dentes com giro a 5°",
+      "Acabamento: Cromado polido de alto brilho",
+      "Peso: 1,569 kg"
+    ],
+    "properties": [
+      "Kit completo que atende 100% da linha automotiva leve e média",
+      "Boca fixa com inclinação a 15°",
+      "Estojo para fixação em painel ou bancada"
+    ],
+    "instructions": [
+      "Utilize sempre a bitola correspondente ao parafuso.",
+      "Evite pancadas sobre a extremidade da catraca."
+    ],
+    "image": "/images/products/r07105012-1.jpeg",
+    "images": [
+      "/images/products/r07105012-1.jpeg"
+    ],
+    "application": "Centros Automotivos, Oficinas de Motocicletas, Indústrias e Mecânica Pesada",
+    "priceFormatted": "Consulte Valor"
+  },
+  {
+    "id": "r09105112",
+    "name": "R09105112 JOGO DE CHAVES COMBINADAS 6-22mm 12 Peças",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Chaves de Aperto",
+    "code": "R09105112",
+    "technicalCode": "3300992",
+    "description": "Jogo de chaves combinadas milimétricas com 12 peças de 6 a 22 mm em aço Cromo-Vanádio com estria a 15°.",
+    "detailedDescription": "O Jogo de Chaves Combinadas GEDORE red R09105112 (Código 3300992) com 12 peças foi desenvolvido para o profissional exigente. Em conformidade com as normas DIN 3113 forma A, ISO 3318 e ISO 7738, combina boca a 15° e estria unit-drive inclinada para acesso facilitado a parafusos em locais apertados.",
+    "composition": [
+      "Chaves combinadas: 6, 7, 8, 9, 10, 11, 12, 13, 14, 17, 19 e 22 mm",
+      "Suporte especial organizador GEDORE red"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3300992",
+      "referencia": "R09105112",
+      "pecas": "12",
+      "pesoKg": "1,172 kg",
+      "faixaMedidas": "6 a 22 mm"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Peças",
+        "Medidas (mm)",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3300992",
+          "R09105112",
+          "12",
+          "6; 7; 8; 9; 10; 11; 12; 13; 14; 17; 19; 22 mm",
+          "1,172 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3300992",
+      "Referência: R09105112",
+      "Peças: 12 peças",
+      "Material: Aço cromo-vanádio GEDORE red",
+      "Acabamento: Niquelado e cromado fosco",
+      "Peso total: 1,172 kg"
+    ],
+    "properties": [
+      "Encaixe estriado unit-drive de alta segurança que não danifica as arestas dos fixadores",
+      "Corpo esbelto e confortável para manuseio prolongado",
+      "Suporte com trava que facilita o transporte na caixa de ferramentas"
+    ],
+    "instructions": [
+      "Utilize no sentido correto de tração e evite prolongadores tubulares.",
+      "Mantenha limpo e seco em seu estojo após o uso."
+    ],
+    "image": "/images/products/r09105112-1.jpeg",
+    "images": [
+      "/images/products/r09105112-1.jpeg",
+      "/images/products/r09105112-2.jpeg"
+    ],
+    "application": "Oficinas Mecânicas, Manutenção Industrial, Serralherias e Linha Branca",
+    "priceFormatted": "Consulte Valor"
+  },
+  {
+    "id": "r09105015",
+    "name": "R09105015 JOGO DE CHAVES COMBINADAS 6-32mm 15 Peças",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Chaves de Aperto",
+    "code": "R09105015",
+    "technicalCode": "3300993",
+    "description": "Jogo de chaves combinadas milimétricas com 15 peças de 6 a 32 mm cobrindo as principais bitolas industriais e mecânicas.",
+    "detailedDescription": "O Jogo de Chaves Combinadas GEDORE red R09105015 (Código 3300993) contém 15 peças estratégicas que abrangem desde pequenos fixadores de 6 mm até grandes porcas de 32 mm. Forjadas em aço cromo-vanádio tratado termicamente, são a base indispensável para qualquer bancada profissional.",
+    "composition": [
+      "Chaves combinadas: 6, 7, 8, 10, 11, 12, 13, 14, 17, 19, 22, 24, 27, 30 e 32 mm",
+      "Suporte especial de acondicionamento"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3300993",
+      "referencia": "R09105015",
+      "pecas": "15",
+      "pesoKg": "2,850 kg",
+      "faixaMedidas": "6 a 32 mm"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Peças",
+        "Medidas (mm)",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3300993",
+          "R09105015",
+          "15",
+          "6; 7; 8; 10; 11; 12; 13; 14; 17; 19; 22; 24; 27; 30; 32 mm",
+          "2,850 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3300993",
+      "Referência: R09105015",
+      "Peças: 15 peças",
+      "Faixa: 6 a 32 mm",
+      "Material: Aço Cromo-Vanádio",
+      "Peso: 2,850 kg"
+    ],
+    "properties": [
+      "Cobre as medidas mais pesadas da mecânica pesada e industrial (24, 27, 30 e 32 mm)",
+      "Boca a 15° e estria unit-drive",
+      "Acabamento acetinado antirreflexo"
+    ],
+    "instructions": [
+      "Aplique força no sentido da tração do operador para segurança.",
+      "Guarde no suporte organizador em local seco."
+    ],
+    "image": "/images/products/r09105015-1.jpeg",
+    "images": [
+      "/images/products/r09105015-1.jpeg",
+      "/images/products/r09105015-2.jpeg"
+    ],
+    "application": "Mecânica Pesada, Centros Automotivos, Tratores, Caminhões e Manutenção Industrial",
+    "priceFormatted": "Consulte Valor"
+  },
+  {
+    "id": "r09105024",
+    "name": "R09105024 JOGO DE CHAVES COMBINADAS 6-32mm 24 Peças",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Chaves de Aperto",
+    "code": "R09105024",
+    "technicalCode": "3300995",
+    "description": "O jogo de chaves combinadas mais completo da GEDORE red com 24 peças sem saltos de medida: de 6 a 32 mm.",
+    "detailedDescription": "O Jogo de Chaves Combinadas GEDORE red R09105024 (Código 3300995) com 24 peças é o topo de linha para equipar oficinas e indústrias. Contempla todas as bitolas métricas de 6 a 32 mm, garantindo que o mecânico nunca fique sem a ferramenta correta em suas operações diárias.",
+    "composition": [
+      "Chaves combinadas: 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 26, 27, 28, 30 e 32 mm",
+      "Suporte especial organizador de alta durabilidade"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3300995",
+      "referencia": "R09105024",
+      "pecas": "24",
+      "pesoKg": "4,850 kg",
+      "faixaMedidas": "6 a 32 mm (24 medidas)"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Peças",
+        "Medidas (mm)",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3300995",
+          "R09105024",
+          "24",
+          "6; 7; 8; 9; 10; 11; 12; 13; 14; 15; 16; 17; 18; 19; 20; 21; 22; 23; 24; 26; 27; 28; 30; 32 mm",
+          "4,850 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3300995",
+      "Referência: R09105024",
+      "Peças: 24 peças",
+      "Medidas: 6 a 32 mm completas",
+      "Material: Aço Cromo-Vanádio GEDORE red",
+      "Acabamento: Niquelado e cromado fosco",
+      "Peso: 4,850 kg"
+    ],
+    "properties": [
+      "O conjunto definitivo: 24 chaves sem saltos para total cobertura",
+      "Perfil unit-drive na estria para máximo torque sem danificar parafusos",
+      "Atende todas as normas técnicas DIN 3113 forma A e ISO 3318"
+    ],
+    "instructions": [
+      "Utilize sempre a ferramenta correspondente à cabeça do fixador.",
+      "Mantenha as chaves organizadas no suporte após o trabalho."
+    ],
+    "image": "/images/products/r09105024-1.jpeg",
+    "images": [
+      "/images/products/r09105024-1.jpeg",
+      "/images/products/r09105024-2.jpeg"
+    ],
+    "featured": true,
+    "application": "Oficinas Mecânicas Completas, Centros de Usinagem, Indústrias Metalúrgicas e Linha Pesada",
+    "priceFormatted": "Consulte Valor"
+  },
+  {
+    "id": "r01185008",
+    "name": "R01185008 JOGO DE CHAVES ESTRELA 6-22mm 8 Peças",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Chaves de Aperto",
+    "code": "R01185008",
+    "technicalCode": "3301810",
+    "description": "Jogo de chaves estrela planas profundas com 8 peças em milímetros, paredes finas e cabeças inclinadas para alto torque.",
+    "detailedDescription": "O Jogo de Chaves Estrela GEDORE red R01185008 (Código 3301810) contém 8 peças com medidas duplas de 6 a 22 mm. Produzidas conforme a norma DIN 838 e ISO 3318, possuem cabeças profundas e paredes finas, proporcionando excelente transmissão de força sem risco de escorregamento.",
+    "composition": [
+      "Chave estrela 6 x 7 mm",
+      "Chave estrela 8 x 9 mm",
+      "Chave estrela 10 x 11 mm",
+      "Chave estrela 12 x 13 mm",
+      "Chave estrela 14 x 15 mm",
+      "Chave estrela 16 x 17 mm",
+      "Chave estrela 18 x 19 mm",
+      "Chave estrela 20 x 22 mm",
+      "Suporte especial organizador"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3301810",
+      "referencia": "R01185008",
+      "pecas": "8",
+      "pesoKg": "0,900 kg",
+      "norma": "DIN 838 / ISO 3318"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Peças",
+        "Composição (mm)",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3301810",
+          "R01185008",
+          "8",
+          "6x7; 8x9; 10x11; 12x13; 14x15; 16x17; 18x19; 20x22 mm",
+          "0,900 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3301810",
+      "Referência: R01185008",
+      "Peças: 8 peças",
+      "Medidas: 6x7 a 20x22 mm",
+      "Material: Aço cromo-vanádio GEDORE red",
+      "Perfil: Unit-Drive de paredes finas",
+      "Norma: DIN 838, ISO 3318, ISO 1085"
+    ],
+    "properties": [
+      "Cabeças profundas com rebaixo que facilitam o acesso a porcas e parafusos alojados em locais fundos",
+      "Paredes finas de alta resistência mecânica",
+      "Acabamento niquelado e cromado fosco acetinado"
+    ],
+    "instructions": [
+      "Encaixe a estrela totalmente sobre o fixador antes de aplicar torque.",
+      "Não utilize extensões no cabo da ferramenta."
+    ],
+    "image": "/images/products/r01185008-1.jpeg",
+    "images": [
+      "/images/products/r01185008-1.jpeg",
+      "/images/products/r01185008-2.jpeg"
+    ],
+    "application": "Oficinas Mecânicas, Manutenção de Motores, Sistemas Hidráulicos e Indústria",
+    "priceFormatted": "Consulte Valor"
+  },
+  {
+    "id": "r01185012",
+    "name": "R01185012 JOGO DE CHAVES ESTRELA 6-32mm 12 Peças",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Chaves de Aperto",
+    "code": "R01185012",
+    "technicalCode": "3301811",
+    "description": "Jogo de chaves estrela profissionais com 12 peças de 6 a 32 mm, forjadas em aço cromo-vanádio com acabamento niquelado e cromado.",
+    "detailedDescription": "O Jogo de Chaves Estrela GEDORE red R01185012 (Código 3301811) com 12 peças cobre desde 6x7 mm até a pesada bitola 27x32 mm. Suas extremidades rebaixadas profundas e paredes finas permitem alcançar parafusos emblocados em blocos de motores, cabeçotes e máquinas de grande porte com precisão absoluta.",
+    "composition": [
+      "Chave estrela 6 x 7 mm",
+      "Chave estrela 8 x 9 mm",
+      "Chave estrela 10 x 11 mm",
+      "Chave estrela 12 x 13 mm",
+      "Chave estrela 14 x 15 mm",
+      "Chave estrela 16 x 17 mm",
+      "Chave estrela 18 x 19 mm",
+      "Chave estrela 20 x 22 mm",
+      "Chave estrela 21 x 23 mm",
+      "Chave estrela 24 x 26 mm",
+      "Chave estrela 25 x 28 mm",
+      "Chave estrela 27 x 32 mm",
+      "Suporte especial de acondicionamento"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3301811",
+      "referencia": "R01185012",
+      "pecas": "12",
+      "pesoKg": "2,200 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Peças",
+        "Composição (mm)",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3301811",
+          "R01185012",
+          "12",
+          "6x7; 8x9; 10x11; 12x13; 14x15; 16x17; 18x19; 20x22; 21x23; 24x26; 25x28; 27x32 mm",
+          "2,200 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3301811",
+      "Referência: R01185012",
+      "Quantidade de peças: 12",
+      "Faixa: 6x7 a 27x32 mm",
+      "Material: Aço Cromo-Vanádio GEDORE red",
+      "Peso total: 2,200 kg"
+    ],
+    "properties": [
+      "Gama pesada que alcança fixadores industriais de até 32 mm",
+      "Estrias rebaixadas para perfeito assentamento da chave",
+      "Acabamento acetinado mate que previne reflexos e melhora a aderência das mãos"
+    ],
+    "instructions": [
+      "Limpe as superfícies estriadas após o uso em ambientes oleosos.",
+      "Utilize sempre a bitola correspondente para evitar folgas."
+    ],
+    "image": "/images/products/r01185012-1.jpeg",
+    "images": [
+      "/images/products/r01185012-1.jpeg",
+      "/images/products/r01185012-2.jpeg"
+    ],
+    "application": "Centros Automotivos de Linha Pesada, Manutenção Mecânica Industrial e Náutica",
+    "priceFormatted": "Consulte Valor"
+  },
+  {
+    "id": "r01195008",
+    "name": "R01195008 JOGO DE CHAVES ESTRELA POL. 1/4 - 1.1/4 8 Peças",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Chaves de Aperto",
+    "code": "R01195008",
+    "technicalCode": "3301045",
+    "description": "Jogo de chaves estrela em polegadas com 8 peças de 1/4\" a 1.1/4\", com paredes finas e perfil unit-drive que preserva os fixadores.",
+    "detailedDescription": "O Jogo de Chaves Estrela GEDORE red R01195008 (Código 3301045) é a referência em aperto estriado para polegadas. Composto por 8 ferramentas que cobrem de 1/4\" até 1.1/4\", possui cabeças profundas conformadas a frio em aço cromo-vanádio, garantindo torque elevado com total proteção aos parafusos.",
+    "composition": [
+      "Chave estrela 1/4\" x 5/16\"",
+      "Chave estrela 3/8\" x 7/16\"",
+      "Chave estrela 1/2\" x 9/16\"",
+      "Chave estrela 5/8\" x 11/16\"",
+      "Chave estrela 3/4\" x 25/32\"",
+      "Chave estrela 13/16\" x 7/8\"",
+      "Chave estrela 15/16\" x 1\"",
+      "Chave estrela 1.1/16\" x 1.1/4\"",
+      "Suporte especial de acondicionamento"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3301045",
+      "referencia": "R01195008",
+      "pecas": "8",
+      "pesoKg": "1,600 kg",
+      "faixaMedidas": "1/4\" a 1.1/4\""
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Peças",
+        "Composição (pol)",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3301045",
+          "R01195008",
+          "8",
+          "1/4x5/16; 3/8x7/16; 1/2x9/16; 5/8x11/16; 3/4x25/32; 13/16x7/8; 15/16x1; 1.1/16x1.1/4\"",
+          "1,600 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3301045",
+      "Referência: R01195008",
+      "Quantidade de peças: 8",
+      "Medidas em polegadas: 1/4x5/16 a 1.1/16x1.1/4\"",
+      "Material: Aço Cromo-Vanádio GEDORE red",
+      "Peso: 1,600 kg"
+    ],
+    "properties": [
+      "Perfil unit-drive de paredes finas para máximo rendimento",
+      "Cabeças rebaixadas profundas",
+      "Acabamento niquelado e cromado acetinado mate"
+    ],
+    "instructions": [
+      "Verifique sempre a medida em polegadas antes de tracionar.",
+      "Mantenha guardada em suporte para rápida identificação visual."
+    ],
+    "image": "/images/products/r01195008-1.jpeg",
+    "images": [
+      "/images/products/r01195008-1.jpeg",
+      "/images/products/r01195008-2.jpeg"
+    ],
+    "application": "Motores Importados, Máquinas Pesadas, Aeronáutica e Equipamentos Agrícolas",
+    "priceFormatted": "Consulte Valor"
+  },
+  {
+    "id": "r05125008",
+    "name": "R05125008 JOGO DE CHAVES FIXAS 6-22mm 8 Peças",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Chaves de Aperto",
+    "code": "R05125008",
+    "technicalCode": "3301812",
+    "description": "Jogo de chaves fixas (dupla boca) com 8 peças em milímetros de 6 a 22 mm em aço Cromo-Vanádio com bocas a 15°.",
+    "detailedDescription": "O Jogo de Chaves Fixas GEDORE red R05125008 (Código 3301812) é composto por 8 ferramentas de duas bocas que cobrem de 6 a 22 mm. Fabricadas de acordo com as normas DIN 3110 e ISO 3318, apresentam cabeças finas e bocas com inclinação de 15° para rápida inserção e giro em espaços reduzidos.",
+    "composition": [
+      "Chave fixa 6 x 7 mm",
+      "Chave fixa 8 x 9 mm",
+      "Chave fixa 10 x 11 mm",
+      "Chave fixa 12 x 13 mm",
+      "Chave fixa 14 x 15 mm",
+      "Chave fixa 16 x 17 mm",
+      "Chave fixa 18 x 19 mm",
+      "Chave fixa 20 x 22 mm",
+      "Suporte especial organizador"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3301812",
+      "referencia": "R05125008",
+      "pecas": "8",
+      "pesoKg": "0,900 kg",
+      "norma": "DIN 3110 / ISO 3318"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Peças",
+        "Composição (mm)",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3301812",
+          "R05125008",
+          "8",
+          "6x7; 8x9; 10x11; 12x13; 14x15; 16x17; 18x19; 20x22 mm",
+          "0,900 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3301812",
+      "Referência: R05125008",
+      "Peças: 8 peças",
+      "Medidas: 6x7 a 20x22 mm",
+      "Posição das bocas: 15°",
+      "Material: Aço cromo-vanádio GEDORE red",
+      "Acabamento: Niquelado e cromado acetinado"
+    ],
+    "properties": [
+      "Cabeças estreitas e usinadas para encaixe sem folgas",
+      "Corpo forjado com alta resistência à flexão",
+      "Suporte plástico para fixação em bancada ou carrinho"
+    ],
+    "instructions": [
+      "Encaixe a boca perfeitamente perpendicular ao fixador.",
+      "Não bata com martelos na ferramenta."
+    ],
+    "image": "/images/products/r05125008-1.jpeg",
+    "images": [
+      "/images/products/r05125008-1.jpeg",
+      "/images/products/r05125008-2.jpeg"
+    ],
+    "application": "Oficinas Mecânicas, Manutenção Geral, Instalações Hidráulicas e Elétricas",
+    "priceFormatted": "Consulte Valor"
+  },
+  {
+    "id": "r05125012",
+    "name": "R05125012 JOGO DE CHAVES FIXAS 6-32mm 12 Peças",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Chaves de Aperto",
+    "code": "R05125012",
+    "technicalCode": "3300961",
+    "description": "Jogo de chaves fixas com 12 peças de 6 a 32 mm em aço cromo-vanádio GEDORE red conforme DIN 3110 e ISO 3318.",
+    "detailedDescription": "O Jogo de Chaves Fixas GEDORE red R05125012 (Código 3300961) com 12 peças abrange desde pequenos parafusos de 6x7 mm até porcas industriais de 27x32 mm. Fabricadas com aço cromo-vanádio temperado e acabamento fosco acetinado, são ferramentas robustas e confiáveis para o trabalho contínuo.",
+    "composition": [
+      "Chave fixa 6 x 7 mm",
+      "Chave fixa 8 x 9 mm",
+      "Chave fixa 10 x 11 mm",
+      "Chave fixa 12 x 13 mm",
+      "Chave fixa 14 x 15 mm",
+      "Chave fixa 16 x 17 mm",
+      "Chave fixa 18 x 19 mm",
+      "Chave fixa 20 x 22 mm",
+      "Chave fixa 21 x 23 mm",
+      "Chave fixa 24 x 26 mm",
+      "Chave fixa 25 x 28 mm",
+      "Chave fixa 27 x 32 mm",
+      "Suporte especial de acondicionamento"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3300961",
+      "referencia": "R05125012",
+      "pecas": "12",
+      "pesoKg": "1,800 kg",
+      "norma": "DIN 3110 / ISO 3318"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Peças",
+        "Composição (mm)",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3300961",
+          "R05125012",
+          "12",
+          "6x7; 8x9; 10x11; 12x13; 14x15; 16x17; 18x19; 20x22; 21x23; 24x26; 25x28; 27x32 mm",
+          "1,800 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3300961",
+      "Referência: R05125012",
+      "Quantidade de peças: 12",
+      "Medidas: 6x7 a 27x32 mm",
+      "Material: Aço Cromo-Vanádio GEDORE red",
+      "Peso: 1,800 kg"
+    ],
+    "properties": [
+      "Escala ampla cobrindo a rotina mecânica completa",
+      "Cabeças usinadas com tolerâncias estritas",
+      "Acabamento cromado fosco anticorrosivo"
+    ],
+    "instructions": [
+      "Mantenha as chaves no suporte plástico para evitar extravios.",
+      "Limpe após o trabalho em ambientes com óleo ou poeira abrasiva."
+    ],
+    "image": "/images/products/r05125012-1.jpeg",
+    "images": [
+      "/images/products/r05125012-1.jpeg",
+      "/images/products/r05125012-2.jpeg"
+    ],
+    "application": "Oficinas Mecânicas, Montagens Industriais, Implementos Agrícolas e Linha Pesada",
+    "priceFormatted": "Consulte Valor"
+  },
+  {
+    "id": "r03800010",
+    "name": "R03800010 CHAVE AJUSTÁVEL 10\"",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Chaves Ajustáveis",
+    "code": "R03800010",
+    "technicalCode": "3301062",
+    "description": "Chave ajustável de 10\" (250 mm) modelo sueco com abertura de até 30 mm, forjada em aço Cromo-Vanádio com acabamento fosfatado.",
+    "detailedDescription": "A Chave Ajustável GEDORE red R03800010 (Código 3301062) de 10 polegadas (250 mm) é uma ferramenta versátil e indispensável. Conta com mecanismo de rosca sem-fim à esquerda modelo sueco com movimento suave e mordentes com escala métrica milimétrica gravada a laser, permitindo pré-ajuste visual antes do encaixe na peça.",
+    "composition": [
+      "Corpo forjado em aço Cromo-Vanádio GEDORE red",
+      "Acabamento fosfatado escuro com cabeça retificada",
+      "Mandíbula móvel com rosca sem-fim de regulagem precisa à esquerda (modelo sueco)",
+      "Escala milimétrica gravada a laser no mordente para pré-ajuste de medida",
+      "Orifício no cabo para suspensão e armazenamento seguro"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3301062",
+      "referencia": "R03800010",
+      "comprimentoMm": "250 mm",
+      "comprimentoPol": "10\"",
+      "aberturaMaximaMm": "30 mm",
+      "aberturaMaximaPol": "1.3/16\"",
+      "pesoKg": "0,440 kg",
+      "posicaoBoca": "15°"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Comprimento (mm)",
+        "Comprimento (\")",
+        "Abertura Máx (mm)",
+        "Abertura Máx (\")",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3301062",
+          "R03800010",
+          "250 mm",
+          "10\"",
+          "30 mm",
+          "1.3/16\"",
+          "0,440 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3301062",
+      "Referência: R03800010",
+      "Comprimento: 10\" (250 mm)",
+      "Abertura máxima: 30 mm (1.3/16\")",
+      "Acabamento: Fosfatado com cabeça polida",
+      "Material: Aço Cromo-Vanádio GEDORE red",
+      "Posição da boca: 15°",
+      "Peso: 0,440 kg"
+    ],
+    "properties": [
+      "Modelo sueco de alta durabilidade com rosca à esquerda",
+      "Escala milimétrica no mordente para agilidade no trabalho",
+      "Mordentes paralelos usinados com exatidão que não escorregam"
+    ],
+    "instructions": [
+      "Ajuste sempre a mandíbula móvel firmemente contra a face do fixador antes de aplicar torque.",
+      "Aplique a força de preferência no sentido da mandíbula fixa para preservar o mecanismo."
+    ],
+    "image": "/images/products/r03800010-1.jpg",
+    "images": [
+      "/images/products/r03800010-1.jpg"
+    ],
+    "application": "Instalações Hidráulicas, Oficinas Mecânicas, Manutenção Predial e Linhas de Produção",
+    "priceFormatted": "Consulte Valor"
+  },
+  {
+    "id": "r03800012",
+    "name": "R03800012 CHAVE AJUSTÁVEL 12\"",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Chaves Ajustáveis",
+    "code": "R03800012",
+    "technicalCode": "3301063",
+    "description": "Chave ajustável de 12\" (300 mm) modelo sueco com abertura de até 36 mm e acabamento fosfatado de alta resistência.",
+    "detailedDescription": "A Chave Ajustável GEDORE red R03800012 (Código 3301063) de 12 polegadas (300 mm) oferece torque ampliado graças ao seu comprimento de alavanca e abertura de mandíbula de até 36 mm. Forjada em aço cromo-vanádio tratado, é a escolha certa para porcas e parafusos de médio e grande porte.",
+    "composition": [
+      "Corpo forjado em aço Cromo-Vanádio GEDORE red",
+      "Acabamento fosfatado com cabeça usinada e retificada",
+      "Rosca à esquerda para regulagem milimétrica suave",
+      "Abertura máxima de 36 mm (1.7/16\")",
+      "Orifício para pendurar"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3301063",
+      "referencia": "R03800012",
+      "comprimentoMm": "300 mm",
+      "comprimentoPol": "12\"",
+      "aberturaMaximaMm": "36 mm",
+      "pesoKg": "0,700 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Comprimento (mm)",
+        "Comprimento (\")",
+        "Abertura Máx (mm)",
+        "Abertura Máx (\")",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3301063",
+          "R03800012",
+          "300 mm",
+          "12\"",
+          "36 mm",
+          "1.7/16\"",
+          "0,700 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3301063",
+      "Referência: R03800012",
+      "Comprimento: 12\" (300 mm)",
+      "Abertura: 36 mm (1.7/16\")",
+      "Material: Aço Cromo-Vanádio",
+      "Peso: 0,700 kg"
+    ],
+    "properties": [
+      "Alavanca de 300 mm que reduz o esforço físico na operação",
+      "Mordente móvel reforçado",
+      "Acabamento fosfatado de elevada durabilidade contra oxidação"
+    ],
+    "instructions": [
+      "Regule a folga com a rosca para evitar cantos arredondados na porca.",
+      "Não utilize marretas para golpear o cabo."
+    ],
+    "image": "/images/products/r03800012-1.jpg",
+    "images": [
+      "/images/products/r03800012-1.jpg"
+    ],
+    "application": "Oficinas Mecânicas, Manutenção de Frotas, Indústrias e Construção Civil",
+    "priceFormatted": "Consulte Valor"
+  },
+  {
+    "id": "r03800015",
+    "name": "R03800015 CHAVE AJUSTÁVEL 15\"",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Chaves Ajustáveis",
+    "code": "R03800015",
+    "technicalCode": "3301064",
+    "description": "Chave ajustável pesada de 15\" (380 mm) com abertura máxima de 46 mm (1.13/16\"), ideal para serviços pesados industriais.",
+    "detailedDescription": "A Chave Ajustável GEDORE red R03800015 (Código 3301064) de 15 polegadas (380 mm) atende a demandas severas de manutenção industrial e tubulações. Forjada em liga de aço cromo-vanádio de alta resistência, suporta elevados momentos de torção sem deformação.",
+    "composition": [
+      "Corpo forjado em aço Cromo-Vanádio GEDORE red de alta resistência",
+      "Acabamento fosfatado com proteção anticorrosiva duradoura",
+      "Mordente móvel robusto com rosca à esquerda reforçada",
+      "Abertura máxima de 46 mm",
+      "Orifício de suspensão no cabo"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3301064",
+      "referencia": "R03800015",
+      "comprimentoMm": "380 mm",
+      "comprimentoPol": "15\"",
+      "aberturaMaximaMm": "46 mm",
+      "pesoKg": "1,320 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Comprimento (mm)",
+        "Comprimento (\")",
+        "Abertura Máx (mm)",
+        "Abertura Máx (\")",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3301064",
+          "R03800015",
+          "380 mm",
+          "15\"",
+          "46 mm",
+          "1.13/16\"",
+          "1,320 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3301064",
+      "Referência: R03800015",
+      "Comprimento: 15\" (380 mm)",
+      "Abertura máxima: 46 mm (1.13/16\")",
+      "Peso: 1,320 kg",
+      "Material: Aço Cromo-Vanádio"
+    ],
+    "properties": [
+      "Robustez extrema para serviços pesados em tubulações e conexões hidráulicas",
+      "Acabamento fosfatado anticorrosivo",
+      "Rosca usinada de grande diâmetro"
+    ],
+    "instructions": [
+      "Aperte o ajuste completamente antes de exercer o torque.",
+      "Guarde em painel de ferramentas através do olhal do cabo."
+    ],
+    "image": "/images/products/r03800015-1.jpg",
+    "images": [
+      "/images/products/r03800015-1.jpg"
+    ],
+    "application": "Indústria Pesada, Máquinas Agrícolas, Caldeiraria, Saneamento e Mineração",
+    "priceFormatted": "Consulte Valor"
+  },
+  {
+    "id": "r03800018",
+    "name": "R03800018 CHAVE AJUSTÁVEL 18\"",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Chaves Ajustáveis",
+    "code": "R03800018",
+    "technicalCode": "3301065",
+    "description": "Chave ajustável extrapesada de 18\" (450 mm) com abertura máxima de 53 mm (2.1/16\") para grandes porcas e conexões mecânicas.",
+    "detailedDescription": "A Chave Ajustável GEDORE red R03800018 (Código 3301065) de 18 polegadas (450 mm) é o maior modelo da série, oferecendo abertura máxima de 53 mm e empunhadura longa de alto braço de alavanca. Projetada para atender montagens industriais pesadas e equipamentos pesados de terraplanagem.",
+    "composition": [
+      "Corpo forjado em liga de aço Cromo-Vanádio GEDORE red de seção reforçada",
+      "Acabamento fosfatado fosco de alta durabilidade mecânica",
+      "Capacidade de abertura de mordentes até 53 mm",
+      "Mecanismo de rosca à esquerda usinado com folgas mínimas",
+      "Orifício na extremidade para gancho de segurança e fixação"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3301065",
+      "referencia": "R03800018",
+      "comprimentoMm": "450 mm",
+      "comprimentoPol": "18\"",
+      "aberturaMaximaMm": "53 mm",
+      "pesoKg": "1,900 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Comprimento (mm)",
+        "Comprimento (\")",
+        "Abertura Máx (mm)",
+        "Abertura Máx (\")",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3301065",
+          "R03800018",
+          "450 mm",
+          "18\"",
+          "53 mm",
+          "2.1/16\"",
+          "1,900 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3301065",
+      "Referência: R03800018",
+      "Comprimento: 18\" (450 mm)",
+      "Abertura máxima: 53 mm (2.1/16\")",
+      "Peso: 1,900 kg",
+      "Acabamento: Fosfatado com mordentes polidos"
+    ],
+    "properties": [
+      "Capacidade de abertura de mais de 2 polegadas (53 mm)",
+      "Alta tenacidade contra choques mecânicos e vibrações",
+      "Furo no cabo que viabiliza o uso de cabo de segurança em trabalho em altura"
+    ],
+    "instructions": [
+      "Certifique-se de que a porca do parafuso esteja assentada no fundo da boca da chave.",
+      "Após o uso, aplique fina camada de óleo protetivo na rosca sem-fim."
+    ],
+    "image": "/images/products/r03800018-1.jpg",
+    "images": [
+      "/images/products/r03800018-1.jpg"
+    ],
+    "application": "Manutenção Naval, Usinas, Máquinas Pesadas, Mineração e Indústria Petrolífera",
+    "priceFormatted": "Consulte Valor"
+  },
+  {
+    "id": "r27160012",
+    "name": "R27160012 CHAVE PARA TUBOS MODELO AMERICANO 14\"",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Chaves para Tubos",
+    "code": "R27160012",
+    "technicalCode": "3301206",
+    "description": "Chave para tubos tipo Stillson modelo americano 14\" (350 mm) com mordentes forjados em aço especial e dentes endurecidos.",
+    "detailedDescription": "A Chave para Tubos Modelo Americano GEDORE red R27160012 (Código 3301206) de 14 polegadas (350 mm) é projetada para aperto e desaperto de tubos e conexões de até 2\" (60 mm). Com corpo forjado em ferro fundido nodular e mordentes em aço GEDORE red temperados por indução, proporciona travamento instantâneo em tubulações cilíndricas.",
+    "composition": [
+      "Corpo robusto forjado em ferro fundido nodular com cabo de perfil duplo T",
+      "Mordentes forjados em aço especial temperado de alta dureza",
+      "Dentes com geometria auto-apertante e tratamento térmico por indução",
+      "Porca de regulagem em aço com recartilho antiderrapante",
+      "Orifício de suspensão no cabo"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3301206",
+      "referencia": "R27160012",
+      "comprimentoMm": "350 mm",
+      "comprimentoPol": "14\"",
+      "aberturaMaximaMm": "60 mm",
+      "aberturaMaximaPol": "2\" (60 mm)",
+      "pesoKg": "1,500 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Comprimento (mm)",
+        "Comprimento (\")",
+        "Abertura (mm)",
+        "Tubo Máx (\")",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3301206",
+          "R27160012",
+          "350 mm",
+          "14\"",
+          "60 mm",
+          "2\" (60 mm)",
+          "1,500 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3301206",
+      "Referência: R27160012",
+      "Comprimento: 14\" (350 mm)",
+      "Capacidade de tubo: até 2\" (60 mm)",
+      "Mordentes: Aço forjado temperado por indução",
+      "Peso: 1,500 kg"
+    ],
+    "properties": [
+      "Mola de retenção no mordente móvel que cria efeito de catraca no avanço",
+      "Dentes endurecidos que mordem mesmo em tubos lisos e galvanizados",
+      "Cabo com perfil anatômico confortável"
+    ],
+    "instructions": [
+      "Posicione a chave perpendicularmente ao eixo do tubo.",
+      "Gire no sentido em que os dentes puxam a peça para o fundo da boca."
+    ],
+    "image": "/images/products/r27160012-1.jpg",
+    "images": [
+      "/images/products/r27160012-1.jpg"
+    ],
+    "application": "Instalações Hidráulicas, Redes de Incêndio, Indústria de Gás e Manutenção Geral",
+    "priceFormatted": "Consulte Valor"
+  },
+  {
+    "id": "r27160016",
+    "name": "R27160016 CHAVE PARA TUBOS MODELO AMERICANO 18\"",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Chaves para Tubos",
+    "code": "R27160016",
+    "technicalCode": "3301207",
+    "description": "Chave para tubos modelo americano 18\" (450 mm) com capacidade para tubos de até 2.1/2\" (76 mm) e máxima aderência mecânica.",
+    "detailedDescription": "A Chave para Tubos GEDORE red R27160016 (Código 3301207) de 18 polegadas (450 mm) suporta conexões tubulares de até 2.1/2\" (76 mm). Apresenta corpo monobloco com grande momento de inércia e mordentes tratados termicamente que impedem o escorregamento mesmo sob óleo ou graxa.",
+    "composition": [
+      "Corpo forjado em liga nodular de alta resistência mecânica contra torção",
+      "Mordentes forjados com dentes endurecidos e grip instantâneo",
+      "Porca de ajuste de fácil manuseio com encaixe auto-limpante",
+      "Comprimento nominal de 450 mm (18\")"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3301207",
+      "referencia": "R27160016",
+      "comprimentoMm": "450 mm",
+      "comprimentoPol": "18\"",
+      "aberturaMaximaMm": "76 mm",
+      "pesoKg": "2,400 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Comprimento (mm)",
+        "Comprimento (\")",
+        "Abertura (mm)",
+        "Tubo Máx (\")",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3301207",
+          "R27160016",
+          "450 mm",
+          "18\"",
+          "76 mm",
+          "2.1/2\" (76 mm)",
+          "2,400 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3301207",
+      "Referência: R27160016",
+      "Comprimento: 18\" (450 mm)",
+      "Capacidade: até 2.1/2\" (76 mm)",
+      "Peso: 2,400 kg"
+    ],
+    "properties": [
+      "Excelente relação entre peso e alavanca para serviço contínuo",
+      "Mordente móvel flutuante com dentes afiados",
+      "Acabamento com pintura resistente à corrosão"
+    ],
+    "instructions": [
+      "Não utilize extensões no cabo.",
+      "Mantenha a porca recartilhada limpa de detritos de cimento e poeiras metálicas."
+    ],
+    "image": "/images/products/r27160016-1.jpg",
+    "images": [
+      "/images/products/r27160016-1.jpg"
+    ],
+    "application": "Tubulações Industriais, Encanamentos Prediais, Redes de Ar Comprimido e Linha a Gás",
+    "priceFormatted": "Consulte Valor"
+  },
+  {
+    "id": "r27160021",
+    "name": "R27160021 CHAVE PARA TUBOS MODELO AMERICANO 24\"",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Chaves para Tubos",
+    "code": "R27160021",
+    "technicalCode": "3301208",
+    "description": "Chave para tubos modelo americano pesada de 24\" (600 mm) para tubulações de até 3\" (90 mm) na linha pesada e industrial.",
+    "detailedDescription": "A Chave para Tubos GEDORE red R27160021 (Código 3301208) de 24 polegadas (600 mm) foi construída para aplicações severas que demandam torque elevado em canos e uniões de até 3 polegadas (90 mm). Corpo reforçado em perfil I para suportar cargas pesadas de aperto mecânico.",
+    "composition": [
+      "Corpo extrapesado forjado para trabalho contínuo em encanamentos e plataformas",
+      "Mordente móvel e fixo usinados com precisão e revenidos",
+      "Mola de retorno que garante ação tipo catraca durante o rosqueamento",
+      "Orifício para amarração ou gancho"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3301208",
+      "referencia": "R27160021",
+      "comprimentoMm": "600 mm",
+      "comprimentoPol": "24\"",
+      "aberturaMaximaMm": "90 mm",
+      "pesoKg": "4,200 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Comprimento (mm)",
+        "Comprimento (\")",
+        "Abertura (mm)",
+        "Tubo Máx (\")",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3301208",
+          "R27160021",
+          "600 mm",
+          "24\"",
+          "90 mm",
+          "3\" (90 mm)",
+          "4,200 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3301208",
+      "Referência: R27160021",
+      "Comprimento: 24\" (600 mm)",
+      "Capacidade: até 3\" (90 mm)",
+      "Peso: 4,200 kg"
+    ],
+    "properties": [
+      "Alavanca de 600 mm capaz de quebrar juntas travadas ou oxidadas com facilidade",
+      "Dentes temperados resistentes ao lascamento",
+      "Porca em aço com rosca rápida"
+    ],
+    "instructions": [
+      "Garanta que os mordentes estejam limpos antes de agarrar a tubulação.",
+      "Após o serviço, guarde em prateleira ou gancho adequado."
+    ],
+    "image": "/images/products/r27160021-1.jpg",
+    "images": [
+      "/images/products/r27160021-1.jpg"
+    ],
+    "application": "Montagem de Poços Artesianos, Indústria Pesada, Caldeiraria e Saneamento Básico",
+    "priceFormatted": "Consulte Valor"
+  },
+  {
+    "id": "r27160030",
+    "name": "R27160030 CHAVE PARA TUBOS MODELO AMERICANO 36\"",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Chaves para Tubos",
+    "code": "R27160030",
+    "technicalCode": "3301209",
+    "description": "Chave para tubos modelo americano extrapesada de 36\" (900 mm) com capacidade de até 5\" (140 mm) para tubulações de grande porte.",
+    "detailedDescription": "A Chave para Tubos GEDORE red R27160030 (Código 3301209) de 36 polegadas (900 mm) é uma ferramenta maciça com capacidade para tubos industriais de até 5\" (140 mm). Forjada com tecnologia de ponta, oferece alavanca massiva para afrouxar e apertar uniões de grande porte em refinarias, saneamento e infraestrutura pesada.",
+    "composition": [
+      "Estrutura maciça em liga de ferro nodular de altíssima tenacidade e capacidade de carga",
+      "Mordentes forjados em aço especial temperado de alta resistência ao desgaste",
+      "Dentes endurecidos com desenho otimizado para agarrar tubulações lisas e galvanizadas",
+      "Cabo longo para efeito de alavanca com esforço reduzido"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3301209",
+      "referencia": "R27160030",
+      "comprimentoMm": "900 mm",
+      "comprimentoPol": "36\"",
+      "aberturaMaximaMm": "140 mm",
+      "pesoKg": "8,700 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Comprimento (mm)",
+        "Comprimento (\")",
+        "Abertura (mm)",
+        "Tubo Máx (\")",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3301209",
+          "R27160030",
+          "900 mm",
+          "36\"",
+          "140 mm",
+          "5\" (140 mm)",
+          "8,700 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3301209",
+      "Referência: R27160030",
+      "Comprimento: 36\" (900 mm)",
+      "Capacidade: até 5\" (140 mm)",
+      "Peso: 8,700 kg",
+      "Material: Ferro nodular especial com mordentes forjados"
+    ],
+    "properties": [
+      "Comprimento de quase 1 metro (900 mm) gerando altíssimo torque manual",
+      "Mordentes substituíveis e porca de alta precisão",
+      "Construção inquebrável para trabalho extrapesado contínuo"
+    ],
+    "instructions": [
+      "Requer manuseio firme de dois operadores ou apoio estável para alavanca máxima com segurança.",
+      "Inspecione os dentes periodicamente para verificar ausência de trincas por fadiga extrema."
+    ],
+    "image": "/images/products/r27160030-1.jpg",
+    "images": [
+      "/images/products/r27160030-1.jpg"
+    ],
+    "application": "Indústria Naval, Mineração, Plataformas de Óleo e Gás, Infraestrutura de Saneamento e Usinas",
+    "priceFormatted": "Consulte Valor"
+  },
+  {
+    "id": "r38001005",
+    "name": "R38001005 JOGO DE CHAVE DE FENDA 5 Peças",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Chaves de Fenda & Phillips",
+    "code": "R38001005",
+    "technicalCode": "3365101",
+    "description": "Jogo de chaves de fenda simples e cruzadas PH com 5 peças em cromo-vanádio GEDORE red e cabo ergonômico injetado.",
+    "detailedDescription": "O Jogo de Chaves de Fenda GEDORE red R38001005 (Código 3365101) reúne 5 peças fundamentais para o dia a dia profissional: 3 chaves de fenda simples e 2 chaves de fenda cruzada (Phillips). Produzidas conforme as normas DIN/ISO, possuem haste em aço cromo-vanádio niquelado e cabo injetado em polipropileno com cantos arredondados que proporciona excelente empunhadura e transmissão de torque sem fadiga.",
+    "composition": [
+      "Chave de fenda simples 3/16\" x 4\" (5 x 100 mm)",
+      "Chave de fenda simples 1/4\" x 6\" (6 x 150 mm)",
+      "Chave de fenda simples 5/16\" x 8\" (8 x 200 mm)",
+      "Chave de fenda cruzada 3/16\" x 4\" PH1 (5 x 100 mm)",
+      "Chave de fenda cruzada 1/4\" x 6\" PH2 (6 x 150 mm)"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3365101",
+      "referencia": "R38001005",
+      "pecas": "5",
+      "pesoKg": "0,450 kg",
+      "norma": "DIN / ISO"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Peças",
+        "Composição",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3365101",
+          "R38001005",
+          "5",
+          "3 Fenda Simples (3/16x4\", 1/4x6\", 5/16x8\") + 2 Fenda Cruzada (PH1, PH2)",
+          "0,450 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3365101",
+      "Referência: R38001005",
+      "Peças: 5 peças",
+      "Haste: Aço cromo-vanádio com superfície niquelada",
+      "Cabo: Polipropileno ergonômico injetado",
+      "Ponta: Fosfatizada preta para ajuste perfeito no parafuso",
+      "Normas: DIN / ISO",
+      "Peso: 0,450 kg"
+    ],
+    "properties": [
+      "Cabo com formato anatômico e cantos arredondados para maior conforto no giro contínuo",
+      "Ponta fosfatizada que garante aderência superior e previne desgaste precoce da fenda",
+      "Haste niquelada de alta resistência contra ferrugem e oxidação"
+    ],
+    "instructions": [
+      "Utilize a ponta de tamanho idêntico à ranhura do parafuso para evitar espanar a cabeça.",
+      "Não utilize a haste da chave como alavanca ou ponteira."
+    ],
+    "image": "/images/products/r38001005-1.jpg",
+    "images": [
+      "/images/products/r38001005-1.jpg"
+    ],
+    "application": "Montagem de Painéis Elétricos, Marcenarias, Manutenção Automotiva, Eletrônica e Linha Branca",
     "priceFormatted": "Consulte Valor"
   }
 ];
