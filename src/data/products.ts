@@ -993,7 +993,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     "id": "r21560101",
-    "name": "R21560101 CARRO PARA FERRAMENTAS GEDORE RED ESSENCIAL COM FERRAMENTAS 101 Peças",
+    "name": "R21560101 CARRO PARA FERRAMENTAS GEDORE RED ESSENCIAL COM FERRAMENTAS",
     "brand": "gedore-red",
     "brandLabel": "Gedore Red",
     "itemType": "jogo",
@@ -1002,7 +1002,7 @@ export const PRODUCTS: Product[] = [
     "categoryLabel": "Carros e Bancadas",
     "code": "R21560101",
     "technicalCode": "3301669",
-    "description": "Carro para ferramentas com 6 gavetas equipado com 101 peças essenciais: chaves combinadas, chaves biela, alicates e soquetes.",
+    "description": "Carro para ferramentas com 6 gavetas equipado com jogo de soquetes 172 peças, chaves combinadas, chaves biela, alicates e martelo.",
     "detailedDescription": "O Carro para Ferramentas GEDORE red Essencial com Ferramentas R21560101 (Código 3301669) é a escolha certeira para oficinas que buscam o melhor custo-benefício em estações completas de ferramentas. Com estrutura em chapa de aço soldada e 6 gavetas com corrediças telescópicas (5 gavetas de 75 mm e 1 gaveta grande de 155 mm), vem acompanhado do jogo de soquetes 172 peças, jogo de chaves combinadas de 6 a 32 mm, chaves biela de 8 a 19 mm, alicates de precisão e martelo.",
     "composition": [
       "Jogo de soquetes 1/4\" + 3/8\" + 1/2\" sextavados (172 peças)",
@@ -1070,7 +1070,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     "id": "r21562101",
-    "name": "R21562101 CARRO PARA FERRAMENTAS GEDORE RED ESSENCIAL BLACK EDITION COM FERRAMENTAS 101 Peças",
+    "name": "R21562101 CARRO PARA FERRAMENTAS GEDORE RED ESSENCIAL BLACK EDITION COM FERRAMENTAS",
     "brand": "gedore-red",
     "brandLabel": "Gedore Red",
     "itemType": "jogo",
@@ -1079,8 +1079,8 @@ export const PRODUCTS: Product[] = [
     "categoryLabel": "Carros e Bancadas",
     "code": "R21562101",
     "technicalCode": "3301671",
-    "description": "Edição Black Edition do carro Essencial 6 gavetas completo com 101 ferramentas essenciais para a oficina mecânica.",
-    "detailedDescription": "O Carro para Ferramentas GEDORE red Essencial Black Edition com Ferramentas R21562101 (Código 3301671) traz o acabamento preto acetinado exclusivo com o consagrado kit de ferramentas Essencial. São 101 peças de alto giro para o dia a dia: chaves combinadas, chaves biela, soquetes, alicates para anéis, fendas, phillips e martelo bola, organizados em um carro de 6 gavetas com capacidade estática para 300 kg.",
+    "description": "Edição Black Edition do carro Essencial 6 gavetas completo com jogo de soquetes 172 peças, chaves combinadas, bielas e alicates.",
+    "detailedDescription": "O Carro para Ferramentas GEDORE red Essencial Black Edition com Ferramentas R21562101 (Código 3301671) traz o acabamento preto acetinado exclusivo com o consagrado kit de ferramentas Essencial, incluindo jogo de soquetes 172 peças, chaves combinadas, chaves biela, alicates para anéis, fendas, phillips e martelo bola, organizados em um carro de 6 gavetas com capacidade estática para 300 kg.",
     "composition": [
       "Jogo de soquetes 1/4\" + 3/8\" + 1/2\" sextavados (172 peças)",
       "Chaves combinadas: 6, 7, 8, 10, 11, 12, 13, 14, 17, 19, 22, 24, 27, 30, 32 mm",

@@ -65,6 +65,24 @@ export default function ProductDetailPage() {
     );
   }
 
+  const pieceCount = (() => {
+    if (product.technicalSpecs?.pecas) {
+      const p = parseInt(String(product.technicalSpecs.pecas), 10);
+      if (!isNaN(p) && p > 0) return p;
+    }
+    const matchName = product.name.match(/(\d+)\s*(?:Peças|Pcs|peças|pcs)/i);
+    if (matchName) {
+      const p = parseInt(matchName[1], 10);
+      if (!isNaN(p) && p > 0) return p;
+    }
+    const matchDesc = product.description?.match(/(\d+)\s*(?:Peças|peças)/i);
+    if (matchDesc) {
+      const p = parseInt(matchDesc[1], 10);
+      if (!isNaN(p) && p > 0) return p;
+    }
+    return null;
+  })();
+
   const handleCopyCode = () => {
     navigator.clipboard.writeText(product.code);
     setCopiedCode(true);
@@ -419,7 +437,9 @@ export default function ProductDetailPage() {
                 onClick={() => setActiveTab('composicao')}
                 className={`tab-btn ${activeTab === 'composicao' ? 'active' : ''}`}
               >
-                Composição Completa (100 Peças)
+                {product.itemType === 'jogo'
+                  ? (pieceCount ? `Composição Completa (${pieceCount} Peças)` : 'Composição do Conjunto')
+                  : 'Especificações & Componentes'}
               </button>
               <button
                 onClick={() => setActiveTab('especificacoes')}
@@ -447,11 +467,15 @@ export default function ProductDetailPage() {
                 <div>
                   <div style={{ marginBottom: '18px' }}>
                     <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#0f172a', marginBottom: '4px' }}>
-                      {product.itemType === 'jogo' ? 'Itens Inclusos na Composição' : 'Especificações e Componentes do Produto'}
+                      {product.itemType === 'jogo' 
+                        ? (pieceCount ? `Itens Inclusos no Conjunto (${pieceCount} Peças)` : 'Itens Inclusos na Composição')
+                        : 'Especificações e Componentes do Produto'}
                     </h3>
                     <p style={{ color: '#64748b', fontSize: '0.88rem' }}>
                       {product.itemType === 'jogo' 
-                        ? 'Confira a relação detalhada dos itens e ferramentas que compõem o conjunto:'
+                        ? (pieceCount 
+                            ? `Confira a relação detalhada de todas as ${pieceCount} ferramentas e acessórios que compõem o conjunto:` 
+                            : 'Confira a relação detalhada dos itens e ferramentas que compõem o conjunto:')
                         : 'Confira as características construtivas e itens integrados ao produto:'}
                     </p>
                   </div>
