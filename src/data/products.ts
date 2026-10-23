@@ -44,11 +44,11 @@ export const BRANDS = [
 ] as const;
 
 export const CATEGORIES = [
-  { id: 'all', label: 'Todas as Categorias', count: 36 },
+  { id: 'all', label: 'Todas as Categorias', count: 58 },
   { id: 'jogos-ferramentas', label: 'Jogos de Ferramentas & Soquetes', count: 3 },
-  { id: 'soquetes-chaves', label: 'Chaves de Aperto, Estrela & Tubos', count: 21 },
+  { id: 'soquetes-chaves', label: 'Chaves de Aperto, Estrela & Tubos', count: 29 },
   { id: 'maletas-carrinhos', label: 'Carros, Bancadas & Mochilas', count: 9 },
-  { id: 'automotivo', label: 'Linha Automotiva & Oficina', count: 3 },
+  { id: 'automotivo', label: 'Linha Automotiva & Oficina', count: 17 },
 ] as const;
 
 export const PRODUCTS: Product[] = [
@@ -2851,5 +2851,1583 @@ export const PRODUCTS: Product[] = [
     ],
     "application": "Montagem de Painéis Elétricos, Marcenarias, Manutenção Automotiva, Eletrônica e Linha Branca",
     "priceFormatted": "Consulte Valor"
+  }
+,
+  {
+    "id": "r36605109",
+    "name": "R36605109 JOGO DE CHAVES L HEXAGONAIS ALLEN 1,5 A 10MM 9 Peças",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Chaves de Aperto & Hexagonais",
+    "code": "R36605109",
+    "technicalCode": "3369998",
+    "description": "Jogo de chaves L hexagonais tipo Allen de 1,5 a 10mm com 9 peças forjadas em aço cromo-vanádio com suporte compacto.",
+    "detailedDescription": "O Jogo de Chaves L Hexagonais (Allen) GEDORE red R36605109 (Código 3369998) com 9 peças foi projetado para operações de aperto e desaperto em parafusos com sextavado interno. Fabricadas em aço Cromo-Vanádio de altíssima resistência com acabamento fosfatizado, as chaves oferecem precisão dimensional nas pontas e proteção superior contra corrosão. Acompanha suporte plástico de alta densidade que mantém todas as peças organizadas e identificadas de forma rápida na bancada ou caixa de ferramentas.",
+    "composition": [
+      "Chave L hexagonal 1,5 mm",
+      "Chave L hexagonal 2,0 mm",
+      "Chave L hexagonal 2,5 mm",
+      "Chave L hexagonal 3,0 mm",
+      "Chave L hexagonal 4,0 mm",
+      "Chave L hexagonal 5,0 mm",
+      "Chave L hexagonal 6,0 mm",
+      "Chave L hexagonal 8,0 mm",
+      "Chave L hexagonal 10,0 mm",
+      "Suporte plástico organizador de alta resistência com trava"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3369998",
+      "referencia": "R36605109",
+      "pecas": "9",
+      "pesoKg": "0,240 kg",
+      "norma": "DIN ISO 2936"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Conteúdo",
+        "Peças",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3369998",
+          "R36605109",
+          "1,5; 2; 2,5; 3; 4; 5; 6; 8; 10 mm",
+          "9",
+          "0,240 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3369998",
+      "Referência: R36605109",
+      "Composição: 9 peças (1,5 a 10 mm)",
+      "Material: Aço Cromo-Vanádio (Cr-V) de alta tenacidade",
+      "Acabamento: Superfície fosfatizada anticorrosiva",
+      "Norma: Em conformidade com DIN ISO 2936",
+      "Peso do jogo: 0,240 kg"
+    ],
+    "properties": [
+      "Bordas chanfradas para acoplamento rápido e seguro na cabeça do parafuso",
+      "Tratamento térmico de precisão para máxima resistência à torção sem deformações",
+      "Estojo compacto articulado com indicação gravada em relevo de cada bitola"
+    ],
+    "instructions": [
+      "Encaixe a chave completamente no sextavado interno antes de aplicar o torque.",
+      "Evite o uso de extensores improvisados no braço curto para não danificar o perfil."
+    ],
+    "application": "Oficinas Mecânicas, Manutenção Industrial, Montagem de Máquinas, Linha Branca e Bicicletários",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r36605109-1.jpg",
+    "images": [
+      "/images/products/r36605109-1.jpg"
+    ]
+  },
+  {
+    "id": "r36405009",
+    "name": "R36405009 JOGO DE CHAVES L TX PERFIL HEXALOBULAR T10 A T50 9 Peças",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Chaves de Aperto & Hexalobulares",
+    "code": "R36405009",
+    "technicalCode": "3369856",
+    "description": "Jogo de chaves L com perfil hexalobular (TX / Torx) T10 a T50 com 9 peças forjadas em aço cromo-vanádio fosfatizado.",
+    "detailedDescription": "O Jogo de Chaves L TX Perfil Hexalobular GEDORE red R36405009 (Código 3369856) reúne 9 medidas essenciais (T10 a T50) desenvolvidas para sistemas de transmissão de torque elevado com perfil hexalobular. Fabricadas em aço Cromo-Vanádio com rigoroso controle térmico e acabamento fosfatizado, garantem encaixe sem folgas nas cabeças dos parafusos automotivos e industriais, prevenindo o espanamento do perfil. Acompanha suporte plástico ergonômico.",
+    "composition": [
+      "Chave L TX T10",
+      "Chave L TX T15",
+      "Chave L TX T20",
+      "Chave L TX T25",
+      "Chave L TX T27",
+      "Chave L TX T30",
+      "Chave L TX T40",
+      "Chave L TX T45",
+      "Chave L TX T50",
+      "Suporte plástico organizador com encaixe seguro"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3369856",
+      "referencia": "R36405009",
+      "pecas": "9",
+      "pesoKg": "0,250 kg",
+      "norma": "DIN / ISO"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Peças",
+        "Composição",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3369856",
+          "R36405009",
+          "9",
+          "T10, T15, T20, T25, T27, T30, T40, T45, T50",
+          "0,250 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3369856",
+      "Referência: R36405009",
+      "Quantidade: 9 peças",
+      "Material: Aço cromo-vanádio GEDORE red",
+      "Acabamento: Fosfatizado escuro",
+      "Perfil: Hexalobular (TX) conforme normas técnicas internacionais",
+      "Peso total: 0,250 kg"
+    ],
+    "properties": [
+      "Perfil hexalobular que distribui as forças de aperto uniformemente nos cantos",
+      "Excelente retenção de torque em parafusos automotivos e eletrônicos",
+      "Suporte dobrável com trava que previne a perda acidental de medidas menores"
+    ],
+    "instructions": [
+      "Verifique o número exato do perfil TX gravado na chave correspondente ao parafuso.",
+      "Não utilize martelos ou impactos mecânicos nas hastes das chaves L."
+    ],
+    "application": "Montagem Automotiva, Fixação de Painéis, Injeção Eletrônica, Eletrodomésticos e Máquinas Agrícolas",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r36405009-1.jpg",
+    "images": [
+      "/images/products/r36405009-1.jpg"
+    ]
+  },
+  {
+    "id": "r36455009",
+    "name": "R36455009 JOGO DE CHAVES L TX LONGAS T10 A T50 9 Peças",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Chaves de Aperto & Hexalobulares",
+    "code": "R36455009",
+    "technicalCode": "3369967",
+    "description": "Jogo de chaves L TX hexalobulares longas T10 a T50 com 9 peças para alcance superior em cavidades profundas.",
+    "detailedDescription": "O Jogo de Chaves L TX Longas GEDORE red R36455009 (Código 3369967) com 9 peças foi projetado para operações que demandam maior alavancagem de torque e acesso facilitado a parafusos embutidos ou de difícil alcance. O corpo estendido proporciona braço de alavanca aumentado, permitindo soltar parafusos emperrados com menor esforço físico do mecânico. Produzidas em aço Cromo-Vanádio com tratamento térmico especial e acabamento fosfatizado.",
+    "composition": [
+      "Chave L TX longa T10",
+      "Chave L TX longa T15",
+      "Chave L TX longa T20",
+      "Chave L TX longa T25",
+      "Chave L TX longa T27",
+      "Chave L TX longa T30",
+      "Chave L TX longa T40",
+      "Chave L TX longa T45",
+      "Chave L TX longa T50",
+      "Suporte plástico organizador articulado"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3369967",
+      "referencia": "R36455009",
+      "pecas": "9",
+      "pesoKg": "0,404 kg",
+      "norma": "DIN / ISO"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Peças",
+        "Composição",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3369967",
+          "R36455009",
+          "9",
+          "T10, T15, T20, T25, T27, T30, T40, T45, T50 (Longas)",
+          "0,404 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3369967",
+      "Referência: R36455009",
+      "Haste: Longa para maior alcance e alavanca",
+      "Peças: 9 peças",
+      "Material: Aço Cromo-Vanádio (Cr-V)",
+      "Acabamento: Fosfatizado de alta durabilidade",
+      "Peso: 0,404 kg"
+    ],
+    "properties": [
+      "Hastes longas que alcançam fixadores em locais profundos de motores e compartimentos",
+      "Maior efeito alavanca para desaperto de parafusos com alto torque e travas químicas",
+      "Pontas usinadas com precisão micrométrica para assentamento perfeito"
+    ],
+    "instructions": [
+      "Alinhe a chave axialmente ao parafuso antes de girar com alavanca máxima.",
+      "Mantenha o suporte limpo de limalhas e óleos para prolongar a vida útil."
+    ],
+    "application": "Motores Automotivos, Câmbios, Motocicletas, Manutenção Industrial Pesada e Máquinas",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r36455009-1.jpg",
+    "images": [
+      "/images/products/r36455009-1.jpg",
+      "/images/products/r36455009-2.jpg"
+    ]
+  },
+  {
+    "id": "r01802012",
+    "name": "R01802012 JOGO DE CHAVES BIELA 8 A 19MM 12 Peças",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Chaves Biela & Tubo",
+    "code": "R01802012",
+    "technicalCode": "3301527",
+    "description": "Jogo de chaves biela tipo L de 8 a 19mm com 12 peças sextavadas vazadas forjadas em aço cromo-vanádio niquelado.",
+    "detailedDescription": "O Jogo de Chaves Biela GEDORE red R01802012 (Código 3301527) com 12 peças é um clássico indispensável para mecânicos e preparadores. Composto pelas bitolas de 8 a 19 mm, cada chave possui perfil sextavado em ambos os lados e cabeça cônica de parede fina, viabilizando o aperto e desaperto ágil de porcas em prisioneiros compridos e locais rebaixados. O corpo em L com furo passante na curva permite a passagem de hastes rosqueadas longas com facilidade incomparável.",
+    "composition": [
+      "Chave biela 8 mm",
+      "Chave biela 9 mm",
+      "Chave biela 10 mm",
+      "Chave biela 11 mm",
+      "Chave biela 12 mm",
+      "Chave biela 13 mm",
+      "Chave biela 14 mm",
+      "Chave biela 15 mm",
+      "Chave biela 16 mm",
+      "Chave biela 17 mm",
+      "Chave biela 18 mm",
+      "Chave biela 19 mm",
+      "Caixa de papelão estruturado para acondicionamento e transporte"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3301527",
+      "referencia": "R01802012",
+      "pecas": "12",
+      "pesoKg": "4,300 kg",
+      "norma": "DIN / ISO"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Peças",
+        "Bitolas Inclusas",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3301527",
+          "R01802012",
+          "12",
+          "8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 mm",
+          "4,300 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3301527",
+      "Referência: R01802012",
+      "Quantidade: 12 peças",
+      "Material: Aço Cromo-Vanádio GEDORE red",
+      "Acabamento: Niquelado e cromado fosco anti-reflexo",
+      "Perfil: Sextavado com cabeças de paredes finas e furo passante",
+      "Peso do jogo: 4,300 kg"
+    ],
+    "properties": [
+      "Perfil sextavado com encaixe preciso que não arredonda os cantos de porcas e parafusos",
+      "Furo passante na curvatura que permite acomodar parafusos e prisioneiros longos",
+      "Forjamento a quente para suportar torques contínuos de alta intensidade em oficinas"
+    ],
+    "instructions": [
+      "Utilize o braço longo para soltar porcas travadas e o braço curto para rotação rápida.",
+      "Mantenha as pontas sextavadas limpas de graxa espessa e terra abrasiva."
+    ],
+    "application": "Oficinas Mecânicas Automotivas, Centro Automotivo, Caminhões Leves, Máquinas e Implementos",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r01802012-1.jpg",
+    "images": [
+      "/images/products/r01802012-1.jpg",
+      "/images/products/r01802012-2.jpg",
+      "/images/products/r01802012-3.jpg",
+      "/images/products/r01802012-4.jpg",
+      "/images/products/r01802012-5.jpg"
+    ]
+  },
+  {
+    "id": "r01902007",
+    "name": "R01902007 JOGO DE CHAVES BIELA 3/8\" A 3/4\" 7 Peças",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Chaves Biela & Tubo",
+    "code": "R01902007",
+    "technicalCode": "3301528",
+    "description": "Jogo de chaves biela em polegadas 3/8\" a 3/4\" com 7 peças forjadas em aço cromo-vanádio com furo passante.",
+    "detailedDescription": "O Jogo de Chaves Biela em Polegadas GEDORE red R01902007 (Código 3301528) conta com 7 peças projetadas para atender equipamentos, motores náuticos, máquinas agrícolas e veículos que adotam o padrão imperial (polegadas). Fabricadas em aço Cromo-Vanádio com acabamento niquelado protetivo, as chaves possuem formato em L, cabeças sextavadas cônica de parede fina e orifício na curvatura para passagem de tirantes e parafusos de comprimento elevado.",
+    "composition": [
+      "Chave biela 3/8\"",
+      "Chave biela 7/16\"",
+      "Chave biela 1/2\"",
+      "Chave biela 9/16\"",
+      "Chave biela 5/8\"",
+      "Chave biela 11/16\"",
+      "Chave biela 3/4\"",
+      "Embalagem estruturada original Gedore Red"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3301528",
+      "referencia": "R01902007",
+      "pecas": "7",
+      "pesoKg": "2,700 kg",
+      "norma": "DIN / ISO"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Peças",
+        "Bitolas Polegadas",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3301528",
+          "R01902007",
+          "7",
+          "3/8\", 7/16\", 1/2\", 9/16\", 5/8\", 11/16\", 3/4\"",
+          "2,700 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3301528",
+      "Referência: R01902007",
+      "Quantidade: 7 peças",
+      "Material: Aço Cromo-Vanádio Cr-V",
+      "Acabamento: Niquelado e cromado",
+      "Bitolas: 3/8\" a 3/4\"",
+      "Peso: 2,700 kg"
+    ],
+    "properties": [
+      "Medidas em polegadas essenciais para manutenção em importados, aviação e náutica",
+      "Corpo vazado para aperto de porcas em barras roscadas profundas",
+      "Geometria esguia com cantos arredondados que proporciona manuseio confortável"
+    ],
+    "instructions": [
+      "Use sempre a bitola em polegadas correta para não danificar fixadores padrão imperial.",
+      "Limpe após o contato com fluídos hidráulicos para preservar o acabamento niquelado."
+    ],
+    "application": "Motores Importados, Máquinas Agrícolas, Equipamentos Náuticos, Compressores e Aviação Leve",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r01902007-1.jpg",
+    "images": [
+      "/images/products/r01902007-1.jpg"
+    ]
+  },
+  {
+    "id": "r19401001",
+    "name": "R19401001 ALICATE PARA ABRAÇADEIRAS ELÁSTICAS PONTA RETA 215MM",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "automotivo",
+    "categoryLabel": "Ferramentas Automotivas",
+    "code": "R19401001",
+    "technicalCode": "3300230",
+    "description": "Alicate com pontas retas giratórias com ranhuras cruzadas para montagem e desmontagem de abraçadeiras elásticas automotivas.",
+    "detailedDescription": "O Alicate para Abraçadeiras Elásticas Ponta Reta GEDORE red R19401001 (Código 3300230) foi concebido para facilitar a remoção e instalação de abraçadeiras elásticas auto-compensadoras em mangueiras de radiador, arrefecimento e combustível. Seus mordentes contam com ponteiras giratórias ranhuradas que se adaptam em múltiplos ângulos de fixação sem deslizar. Conta com mecanismo de cremalheira/trava com catraca que mantém a abraçadeira aberta, poupando a força do profissional.",
+    "composition": [
+      "Alicate para abraçadeiras elásticas com ponta reta 215 mm",
+      "Ponteiras móveis ranhuradas giratórias 360°",
+      "Cabo com revestimento emborrachado ergonômico",
+      "Sistema de trava com catraca de desengate rápido"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3300230",
+      "referencia": "R19401001",
+      "pecas": "1",
+      "pesoKg": "0,220 kg",
+      "norma": "Padrão Gedore Red"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Comprimento",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3300230",
+          "R19401001",
+          "215 mm",
+          "0,220 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3300230",
+      "Referência: R19401001",
+      "Comprimento total: 215 mm",
+      "Ponteira: Reta com ranhuras em cruz",
+      "Mecanismo: Catraca de trava com mola de retenção",
+      "Material: Aço especial de alta resistência",
+      "Peso: 0,220 kg"
+    ],
+    "properties": [
+      "Pontas com rotação que acomodam abraçadeiras em diferentes posições espaciais",
+      "Trava automática com cremalheira que mantém a abraçadeira comprimida com segurança",
+      "Empunhadura plastificada antideslizante para máximo controle durante o manuseio"
+    ],
+    "instructions": [
+      "Posicione as pontas ranhuradas nas abas da abraçadeira e aperte até a trava engatar.",
+      "Para destravar, pressione a alavanca de desengate rápido na parte traseira do alicate."
+    ],
+    "application": "Sistemas de Arrefecimento, Mangueiras de Radiador, Ar Condicionado e Linhas de Combustível",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r19401001-1.jpeg",
+    "images": [
+      "/images/products/r19401001-1.jpeg",
+      "/images/products/r19401001-2.jpeg",
+      "/images/products/r19401001-3.jpeg",
+      "/images/products/r19401001-4.jpeg"
+    ]
+  },
+  {
+    "id": "r19401002",
+    "name": "R19401002 ALICATE PARA ABRAÇADEIRAS ELÁSTICAS PONTA CURVA 215MM",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "automotivo",
+    "categoryLabel": "Ferramentas Automotivas",
+    "code": "R19401002",
+    "technicalCode": "3300231",
+    "description": "Alicate com pontas curvas angulares para abraçadeiras elásticas em mangueiras de difícil acesso no cofre do motor.",
+    "detailedDescription": "O Alicate para Abraçadeiras Elásticas Ponta Curva GEDORE red R19401002 (Código 3300231) possui formato angular especial desenhado para vencer obstáculos e alcançar conexões rebaixadas sob o coletor ou atrás do radiador. As cabeças móveis com fendas em cruz travam com firmeza as extremidades da abraçadeira sem escapar, enquanto a cremalheira progressiva mantém a peça aberta durante o posicionamento ou troca da mangueira.",
+    "composition": [
+      "Alicate para abraçadeiras elásticas ponta curva 215 mm",
+      "Pontas giratórias angulares com perfil ranhurado",
+      "Alavanca de liberação rápida da trava de catraca",
+      "Cabos plastificados de alta aderência"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3300231",
+      "referencia": "R19401002",
+      "pecas": "1",
+      "pesoKg": "0,185 kg",
+      "norma": "Padrão Gedore Red"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Comprimento",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3300231",
+          "R19401002",
+          "215 mm",
+          "0,185 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3300231",
+      "Referência: R19401002",
+      "Comprimento: 215 mm",
+      "Geometria: Pontas curvas inclinadas para acesso angular",
+      "Acabamento: Pintura protetiva preta anticorrosão",
+      "Peso: 0,185 kg"
+    ],
+    "properties": [
+      "Cabeça curva que contorna suportes, mangotes e tubulações de ar-condicionado",
+      "Mordentes giratórios que se auto-alinham na geometria da abraçadeira elástica",
+      "Sistema de catraca com múltiplos estágios de compressão"
+    ],
+    "instructions": [
+      "Use o ângulo curvado para contornar chicotes ou mangueiras paralelas.",
+      "Acione a alavanca de liberação suavemente para evitar o salto repentino da abraçadeira."
+    ],
+    "application": "Cofre do Motor, Mangueiras de Aquecedor Interno, Turbinas e Termostáticas",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r19401002-1.jpeg",
+    "images": [
+      "/images/products/r19401002-1.jpeg",
+      "/images/products/r19401002-2.jpeg",
+      "/images/products/r19401002-3.jpeg",
+      "/images/products/r19401002-4.jpeg"
+    ]
+  },
+  {
+    "id": "r15101215",
+    "name": "R15101215 ALICATE PARA ABRAÇADEIRA ELÁSTICA COM HASTE FLEXÍVEL",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "automotivo",
+    "categoryLabel": "Ferramentas Automotivas",
+    "code": "R15101215",
+    "technicalCode": "3300375",
+    "description": "Alicate com cabo de aço e haste flexível de longo alcance com trava tipo catraca para abraçadeiras inacessíveis.",
+    "detailedDescription": "O Alicate com Haste Flexível GEDORE red R15101215 (Código 3300375) é a solução definitiva para abraçadeiras elásticas instaladas em pontos cegos ou inacessíveis por alicates convencionais. Dotado de conduíte reforçado e cabo de aço flexível de 630 mm, o mordente na extremidade do cabo alcança abraçadeiras situadas na base do radiador ou atrás do motor. O corpo conta com trava de catraca contínua que mantém a tensão ajustada enquanto você posiciona a mangueira com as duas mãos livres.",
+    "composition": [
+      "Alicate acionador com trava de cremalheira",
+      "Haste flexível com cabo de aço de alta resistência (aprox. 630 mm)",
+      "Mordente terminal compacto com garra autoajustável",
+      "Cabos emborrachados anatômicos"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3300375",
+      "referencia": "R15101215",
+      "pecas": "1",
+      "pesoKg": "0,539 kg",
+      "norma": "Padrão Gedore Red"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Comprimento",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3300375",
+          "R15101215",
+          "215 mm (Corpo) / 630 mm (Cabo)",
+          "0,539 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3300375",
+      "Referência: R15101215",
+      "Alcance do cabo flexível: 630 mm",
+      "Comprimento da empunhadura: 215 mm",
+      "Capacidade de abertura: 18 a 54 mm",
+      "Mecanismo: Cabo de aço com conduíte de alta flexibilidade",
+      "Peso: 0,539 kg"
+    ],
+    "properties": [
+      "Permite desmontar mangueiras do radiador sem precisar retirar o para-choque ou ventoinha",
+      "Cabo de aço blindado contra torção e atrito em chapas do motor",
+      "Trava automática de pressão com liberação imediata por alavanca de polegar"
+    ],
+    "instructions": [
+      "Evite dobras vivas com raio inferior a 50mm no cabo durante a compressão.",
+      "Aplique lubrificante spray no cabo de aço periodicamente para garantir suavidade no retorno."
+    ],
+    "application": "Oficinas Mecânicas, Veículos Nacionais e Importados com Cofres de Motor Compactos e Híbridos",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r15101215-1.jpeg",
+    "images": [
+      "/images/products/r15101215-1.jpeg",
+      "/images/products/r15101215-2.jpeg",
+      "/images/products/r15101215-3.jpeg",
+      "/images/products/r15101215-4.jpeg"
+    ]
+  },
+  {
+    "id": "r19401003",
+    "name": "R19401003 ALICATE PARA ABRAÇADEIRA TIPO CLIC E CLIC-R 175MM",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "automotivo",
+    "categoryLabel": "Ferramentas Automotivas",
+    "code": "R19401003",
+    "technicalCode": "3300248",
+    "description": "Alicate forjado reversível para abrir e fechar com perfeição abraçadeiras tipo Clic e Clic-R em veículos modernos.",
+    "detailedDescription": "O Alicate para Abraçadeiras Clic e Clic-R GEDORE red R19401003 (Código 3300248) foi especificamente desenvolvido para os sistemas de abraçadeiras reutilizáveis do tipo Clic e Clic-R, comuns em montadoras europeias e asiáticas. Ao virar o alicate em 180°, ele alterna entre as funções de abertura e de travamento (fechamento) da abraçadeira, sem entortar ou danificar os ganchos metálicos originais. Forjado em aço especial com pontas temperadas por indução.",
+    "composition": [
+      "Alicate para abraçadeiras Clic e Clic-R 175 mm",
+      "Mordentes duplos usinados com encaixes para abertura e fechamento",
+      "Mola de retorno de abertura automática",
+      "Cabo revestido em vinil vermelho antiderrapante"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3300248",
+      "referencia": "R19401003",
+      "pecas": "1",
+      "pesoKg": "0,270 kg",
+      "norma": "Padrão Gedore Red"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Comprimento",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3300248",
+          "R19401003",
+          "175 mm",
+          "0,270 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3300248",
+      "Referência: R19401003",
+      "Comprimento: 175 mm",
+      "Compatibilidade: Abraçadeiras metálicas tipo Clic e Clic-R",
+      "Material: Aço forjado temperado de alta qualidade",
+      "Peso: 0,270 kg"
+    ],
+    "properties": [
+      "Função dupla: abre a abraçadeira de um lado e trava com segurança virando o alicate",
+      "Preserva a abraçadeira original do veículo para reutilização sem perda de pressão",
+      "Mola interna que auxilia na abertura rápida dos mordentes após o aperto"
+    ],
+    "instructions": [
+      "Posicione os dentes do alicate no fecho da abraçadeira Clic no lado correspondente (abrir ou fechar).",
+      "Aperte as empunhaduras até ouvir o clique de travamento característico do fecho."
+    ],
+    "application": "Manutenção em Linhas de Combustível, Vácuo, Respiro do Cárter, Ar e Injeção Eletrônica",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r19401003-1.jpeg",
+    "images": [
+      "/images/products/r19401003-1.jpeg",
+      "/images/products/r19401003-2.jpeg",
+      "/images/products/r19401003-3.jpeg"
+    ]
+  },
+  {
+    "id": "r19401000",
+    "name": "R19401000 ALICATE PARA REMOÇÃO DE GRAMPOS DE ACABAMENTO 235MM",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "automotivo",
+    "categoryLabel": "Funilaria & Acabamento Automotivo",
+    "code": "R19401000",
+    "technicalCode": "3300229",
+    "description": "Alicate extrator com mordente biselado para remoção segura de grampos plásticos de painéis e forrações sem riscar.",
+    "detailedDescription": "O Alicate para Remoção de Grampos de Acabamento GEDORE red R19401000 (Código 3300229) foi criado para profissionais de funilaria, tapeçaria e instaladores de som e películas. Suas pontas afiladas em formato de garfo deslizam com extrema suavidade por baixo de presilhas plásticas, grampos de forro de porta e guarnições sem quebrar o pino ou danificar a pintura do veículo. O ponto de apoio curvo cria uma alavanca suave e eficiente que extrai os grampos intactos.",
+    "composition": [
+      "Alicate extrator de grampos e presilhas 235 mm",
+      "Mordente em cunha com chanfro de apoio alavancado",
+      "Mola de abertura suave",
+      "Cabos emborrachados isolantes com textura aderente"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3300229",
+      "referencia": "R19401000",
+      "pecas": "1",
+      "pesoKg": "0,210 kg",
+      "norma": "Padrão Gedore Red"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Comprimento",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3300229",
+          "R19401000",
+          "235 mm",
+          "0,210 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3300229",
+      "Referência: R19401000",
+      "Comprimento: 235 mm",
+      "Perfil da garra: Garfo com chanfro para alavancagem plana",
+      "Material: Aço carbono tratado termicamente",
+      "Peso: 0,210 kg"
+    ],
+    "properties": [
+      "Remove grampos de forração de portas, teto e para-barros sem partir a cabeça plástica",
+      "Base com fulcro curvo que apoia na lataria sem riscar ou afundar o metal",
+      "Diminui o tempo de desmontagem de acabamentos internos e externos pela metade"
+    ],
+    "instructions": [
+      "Insira o garfo sob a cabeça do grampo e pressione o cabo para levantá-lo suavemente.",
+      "Utilize uma fita crepe de apoio na lataria em caso de pinturas delicadas e restauradas."
+    ],
+    "application": "Tapeçaria Automotiva, Funilaria e Pintura, Instalação de Som, Envelopamento e Acessórios",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r19401000-1.jpeg",
+    "images": [
+      "/images/products/r19401000-1.jpeg",
+      "/images/products/r19401000-2.jpeg",
+      "/images/products/r19401000-3.jpeg",
+      "/images/products/r19401000-4.jpeg"
+    ]
+  },
+  {
+    "id": "r15101000",
+    "name": "R15101000 ALICATE PARA CONECTOR DO FILTRO DE COMBUSTÍVEL 230MM",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "automotivo",
+    "categoryLabel": "Ferramentas Automotivas",
+    "code": "R15101000",
+    "technicalCode": "3300221",
+    "description": "Alicate extrator com pontas curvas especiais para destravar engates rápidos do filtro e linhas de combustível com segurança.",
+    "detailedDescription": "O Alicate para Conector do Filtro de Combustível GEDORE red R15101000 (Código 3300221) elimina o risco de quebrar as travas plásticas de engates rápidos durante a substituição periódica do filtro de combustível. Desenvolvido com ponteiras de desenho especial que comprimem uniformemente as duas aletas de travamento do conector, permite desacoplar a mangueira com um único puxão firme e sem vazamentos indesejados. Essencial para revisões de injeção eletrônica e troca de filtros.",
+    "composition": [
+      "Alicate para conectores de linha de combustível 230 mm",
+      "Mordentes curvos com encaixe anatômico para botões de engate rápido",
+      "Mola de retorno para abertura automática",
+      "Cabos com acabamento plástico ergonômico"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3300221",
+      "referencia": "R15101000",
+      "pecas": "1",
+      "pesoKg": "0,270 kg",
+      "norma": "Padrão Gedore Red"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Comprimento",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3300221",
+          "R15101000",
+          "230 mm",
+          "0,270 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3300221",
+      "Referência: R15101000",
+      "Comprimento: 230 mm",
+      "Aplicação: Engates rápidos de linhas de combustível e filtro",
+      "Material: Aço forjado com tratamento superficial fosfatizado",
+      "Peso: 0,270 kg"
+    ],
+    "properties": [
+      "Pressiona as duas aletas do engate simultaneamente com pressão equilibrada",
+      "Previne quebras acidentais de conectores plásticos caros da linha de injeção",
+      "Formato longo que alcança conectores instalados acima do tanque de combustível"
+    ],
+    "instructions": [
+      "Despressurize a linha de combustível antes de desconectar o filtro.",
+      "Posicione as pontas do alicate nos botões de pressão do engate, aperte e puxe a mangueira suavemente para trás."
+    ],
+    "application": "Troca de Filtro de Combustível, Manutenção de Bomba de Combustível e Injeção Eletrônica",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r15101000-1.jpeg",
+    "images": [
+      "/images/products/r15101000-1.jpeg",
+      "/images/products/r15101000-2.jpeg",
+      "/images/products/r15101000-3.jpeg",
+      "/images/products/r15101000-4.jpeg"
+    ]
+  },
+  {
+    "id": "r09120014",
+    "name": "R09120014 CHAVE DE VELA ARTICULADA CABO T 14MM 335MM",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Chaves de Vela Automotivas",
+    "code": "R09120014",
+    "technicalCode": "3365220",
+    "description": "Chave de vela articulada 14mm com cabo T longo de 335mm, encaixe sextavado e borracha interna de retenção.",
+    "detailedDescription": "A Chave de Vela Articulada com Cabo T GEDORE red R09120014 (Código 3365220) na medida 14 mm é fabricada especialmente para motores modernos com cabeçotes compactos multiválvulas (16V/24V) que utilizam velas estreitas de 14mm. Com comprimento total de 335 mm e junta cardan articulada de alta resistência, permite retirar e rosquear velas em túneis profundos e com ângulos inclinados. Possui inserto de borracha interno que segura a vela com firmeza para extração segura.",
+    "composition": [
+      "Chave de vela articulada com cabo T 14 mm x 335 mm",
+      "Junta cardan articulada 360° reforçada",
+      "Borracha interna de retenção para fixação da vela",
+      "Cabo em T deslizante ergonômico"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3365220",
+      "referencia": "R09120014",
+      "pecas": "1",
+      "pesoKg": "0,435 kg",
+      "norma": "DIN / ISO"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Sextavado",
+        "Encaixe",
+        "Comprimento",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3365220",
+          "R09120014",
+          "14 mm",
+          "3/8\"",
+          "335 mm",
+          "0,435 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3365220",
+      "Referência: R09120014",
+      "Medida do sextavado: 14 mm",
+      "Comprimento: 335 mm",
+      "Articulação: Junta universal integrada",
+      "Material: Aço Cromo-Vanádio com acabamento niquelado",
+      "Peso: 0,435 kg"
+    ],
+    "properties": [
+      "Borracha interna especial que prende a vela para facilitar a extração do túnel do cabeçote",
+      "Junta cardan que possibilita trabalhar em ângulos inclinados de até 45 graus",
+      "Haste longa de 335 mm ideal para motores 16 válvulas profundos e compactos"
+    ],
+    "instructions": [
+      "Inicie sempre o rosqueamento da vela manualmente para evitar cruzar as roscas de alumínio do cabeçote.",
+      "Não aplique torque excessivo além da especificação recomendada pelo fabricante da vela."
+    ],
+    "application": "Troca de Velas de Ignição em Motores 1.0 a 2.0 16V, Motores Modernos com Injeção Direta e Motos",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r09120014-1.jpeg",
+    "images": [
+      "/images/products/r09120014-1.jpeg",
+      "/images/products/r09120014-2.jpeg",
+      "/images/products/r09120014-3.jpeg",
+      "/images/products/r09120014-4.jpeg"
+    ]
+  },
+  {
+    "id": "r09120016",
+    "name": "R09120016 CHAVE DE VELA ARTICULADA CABO T 16MM 335MM",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Chaves de Vela Automotivas",
+    "code": "R09120016",
+    "technicalCode": "3365221",
+    "description": "Chave de vela articulada 16mm (5/8\") com cabo T 335mm forjada em cromo-vanádio com anel retentor interno.",
+    "detailedDescription": "A Chave de Vela Articulada com Cabo T GEDORE red R09120016 (Código 3365221) no padrão 16 mm (5/8\") é a chave mais utilizada na mecânica automotiva nacional e importada. Equipada com haste longa de 335 mm e articulação tipo cardan flexível, proporciona alcance suave até o fundo do cabeçote sem interferência nos coletores de admissão ou cabos de vela. O soquete possui retentor interno de borracha sintética que trava a vela durante a descida ou retirada.",
+    "composition": [
+      "Chave de vela articulada cabo T 16 mm x 335 mm",
+      "Articulação cardan de alta tenacidade",
+      "Borracha interna retentora de vela",
+      "Barra transversal em T de giro rápido"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3365221",
+      "referencia": "R09120016",
+      "pecas": "1",
+      "pesoKg": "0,447 kg",
+      "norma": "DIN / ISO"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Sextavado",
+        "Encaixe",
+        "Comprimento",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3365221",
+          "R09120016",
+          "16 mm (5/8\")",
+          "3/8\"",
+          "335 mm",
+          "0,447 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3365221",
+      "Referência: R09120016",
+      "Sextavado: 16 mm (equivalente a 5/8\")",
+      "Comprimento total: 335 mm",
+      "Material: Aço Cromo-Vanádio niquelado e polido",
+      "Peso: 0,447 kg"
+    ],
+    "properties": [
+      "Medida universal padrão mais comum da frota veicular brasileira",
+      "Junta articulada resistente que permite operar em compartimentos estreitos",
+      "Retentor de borracha resistente a derivados de petróleo e calor do motor"
+    ],
+    "instructions": [
+      "Verifique se o soquete está alinhado com a vela antes de aplicar força.",
+      "Deixe o motor esfriar antes de remover velas em cabeçotes de alumínio para evitar danos na rosca."
+    ],
+    "application": "Veículos das linhas VW, GM, Fiat, Ford, Toyota, Honda, Hyundai, Renault, Peugeot e motos",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r09120016-1.jpeg",
+    "images": [
+      "/images/products/r09120016-1.jpeg",
+      "/images/products/r09120016-2.jpeg",
+      "/images/products/r09120016-3.jpeg",
+      "/images/products/r09120016-4.jpeg"
+    ]
+  },
+  {
+    "id": "r09120021",
+    "name": "R09120021 CHAVE DE VELA ARTICULADA CABO T 21MM 335MM",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Chaves de Vela Automotivas",
+    "code": "R09120021",
+    "technicalCode": "3365222",
+    "description": "Chave de vela articulada 21mm (13/16\") com cabo T 335mm reforçado para motores convencionais e clássicos.",
+    "detailedDescription": "A Chave de Vela Articulada com Cabo T GEDORE red R09120021 (Código 3365222) com soquete sextavado de 21 mm (13/16\") foi projetada para veículos tradicionais, motores estacionários, cortadores de grama, geradores, motores marítimos e motos de média/alta cilindrada que utilizam velas maiores. Conta com junta cardan reforçada e comprimento de 335 mm que permite contornar tubulações com conforto, além da borracha interna para sacar a vela sem risco de queda no cofre do motor.",
+    "composition": [
+      "Chave de vela articulada cabo T 21 mm x 335 mm",
+      "Junta universal articulada de alto torque",
+      "Anel de borracha interno retentor",
+      "Manípulo T para aperto manual equilibrado"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3365222",
+      "referencia": "R09120021",
+      "pecas": "1",
+      "pesoKg": "0,545 kg",
+      "norma": "DIN / ISO"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Sextavado",
+        "Encaixe",
+        "Comprimento",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3365222",
+          "R09120021",
+          "21 mm (13/16\")",
+          "3/8\"",
+          "335 mm",
+          "0,545 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3365222",
+      "Referência: R09120021",
+      "Sextavado: 21 mm (13/16\")",
+      "Comprimento: 335 mm",
+      "Acabamento: Niquelado com proteção antiferrugem",
+      "Peso: 0,545 kg"
+    ],
+    "properties": [
+      "Perfeita para motores tradicionais (AP, Opala, Fusca/VW Boxer, motos clássicas e geradores)",
+      "Articulação cardan macia que compensa desalinhamentos no túnel da vela",
+      "Revestimento interno em borracha que absorve choques e previne trinca na porcelana da vela"
+    ],
+    "instructions": [
+      "Não utilize alavancas auxiliares ou canos para aumentar a força do cabo T.",
+      "Certifique-se de que a vela esteja firmemente presa na borracha antes de puxar para fora."
+    ],
+    "application": "Carros Clássicos, Motores Estacionários, Geradores, Motosserras, Barcos e Motocicletas",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r09120021-1.jpeg",
+    "images": [
+      "/images/products/r09120021-1.jpeg",
+      "/images/products/r09120021-2.jpeg",
+      "/images/products/r09120021-3.jpeg",
+      "/images/products/r09120021-4.jpeg"
+    ]
+  },
+  {
+    "id": "r19202400",
+    "name": "R19202400 TRAVA POLIAS DO COMANDO DE VÁLVULAS AUTOAJUSTÁVEL 485MM",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "automotivo",
+    "categoryLabel": "Sincronismo & Ponto de Motores",
+    "code": "R19202400",
+    "technicalCode": "3300390",
+    "description": "Ferramenta autoajustável com pinos intercambiáveis para travar com precisão polias do comando de válvulas e bomba d'água.",
+    "detailedDescription": "A Trava Polias do Comando de Válvulas Autoajustável GEDORE red R19202400 (Código 3300390) com 485 mm é uma ferramenta indispensável para a troca segura de correias dentadas, correntes de sincronismo e retentores de óleo. Equipada com braços articulados pantográficos com parafuso de bloqueio central, ela se ajusta instantaneamente aos diâmetros de furos de diversas polias dentadas do mercado. Acompanha pinos cônicos rosqueados de alta resistência que travam firmemente a polia durante o torque do parafuso central.",
+    "composition": [
+      "Ferramenta trava polias pantográfica com braço longo de 485 mm",
+      "Conjunto de pinos de retenção cilíndricos e cônicos intercambiáveis",
+      "Parafuso de travamento e ajuste de abertura",
+      "Cabo longo para contra-apoio seguro sem deslizar"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3300390",
+      "referencia": "R19202400",
+      "pecas": "1",
+      "pesoKg": "1,010 kg",
+      "norma": "Padrão Gedore Red"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Comprimento",
+        "Abertura / Ajuste",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3300390",
+          "R19202400",
+          "485 mm",
+          "Autoajustável universal",
+          "1,010 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3300390",
+      "Referência: R19202400",
+      "Comprimento total: 485 mm",
+      "Ajuste: Abertura variável autoajustável",
+      "Material: Aço carbono tratado com alta tenacidade estrutural",
+      "Peso: 1,010 kg"
+    ],
+    "properties": [
+      "Evita que o comando de válvulas saia de fase e atropele as válvulas nos pistões",
+      "Braço de alavanca de 485 mm que suporta o torque de desaperto do parafuso central",
+      "Pinos parafusáveis que eliminam folgas perigosas nos furos da engrenagem da polia"
+    ],
+    "instructions": [
+      "Ajuste a abertura dos braços e aperte firmemente o botão central antes de aplicar torque no parafuso da polia.",
+      "Nunca utilize pistola de impacto diretamente enquanto segura a ferramenta com uma única mão."
+    ],
+    "application": "Troca de Correia Dentada, Troca de Bomba D'água, Manutenção em Cabeçotes e Sincronismo de Motores",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r19202400-1.jpeg",
+    "images": [
+      "/images/products/r19202400-1.jpeg",
+      "/images/products/r19202400-2.jpeg",
+      "/images/products/r19202400-3.jpeg",
+      "/images/products/r19202400-4.jpeg"
+    ]
+  },
+  {
+    "id": "r15101075",
+    "name": "R15101075 ESTETOSCÓPIO PARA MECÂNICO 900MM",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "automotivo",
+    "categoryLabel": "Diagnóstico Automotivo & Oficina",
+    "code": "R15101075",
+    "technicalCode": "3300385",
+    "description": "Estetoscópio acústico automotivo de alta sensibilidade para localização precisa de ruídos em rolamentos, válvulas e tuchos.",
+    "detailedDescription": "O Estetoscópio para Mecânico GEDORE red R15101075 (Código 3300385) com comprimento total de 900 mm é um instrumento de diagnóstico acústico indispensável em oficinas mecânicas modernas. Sua sonda metálica de alta precisão capta vibrações internas do motor e transmite amplificadas aos fones de ouvido isolados, permitindo ao mecânico isolar e identificar com exatidão a origem de estalos, assobios, rolamentos roncando, tuchos hidráulicos batendo, pistões folgados ou engrenagens de câmbio desgastadas sem desmontar nada antes da hora.",
+    "composition": [
+      "Estetoscópio mecânico com diafragma acústico de alta sensibilidade",
+      "Haste metálica de palpação com extensão de longo alcance (900 mm total)",
+      "Mangueiras acústicas de silicone flexível de alta densidade",
+      "Fones auriculares com almofadas anatômicas de vedação de ruído externo"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3300385",
+      "referencia": "R15101075",
+      "pecas": "1",
+      "pesoKg": "0,095 kg",
+      "norma": "Padrão Gedore Red"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Comprimento Total",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3300385",
+          "R15101075",
+          "900 mm",
+          "0,095 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3300385",
+      "Referência: R15101075",
+      "Comprimento da haste: Sonda metálica fina de longo alcance",
+      "Comprimento total: 900 mm",
+      "Diafragma: Alumínio acústico de alta frequência",
+      "Peso: 0,095 kg"
+    ],
+    "properties": [
+      "Detecta folgas ocultas em rolamentos de alternador, bomba d'água, tensor e compressor de ar condicionado",
+      "Isola ruídos metálicos internos de tuchos, válvulas e anéis com o motor em funcionamento",
+      "Design ultra-leve com fones confortáveis que silenciam ruídos do ambiente da oficina"
+    ],
+    "instructions": [
+      "Mantenha distância de correias, hélices e polias em movimento ao encostar a ponta da haste.",
+      "Encoste a ponta metálica suavemente sobre o bloco, mancais ou carcaças para escutar a vibração."
+    ],
+    "application": "Diagnóstico de Ruídos em Motores, Câmbios Manuais e Automáticos, Rolamentos e Bombas",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r15101075-1.jpeg",
+    "images": [
+      "/images/products/r15101075-1.jpeg",
+      "/images/products/r15101075-2.jpeg",
+      "/images/products/r15101075-3.jpeg"
+    ]
+  },
+  {
+    "id": "r19101005",
+    "name": "R19101005 JOGO DE MINIPEGADORES 4 Peças",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "automotivo",
+    "categoryLabel": "Ferramentas Automotivas & Precisão",
+    "code": "R19101005",
+    "technicalCode": "3301571",
+    "description": "Jogo de minipegadores de precisão com 4 peças (reto, 90°, gancho e ângulo 45°) para anéis o-ring, gaxetas e travas.",
+    "detailedDescription": "O Jogo de Minipegadores GEDORE red R19101005 (Código 3301571) com 4 peças foi desenhado para trabalhos minuciosos que exigem alta destreza manual e pontas afiladas. Composto por quatro geometrias distintas (ponta reta, curva 90°, gancho semicircular e ponta angulada 45°), é ideal para remoção de anéis o-ring de borracha, retentores, gaxetas de pistão, molas de retorno, fusíveis e pequenos cabos elétricos sem riscar as sedes usinadas.",
+    "composition": [
+      "Minipegador com ponta reta",
+      "Minipegador com ponta em ângulo de 90°",
+      "Minipegador com ponta tipo gancho semicircular",
+      "Minipegador com ponta em ângulo de 45°",
+      "Cabos emborrachados anatômicos texturizados"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3301571",
+      "referencia": "R19101005",
+      "pecas": "4",
+      "pesoKg": "0,070 kg",
+      "norma": "Padrão Gedore Red"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Peças",
+        "Geometrias Inclusas",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3301571",
+          "R19101005",
+          "4",
+          "Reto, 90°, Gancho, 45°",
+          "0,070 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3301571",
+      "Referência: R19101005",
+      "Quantidade: 4 peças",
+      "Hastes: Aço cromo-vanádio tratado termicamente",
+      "Cabo: Bicomponente ergonômico antiderrapante",
+      "Peso total: 0,070 kg"
+    ],
+    "properties": [
+      "Pontas finas de alta precisão que pescam retentores e travas em orifícios milimétricos",
+      "Cabos bicomponentes que proporcionam firmeza no controle com pontas dos dedos oleosas",
+      "Haste cromada resistente a solventes, desengraxantes e ferrugem"
+    ],
+    "instructions": [
+      "Utilize a ponta em gancho ou curva para levantar o-rings sem perfurar a borracha de vedação.",
+      "Não utilize as pontas como talhadeiras ou punções de impacto."
+    ],
+    "application": "Montagem de Câmbios Automáticos, Injeção Eletrônica, Freios, Carburadores e Circuitos Pneumáticos",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r19101005-1.jpeg",
+    "images": [
+      "/images/products/r19101005-1.jpeg",
+      "/images/products/r19101005-2.jpeg",
+      "/images/products/r19101005-3.jpeg"
+    ]
+  },
+  {
+    "id": "r15151002",
+    "name": "R15151002 JOGO DE PINÇAS CURVAS PARA ESTRANGULAR MANGUEIRAS 3 Peças",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "automotivo",
+    "categoryLabel": "Ferramentas Automotivas",
+    "code": "R15151002",
+    "technicalCode": "3301538",
+    "description": "Jogo de pinças curvas para estrangular e estancar mangueiras de fluidos sem cortar ou danificar a borracha (3 peças).",
+    "detailedDescription": "O Jogo de Pinças Curvas para Estrangular Mangueiras GEDORE red R15151002 (Código 3301538) com 3 peças é a ferramenta ideal para conter vazamentos durante a manutenção em linhas de combustível, vácuo, arrefecimento e freio. Fabricadas em polímero técnico termoplástico reforçado e não condutor, as pinças possuem mordentes com bordas arredondadas que interrompem o fluxo de líquidos por compressão controlada, evitando vazamento no chão da oficina sem esmagar ou romper a malha interna da mangueira.",
+    "composition": [
+      "Pinça curva pequena para mangueiras de 1/8\" a 5/16\" (combustível e vácuo)",
+      "Pinça curva média para mangueiras de 1/2\" a 3/4\" (aquecedor e arrefecimento)",
+      "Pinça curva grande para mangueiras de 3/4\" a 2.1/4\" (radiador principal)",
+      "Anel corrediço de bloqueio e retenção contínua em cada pinça"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3301538",
+      "referencia": "R15151002",
+      "pecas": "3",
+      "pesoKg": "0,280 kg",
+      "norma": "Padrão Gedore Red"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Peças",
+        "Capacidade de Diâmetro",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3301538",
+          "R15151002",
+          "3",
+          "Pequena, Média e Grande (1/8\" a 2.1/4\")",
+          "0,280 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3301538",
+      "Referência: R15151002",
+      "Quantidade: 3 peças",
+      "Material: Nylon técnico reforçado com fibra, não condutor de eletricidade",
+      "Formato dos mordentes: Curvos com cantos biselados anti-corte",
+      "Peso do jogo: 0,280 kg"
+    ],
+    "properties": [
+      "Estanca o fluxo de combustível ou aditivo sem precisar drenar todo o sistema do veículo",
+      "Bordas lisas arredondadas que não machucam o revestimento têxtil interno das mangueiras",
+      "Mecanismo de anel de trava rápida que mantém o estrangulamento sem cansar as mãos"
+    ],
+    "instructions": [
+      "Deslize o anel de travamento para fechar os mordentes até estancar o vazamento.",
+      "Não utilize em mangueiras metálicas flexíveis ou linhas com malha de aço externa trançada."
+    ],
+    "application": "Troca de Bombas D'água, Válvulas Termostáticas, Filtros de Combustível e Servofreio",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r15151002-1.jpeg",
+    "images": [
+      "/images/products/r15151002-1.jpeg",
+      "/images/products/r15151002-2.jpeg",
+      "/images/products/r15151002-3.jpeg"
+    ]
+  },
+  {
+    "id": "r15551001",
+    "name": "R15551001 SACA FILTRO DE ÓLEO TRÊS GARRAS AUTOAJUSTÁVEL",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "automotivo",
+    "categoryLabel": "Troca de Óleo & Lubrificação",
+    "code": "R15551001",
+    "technicalCode": "3301542",
+    "description": "Saca filtro de óleo bidirecional com três garras estriadas autoajustáveis para encaixe de 1/2\" e 3/8\".",
+    "detailedDescription": "O Saca Filtro de Óleo Três Garras GEDORE red R15551001 (Código 3301542) é uma das ferramentas mais eficientes para a troca rápida de óleo automotivo. Projetado com sistema de engrenagens planetárias autoajustáveis e três garras cilíndricas com estrias serrilhadas de alta aderência, ele morde a carcaça metálica do filtro com firmeza crescente à medida que mais torque é aplicado. Opera nos dois sentidos (aperto e desaperto) e conta com encaixe quadrado de 1/2\" e adaptador para 3/8\" ou chave fixa de 21 mm.",
+    "composition": [
+      "Saca filtro de óleo de 3 garras autoajustável para filtros de 63 a 102 mm",
+      "Adaptador com encaixe quadrado interno de 1/2\" e externo de 21 mm",
+      "Garras cilíndricas temperadas com recartilho antiderrapante"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3301542",
+      "referencia": "R15551001",
+      "pecas": "1",
+      "pesoKg": "0,370 kg",
+      "norma": "Padrão Gedore Red"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Encaixe Quadrado",
+        "Capacidade Diâmetro",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3301542",
+          "R15551001",
+          "1/2\" e 3/8\" (com adaptador)",
+          "63 a 102 mm",
+          "0,370 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3301542",
+      "Referência: R15551001",
+      "Abertura: 63 a 102 mm",
+      "Encaixe: Quadrado 1/2\" (ou sextavado 21 mm com chave combinada)",
+      "Mecanismo: 3 garras sincronizadas bidirecionais",
+      "Material: Aço forjado com engrenagens usinadas de alta resistência",
+      "Peso: 0,370 kg"
+    ],
+    "properties": [
+      "Garras serrilhadas que cravam no filtro mesmo sujo de óleo escorregadio",
+      "Ajuste progressivo: quanto maior a força na catraca, mais forte as garras prendem",
+      "Compatível com catracas de 1/2\", extensores longos ou chaves fixas de 21 mm"
+    ],
+    "instructions": [
+      "Posicione o saca filtro centralizado na ponta do filtro de óleo.",
+      "Gire no sentido anti-horário com a catraca para travar as garras e soltar o filtro com facilidade."
+    ],
+    "application": "Centros de Troca de Óleo, Oficinas Mecânicas, Frotas, Vans, Utilitários e Caminhões Leves",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r15551001-1.jpeg",
+    "images": [
+      "/images/products/r15551001-1.jpeg",
+      "/images/products/r15551001-2.jpeg",
+      "/images/products/r15551001-3.jpeg",
+      "/images/products/r15551001-4.jpeg"
+    ]
+  },
+  {
+    "id": "r19102001",
+    "name": "R19102001 BANDEJA MAGNÉTICA RETANGULAR 237X135MM",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "automotivo",
+    "categoryLabel": "Organização & Fixação de Oficina",
+    "code": "R19102001",
+    "technicalCode": "3301545",
+    "description": "Bandeja magnética retangular em aço inox com base emborrachada de imã duplo de neodímio para parafusos e ferramentas.",
+    "detailedDescription": "A Bandeja Magnética Retangular GEDORE red R19102001 (Código 3301545) com dimensões de 237 x 135 mm e profundidade de 30 mm é um item indispensável para manter a organização e produtividade em desmontagens de motores e suspensões. Fabricada em chapa de aço inoxidável polida resistente à corrosão e solventes, conta com dois ímãs de neodímio de alta potência na base. Ela pode ser fixada na vertical, de ponta-cabeça no elevador automotivo ou sobre o capô sem riscar a pintura graças à capa de borracha protetora.",
+    "composition": [
+      "Bandeja retangular em aço inoxidável 237 x 135 x 30 mm",
+      "Base com 2 ímãs permanentes de alta atração magnética",
+      "Revestimento protetor de borracha nas bases magnéticas"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3301545",
+      "referencia": "R19102001",
+      "pecas": "1",
+      "pesoKg": "0,590 kg",
+      "norma": "Padrão Gedore Red"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Comprimento",
+        "Largura",
+        "Profundidade",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3301545",
+          "R19102001",
+          "237 mm (9,5\")",
+          "135 mm",
+          "30 mm",
+          "0,590 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3301545",
+      "Referência: R19102001",
+      "Dimensões: 237 mm x 135 mm x 30 mm",
+      "Material: Aço inoxidável polido",
+      "Bases magnéticas: 2 ímãs com capa protetora de borracha",
+      "Peso: 0,590 kg"
+    ],
+    "properties": [
+      "Retém porcas, arruelas, parafusos, pontas de bits e chaves pequenas mesmo inclinada a 90° ou 180°",
+      "Bases emborrachadas macias que aderem à lataria ou elevador sem arranhar a pintura",
+      "Aço inox imune à oxidação por óleo de motor, líquido de arrefecimento e solventes"
+    ],
+    "instructions": [
+      "Limpe a superfície de apoio da bandeja para garantir máxima área de contato magnético.",
+      "Não posicione próximo a módulos de injeção eletrônica sensíveis ou cartões magnéticos."
+    ],
+    "application": "Oficinas Mecânicas, Funilarias, Elevadores Automotivos, Bancadas de Montagem e Motocicletas",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r19102001-1.jpeg",
+    "images": [
+      "/images/products/r19102001-1.jpeg",
+      "/images/products/r19102001-2.jpeg",
+      "/images/products/r19102001-3.jpeg"
+    ]
+  },
+  {
+    "id": "r19101004",
+    "name": "R19101004 BANDEJA MAGNÉTICA REDONDA 150MM",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "automotivo",
+    "categoryLabel": "Organização & Fixação de Oficina",
+    "code": "R19101004",
+    "technicalCode": "3301567",
+    "description": "Prato magnético redondo de 150mm em aço inoxidável com ímã permanente emborrachado para parafusos.",
+    "detailedDescription": "A Bandeja Magnética Redonda GEDORE red R19101004 (Código 3301567) com diâmetro de 150 mm é a companheira perfeita para o mecânico que precisa de mobilidade e agilidade em serviços rápidos. Com fundo côncavo em aço inox resistente e potente base magnética emborrachada, mantém pequenos fixadores, travas e porcas sempre ao alcance das mãos sem risco de rolarem pelo chão da oficina. Fixa-se instantaneamente em colunas metálicas, longarinas e braços de elevadores automotivos.",
+    "composition": [
+      "Bandeja / prato redondo magnético Ø 150 mm",
+      "Ímã permanente redondo central de alta força",
+      "Proteção de borracha flexível na base contra riscos"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3301567",
+      "referencia": "R19101004",
+      "pecas": "1",
+      "pesoKg": "0,315 kg",
+      "norma": "Padrão Gedore Red"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Diâmetro do Prato",
+        "Material",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3301567",
+          "R19101004",
+          "150 mm",
+          "Aço inoxidável",
+          "0,315 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3301567",
+      "Referência: R19101004",
+      "Diâmetro do prato: 150 mm",
+      "Material: Chapa de aço inoxidável prensada",
+      "Base: Ímã circular com capa de borracha antiriscos",
+      "Peso: 0,315 kg"
+    ],
+    "properties": [
+      "Design circular compacto que cabe perfeitamente no vão de qualquer bandeja ou carrinho",
+      "Ímã de alta indução que segura com firmeza parafusos de cabeçote e pequenas ferramentas",
+      "Borracha na base que não transfere atrito para a pintura de para-lamas e laterais de veículos"
+    ],
+    "instructions": [
+      "Evite quedas fortes de altura para não descolar o imã permanente da base.",
+      "Lave com desengraxante neutro para retirar excesso de óleo e poeira de ferro."
+    ],
+    "application": "Troca de Pastilhas de Freio, Desmontagem de Painéis, Manutenção em Motos e Bancadas",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r19101004-1.jpeg",
+    "images": [
+      "/images/products/r19101004-1.jpeg",
+      "/images/products/r19101004-2.jpeg"
+    ]
+  },
+  {
+    "id": "r17152000",
+    "name": "R17152000 SACA POLIAS DUAS GARRAS 4\" CAPACIDADE 2.300KG",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "automotivo",
+    "categoryLabel": "Extratores & Saca Polias",
+    "code": "R17152000",
+    "technicalCode": "3300386",
+    "description": "Extrator mecânico de duas garras articuladas reversíveis de 4 polegadas com capacidade de carga de 2.300 kg.",
+    "detailedDescription": "O Saca Polias com Duas Garras GEDORE red R17152000 (Código 3300386) de 4 polegadas (abertura máxima de 100 mm) foi forjado para extração segura de rolamentos, buchas, engrenagens e polias cravadas em eixos de motores e transmissões. Projetado com fuso mecânico roscado de alta resistência com ponta cônica de apoio e garras reversíveis (para extração externa ou interna), suporta com folga até 2.300 kg (22,5 kN) de força de tração, prevenindo empenamentos no eixo do motor.",
+    "composition": [
+      "Corpo travessa forjado em aço especial de alto limite elástico",
+      "Fuso mecânico roscado temperado com cabeça sextavada",
+      "Par de garras reversíveis de 4 polegadas (100 mm de abertura máxima)",
+      "Parafusos e porcas de fixação e articulação das garras"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3300386",
+      "referencia": "R17152000",
+      "pecas": "1",
+      "pesoKg": "0,750 kg",
+      "norma": "Padrão Gedore Red"
+    },
+    "tableData": {
+      "headers": [
+        "Descrição",
+        "Código",
+        "Referência",
+        "Capacidade de Carga",
+        "Abertura Máxima"
+      ],
+      "rows": [
+        [
+          "Saca polias 2 garras 4\"",
+          "3300386",
+          "R17152000",
+          "2.300 kg (2,3 t)",
+          "100 mm"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3300386",
+      "Referência: R17152000",
+      "Abertura máxima das garras: 100 mm (4\")",
+      "Capacidade de carga: 2.300 kg (22,5 kN)",
+      "Garras: Reversíveis para pega interna e externa",
+      "Fuso: Aço temperado de alta dureza com ponta cônica de centragem",
+      "Peso: 0,750 kg"
+    ],
+    "properties": [
+      "Garras com perfil delgado que encaixam atrás de polias com folga mínima na carcaça",
+      "Garras reversíveis que alternam entre extração externa e interna de pistas de rolamentos",
+      "Fuso com rosca trapezoidal usinada para avanço suave com mínimo atrito mecânico"
+    ],
+    "instructions": [
+      "Lubrifique a rosca do fuso antes de aplicar carga para garantir o rendimento máximo da força mecânica.",
+      "Certifique-se de que as duas garras estejam posicionadas simetricamente no centro do eixo."
+    ],
+    "application": "Extração de Rolamentos, Polias de Virabrequim, Engrenagens de Câmbio e Buchas Industriais",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r17152000-1.jpeg",
+    "images": [
+      "/images/products/r17152000-1.jpeg",
+      "/images/products/r17152000-2.jpeg",
+      "/images/products/r17152000-3.jpeg"
+    ]
   }
 ];

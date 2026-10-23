@@ -628,28 +628,32 @@ export default function Catalog({ selectedBrand, onBrandChange, searchInputRef }
                         </div>
 
                         {/* Indicador de Fotos (Apenas Ícone e Quantidade conforme solicitado) */}
-                        {product.images && product.images.length > 1 && (
-                          <div style={{
-                            position: 'absolute',
-                            bottom: '10px',
-                            right: '10px',
-                            background: 'rgba(255, 255, 255, 0.95)',
-                            backdropFilter: 'blur(4px)',
-                            color: '#0f172a',
-                            fontSize: '0.72rem',
-                            fontWeight: 700,
-                            padding: '3px 7px',
-                            borderRadius: '3px',
-                            border: '1px solid #cbd5e1',
-                            boxShadow: '0 1px 3px rgba(0,0,0,0.06)',
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '4px'
-                          }}>
-                            <Camera size={13} color="#475569" />
-                            <span>{product.images.length}</span>
-                          </div>
-                        )}
+                        {(() => {
+                          const count = (product.images && product.images.length > 0) ? product.images.length : (product.image ? 1 : 0);
+                          if (count <= 0) return null;
+                          return (
+                            <div style={{
+                              position: 'absolute',
+                              bottom: '10px',
+                              right: '10px',
+                              background: 'rgba(255, 255, 255, 0.95)',
+                              backdropFilter: 'blur(4px)',
+                              color: '#0f172a',
+                              fontSize: '0.72rem',
+                              fontWeight: 700,
+                              padding: '3px 7px',
+                              borderRadius: '3px',
+                              border: '1px solid #cbd5e1',
+                              boxShadow: '0 1px 3px rgba(0,0,0,0.06)',
+                              display: 'flex',
+                              alignItems: 'center',
+                              gap: '4px'
+                            }}>
+                              <Camera size={13} color="#475569" />
+                              <span>{count}</span>
+                            </div>
+                          );
+                        })()}
                       </Link>
 
                       {/* Corpo do Anúncio */}

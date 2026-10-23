@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
@@ -21,11 +21,16 @@ import {
   Truck, 
   Layers, 
   ChevronRight,
+  ChevronLeft,
   FileSpreadsheet,
   CheckCircle2,
   Wrench,
   Tag,
-  Camera
+  Camera,
+  ZoomIn,
+  ZoomOut,
+  X,
+  Maximize2
 } from 'lucide-react';
 
 export default function ProductDetailPage() {
@@ -41,6 +46,45 @@ export default function ProductDetailPage() {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [copiedCode, setCopiedCode] = useState(false);
   const [activeTab, setActiveTab] = useState<'composicao' | 'especificacoes' | 'descricao' | 'instrucoes'>('composicao');
+
+  // Modo Zoom & Lightbox
+  const [isZoomOpen, setIsZoomOpen] = useState(false);
+  const [zoomScale, setZoomScale] = useState(1);
+
+  const nextImage = useCallback((e?: React.MouseEvent) => {
+    e?.stopPropagation();
+    if (productImages.length <= 1) return;
+    setSelectedImageIndex((prev) => (prev + 1) % productImages.length);
+  }, [productImages.length]);
+
+  const prevImage = useCallback((e?: React.MouseEvent) => {
+    e?.stopPropagation();
+    if (productImages.length <= 1) return;
+    setSelectedImageIndex((prev) => (prev - 1 + productImages.length) % productImages.length);
+  }, [productImages.length]);
+
+  const openZoom = (e?: React.MouseEvent) => {
+    e?.stopPropagation();
+    setZoomScale(1);
+    setIsZoomOpen(true);
+  };
+
+  const closeZoom = () => {
+    setIsZoomOpen(false);
+    setZoomScale(1);
+  };
+
+  // Suporte a teclado no modo zoom
+  useEffect(() => {
+    if (!isZoomOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') closeZoom();
+      if (e.key === 'ArrowRight') nextImage();
+      if (e.key === 'ArrowLeft') prevImage();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isZoomOpen, nextImage, prevImage]);
 
   if (!product) {
     return (
@@ -128,21 +172,26 @@ export default function ProductDetailPage() {
             {/* COLUNA ESQUERDA: Galeria de Fotos com Zoom e Miniaturas */}
             <div className="gallery-col">
               {/* Foto Principal */}
-              <div style={{
-                position: 'relative',
-                width: '100%',
-                aspectRatio: '1 / 1',
-                maxHeight: '440px',
-                background: '#ffffff',
-                border: '1px solid #cbd5e1',
-                borderRadius: '6px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                padding: '16px',
-                overflow: 'hidden',
-                boxSizing: 'border-box'
-              }}>
+              <div 
+                onClick={openZoom}
+                title="Clique para ampliar em tela cheia (Zoom)"
+                style={{
+                  position: 'relative',
+                  width: '100%',
+                  aspectRatio: '1 / 1',
+                  maxHeight: '440px',
+                  background: '#ffffff',
+                  border: '1px solid #cbd5e1',
+                  borderRadius: '6px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  padding: '16px',
+                  overflow: 'hidden',
+                  boxSizing: 'border-box',
+                  cursor: 'zoom-in'
+                }}
+              >
                 <img
                   src={productImages[selectedImageIndex]}
                   alt={`${product.name} - Foto ${selectedImageIndex + 1}`}
@@ -168,6 +217,96 @@ export default function ProductDetailPage() {
                     {product.brandLabel}
                   </span>
                 </div>
+
+                {/* Botão de Zoom no Canto Superior Direito */}
+                <button
+                  type="button"
+                  onClick={openZoom}
+                  title="Ampliar foto em tela cheia"
+                  style={{
+                    position: 'absolute',
+                    top: '10px',
+                    right: '10px',
+                    background: 'rgba(255, 255, 255, 0.95)',
+                    border: '1px solid #cbd5e1',
+                    borderRadius: '4px',
+                    padding: '4px 8px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '4px',
+                    cursor: 'pointer',
+                    zIndex: 3,
+                    fontSize: '0.74rem',
+                    fontWeight: 700,
+                    color: '#0f172a',
+                    boxShadow: '0 2px 4px rgba(0,0,0,0.08)',
+                    transition: 'all 0.15s ease'
+                  }}
+                >
+                  <ZoomIn size={14} color="#e5242a" />
+                  <span>Zoom</span>
+                </button>
+
+                {/* Setas de Navegação (quando há mais de 1 foto) */}
+                {productImages.length > 1 && (
+                  <>
+                    <button
+                      type="button"
+                      onClick={prevImage}
+                      aria-label="Foto anterior"
+                      title="Foto anterior"
+                      style={{
+                        position: 'absolute',
+                        left: '10px',
+                        top: '50%',
+                        transform: 'translateY(-50%)',
+                        background: 'rgba(255, 255, 255, 0.92)',
+                        border: '1px solid #cbd5e1',
+                        borderRadius: '50%',
+                        width: '38px',
+                        height: '38px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        cursor: 'pointer',
+                        zIndex: 3,
+                        boxShadow: '0 2px 8px rgba(0,0,0,0.14)',
+                        color: '#0f172a',
+                        transition: 'all 0.15s ease'
+                      }}
+                    >
+                      <ChevronLeft size={22} />
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={nextImage}
+                      aria-label="Próxima foto"
+                      title="Próxima foto"
+                      style={{
+                        position: 'absolute',
+                        right: '10px',
+                        top: '50%',
+                        transform: 'translateY(-50%)',
+                        background: 'rgba(255, 255, 255, 0.92)',
+                        border: '1px solid #cbd5e1',
+                        borderRadius: '50%',
+                        width: '38px',
+                        height: '38px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        cursor: 'pointer',
+                        zIndex: 3,
+                        boxShadow: '0 2px 8px rgba(0,0,0,0.14)',
+                        color: '#0f172a',
+                        transition: 'all 0.15s ease'
+                      }}
+                    >
+                      <ChevronRight size={22} />
+                    </button>
+                  </>
+                )}
 
                 {/* Contador de Foto Atual com Ícone de Câmera */}
                 <div style={{
@@ -698,6 +837,267 @@ export default function ProductDetailPage() {
           </div>
         </div>
       </main>
+
+      {/* MODAL LIGHTBOX DE ZOOM EM TELA CHEIA */}
+      {isZoomOpen && (
+        <div 
+          onClick={closeZoom}
+          style={{
+            position: 'fixed',
+            inset: 0,
+            zIndex: 9999,
+            background: 'rgba(10, 15, 29, 0.96)',
+            backdropFilter: 'blur(8px)',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+            padding: '16px',
+            boxSizing: 'border-box'
+          }}
+        >
+          {/* Barra Superior do Modal */}
+          <div 
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              width: '100%',
+              maxWidth: '1200px',
+              margin: '0 auto',
+              color: '#ffffff',
+              gap: '12px'
+            }}
+          >
+            <div style={{ minWidth: 0, flex: 1 }}>
+              <h3 style={{ 
+                margin: 0, 
+                fontSize: '1rem', 
+                fontWeight: 700, 
+                color: '#ffffff',
+                whiteSpace: 'nowrap',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis'
+              }}>
+                {product.name}
+              </h3>
+              <span style={{ fontSize: '0.8rem', color: '#94a3b8' }}>
+                Foto {selectedImageIndex + 1} de {productImages.length}
+              </span>
+            </div>
+
+            {/* Controles de Zoom e Fechar */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <button
+                type="button"
+                onClick={() => setZoomScale((s) => Math.max(1, +(s - 0.5).toFixed(1)))}
+                title="Diminuir zoom"
+                style={{
+                  background: 'rgba(255,255,255,0.12)',
+                  border: '1px solid rgba(255,255,255,0.2)',
+                  borderRadius: '4px',
+                  color: '#ffffff',
+                  padding: '6px 10px',
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '4px',
+                  fontSize: '0.8rem'
+                }}
+              >
+                <ZoomOut size={16} />
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setZoomScale((s) => Math.min(3, +(s + 0.5).toFixed(1)))}
+                title="Aumentar zoom"
+                style={{
+                  background: 'rgba(255,255,255,0.12)',
+                  border: '1px solid rgba(255,255,255,0.2)',
+                  borderRadius: '4px',
+                  color: '#ffffff',
+                  padding: '6px 10px',
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '4px',
+                  fontSize: '0.8rem'
+                }}
+              >
+                <ZoomIn size={16} />
+                <span>{Math.round(zoomScale * 100)}%</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={closeZoom}
+                title="Fechar (ESC)"
+                style={{
+                  background: '#e5242a',
+                  border: 'none',
+                  borderRadius: '4px',
+                  color: '#ffffff',
+                  padding: '6px 14px',
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '5px',
+                  fontSize: '0.85rem',
+                  fontWeight: 700
+                }}
+              >
+                <X size={18} />
+                <span>Fechar</span>
+              </button>
+            </div>
+          </div>
+
+          {/* Área Central da Imagem com Setas */}
+          <div 
+            style={{
+              position: 'relative',
+              flex: 1,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              overflow: 'hidden',
+              width: '100%',
+              maxHeight: 'calc(100vh - 160px)'
+            }}
+          >
+            {/* Seta Esquerda no Modal */}
+            {productImages.length > 1 && (
+              <button
+                type="button"
+                onClick={prevImage}
+                title="Foto anterior (Seta esquerda)"
+                style={{
+                  position: 'absolute',
+                  left: '16px',
+                  top: '50%',
+                  transform: 'translateY(-50%)',
+                  background: 'rgba(15, 23, 42, 0.75)',
+                  border: '1px solid rgba(255,255,255,0.25)',
+                  borderRadius: '50%',
+                  width: '46px',
+                  height: '46px',
+                  color: '#ffffff',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  cursor: 'pointer',
+                  zIndex: 10,
+                  transition: 'background 0.15s ease'
+                }}
+              >
+                <ChevronLeft size={28} />
+              </button>
+            )}
+
+            {/* Imagem em Zoom */}
+            <div 
+              onClick={(e) => {
+                e.stopPropagation();
+                setZoomScale((s) => (s > 1 ? 1 : 2));
+              }}
+              style={{
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                cursor: zoomScale > 1 ? 'zoom-out' : 'zoom-in',
+                transition: 'transform 0.2s ease',
+                transform: `scale(${zoomScale})`
+              }}
+            >
+              <img
+                src={productImages[selectedImageIndex]}
+                alt={`${product.name} em alta resolução`}
+                style={{
+                  maxWidth: '90vw',
+                  maxHeight: '75vh',
+                  objectFit: 'contain',
+                  userSelect: 'none',
+                  pointerEvents: 'none'
+                }}
+              />
+            </div>
+
+            {/* Seta Direita no Modal */}
+            {productImages.length > 1 && (
+              <button
+                type="button"
+                onClick={nextImage}
+                title="Próxima foto (Seta direita)"
+                style={{
+                  position: 'absolute',
+                  right: '16px',
+                  top: '50%',
+                  transform: 'translateY(-50%)',
+                  background: 'rgba(15, 23, 42, 0.75)',
+                  border: '1px solid rgba(255,255,255,0.25)',
+                  borderRadius: '50%',
+                  width: '46px',
+                  height: '46px',
+                  color: '#ffffff',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  cursor: 'pointer',
+                  zIndex: 10,
+                  transition: 'background 0.15s ease'
+                }}
+              >
+                <ChevronRight size={28} />
+              </button>
+            )}
+          </div>
+
+          {/* Barra Inferior com Miniaturas */}
+          {productImages.length > 1 && (
+            <div 
+              onClick={(e) => e.stopPropagation()}
+              style={{
+                display: 'flex',
+                gap: '10px',
+                justifyContent: 'center',
+                overflowX: 'auto',
+                padding: '8px 0',
+                maxWidth: '100%'
+              }}
+            >
+              {productImages.map((img, idx) => (
+                <button
+                  key={idx}
+                  type="button"
+                  onClick={() => {
+                    setSelectedImageIndex(idx);
+                    setZoomScale(1);
+                  }}
+                  style={{
+                    width: '56px',
+                    height: '56px',
+                    borderRadius: '4px',
+                    border: selectedImageIndex === idx ? '2px solid #e5242a' : '1px solid rgba(255,255,255,0.3)',
+                    background: '#ffffff',
+                    padding: '2px',
+                    cursor: 'pointer',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    boxShadow: selectedImageIndex === idx ? '0 0 10px rgba(229,36,42,0.6)' : 'none',
+                    flexShrink: 0
+                  }}
+                >
+                  <img src={img} alt={`Miniatura ${idx + 1}`} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
 
       <Footer />
       <QuoteDrawer />
