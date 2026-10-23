@@ -44,11 +44,11 @@ export const BRANDS = [
 ] as const;
 
 export const CATEGORIES = [
-  { id: 'all', label: 'Todas as Categorias', count: 58 },
-  { id: 'jogos-ferramentas', label: 'Jogos de Ferramentas & Soquetes', count: 3 },
-  { id: 'soquetes-chaves', label: 'Chaves de Aperto, Estrela & Tubos', count: 29 },
+  { id: 'all', label: 'Todas as Categorias', count: 80 },
+  { id: 'jogos-ferramentas', label: 'Jogos de Ferramentas & Soquetes', count: 15 },
+  { id: 'soquetes-chaves', label: 'Chaves de Aperto, Estrela & Tubos', count: 34 },
   { id: 'maletas-carrinhos', label: 'Carros, Bancadas & Mochilas', count: 9 },
-  { id: 'automotivo', label: 'Linha Automotiva & Oficina', count: 17 },
+  { id: 'automotivo', label: 'Linha Automotiva & Oficina', count: 22 },
 ] as const;
 
 export const PRODUCTS: Product[] = [
@@ -4428,6 +4428,1578 @@ export const PRODUCTS: Product[] = [
       "/images/products/r17152000-1.jpeg",
       "/images/products/r17152000-2.jpeg",
       "/images/products/r17152000-3.jpeg"
+    ]
+  }
+,
+  {
+    "id": "r17152001",
+    "name": "R17152001 SACA POLIAS DUAS GARRAS 6\" CAPACIDADE 2.800KG",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "automotivo",
+    "categoryLabel": "Extratores & Saca Polias",
+    "code": "R17152001",
+    "technicalCode": "3300387",
+    "description": "Extrator mecânico com duas garras reversíveis de 6 polegadas (150mm) e fuso temperado com capacidade de 2.800 kg.",
+    "detailedDescription": "O Saca Polias com Duas Garras GEDORE red R17152001 (Código 3300387) com alcance de 6 polegadas (abertura máxima de 150 mm) foi especialmente dimensionado para extrair com segurança polias de correias automotivas, engrenagens de eixos secundários e rolamentos industriais. Forjado em aço de altíssima resistência com fuso roscado tratado e temperado, ele suporta até 2.800 kg de carga trativa. Suas garras reversíveis permitem tanto a pega externa convencional quanto a extração interna de peças com apoio rebaixado.",
+    "composition": [
+      "Corpo travessa forjado em aço especial de alta resistência",
+      "Fuso mecânico roscado com cabeça sextavada e ponta cônica de centragem",
+      "Par de garras reversíveis de 6 polegadas (150 mm de abertura máxima)",
+      "Parafusos de retenção e articulação das garras"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3300387",
+      "referencia": "R17152001",
+      "pecas": "1",
+      "pesoKg": "1,200 kg",
+      "norma": "Padrão Gedore Red"
+    },
+    "tableData": {
+      "headers": [
+        "Descrição",
+        "Código",
+        "Referência",
+        "Capacidade de Carga",
+        "Abertura Máxima"
+      ],
+      "rows": [
+        [
+          "Saca polias 2 garras 6\"",
+          "3300387",
+          "R17152001",
+          "2.800 kg (2,8 t)",
+          "150 mm"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3300387",
+      "Referência: R17152001",
+      "Abertura máxima das garras: 150 mm (6\")",
+      "Capacidade de carga: 2.800 kg (27,4 kN)",
+      "Garras: Reversíveis para pega externa e interna",
+      "Fuso: Aço temperado de alta dureza",
+      "Peso: 1,200 kg"
+    ],
+    "properties": [
+      "Garras longas de 150 mm para polias largas de virabrequim e alternadores pesados",
+      "Versatilidade de inversão das garras para extrações internas em cubos e pistas",
+      "Fuso robusto com encaixe sextavado para aperto com chaves ou soquetes manuais"
+    ],
+    "instructions": [
+      "Mantenha o fuso sempre lubrificado com graxa ou óleo para evitar desgaste precoce do passo de rosca.",
+      "Posicione a ponta cônica perfeitamente alinhada com o furo de centro do eixo."
+    ],
+    "application": "Oficinas Mecânicas, Manutenção de Frotas, Caminhões, Tratores e Motores Industriais",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r17152001-1.jpeg",
+    "images": [
+      "/images/products/r17152001-1.jpeg",
+      "/images/products/r17152001-2.jpeg",
+      "/images/products/r17152001-3.jpeg"
+    ]
+  },
+  {
+    "id": "r17202000",
+    "name": "R17202000 SACA POLIAS TRÊS GARRAS 4\" CAPACIDADE 2.700KG",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "automotivo",
+    "categoryLabel": "Extratores & Saca Polias",
+    "code": "R17202000",
+    "technicalCode": "3300388",
+    "description": "Extrator mecânico autocentrante com três garras reversíveis de 4 polegadas (100mm) e capacidade para 2.700 kg.",
+    "detailedDescription": "O Saca Polias com Três Garras GEDORE red R17202000 (Código 3300388) de 4 polegadas (100 mm de abertura máxima) oferece distribuição homogênea das forças de extração através do seu cubo triangular de 3 apoios simétricos a 120°. Essa geometria previne o empenamento ou a ovalização de polias e engrenagens delicadas de alumínio ou ferro fundido durante o desmonte. Suporta com total estabilidade esforços de tração de até 2.700 kg com garras articuladas e reversíveis.",
+    "composition": [
+      "Cubo central triangular forjado para distribuição em 3 pontos a 120°",
+      "Fuso central de acionamento em aço tratado com ponta de apoio",
+      "3 garras forjadas reversíveis de 4 polegadas (100 mm)",
+      "Conjunto de parafusos e porcas de fixação das garras"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3300388",
+      "referencia": "R17202000",
+      "pecas": "1",
+      "pesoKg": "1,050 kg",
+      "norma": "Padrão Gedore Red"
+    },
+    "tableData": {
+      "headers": [
+        "Descrição",
+        "Código",
+        "Referência",
+        "Capacidade de Carga",
+        "Abertura Máxima"
+      ],
+      "rows": [
+        [
+          "Saca polias 3 garras 4\"",
+          "3300388",
+          "R17202000",
+          "2.700 kg (2,7 t)",
+          "100 mm"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3300388",
+      "Referência: R17202000",
+      "Capacidade de carga: 2.700 kg (26,5 kN)",
+      "Abertura máxima: 100 mm (4\")",
+      "Configuração: Três garras simétricas para pega equilibrada",
+      "Peso: 1,050 kg"
+    ],
+    "properties": [
+      "Distribuição triangular que reduz o risco de quebra ou deformação da polia",
+      "Fixação mais estável que não escorrega lateralmente durante o torque",
+      "Garras reversíveis para alcance interno ou externo em peças automotivas"
+    ],
+    "instructions": [
+      "Ajuste os três braços de maneira simétrica para garantir tração alinhada.",
+      "Não utilize chaves de impacto de alta vibração; utilize catraca ou chave manual."
+    ],
+    "application": "Oficinas Mecânicas, Retíficas de Motores, Bombas Hidráulicas e Engrenagens Automotivas",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r17202000-1.jpeg",
+    "images": [
+      "/images/products/r17202000-1.jpeg",
+      "/images/products/r17202000-2.jpeg",
+      "/images/products/r17202000-3.jpeg"
+    ]
+  },
+  {
+    "id": "r17202001",
+    "name": "R17202001 SACA POLIAS TRÊS GARRAS 6\" CAPACIDADE 3.300KG",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "automotivo",
+    "categoryLabel": "Extratores & Saca Polias",
+    "code": "R17202001",
+    "technicalCode": "3300389",
+    "description": "Extrator mecânico reforçado com três garras reversíveis de 6 polegadas (150mm) e capacidade para 3.300 kg.",
+    "detailedDescription": "O Saca Polias com Três Garras GEDORE red R17202001 (Código 3300389) de 6 polegadas (150 mm de abertura máxima) foi desenvolvido para componentes mecânicos de maior porte e alta interferência de montagem. Com três garras articuladas e capacidade trativa de até 3.300 kg, entrega o dobro de estabilidade e segurança em relação aos modelos de duas garras, garantindo que polias pesadas, rotores e rolamentos de esteiras sejam extraídos em linha reta sem danificar eixos de acionamento.",
+    "composition": [
+      "Flange triangular forjada para montagem de 3 garras",
+      "Fuso temperado de avanço suave com rosca trapezoidal e cabeça sextavada",
+      "3 garras reversíveis de 6 polegadas (150 mm de abertura máxima)",
+      "Parafusos e porcas de travamento mecânico"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3300389",
+      "referencia": "R17202001",
+      "pecas": "1",
+      "pesoKg": "1,600 kg",
+      "norma": "Padrão Gedore Red"
+    },
+    "tableData": {
+      "headers": [
+        "Descrição",
+        "Código",
+        "Referência",
+        "Capacidade de Carga",
+        "Abertura Máxima"
+      ],
+      "rows": [
+        [
+          "Saca polias 3 garras 6\"",
+          "3300389",
+          "R17202001",
+          "3.300 kg (3,3 t)",
+          "150 mm"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3300389",
+      "Referência: R17202001",
+      "Abertura máxima: 150 mm (6\")",
+      "Capacidade trativa: 3.300 kg (32,3 kN)",
+      "Material: Aço forjado temperado de alta densidade",
+      "Peso: 1,600 kg"
+    ],
+    "properties": [
+      "Capacidade estendida de 3,3 toneladas para polias emperradas e engrenagens cônicas",
+      "Pega uniforme em três pontos a 120 graus que elimina torções no eixo do motor",
+      "Garras articuladas e reversíveis que se adaptam a diferentes rebaixos e diâmetros"
+    ],
+    "instructions": [
+      "Lubrifique a ponta cônica e a rosca antes de apertar sob alta pressão.",
+      "Garanta que a peça a ser extraída esteja livre de travas ou anéis elásticos ocultos."
+    ],
+    "application": "Linha Pesada, Máquinas Agrícolas, Compressores Industriais, Motores Elétricos e Caminhões",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r17202001-1.jpeg",
+    "images": [
+      "/images/products/r17202001-1.jpeg",
+      "/images/products/r17202001-2.jpeg",
+      "/images/products/r17202001-3.jpeg"
+    ]
+  },
+  {
+    "id": "r49003033",
+    "name": "R49003033 JOGO DE SOQUETES 1/4\" SEXTAVADOS 4 A 13MM 33 Peças",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "jogos-ferramentas",
+    "categoryLabel": "Jogos de Soquetes 1/4\"",
+    "code": "R49003033",
+    "technicalCode": "3300051",
+    "description": "Jogo compacto de soquetes 1/4\" sextavados de 4 a 13mm, catraca reversível de dentes finos e bits em maleta técnica com 33 peças.",
+    "detailedDescription": "O Jogo de Soquetes 1/4\" GEDORE red R49003033 (Código 3300051) reúne 33 peças essenciais acondicionadas em um estojo plástico de alta resistência com fecho metálico. Ideal para trabalhos em espaços confinados, o conjunto conta com soquetes curtos de 4 a 13 mm conforme normas DIN 3124 e ISO 2725, catraca reversível com botão de desengate rápido e empunhadura ergonômica bicomponente, além de extensões, junta universal e chaves soquete com pontas hexagonais, fenda, phillips, pozidriv e torx.",
+    "composition": [
+      "12 Soquetes 1/4\" sextavados: 4, 4.5, 5, 5.5, 6, 7, 8, 9, 10, 11, 12, 13 mm",
+      "1 Catraca reversível 1/4\" com desengate rápido",
+      "1 Cabo com quadrado 1/4\"",
+      "2 Extensões 1/4\": 50 e 100 mm",
+      "1 Junta universal 1/4\"",
+      "1 Adaptador para bits 1/4\" x 1/4\"",
+      "4 Chaves soquete 1/4\" hexagonais: 3, 4, 5, 6 mm",
+      "3 Chaves soquete 1/4\" fenda simples: 4, 5.5, 6.5 mm",
+      "2 Chaves soquete 1/4\" fenda cruzada PH: PH1, PH2",
+      "2 Chaves soquete 1/4\" fenda cruzada PZ: PZ1, PZ2",
+      "4 Chaves soquete 1/4\" TX (hexalobular): T15, T20, T25, T30",
+      "Maleta plástica com dobradiças e fecho metálico (300 x 180 x 52 mm)"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3300051",
+      "referencia": "R49003033",
+      "pecas": "33",
+      "pesoKg": "1,310 kg",
+      "norma": "DIN 3120 / DIN 3124 / ISO 1174"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Dimensões Estojo",
+        "Peças",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3300051",
+          "R49003033",
+          "300 x 180 x 52 mm",
+          "33",
+          "1,310 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3300051",
+      "Referência: R49003033",
+      "Encaixe: Quadrado de 1/4\"",
+      "Peças: 33 peças",
+      "Acabamento: Cromado mate acetinado com pontas fosfatizadas",
+      "Catraca: Reversível por alavanca com botão de pressão para extração de soquetes",
+      "Peso total: 1,310 kg"
+    ],
+    "properties": [
+      "Catraca com mecanismo de dentes finos que opera em ângulos de giro reduzidos",
+      "Chaves soquete com haste fosfatizada antiferrugem e precisão milimétrica",
+      "Maleta plástica com travas de aço resistente a quedas e produtos químicos de bancada"
+    ],
+    "instructions": [
+      "Pressione o botão traseiro da catraca para inserir ou remover o soquete com suavidade.",
+      "Utilize o cabo com quadrado para apertos manuais rápidos sem necessidade da catraca."
+    ],
+    "application": "Painéis Elétricos, Injeção Eletrônica, Motocicletas, Informática, Eletrodomésticos e Manutenção Geral",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r49003033-1.jpg",
+    "images": [
+      "/images/products/r49003033-1.jpg"
+    ]
+  },
+  {
+    "id": "r49003046",
+    "name": "R49003046 JOGO DE SOQUETES 1/4\" SEXTAVADOS 4 A 14MM 46 Peças",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "jogos-ferramentas",
+    "categoryLabel": "Jogos de Soquetes 1/4\"",
+    "code": "R49003046",
+    "technicalCode": "3300052",
+    "description": "Jogo completo de soquetes 1/4\" de 4 a 14mm com extensão flexível, cabo T, catraca reversível e chaves soquete (46 peças).",
+    "detailedDescription": "O Jogo de Soquetes 1/4\" GEDORE red R49003046 (Código 3300052) com 46 peças é a solução mais completa da categoria para serviços de precisão e acesso difícil. Forjado em aço Cromo-Vanádio com acabamento acetinado de alta qualidade, inclui soquetes de 4 a 14 mm, catraca de dentes finos com troca rápida, cabo T deslizante, extensão flexível de 150 mm para locais curvos, junta universal articulada, adaptadores, chaves L hexagonais e um amplo sortimento de chaves soquete.",
+    "composition": [
+      "13 Soquetes 1/4\" sextavados: 4, 4.5, 5, 5.5, 6, 7, 8, 9, 10, 11, 12, 13, 14 mm",
+      "1 Catraca reversível 1/4\" com desengate rápido",
+      "1 Cabo T 1/4\" deslizante",
+      "1 Cabo com quadrado 1/4\"",
+      "2 Extensões 1/4\": 50 e 100 mm",
+      "1 Extensão flexível 1/4\": 150 mm",
+      "1 Junta universal 1/4\"",
+      "1 Adaptador para bits 1/4\" x 1/4\"",
+      "4 Chaves L hexagonais: 1.27, 1.5, 2, 2.5 mm",
+      "6 Chaves soquete 1/4\" hexagonais: 3, 4, 5, 6, 7, 8 mm",
+      "3 Chaves soquete 1/4\" fenda simples: 4, 5.5, 6.5 mm",
+      "3 Chaves soquete 1/4\" fenda cruzada PH: PH1, PH2, PH3",
+      "3 Chaves soquete 1/4\" fenda cruzada PZ: PZ1, PZ2, PZ3",
+      "7 Chaves soquete 1/4\" TX (hexalobular): T10, T15, T20, T25, T27, T30, T40",
+      "Maleta plástica com fechos metálicos (300 x 180 x 52 mm)"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3300052",
+      "referencia": "R49003046",
+      "pecas": "46",
+      "pesoKg": "1,450 kg",
+      "norma": "DIN 3120 / DIN 3124 / ISO 1174"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Dimensões Estojo",
+        "Peças",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3300052",
+          "R49003046",
+          "300 x 180 x 52 mm",
+          "46",
+          "1,450 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3300052",
+      "Referência: R49003046",
+      "Encaixe: 1/4\"",
+      "Composição: 46 peças",
+      "Material: Aço Cromo-Vanádio (Cr-V)",
+      "Diferencial: Inclui extensão flexível de 150 mm para contorno de obstáculos",
+      "Peso do jogo: 1,450 kg"
+    ],
+    "properties": [
+      "Extensão flexível de 150 mm que permite girar parafusos atrás de condutos e mangueiras",
+      "Cabo T deslizante para aplicação de torque equilibrado com as duas mãos",
+      "Acompanha chaves L hexagonais auxiliares para calibragem e ajustes de precisão"
+    ],
+    "instructions": [
+      "Evite aplicar torque extremo na extensão flexível; use-a apenas para condução inicial.",
+      "Limpe os soquetes após o uso para preservar a marcação em baixo relevo das medidas."
+    ],
+    "application": "Mecânica de Precisão, Ajustes Automotivos, Robótica, Manutenção de Aeronaves Leves e Motos",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r49003046-1.jpg",
+    "images": [
+      "/images/products/r49003046-1.jpg"
+    ]
+  },
+  {
+    "id": "r69008012",
+    "name": "R69008012 JOGO DE SOQUETES 1/2\" SEXTAVADOS 10 A 19MM COM CATRACA 12 Peças",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "jogos-ferramentas",
+    "categoryLabel": "Jogos de Soquetes 1/2\"",
+    "code": "R69008012",
+    "technicalCode": "3300030",
+    "description": "Jogo de soquetes 1/2\" sextavados de 10 a 19mm com catraca reversível e extensão em régua metálica (12 peças).",
+    "detailedDescription": "O Jogo de Soquetes 1/2\" GEDORE red R69008012 (Código 3300030) com 12 peças é um kit prático e enxuto que reúne as bitolas mais frequentes do dia a dia da oficina. Acompanha os soquetes de 10 a 19 mm, extensão de 125 mm e a consagrada catraca reversível de 1/2\" com botão de desengate rápido e cabo ergonômico. Todas as peças são organizadas sobre um trilho metálico compacto que pode ser fixado diretamente na parede ou colocado no carrinho de ferramentas.",
+    "composition": [
+      "10 Soquetes 1/2\" sextavados: 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 mm",
+      "1 Catraca reversível 1/2\" com desengate rápido",
+      "1 Extensão 1/2\": 125 mm",
+      "1 Trilho / régua metálica de fixação e organização"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3300030",
+      "referencia": "R69008012",
+      "pecas": "12",
+      "pesoKg": "1,300 kg",
+      "norma": "DIN 3120 / DIN 3124 / ISO 1174"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Peças",
+        "Composição",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3300030",
+          "R69008012",
+          "12",
+          "10 a 19 mm + Catraca 1/2\" + Extensão 125 mm",
+          "1,300 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3300030",
+      "Referência: R69008012",
+      "Encaixe: 1/2\"",
+      "Peças: 12 peças",
+      "Acabamento: Cromado mate acetinado com estrias de fricção",
+      "Fixação: Trilho metálico para organização rápida",
+      "Peso: 1,300 kg"
+    ],
+    "properties": [
+      "Concentra as medidas mais demandadas (10 a 19 mm) em formato ultra-portátil",
+      "Soquetes com rebaixo interno especial que abraça as faces das porcas sem arredondar",
+      "Trilho de suporte metálico que impede que os soquetes se espalhem na caixa"
+    ],
+    "instructions": [
+      "Encaixe o soquete firmemente na esfera de retenção da catraca ou extensão.",
+      "Não utilize extensores improvisados no cabo da catraca."
+    ],
+    "application": "Oficinas Mecânicas, Borracharias, Suspensão, Manutenção Predial e Montagens Industriais",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r69008012-1.jpg",
+    "images": [
+      "/images/products/r69008012-1.jpg"
+    ]
+  },
+  {
+    "id": "r59003026",
+    "name": "R59003026 JOGO DE SOQUETES 3/8\" SEXTAVADOS 6 A 24MM 26 Peças",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "jogos-ferramentas",
+    "categoryLabel": "Jogos de Soquetes 3/8\"",
+    "code": "R59003026",
+    "technicalCode": "3300053",
+    "description": "Jogo de soquetes 3/8\" sextavados de 6 a 24mm com soquetes de vela, catraca, extensões e cabo T em maleta com 26 peças.",
+    "detailedDescription": "O Jogo de Soquetes 3/8\" GEDORE red R59003026 (Código 3300053) com 26 peças é o equilíbrio perfeito entre leveza, robustez e alcance dimensional. Cobrindo do 6 ao 24 mm, atende desde pequenos parafusos de sensores e coletores até fixações médias de suspensão e freios. Forjado em aço Cromo-Vanádio com acabamento acetinado fosco, o jogo conta com catraca reversível 3/8\", soquetes de vela de 16 e 21 mm com borracha retentora, extensões de 75 e 150 mm, cabo T com corpo deslizante e junta articulada universal.",
+    "composition": [
+      "18 Soquetes 3/8\" sextavados: 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 24 mm",
+      "2 Soquetes de vela 3/8\": 16 e 21 mm",
+      "1 Catraca reversível 3/8\" com desengate rápido",
+      "2 Extensões 3/8\": 75 e 150 mm",
+      "1 Cabo T 3/8\" com adaptador deslizante",
+      "1 Junta universal 3/8\"",
+      "1 Adaptador quadrado 3/8\" x 1/4\"",
+      "Maleta plástica de alta resistência com fecho metálico (300 x 180 x 52 mm)"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3300053",
+      "referencia": "R59003026",
+      "pecas": "26",
+      "pesoKg": "2,440 kg",
+      "norma": "DIN 3120 / DIN 3124 / ISO 1174"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Dimensões Maleta",
+        "Peças",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3300053",
+          "R59003026",
+          "300 x 180 x 52 mm",
+          "26",
+          "2,440 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3300053",
+      "Referência: R59003026",
+      "Encaixe: 3/8\"",
+      "Peças: 26 peças",
+      "Faixa de bitolas: 6 a 24 mm",
+      "Soquetes de vela inclusos: 16 mm e 21 mm",
+      "Peso do jogo: 2,440 kg"
+    ],
+    "properties": [
+      "Encaixe 3/8\" que proporciona excelente acesso em cofre de motores modernos",
+      "Soquetes de vela com borracha que seguram a vela para descer e subir sem cair",
+      "Catraca ergonômica com empunhadura suave que reduz a fadiga em apertos repetitivos"
+    ],
+    "instructions": [
+      "Utilize as extensões para afastar a catraca de superfícies cortantes e chapas quentes.",
+      "Guarde todas as peças nos nichos moldados da maleta para evitar perdas na bancada."
+    ],
+    "application": "Manutenção Automotiva Geral, Motocicletas, Motores Náuticos e Linhas de Montagem",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r59003026-1.jpg",
+    "images": [
+      "/images/products/r59003026-1.jpg",
+      "/images/products/r59003026-2.jpg",
+      "/images/products/r59003026-3.jpg"
+    ]
+  },
+  {
+    "id": "r69003024",
+    "name": "R69003024 JOGO DE SOQUETES 1/2\" SEXTAVADOS 10 A 32MM 24 Peças",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "jogos-ferramentas",
+    "categoryLabel": "Jogos de Soquetes 1/2\"",
+    "code": "R69003024",
+    "technicalCode": "3300055",
+    "description": "Jogo profissional de soquetes 1/2\" sextavados de 10 a 32mm com catraca reversível, soquetes de vela e extensões (24 peças).",
+    "detailedDescription": "O Jogo de Soquetes 1/2\" GEDORE red R69003024 (Código 3300055) com 24 peças é um dos kits mais consagrados em oficinas automotivas, concessionárias e indústrias pesadas. Cobre de 10 a 32 mm com soquetes sextavados robustos forjados em aço Cromo-Vanádio, capazes de transmitir torques pesados sem escorregar. O conjunto acompanha catraca de 1/2\" com trava por botão, extensões de 125 e 250 mm, cabo T deslizante, junta articulada universal e soquetes magnéticos de vela de 16 e 21 mm em maleta reforçada com dobradiças metálicas.",
+    "composition": [
+      "18 Soquetes 1/2\" sextavados: 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 24, 27, 30, 32 mm",
+      "2 Soquetes de vela 1/2\": 16 e 21 mm",
+      "1 Catraca reversível 1/2\" com desengate rápido",
+      "2 Extensões 1/2\": 125 e 250 mm",
+      "1 Corpo para cabo T 1/2\" com adaptador 3/8\" x 1/2\"",
+      "1 Junta universal 1/2\"",
+      "Maleta plástica reforçada antichoque (383 x 272 x 80 mm)"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3300055",
+      "referencia": "R69003024",
+      "pecas": "24",
+      "pesoKg": "4,430 kg",
+      "norma": "DIN 3120 / DIN 3124 / ISO 1174"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Dimensões Maleta",
+        "Peças",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3300055",
+          "R69003024",
+          "383 x 272 x 80 mm",
+          "24",
+          "4,430 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3300055",
+      "Referência: R69003024",
+      "Encaixe: 1/2\"",
+      "Composição: 24 peças",
+      "Bitolas: 10 a 32 mm",
+      "Material: Aço cromo-vanádio GEDORE red",
+      "Peso do jogo: 4,430 kg"
+    ],
+    "properties": [
+      "Ampla gama de 10 a 32 mm cobrindo cubos de roda, pivôs, buchas e suportes de motor",
+      "Corpo deslizante para cabo T que funciona como adaptador de 3/8\" para 1/2\"",
+      "Maleta com canaleta organizadora que mantém cada soquete firme durante o transporte"
+    ],
+    "instructions": [
+      "Use o cabo T para soltar porcas com torque muito elevado e a catraca para o giro rápido.",
+      "Nunca utilize soquetes manuais em chaves de impacto pneumáticas."
+    ],
+    "application": "Centros Automotivos, Suspensão e Freios, Oficinas Diesel, Manutenção Industrial e Agrícola",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r69003024-1.jpg",
+    "images": [
+      "/images/products/r69003024-1.jpg",
+      "/images/products/r69003024-2.jpg",
+      "/images/products/r69003024-3.jpg"
+    ]
+  },
+  {
+    "id": "r46013094",
+    "name": "R46013094 JOGO DE SOQUETES 1/4\" E 1/2\" 94 Peças",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "jogos-ferramentas",
+    "categoryLabel": "Maletas de Soquetes Completas",
+    "code": "R46013094",
+    "technicalCode": "3300247",
+    "description": "Maleta mestre de ferramentas com 94 peças: soquetes 1/4\" e 1/2\" curtos e longos, catracas de alta velocidade e sortimento de bits.",
+    "detailedDescription": "O Jogo de Soquetes 1/4\" e 1/2\" GEDORE red R46013094 (Código 3300247) com 94 peças é a oficina móvel completa para o mecânico exigente. Integrando os dois padrões de encaixe mais utilizados no mundo (1/4\" e 1/2\"), conta com soquetes sextavados curtos e longos (para porcas sobre prisioneiros fundos), soquetes de vela, catracas com botão de desengate rápido, extensões rígidas e flexíveis, juntas cardan, cabo T e um generoso estojo de bits hexagonais, fenda, phillips e torx forjados em aço Cr-V.",
+    "composition": [
+      "13 Soquetes 1/4\" sextavados curtos: 4, 4.5, 5, 5.5, 6, 7, 8, 9, 10, 11, 12, 13, 14 mm",
+      "8 Soquetes 1/4\" sextavados longos: 6, 7, 8, 9, 10, 11, 12, 13 mm",
+      "18 Soquetes 1/2\" sextavados curtos: 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 27, 30, 32 mm",
+      "4 Soquetes 1/2\" sextavados longos: 14, 15, 17, 19 mm",
+      "2 Soquetes de vela 1/2\": 16 e 21 mm",
+      "2 Catracas reversíveis com desengate rápido: 1/4\" e 1/2\"",
+      "4 Extensões: 1/4\" (50 e 100 mm) e 1/2\" (125 e 250 mm)",
+      "1 Extensão flexível 1/4\" (150 mm)",
+      "2 Juntas universais: 1/4\" e 1/2\"",
+      "1 Cabo T 1/4\" deslizante",
+      "1 Cabo com quadrado 1/4\"",
+      "1 Adaptador 3/8\" x 1/2\" para cabo T",
+      "1 Adaptador para bits 1/2\" x 5/16\"",
+      "3 Chaves L hexagonais: 1.5, 2, 2.5 mm",
+      "17 Chaves soquete 1/4\" (hex, fenda, phillips, pozidriv, torx)",
+      "15 Bits 5/16\" de alto torque",
+      "Maleta plástica reforçada GEDORE red com fecho metálico (380 x 280 x 90 mm)"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3300247",
+      "referencia": "R46013094",
+      "pecas": "94",
+      "pesoKg": "6,500 kg",
+      "norma": "DIN 3120 / DIN 3124 / ISO 1174"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Dimensões Maleta",
+        "Peças",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3300247",
+          "R46013094",
+          "380 x 280 x 90 mm",
+          "94",
+          "6,500 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3300247",
+      "Referência: R46013094",
+      "Total de itens: 94 peças",
+      "Encaixes inclusos: 1/4\" e 1/2\"",
+      "Soquetes longos inclusos para porcas embutidas",
+      "Maleta antichoque com berço termomoldado",
+      "Peso do jogo: 6,500 kg"
+    ],
+    "properties": [
+      "Solução all-in-one para quem atende em campo ou quer uma oficina organizada numa só maleta",
+      "Presença de soquetes longos de 1/4\" e 1/2\" que eliminam a necessidade de comprar kits avulsos",
+      "Duas catracas de alta precisão com sistema de desengate rápido para máxima agilidade"
+    ],
+    "instructions": [
+      "Organize cada soquete em sua respectiva posição numerada na maleta após o serviço.",
+      "Mantenha a maleta fechada com as travas metálicas para transporte seguro."
+    ],
+    "application": "Socorro Móvel, Oficinas Mecânicas, Centros Automotivos, Manutenção Industrial e Competições",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r46013094-1.png",
+    "images": [
+      "/images/products/r46013094-1.png",
+      "/images/products/r46013094-2.jpeg"
+    ]
+  },
+  {
+    "id": "r68003016",
+    "name": "R68003016 JOGO DE SOQUETES E CHAVES SOQUETE 1/2\" TORX E10 A E24 E T30 A T70 16 Peças",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "jogos-ferramentas",
+    "categoryLabel": "Jogos de Soquetes Torx",
+    "code": "R68003016",
+    "technicalCode": "3300009",
+    "description": "Jogo de soquetes fêmea E10 a E24 e chaves soquete macho T30 a T70 com encaixe 1/2\" em estojo plástico (16 peças).",
+    "detailedDescription": "O Jogo de Soquetes e Chaves Soquete 1/2\" Perfil Hexalobular (TX / Torx) GEDORE red R68003016 (Código 3300009) com 16 peças reúne todas as medidas pesadas exigidas por montadoras modernas em cabeçotes, mangas de eixo, freios e caixas de transmissão. Composto por 9 soquetes de perfil fêmea (E10 a E24) e 7 chaves soquete macho com hastes fosfatizadas (T30 a T70), suporta torques intensos com total precisão dimensional, impedindo o arredondamento dos fixadores hexalobulares.",
+    "composition": [
+      "9 Soquetes 1/2\" TX fêmea: E10, E11, E12, E14, E16, E18, E20, E22, E24",
+      "7 Chaves soquete 1/2\" TX macho: T30, T40, T45, T50, T55, T60, T70",
+      "Maleta plástica com travas metálicas (300 x 180 x 52 mm)"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3300009",
+      "referencia": "R68003016",
+      "pecas": "16",
+      "pesoKg": "1,690 kg",
+      "norma": "DIN 3120 / ISO 1174"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Dimensões Estojo",
+        "Peças",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3300009",
+          "R68003016",
+          "300 x 180 x 52 mm",
+          "16",
+          "1,690 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3300009",
+      "Referência: R68003016",
+      "Encaixe: 1/2\"",
+      "Peças: 16 peças",
+      "Perfil: Hexalobular interno (Torx macho) e externo (Torx fêmea E-Torx)",
+      "Hastes: Aço especial temperado com tratamento fosfatizado",
+      "Peso do jogo: 1,690 kg"
+    ],
+    "properties": [
+      "Kit completo para a linha pesada de fixadores Torx em motores Euro 5/Euro 6 e suspensões",
+      "Hastes usinadas sob tolerâncias restritas para encaixe justo sem folgas perigosas",
+      "Estojo com identificação em relevo das bitolas em cada berço"
+    ],
+    "instructions": [
+      "Verifique a limpeza da fenda do parafuso antes de inserir a chave soquete.",
+      "Para parafusos de cabeçote com aperto angular, utilize o goniômetro adequado acoplado."
+    ],
+    "application": "Parafusos de Cabeçote, Freios ABS, Câmbios Automáticos, Picapes e Veículos Europeus",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r68003016-1.jpg",
+    "images": [
+      "/images/products/r68003016-1.jpg",
+      "/images/products/r68003016-2.jpg"
+    ]
+  },
+  {
+    "id": "r68003020",
+    "name": "R68003020 JOGO DE SOQUETES 3/8\" E 1/2\" TORX E8 A E20 E T10 A T55 20 Peças",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "jogos-ferramentas",
+    "categoryLabel": "Jogos de Soquetes Torx",
+    "code": "R68003020",
+    "technicalCode": "3300045",
+    "description": "Jogo versátil de soquetes Torx fêmea e chaves soquete macho nos encaixes 3/8\" e 1/2\" com adaptador em estojo (20 peças).",
+    "detailedDescription": "O Jogo de Soquetes 3/8\" e 1/2\" TX GEDORE red R68003020 (Código 3300045) com 20 peças combina perfeitamente a agilidade do encaixe 3/8\" para locais compactos com a robustez do encaixe 1/2\" para torques elevados. O conjunto conta com 9 soquetes fêmea (E6 a E10 em 3/8\" e E12 a E20 em 1/2\"), 10 chaves soquete macho (T10 a T27 em 3/8\" e T30 a T55 em 1/2\") e 1 adaptador de 1/2\" para 3/8\", fornecendo cobertura total em sistemas de injeção, carroceria e mecânica veicular.",
+    "composition": [
+      "4 Soquetes 3/8\" TX fêmea: E6, E7, E8, E10",
+      "5 Soquetes 1/2\" TX fêmea: E12, E14, E16, E18, E20",
+      "5 Chaves soquete 3/8\" TX macho: T10, T15, T20, T25, T27",
+      "5 Chaves soquete 1/2\" TX macho: T30, T40, T45, T50, T55",
+      "1 Adaptador quadrado 1/2\" x 3/8\"",
+      "Maleta plástica organizadora com travas metálicas (300 x 180 x 52 mm)"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3300045",
+      "referencia": "R68003020",
+      "pecas": "20",
+      "pesoKg": "2,000 kg",
+      "norma": "DIN 3120 / ISO 1174"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Dimensões Estojo",
+        "Peças",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3300045",
+          "R68003020",
+          "300 x 180 x 52 mm",
+          "20",
+          "2,000 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3300045",
+      "Referência: R68003020",
+      "Encaixes: 3/8\" e 1/2\"",
+      "Peças: 20 peças",
+      "Gama fêmea: E6 a E20",
+      "Gama macho: T10 a T55",
+      "Peso do jogo: 2,000 kg"
+    ],
+    "properties": [
+      "Atende tanto parafusos miúdos de acabamento interno quanto parafusos estruturais de suspensão",
+      "Adaptador 1/2\" x 3/8\" incluso que amplia as possibilidades de combinação com catracas",
+      "Aço Cromo-Vanádio com tratamento térmico que suporta torques repetitivos sem deformar as pontas"
+    ],
+    "instructions": [
+      "Use o encaixe 3/8\" para pontos de difícil acesso no cofre do motor.",
+      "Não aplique pancadas na chave soquete para soltar parafusos oxidados; use desengripante prévio."
+    ],
+    "application": "Manutenção Automotiva Geral, Freios, Painéis, Câmbios e Linha Leve Nacional e Importada",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r68003020-1.jpg",
+    "images": [
+      "/images/products/r68003020-1.jpg",
+      "/images/products/r68003020-2.jpg",
+      "/images/products/r68003020-3.jpg"
+    ]
+  },
+  {
+    "id": "r40000027",
+    "name": "R40000027 CATRACA REVERSÍVEL 1/4\" COM DESENGATE RÁPIDO 150MM",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Catracas Reversíveis",
+    "code": "R40000027",
+    "technicalCode": "3300158",
+    "description": "Catraca reversível 1/4\" de dentes finos com cabeça oval compacta, botão de desengate rápido e cabo bicomponente (150mm).",
+    "detailedDescription": "A Catraca Reversível 1/4\" GEDORE red R40000027 (Código 3300158) foi projetada para trabalhos ágeis que exigem rotação suave e manuseio confortável. Com comprimento de 150 mm e mecanismo interno de dentes finos (72 dentes), ela opera com ângulo de retorno de apenas 5 graus, permitindo movimentar parafusos em vãos extremamente estreitos. Possui alavanca de inversão rápida de sentido e botão de pressão no topo da cabeça para ejeção instantânea do soquete com as mãos sujas de graxa.",
+    "composition": [
+      "Catraca reversível 1/4\" com cabeça oval de 150 mm",
+      "Mecanismo de dentes finos com ângulo de retorno de 5°",
+      "Botão de desengate rápido de soquetes",
+      "Empunhadura bicomponente ergonômica com furo para pendurar"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3300158",
+      "referencia": "R40000027",
+      "pecas": "1",
+      "pesoKg": "0,122 kg",
+      "norma": "DIN 3122 / ISO 3315"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Encaixe Quadrado",
+        "Comprimento",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3300158",
+          "R40000027",
+          "1/4\"",
+          "150 mm",
+          "0,122 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3300158",
+      "Referência: R40000027",
+      "Encaixe: 1/4\"",
+      "Comprimento total: 150 mm",
+      "Mecanismo: Dentes finos reversível por alavanca",
+      "Material: Aço Cromo-Vanádio niquelado e cromado fosco",
+      "Peso: 0,122 kg"
+    ],
+    "properties": [
+      "Cabeça oval esguia que entra em cantos de painéis e cofres de motor apertados",
+      "Botão de desengate por pressão que solta o soquete com apenas um toque",
+      "Cabo bicomponente confortável que não desliza e protege contra calos"
+    ],
+    "instructions": [
+      "Utilize a catraca para o giro contínuo de porcas e parafusos já aliviados.",
+      "Evite aplicar trancos ou pancadas na cabeça da catraca."
+    ],
+    "application": "Painéis Elétricos, Injeção Eletrônica, Eletroeletrônica, Motos e Manutenção Leve",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r40000027-1.jpg",
+    "images": [
+      "/images/products/r40000027-1.jpg"
+    ]
+  },
+  {
+    "id": "r50000027",
+    "name": "R50000027 CATRACA REVERSÍVEL 3/8\" COM DESENGATE RÁPIDO 200MM",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Catracas Reversíveis",
+    "code": "R50000027",
+    "technicalCode": "3300224",
+    "description": "Catraca reversível 3/8\" com cabeça oval compacta, botão de troca rápida e empunhadura ergonômica bicomponente (200mm).",
+    "detailedDescription": "A Catraca Reversível 3/8\" GEDORE red R50000027 (Código 3300224) com comprimento de 200 mm é o instrumento ideal para mecânicos automotivos que buscam a manobrabilidade de um encaixe leve com a resistência mecânica necessária para torques médios. Equipada com catraca de engrenagens finas, alavanca seletora de sentido (direita/esquerda) e botão no dorso para liberação e trava segura dos soquetes, oferece excelente rendimento na montagem e desmontagem de componentes de motores e transmissões.",
+    "composition": [
+      "Catraca reversível 3/8\" com comprimento de 200 mm",
+      "Mecanismo de dentes finos reversível por alavanca",
+      "Botão de liberação rápida com esfera de pressão",
+      "Cabo ergonômico bicomponente em vermelho e preto"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3300224",
+      "referencia": "R50000027",
+      "pecas": "1",
+      "pesoKg": "0,282 kg",
+      "norma": "DIN 3122 / ISO 3315"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Encaixe Quadrado",
+        "Comprimento",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3300224",
+          "R50000027",
+          "3/8\"",
+          "200 mm",
+          "0,282 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3300224",
+      "Referência: R50000027",
+      "Encaixe: 3/8\"",
+      "Comprimento: 200 mm",
+      "Material: Aço Cromo-Vanádio GEDORE red",
+      "Peso: 0,282 kg"
+    ],
+    "properties": [
+      "Perfeita para operações automotivas onde a catraca de 1/2\" é volumosa demais e a de 1/4\" é frágil",
+      "Engrenamento suave que economiza tempo de giro nos dois sentidos",
+      "Acabamento cromado acetinado que não reflete a luz de luminárias de oficina nos olhos"
+    ],
+    "instructions": [
+      "Certifique-se de que a alavanca seletora esteja completamente posicionada no sentido desejado.",
+      "Não utilize tubos extensores para alavanca na empunhadura plástica."
+    ],
+    "application": "Oficinas Mecânicas Automotivas, Linha de Montagem, Manutenção de Máquinas e Motos",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r50000027-1.jpg",
+    "images": [
+      "/images/products/r50000027-1.jpg",
+      "/images/products/r50000027-2.jpg"
+    ]
+  },
+  {
+    "id": "r45200022",
+    "name": "R45200022 CABO T 1/4\" DESLIZANTE 115MM",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Acessórios para Soquetes",
+    "code": "R45200022",
+    "technicalCode": "3300143",
+    "description": "Cabo T deslizante 1/4\" de 115mm (4,5\") forjado em cromo-vanádio com trava de esfera para aperto manual equilibrado.",
+    "detailedDescription": "O Cabo T Deslizante 1/4\" GEDORE red R45200022 (Código 3300143) de 115 mm (4,5 polegadas) é um acessório clássico de alta resistência fabricado em conformidade com as normas DIN 3122 e ISO 3315. O cabeçote deslizante permite posicionar o quadrado de acionamento tanto no centro da haste (para giro balanceado com ambas as mãos como um manípulo T) quanto em uma das extremidades (funcionando como um braço de alavanca L rígido para desaperto inicial).",
+    "composition": [
+      "Haste cilíndrica de 115 mm com limitadores de curso nas pontas",
+      "Cabeçote deslizante com encaixe quadrado 1/4\" e esfera de retenção sob pressão"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3300143",
+      "referencia": "R45200022",
+      "pecas": "1",
+      "pesoKg": "0,038 kg",
+      "norma": "DIN 3122 / ISO 3315"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Comprimento mm",
+        "Comprimento Pol.",
+        "Encaixe",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3300143",
+          "R45200022",
+          "115 mm",
+          "4,5\"",
+          "1/4\"",
+          "0,038 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3300143",
+      "Referência: R45200022",
+      "Encaixe: Quadrado de 1/4\"",
+      "Comprimento: 115 mm (4,5\")",
+      "Material: Aço Cromo-Vanádio com acabamento acetinado",
+      "Peso: 0,038 kg"
+    ],
+    "properties": [
+      "Dupla função: opera como chave T balanceada ou como chave L de maior alavanca",
+      "Esfera de retenção sob pressão que impede a queda involuntária de soquetes",
+      "Resistente a torções elevadas sem componentes mecânicos internos sujeitos a quebra"
+    ],
+    "instructions": [
+      "Deslize o cabeçote até o batente da extremidade para obter torque máximo de desaperto.",
+      "Mantenha a haste livre de rebarbas mecânicas para deslizamento suave."
+    ],
+    "application": "Montagem de Painéis, Injeção Eletrônica, Manutenção de Equipamentos e Bancadas",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r45200022-1.jpg",
+    "images": [
+      "/images/products/r45200022-1.jpg"
+    ]
+  },
+  {
+    "id": "r60000027",
+    "name": "R60000027 CATRACA REVERSÍVEL 1/2\" COM DESENGATE RÁPIDO 250MM",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Catracas Reversíveis",
+    "code": "R60000027",
+    "technicalCode": "3300410",
+    "description": "Catraca reversível 1/2\" de alta resistência com dentes finos, botão de desengate rápido e cabo ergonômico (250mm).",
+    "detailedDescription": "A Catraca Reversível 1/2\" GEDORE red R60000027 (Código 3300410) com comprimento de 250 mm é a ferramenta de aperto mais emblemática para serviços automotivos pesados e industriais. Forjada em aço Cromo-Vanádio de altíssima tenacidade com acabamento acetinado fosco, possui engrenagem de 72 dentes com ângulo de trabalho de 5 graus para aperto contínuo em locais com pouco espaço. O botão central no topo da cabeça trava firmemente o soquete e o ejeta instantaneamente ao ser pressionado.",
+    "composition": [
+      "Catraca reversível 1/2\" de 250 mm com cabeça oval",
+      "Mecanismo de dentes finos com ângulo de retorno de 5°",
+      "Botão de liberação rápida com esfera de bloqueio",
+      "Cabo bicomponente ergonômico reforçado"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3300410",
+      "referencia": "R60000027",
+      "pecas": "1",
+      "pesoKg": "0,586 kg",
+      "norma": "DIN 3122 / ISO 3315"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Encaixe Quadrado",
+        "Comprimento",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3300410",
+          "R60000027",
+          "1/2\"",
+          "250 mm",
+          "0,586 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3300410",
+      "Referência: R60000027",
+      "Encaixe: Quadrado de 1/2\"",
+      "Comprimento: 250 mm",
+      "Mecanismo: 72 dentes com inversão rápida por alavanca",
+      "Peso: 0,586 kg"
+    ],
+    "properties": [
+      "Construção forjada robusta que suporta torques rigorosos do dia a dia da oficina",
+      "Desengate rápido por botão de pressão que evita que soquetes fiquem presos na porca",
+      "Empunhadura ergonômica anatômica com apoio para o polegar para máxima firmeza"
+    ],
+    "instructions": [
+      "Não utilize a catraca como martelo ou alavanca de impacto contra eixos emperrados.",
+      "Para quebrar torques extremamente travados, inicie o desaperto com um cabo articulado de força."
+    ],
+    "application": "Centros Automotivos, Concessionárias, Suspensão, Manutenção Pesada e Máquinas",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r60000027-1.jpg",
+    "images": [
+      "/images/products/r60000027-1.jpg",
+      "/images/products/r60000027-2.jpg"
+    ]
+  },
+  {
+    "id": "r63003008",
+    "name": "R63003008 JOGO DE SOQUETES DE IMPACTO 1/2\" SEXTAVADOS 10 A 24MM 8 Peças",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "jogos-ferramentas",
+    "categoryLabel": "Linha de Impacto",
+    "code": "R63003008",
+    "technicalCode": "3300575",
+    "description": "Jogo de soquetes de impacto 1/2\" sextavados de 10 a 24mm em aço cromo-molibdênio para parafusadeiras e chaves de impacto (8 peças).",
+    "detailedDescription": "O Jogo de Soquetes de Impacto 1/2\" GEDORE red R63003008 (Código 3300575) com 8 peças é fabricado em aço Cromo-Molibdênio (Cr-Mo) de alta resistência e tenacidade elástica, próprio para absorver os golpes cíclicos e picos de torque de chaves de impacto pneumáticas e a bateria. Com acabamento fosfatizado preto protetivo, furos passantes e ranhura de retenção para pino e anel de segurança, inclui as bitolas de 10, 12, 13, 14, 17, 19, 21 e 24 mm acomodadas em estojo plástico antichoque com fecho de aço.",
+    "composition": [
+      "8 Soquetes de impacto 1/2\" sextavados: 10, 12, 13, 14, 17, 19, 21, 24 mm",
+      "Estojo plástico resistente a impacto com fecho metálico (190 x 110 x 52 mm)"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3300575",
+      "referencia": "R63003008",
+      "pecas": "8",
+      "pesoKg": "1,100 kg",
+      "norma": "DIN 3129 / ISO 2725-2"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Dimensões Estojo",
+        "Peças",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3300575",
+          "R63003008",
+          "190 x 110 x 52 mm",
+          "8",
+          "1,100 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3300575",
+      "Referência: R63003008",
+      "Encaixe: 1/2\"",
+      "Peças: 8 peças (10, 12, 13, 14, 17, 19, 21, 24 mm)",
+      "Material: Aço Cromo-Molibdênio (Cr-Mo) especial para impacto",
+      "Acabamento: Fosfatizado antiferrugem",
+      "Peso do jogo: 1,100 kg"
+    ],
+    "properties": [
+      "Desenvolvido especificamente para suportar o impacto violento de pistolas pneumáticas de 1/2\"",
+      "Orifício transversal e canaleta para travamento por pino e anel o-ring conforme normas de segurança",
+      "Estojo compacto ideal para levar direto para o box de alinhamento ou elevador"
+    ],
+    "instructions": [
+      "Utilize sempre pino e anel elástico de retenção ao acoplar soquetes em ferramentas pneumáticas de alto torque.",
+      "Não utilize soquetes comuns cromados em máquinas de impacto para evitar estilhaçamento."
+    ],
+    "application": "Troca de Pneus, Suspensão Automotiva, Montagem de Estruturas Metálicas e Indústria Mecânica",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r63003008-1.jpg",
+    "images": [
+      "/images/products/r63003008-1.jpg"
+    ]
+  },
+  {
+    "id": "r63003012",
+    "name": "R63003012 JOGO DE SOQUETES DE IMPACTO 1/2\" SEXTAVADOS 10 A 24MM 12 Peças",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "jogos-ferramentas",
+    "categoryLabel": "Linha de Impacto",
+    "code": "R63003012",
+    "technicalCode": "3300574",
+    "description": "Jogo profissional de soquetes de impacto 1/2\" sextavados de 10 a 24mm em aço cromo-molibdênio fosfatizado em maleta técnica com 12 peças.",
+    "detailedDescription": "O Jogo de Soquetes de Impacto 1/2\" GEDORE red R63003012 (Código 3300574, também listado como R62300012) com 12 peças oferece uma sequência contínua de medidas para trabalho intenso com parafusadeiras e chaves pneumáticas de 1/2\". Forjados em liga especial de Cromo-Molibdênio com têmpera profunda e acabamento fosfatizado escuro, os soquetes contam com alojamento para pino e anel de segurança. O conjunto inclui os tamanhos 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 21, 22 e 24 mm acomodados em maleta plástica durável com fecho de metal.",
+    "composition": [
+      "12 Soquetes de impacto 1/2\" sextavados: 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 21, 22, 24 mm",
+      "Maleta plástica com dobradiça e trava metálica reforçada (300 x 180 x 52 mm)"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3300574",
+      "referencia": "R63003012",
+      "pecas": "12",
+      "pesoKg": "1,598 kg",
+      "norma": "DIN 3129 / ISO 2725-2"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Dimensões Maleta",
+        "Peças",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3300574",
+          "R63003012",
+          "300 x 180 x 52 mm",
+          "12",
+          "1,598 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3300574",
+      "Referência: R63003012 (Ref. comercial R62300012)",
+      "Encaixe: 1/2\"",
+      "Peças: 12 peças (10 a 24 mm contínuo)",
+      "Material: Aço Cromo-Molibdênio (Cr-Mo)",
+      "Acabamento: Superfície fosfatizada de alta resistência",
+      "Peso: 1,598 kg"
+    ],
+    "properties": [
+      "Graduação completa de medidas para montadoras de veículos e concessionárias",
+      "Liga de alta resiliência que absorve vibrações de ferramentas de impacto contínuo",
+      "Gravação das bitolas a laser e em baixo relevo para identificação eterna na oficina"
+    ],
+    "instructions": [
+      "Trave o pino de segurança no anel de borracha antes de acionar a pistola de impacto.",
+      "Evite aplicar forças de alavanca com barras manuais acima da capacidade de ruptura do encaixe de 1/2\"."
+    ],
+    "application": "Oficinas Mecânicas, Frotistas, Centro de Reparação Automotiva e Linhas de Montagem",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r62300012-1.jpg",
+    "images": [
+      "/images/products/r62300012-1.jpg"
+    ]
+  },
+  {
+    "id": "r63003108",
+    "name": "R63003108 JOGO DE SOQUETES DE IMPACTO LONGOS 1/2\" 12 A 23MM 8 Peças",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "jogos-ferramentas",
+    "categoryLabel": "Linha de Impacto",
+    "code": "R63003108",
+    "technicalCode": "3300709",
+    "description": "Jogo de soquetes de impacto longos 1/2\" de 12 a 23mm em cromo-molibdênio para prisioneiros e porcas profundas (8 peças).",
+    "detailedDescription": "O Jogo de Soquetes de Impacto Longos 1/2\" GEDORE red R63003108 (Código 3300709) com 8 peças é projetado para fixadores situados sobre prisioneiros compridos ou alojamentos rebaixados de rodas e suspensão. Produzidos em liga especial de Cromo-Molibdênio (Cr-Mo) com paredes reforçadas e acabamento fosfatizado, o perfil longo de 78 mm permite que a rosca do parafuso penetre livremente no corpo do soquete sem travar o fundo do encaixe. Acompanha maleta plástica antichoque.",
+    "composition": [
+      "8 Soquetes de impacto longos 1/2\" sextavados: 12, 13, 14, 17, 19, 21, 22, 23 mm (comprimento 78 mm)",
+      "Maleta plástica com berço sob medida e fecho de metal (280 x 200 x 52 mm)"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3300709",
+      "referencia": "R63003108",
+      "pecas": "8",
+      "pesoKg": "2,300 kg",
+      "norma": "DIN 3129 / ISO 2725-2"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Dimensões Maleta",
+        "Peças",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3300709",
+          "R63003108",
+          "280 x 200 x 52 mm",
+          "8",
+          "2,300 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3300709",
+      "Referência: R63003108",
+      "Formato: Longo (comprimento aproximado de 78 mm)",
+      "Encaixe: 1/2\"",
+      "Peças: 8 peças (12, 13, 14, 17, 19, 21, 22, 23 mm)",
+      "Material: Aço Cromo-Molibdênio (Cr-Mo)",
+      "Peso do jogo: 2,300 kg"
+    ],
+    "properties": [
+      "Corpo longo que ultrapassa prisioneiros salientes em amortecedores, eixos e rodas",
+      "Excelente retenção de torque em parafusos oxidados com fixação firme",
+      "Alojamento com furos transversais para pino elástico e anel de travamento"
+    ],
+    "instructions": [
+      "Certifique-se de que o sextavado esteja totalmente assentado na porca antes do disparo do impacto.",
+      "Não utilize soquetes com deformações ou trincas aparentes no encaixe quadrado."
+    ],
+    "application": "Borracharias, Suspensão, Manutenção de Picapes, SUVs, Vans e Máquinas Agrícolas",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r63003108-1.jpg",
+    "images": [
+      "/images/products/r63003108-1.jpg"
+    ]
+  },
+  {
+    "id": "r63043003",
+    "name": "R63043003 JOGO DE SOQUETES DE IMPACTO 1/2\" PARA RODAS DE LIGA LEVE 17, 19 E 21MM 3 Peças",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "jogos-ferramentas",
+    "categoryLabel": "Linha de Impacto Automotiva",
+    "code": "R63043003",
+    "technicalCode": "3300578",
+    "description": "Jogo de soquetes de impacto 1/2\" com capa plástica protetora colorida para não riscar rodas esportivas de liga leve (3 peças).",
+    "detailedDescription": "O Jogo de Soquetes de Impacto 1/2\" para Rodas de Liga Leve GEDORE red R63043003 (Código 3300578) com 3 peças é obrigatório em oficinas especializadas em pneus, rodas e centros de estética automotiva. Fabricados em aço Cromo-Molibdênio (Cr-Mo) com tratamento térmico especial para alto torque de impacto, cada soquete possui uma capa protetora de plástico externa giratória e um inserto plástico interno que protegem as rodas esportivas de liga leve diamantadas e cromadas contra qualquer arranhão, marca ou atrito metálico durante a troca das porcas.",
+    "composition": [
+      "1 Soquete de impacto 1/2\" longo 17 mm (Capa Azul protetora)",
+      "1 Soquete de impacto 1/2\" longo 19 mm (Capa Amarela protetora)",
+      "1 Soquete de impacto 1/2\" longo 21 mm (Capa Vermelha protetora)",
+      "Estojo plástico compacto organizador (158 x 138 x 51 mm)"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3300578",
+      "referencia": "R63043003",
+      "pecas": "3",
+      "pesoKg": "0,830 kg",
+      "norma": "Padrão Gedore Red"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Ref.",
+        "Medidas Inclusas",
+        "Peças",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3300578",
+          "R63043003",
+          "17 mm (Azul), 19 mm (Amarelo), 21 mm (Vermelho)",
+          "3",
+          "0,830 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3300578",
+      "Referência: R63043003",
+      "Encaixe: 1/2\"",
+      "Medidas: 17, 19 e 21 mm (as três medidas de parafusos de roda universais)",
+      "Material: Aço Cromo-Molibdênio (Cr-Mo) com luva plástica de proteção",
+      "Cores: Identificação visual imediata (Azul, Amarelo, Vermelho)",
+      "Peso do jogo: 0,830 kg"
+    ],
+    "properties": [
+      "Capa plástica protetora externa que impede o contato do aço do soquete com a pintura da roda",
+      "Inserto plástico interno que preserva o acabamento cromado da cabeça do parafuso da roda",
+      "Cores vibrantes que permitem ao mecânico selecionar a medida exata num relance visual"
+    ],
+    "instructions": [
+      "Verifique periodicamente o estado da capa plástica para garantir proteção total da roda.",
+      "Substitua os parafusos de roda aplicando o torque correto com torquímetro na finalização."
+    ],
+    "application": "Borracharias Premium, Centros Automotivos, Estética Automotiva, Troca de Pneus e Rodas de Liga Leve",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r63043003-1.jpg",
+    "images": [
+      "/images/products/r63043003-1.jpg"
+    ]
+  },
+  {
+    "id": "r28001004",
+    "name": "R28001004 JOGO DE ALICATES UNIVERSAL, CORTE E BICO 3 Peças",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "automotivo",
+    "categoryLabel": "Alicates & Forjados",
+    "code": "R28001004",
+    "technicalCode": "3301189",
+    "description": "Jogo de alicates com 3 peças (Universal 8\", Corte Diagonal 6.1/2\" e Bico Meia-Cana 6.1/2\") com cabo ergonômico bicomponente.",
+    "detailedDescription": "O Jogo de Alicates GEDORE red R28001004 (Código 3301189) reúne os 3 alicates essenciais para qualquer profissional ou bancada de manutenção. Forjados em aço Cromo-Vanádio de alta tenacidade com arestas de corte temperadas por indução, entregam corte limpo e durabilidade incomparável em arames duros e macios. Possuem cabos ergonômicos bicomponentes em vermelho e preto com abas protetoras que impedem o escorregamento da mão durante a compressão.",
+    "composition": [
+      "1 Alicate universal 8\" (200 mm) com dentes serrilhados e corte lateral",
+      "1 Alicate corte diagonal 6.1/2\" (165 mm) com corte rente de alta precisão",
+      "1 Alicate bico meia-cana reto 6.1/2\" (165 mm) para precisão e conformação",
+      "Embalagem blister original Gedore Red"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3301189",
+      "referencia": "R28001004",
+      "pecas": "3",
+      "pesoKg": "0,750 kg",
+      "norma": "DIN ISO 5746 / 5749 / 5745"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Peças",
+        "Composição",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3301189",
+          "R28001004",
+          "3",
+          "Universal 8\", Corte Diagonal 6.1/2\", Bico Meia Cana 6.1/2\"",
+          "0,750 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3301189",
+      "Referência: R28001004",
+      "Peças: 3 peças",
+      "Material: Aço Cromo-Vanádio forjado a quente",
+      "Cabos: Bicomponente ergonômico antiderrapante",
+      "Tratamento: Corte temperado por indução de alta frequência",
+      "Peso do jogo: 0,750 kg"
+    ],
+    "properties": [
+      "Trio clássico que atende corte de fios, puxamento, prensagem e torção com extrema firmeza",
+      "Articulação suave e precisa sem folgas no rebite central",
+      "Empunhadura anatômica com abas anti-deslizamento que proporcionam segurança extra"
+    ],
+    "instructions": [
+      "Não utilize os alicates como martelos para bater em pregos ou pinos.",
+      "Utilize sempre a capacidade máxima de corte recomendada para cada bitola de arame."
+    ],
+    "application": "Eletricistas, Oficinas Mecânicas, Montagem de Painéis, Manutenção Industrial e Domiciliar",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r28001004-1.png",
+    "images": [
+      "/images/products/r28001004-1.png",
+      "/images/products/r28001004-2.jpeg"
+    ]
+  },
+  {
+    "id": "r27210010",
+    "name": "R27210010 ALICATE DE PRESSÃO MORDENTE CURVO 10\" 232MM",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Alicates de Pressão",
+    "code": "R27210010",
+    "technicalCode": "3301832",
+    "description": "Alicate de pressão 10 polegadas (232mm) com mordente curvo forjado, cortador de arame e parafuso de regulagem com alavanca de destrave.",
+    "detailedDescription": "O Alicate de Pressão GEDORE red R27210010 (Código 3301832) de 10 polegadas (232 mm) é a ferramenta de fixação por excelência em serralherias, funilarias e mecânica em geral. Fabricado com corpo em chapa de aço de alta resistência e mordentes curvos forjados em aço Cromo-Vanádio, ele trava tubos, perfis redondos, porcas sextavadas e chapas metálicas com pressão contínua e regulável. Possui cortador de arame embutido e alavanca traseira de liberação rápida protegida.",
+    "composition": [
+      "Alicate de pressão 10\" (232 mm) com mordente curvo forjado",
+      "Parafuso de regulagem de pressão micrométrica na extremidade",
+      "Alavanca de destravamento rápido com mola de retorno",
+      "Cortador de arame integrado na base dos mordentes"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3301832",
+      "referencia": "R27210010",
+      "pecas": "1",
+      "pesoKg": "0,526 kg",
+      "norma": "Padrão Gedore Red"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Abertura Máxima",
+        "Tamanho Pol.",
+        "Comprimento mm",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3301832",
+          "R27210010",
+          "29 mm",
+          "10\"",
+          "232 mm",
+          "0,526 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3301832",
+      "Referência: R27210010",
+      "Comprimento total: 232 mm (10\")",
+      "Abertura dos mordentes: até 29 mm",
+      "Perfil do mordente: Curvo com dentes serrilhados para peças cilíndricas e planas",
+      "Material: Corpo em chapa tratada e mordente em aço Cr-V",
+      "Peso: 0,526 kg"
+    ],
+    "properties": [
+      "Mordentes forjados que seguram firmemente parafusos espanados para desrosqueamento",
+      "Parafuso traseiro com encaixe que permite ajuste fino do aperto antes de travar",
+      "Cortador de arames integrado que adiciona praticidade para trabalhos de solda e funilaria"
+    ],
+    "instructions": [
+      "Gire o parafuso traseiro para ajustar a abertura até sentir pressão firme ao fechar as hastes.",
+      "Pressione a alavanca de destrave interna para abrir o alicate instantaneamente."
+    ],
+    "application": "Soldagem, Serralheria, Funilaria, Extração de Parafusos Espanados, Hidráulica e Oficinas",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r27210010-1.jpg",
+    "images": [
+      "/images/products/r27210010-1.jpg"
+    ]
+  },
+  {
+    "id": "r28002104",
+    "name": "R28002104 JOGO DE ALICATES PARA ANÉIS ELÁSTICOS 4 Peças",
+    "brand": "gedore-red",
+    "brandLabel": "Gedore Red",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "automotivo",
+    "categoryLabel": "Alicates para Anéis",
+    "code": "R28002104",
+    "technicalCode": "3301829",
+    "description": "Jogo de alicates para anéis de segurança internos e externos com pontas retas e curvas de 90° forjadas (4 peças).",
+    "detailedDescription": "O Jogo de Alicates para Anéis GEDORE red R28002104 (Código 3301829) com 4 peças é o conjunto definitivo para montagem e desmontagem de anéis de retenção (trava elástica) de 19 a 60 mm em caixas de câmbio, eixos de transmissão, compressores e motores. Forjados em aço Cromo-Vanádio com pontas usinadas temperadas e acabamento fosfatizado, os alicates contam com molas de abertura suave nos modelos externos e cabos plastificados antiderrapantes em vermelho vivo.",
+    "composition": [
+      "1 Alicate para anéis internos retos (19 a 60 mm) - Ref. R27704061",
+      "1 Alicate para anéis internos curvos 90° (19 a 60 mm) - Ref. R27754061",
+      "1 Alicate para anéis externos retos com mola (19 a 60 mm) - Ref. R27604061",
+      "1 Alicate para anéis externos curvos 90° com mola (19 a 60 mm) - Ref. R27654061",
+      "Embalagem organizadora estruturada"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3301829",
+      "referencia": "R28002104",
+      "pecas": "4",
+      "pesoKg": "0,800 kg",
+      "norma": "DIN 5254 / DIN 5256"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Peças",
+        "Capacidade Diâmetro",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3301829",
+          "R28002104",
+          "4",
+          "19 a 60 mm (Internos e Externos / Retos e Curvos)",
+          "0,800 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3301829",
+      "Referência: R28002104",
+      "Quantidade: 4 peças",
+      "Capacidade dos anéis: Ø 19 a 60 mm",
+      "Material: Aço cromo-vanádio GEDORE red",
+      "Acabamento: Fosfatizado antiferrugem com pontas usinadas de alta precisão",
+      "Peso do jogo: 0,800 kg"
+    ],
+    "properties": [
+      "Cobre as 4 configurações de trabalho: interno reto, interno curvo, externo reto e externo curvo",
+      "Pontas torneadas de alta concentricidade que seguram os olhais do anel elástico sem escapar",
+      "Mola de retorno nos alicates externos que mantém a abertura ideal pronta para o encaixe"
+    ],
+    "instructions": [
+      "Encaixe as duas pontas do alicate nos furos do anel elástico antes de pressionar as empunhaduras.",
+      "Não abra o anel além do limite elástico para não deformar a trava permanentemente."
+    ],
+    "application": "Câmbios Manuais e Automáticos, Diferenciais, Suspensão, Motores e Cilindros Hidráulicos",
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/r28002104-1.jpg",
+    "images": [
+      "/images/products/r28002104-1.jpg",
+      "/images/products/r28002104-2.jpg",
+      "/images/products/r28002104-3.jpg",
+      "/images/products/r28002104-4.jpg",
+      "/images/products/r28002104-5.jpg"
     ]
   }
 ];
