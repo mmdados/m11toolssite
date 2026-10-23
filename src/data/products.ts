@@ -44,11 +44,11 @@ export const BRANDS = [
 ] as const;
 
 export const CATEGORIES = [
-  { id: 'all', label: 'Todas as Categorias', count: 80 },
-  { id: 'jogos-ferramentas', label: 'Jogos de Ferramentas & Soquetes', count: 15 },
-  { id: 'soquetes-chaves', label: 'Chaves de Aperto, Estrela & Tubos', count: 34 },
+  { id: 'all', label: 'Todas as Categorias', count: 90 },
+  { id: 'jogos-ferramentas', label: 'Jogos de Ferramentas & Soquetes', count: 16 },
+  { id: 'soquetes-chaves', label: 'Chaves de Aperto, Estrela & Tubos', count: 40 },
   { id: 'maletas-carrinhos', label: 'Carros, Bancadas & Mochilas', count: 9 },
-  { id: 'automotivo', label: 'Linha Automotiva & Oficina', count: 22 },
+  { id: 'automotivo', label: 'Linha Automotiva & Oficina', count: 25 },
 ] as const;
 
 export const PRODUCTS: Product[] = [
@@ -6001,5 +6001,721 @@ export const PRODUCTS: Product[] = [
       "/images/products/r28002104-4.jpg",
       "/images/products/r28002104-5.jpg"
     ]
+  },
+  {
+      "id": "r99210000",
+      "name": "R99210000 APLICADOR DE SELANTES EM ALUMÍNIO",
+      "brand": "gedore-red",
+      "brandLabel": "Gedore Red",
+      "itemType": "peca",
+      "itemTypeLabel": "Peça",
+      "category": "automotivo",
+      "categoryLabel": "Linha Automotiva",
+      "code": "R99210000",
+      "technicalCode": "3301753",
+      "description": "Aplicador de selantes e silicones profissional tubular GEDORE red em alumínio reforçado (340 x 210 mm).",
+      "detailedDescription": "O Aplicador de Selantes GEDORE red R99210000 (Código 3301753) é desenvolvido para uso profissional intensivo em oficinas, funilarias e obras industriais. Seu corpo tubular em alumínio de alta resistência protege o refil contra danos e quedas, ao mesmo tempo em que proporciona leveza e conforto durante jornadas prolongadas de trabalho. Compatível com cartuchos convencionais e tubos sachê, conta com sistema de alavanca com avanço suave para cordões homogêneos e substituição rápida do cartucho.",
+      "technicalSpecs": {
+          "codigoGedore": "3301753",
+          "referencia": "R99210000",
+          "pecas": "1",
+          "pesoKg": "0,540 kg"
+      },
+      "tableData": {
+          "headers": [
+              "Código GEDORE",
+              "Referência",
+              "Comprimento (mm)",
+              "Altura (mm)",
+              "Peso"
+          ],
+          "rows": [
+              [
+                  "3301753",
+                  "R99210000",
+                  "340 mm",
+                  "210 mm",
+                  "0,540 kg"
+              ]
+          ]
+      },
+      "specs": [
+          "Código GEDORE: 3301753",
+          "Referência: R99210000",
+          "Quantidade: 1 peça",
+          "Material do corpo: Tubo cilíndrico em alumínio leve e robusto",
+          "Mecanismo: Aço estampado com gatilho e alavanca reforçados",
+          "Dimensões: 340 mm de comprimento x 210 mm de altura",
+          "Peso aproximado: 0,540 kg"
+      ],
+      "properties": [
+          "Tubo fechado em alumínio reforçado que protege o cartucho contra amassamentos e sujeiras",
+          "Substituição simples e rápida de cartuchos e sachês com tampas rosqueáveis",
+          "Haste de avanço com cremalheira robusta e gatilho de destravamento rápido para alívio imediato da pressão"
+      ],
+      "instructions": [
+          "Pressione a trava traseira e recue totalmente a haste antes de inserir o cartucho de selante.",
+          "Rosqueie firmemente a tampa frontal e acione o gatilho com pressão contínua e uniforme."
+      ],
+      "application": "Oficinas Mecânicas, Funilaria, Instalação de Pára-brisas, Fixação Automotiva e Construção Civil",
+      "priceFormatted": "Consulte Valor",
+      "image": "/images/products/r99210000-1.jpg",
+      "images": [
+          "/images/products/r99210000-1.jpg"
+      ]
+  },
+  {
+      "id": "r48900025",
+      "name": "R48900025 TORQUÍMETRO DE ESTALO 1/4\" 5-25 Nm",
+      "brand": "gedore-red",
+      "brandLabel": "Gedore Red",
+      "itemType": "peca",
+      "itemTypeLabel": "Peça",
+      "category": "soquetes-chaves",
+      "categoryLabel": "Chaves & Soquetes",
+      "code": "R48900025",
+      "technicalCode": "3369943",
+      "description": "Torquímetro de estalo regulável 1/4\" GEDORE red de 5 a 25 N·m com visor de lupa e certificação DIN EN ISO 6789.",
+      "detailedDescription": "O Torquímetro de Estalo GEDORE red R48900025 (Código 3369943) com encaixe quadrado de 1/4\" e capacidade de 5 a 25 N·m é a ferramenta indispensável para apertos críticos de baixa carga em componentes delicados. Possui precisão de disparo de +/- 3%, catraca reversível integrada, visor de lupa de alta legibilidade com divisão de 0,1 N·m e trava de segurança na extremidade da empunhadura para fixação do torque programado, certificado segundo a norma DIN EN ISO 6789.",
+      "technicalSpecs": {
+          "codigoGedore": "3369943",
+          "referencia": "R48900025",
+          "pecas": "1",
+          "pesoKg": "0,515 kg",
+          "norma": "DIN EN ISO 6789"
+      },
+      "tableData": {
+          "headers": [
+              "Código GEDORE",
+              "Referência",
+              "Encaixe Quadrado",
+              "Faixa (N·m)",
+              "Escala (N·m)",
+              "Comprimento",
+              "Peso"
+          ],
+          "rows": [
+              [
+                  "3369943",
+                  "R48900025",
+                  "1/4\"",
+                  "5 - 25 N·m",
+                  "0,1 N·m",
+                  "285 mm",
+                  "0,515 kg"
+              ]
+          ]
+      },
+      "specs": [
+          "Código GEDORE: 3369943",
+          "Referência: R48900025",
+          "Quantidade: 1 peça",
+          "Encaixe quadrado: 1/4\" com esfera de fixação",
+          "Faixa de torque: 5 a 25 N·m",
+          "Escala de resolução: 0,1 N·m",
+          "Precisão de disparo: +/- 3% da escala calibrada",
+          "Comprimento total: 285 mm",
+          "Norma de fabricação: DIN EN ISO 6789",
+          "Peso: 0,515 kg"
+      ],
+      "properties": [
+          "Disparo com sinal sonoro ('clique') e alívio de esforço nítido ao atingir o torque calibrado",
+          "Escala dupla com janela de lente de aumento que facilita a leitura rápida sem erro de paralelismo",
+          "Sistema de trava positiva na ponta do cabo para travar com segurança a carga ajustada",
+          "Mecanismo com catraca reversível para avanço suave das fixações"
+      ],
+      "instructions": [
+          "Puxe o botão de segurança na base, gire a manopla até a escala exata e pressione para travar.",
+          "Após a utilização diária, retorne a regulagem ao valor mínimo (5 N·m) para conservar a calibração da mola."
+      ],
+      "application": "Tampas de Válvulas, Sensores de Motores, Motocicletas, Ciclismo Profissional e Montagens Eletrônicas",
+      "featured": true,
+      "priceFormatted": "Consulte Valor",
+      "image": "/images/products/r48900025-1.jpg",
+      "images": [
+          "/images/products/r48900025-1.jpg",
+          "/images/products/r48900025-2.jpg",
+          "/images/products/r48900025-3.jpg"
+      ]
+  },
+  {
+      "id": "r58900050",
+      "name": "R58900050 TORQUÍMETRO DE ESTALO 3/8\" 10-50 Nm",
+      "brand": "gedore-red",
+      "brandLabel": "Gedore Red",
+      "itemType": "peca",
+      "itemTypeLabel": "Peça",
+      "category": "soquetes-chaves",
+      "categoryLabel": "Chaves & Soquetes",
+      "code": "R58900050",
+      "technicalCode": "3369938",
+      "description": "Torquímetro de estalo regulável 3/8\" GEDORE red de 10 a 50 N·m com escala micrométrica e certificação DIN EN ISO 6789.",
+      "detailedDescription": "O Torquímetro de Estalo GEDORE red R58900050 (Código 3369938) com encaixe quadrado de 3/8\" e amplitude de torque de 10 a 50 N·m combina excelente acessibilidade e precisão micrométrica com divisão de 0,25 N·m. Fabricado com estrutura tubular robusta e empunhadura anatômica, dispõe de catraca reversível com botão de engate rápido, tolerância rigorosa de +/- 3% e certificação DIN EN ISO 6789.",
+      "technicalSpecs": {
+          "codigoGedore": "3369938",
+          "referencia": "R58900050",
+          "pecas": "1",
+          "pesoKg": "0,540 kg",
+          "norma": "DIN EN ISO 6789"
+      },
+      "tableData": {
+          "headers": [
+              "Código GEDORE",
+              "Referência",
+              "Encaixe Quadrado",
+              "Faixa (N·m)",
+              "Escala (N·m)",
+              "Comprimento",
+              "Peso"
+          ],
+          "rows": [
+              [
+                  "3369938",
+                  "R58900050",
+                  "3/8\"",
+                  "10 - 50 N·m",
+                  "0,25 N·m",
+                  "335 mm",
+                  "0,540 kg"
+              ]
+          ]
+      },
+      "specs": [
+          "Código GEDORE: 3369938",
+          "Referência: R58900050",
+          "Quantidade: 1 peça",
+          "Encaixe quadrado: 3/8\"",
+          "Faixa de torque: 10 a 50 N·m",
+          "Escala de resolução: 0,25 N·m",
+          "Precisão de disparo: +/- 3%",
+          "Comprimento total: 335 mm",
+          "Norma: DIN EN ISO 6789",
+          "Peso: 0,540 kg"
+      ],
+      "properties": [
+          "Regulagem intuitiva no punho com lente de aumento para leitura clara dos valores N·m",
+          "Sinal sonoro instantâneo ao alcançar o torque programado",
+          "Bloqueio firme no terminal do cabo que elimina risco de descalibração acidental durante o aperto"
+      ],
+      "instructions": [
+          "Gire o punho até o valor nominal desejado e trave a alavanca de bloqueio.",
+          "Nunca use o torquímetro para desaperto forçado de parafusos engripados."
+      ],
+      "application": "Velas de Ignição, Coletores de Admissão, Cárteres de Alumínio e Transmissões Leves",
+      "featured": true,
+      "priceFormatted": "Consulte Valor",
+      "image": "/images/products/r58900050-1.jpg",
+      "images": [
+          "/images/products/r58900050-1.jpg",
+          "/images/products/r58900050-2.jpg",
+          "/images/products/r58900050-3.jpg"
+      ]
+  },
+  {
+      "id": "r68900100",
+      "name": "R68900100 TORQUÍMETRO DE ESTALO 1/2\" 20-100 Nm",
+      "brand": "gedore-red",
+      "brandLabel": "Gedore Red",
+      "itemType": "peca",
+      "itemTypeLabel": "Peça",
+      "category": "soquetes-chaves",
+      "categoryLabel": "Chaves & Soquetes",
+      "code": "R68900100",
+      "technicalCode": "3369939",
+      "description": "Torquímetro de estalo regulável 1/2\" GEDORE red de 20 a 100 N·m com catraca reversível e calibração DIN EN ISO 6789.",
+      "detailedDescription": "O Torquímetro de Estalo GEDORE red R68900100 (Código 3369939) com encaixe de 1/2\" e escala de 20 a 100 N·m é a escolha perfeita para fixações mecânicas cruciais em motores e suspensão automotiva. Com comprimento de 395 mm, proporciona a alavanca correta para controle suave de torque, divisão fina de 0,5 N·m, tolerância de disparo de +/- 3% e conformidade total com a norma DIN EN ISO 6789.",
+      "technicalSpecs": {
+          "codigoGedore": "3369939",
+          "referencia": "R68900100",
+          "pecas": "1",
+          "pesoKg": "1,176 kg",
+          "norma": "DIN EN ISO 6789"
+      },
+      "tableData": {
+          "headers": [
+              "Código GEDORE",
+              "Referência",
+              "Encaixe Quadrado",
+              "Faixa (N·m)",
+              "Escala (N·m)",
+              "Comprimento",
+              "Peso"
+          ],
+          "rows": [
+              [
+                  "3369939",
+                  "R68900100",
+                  "1/2\"",
+                  "20 - 100 N·m",
+                  "0,5 N·m",
+                  "395 mm",
+                  "1,176 kg"
+              ]
+          ]
+      },
+      "specs": [
+          "Código GEDORE: 3369939",
+          "Referência: R68900100",
+          "Quantidade: 1 peça",
+          "Encaixe quadrado: 1/2\" com trava de segurança",
+          "Faixa de torque: 20 a 100 N·m",
+          "Escala de resolução: 0,5 N·m",
+          "Precisão de disparo: +/- 3%",
+          "Comprimento total: 395 mm",
+          "Norma: DIN EN ISO 6789",
+          "Peso: 1,176 kg"
+      ],
+      "properties": [
+          "Sinal sonoro ('clique') perceptível e disparo mecânico de alta precisão",
+          "Corpo tubular com acabamento cromado fosco anticorrosivo e escala com lupa de leitura",
+          "Trava de segurança na extremidade da manopla garantindo aperto uniforme em múltiplos parafusos"
+      ],
+      "instructions": [
+          "Puxe a trava inferior, gire o cabo até o valor pretendido e reencaixe a trava.",
+          "Sempre alivie a mola para a escala mínima de 20 N·m antes de guardar no estojo protetor."
+      ],
+      "application": "Mancais, Bielas, Discos de Freio, Cubos e Parafusos Estruturais de Veículos Leves",
+      "featured": true,
+      "priceFormatted": "Consulte Valor",
+      "image": "/images/products/r68900100-1.jpg",
+      "images": [
+          "/images/products/r68900100-1.jpg",
+          "/images/products/r68900100-2.jpg",
+          "/images/products/r68900100-3.jpg"
+      ]
+  },
+  {
+      "id": "r68900200",
+      "name": "R68900200 TORQUÍMETRO DE ESTALO 1/2\" 40-200 Nm",
+      "brand": "gedore-red",
+      "brandLabel": "Gedore Red",
+      "itemType": "peca",
+      "itemTypeLabel": "Peça",
+      "category": "soquetes-chaves",
+      "categoryLabel": "Chaves & Soquetes",
+      "code": "R68900200",
+      "technicalCode": "3369940",
+      "description": "Torquímetro de estalo regulável 1/2\" GEDORE red de 40 a 200 N·m com alavanca de 485 mm, ideal para rodas e cabeçotes.",
+      "detailedDescription": "O Torquímetro de Estalo GEDORE red R68900200 (Código 3369940) com encaixe quadrado de 1/2\" e ampla capacidade de 40 a 200 N·m é a ferramenta mais utilizada em autocenters, concessionárias e frotas para aperto seguro de porcas e parafusos de rodas, cabeçotes e componentes pesados de suspensão. Possui braço de alavanca de 485 mm, incremento de 1,0 N·m, tolerância de disparo de +/- 3% e certificação técnica DIN EN ISO 6789.",
+      "technicalSpecs": {
+          "codigoGedore": "3369940",
+          "referencia": "R68900200",
+          "pecas": "1",
+          "pesoKg": "1,350 kg",
+          "norma": "DIN EN ISO 6789"
+      },
+      "tableData": {
+          "headers": [
+              "Código GEDORE",
+              "Referência",
+              "Encaixe Quadrado",
+              "Faixa (N·m)",
+              "Escala (N·m)",
+              "Comprimento",
+              "Peso"
+          ],
+          "rows": [
+              [
+                  "3369940",
+                  "R68900200",
+                  "1/2\"",
+                  "40 - 200 N·m",
+                  "1,0 N·m",
+                  "485 mm",
+                  "1,350 kg"
+              ]
+          ]
+      },
+      "specs": [
+          "Código GEDORE: 3369940",
+          "Referência: R68900200",
+          "Quantidade: 1 peça",
+          "Encaixe quadrado: 1/2\"",
+          "Faixa de torque: 40 a 200 N·m",
+          "Escala de resolução: 1,0 N·m",
+          "Precisão de disparo: +/- 3%",
+          "Comprimento total: 485 mm",
+          "Norma: DIN EN ISO 6789",
+          "Peso: 1,350 kg"
+      ],
+      "properties": [
+          "Excelente alavanca de 485 mm que reduz sensivelmente o esforço físico do operador",
+          "Mecanismo interno durável com tolerância calibrada de fábrica e certificado individual",
+          "Lente de aumento na escala com sistema de trava de empunhadura altamente seguro"
+      ],
+      "instructions": [
+          "Cesse imediatamente a aplicação de torque assim que ouvir o sinal sonoro ('clique').",
+          "Nunca utilize para desaperto de porcas travadas ou como alavanca de descolamento."
+      ],
+      "application": "Porcas de Rodas Automotivas, Parafusos de Cabeçote, Bandejas de Suspensão e Pivôs",
+      "featured": true,
+      "priceFormatted": "Consulte Valor",
+      "image": "/images/products/r68900200-1.jpg",
+      "images": [
+          "/images/products/r68900200-1.jpg",
+          "/images/products/r68900200-2.jpg",
+          "/images/products/r68900200-3.jpg"
+      ]
+  },
+  {
+      "id": "r68900300",
+      "name": "R68900300 TORQUÍMETRO DE ESTALO 1/2\" 60-300 Nm",
+      "brand": "gedore-red",
+      "brandLabel": "Gedore Red",
+      "itemType": "peca",
+      "itemTypeLabel": "Peça",
+      "category": "soquetes-chaves",
+      "categoryLabel": "Chaves & Soquetes",
+      "code": "R68900300",
+      "technicalCode": "3369942",
+      "description": "Torquímetro de estalo regulável 1/2\" GEDORE red de alta capacidade 60 a 300 N·m com alavanca longa de 575 mm e calibração ISO 6789.",
+      "detailedDescription": "O Torquímetro de Estalo GEDORE red R68900300 (Código 3369942) com encaixe de 1/2\" entrega elevada potência torsional de 60 a 300 N·m. Equipado com alavanca de 575 mm de comprimento, permite atingir torques elevados em utilitários, vans, pick-ups e tratores com precisão e controle. Atende integralmente a norma DIN EN ISO 6789 com disparo de precisão de +/- 3% e visor micrométrico com lupa.",
+      "technicalSpecs": {
+          "codigoGedore": "3369942",
+          "referencia": "R68900300",
+          "pecas": "1",
+          "pesoKg": "1,541 kg",
+          "norma": "DIN EN ISO 6789"
+      },
+      "tableData": {
+          "headers": [
+              "Código GEDORE",
+              "Referência",
+              "Encaixe Quadrado",
+              "Faixa (N·m)",
+              "Escala (N·m)",
+              "Comprimento",
+              "Peso"
+          ],
+          "rows": [
+              [
+                  "3369942",
+                  "R68900300",
+                  "1/2\"",
+                  "60 - 300 N·m",
+                  "1,0 N·m",
+                  "575 mm",
+                  "1,541 kg"
+              ]
+          ]
+      },
+      "specs": [
+          "Código GEDORE: 3369942",
+          "Referência: R68900300",
+          "Quantidade: 1 peça",
+          "Encaixe quadrado: 1/2\"",
+          "Faixa de torque: 60 a 300 N·m",
+          "Escala de resolução: 1,0 N·m",
+          "Precisão de disparo: +/- 3%",
+          "Comprimento total: 575 mm",
+          "Norma: DIN EN ISO 6789",
+          "Peso: 1,541 kg"
+      ],
+      "properties": [
+          "Alavanca longa de 575 mm balanceada para aplicação firme e progressiva de altos torques",
+          "Mecanismo de catraca de alta densidade resistente a elevadas tensões torsionais",
+          "Trava traseira ergonômica que assegura a manutenção do ajuste exato"
+      ],
+      "instructions": [
+          "Posicione a mão no centro do punho antiderrapante para leitura correta do torque.",
+          "Após o término da operação, desregule a ferramenta para o valor mínimo (60 N·m)."
+      ],
+      "application": "Caminhonetes, Vans, Utilitários, Maquinário Agrícola e Suspensões Pesadas",
+      "featured": true,
+      "priceFormatted": "Consulte Valor",
+      "image": "/images/products/r68900300-1.jpg",
+      "images": [
+          "/images/products/r68900300-1.jpg",
+          "/images/products/r68900300-2.jpg",
+          "/images/products/r68900300-3.jpg"
+      ]
+  },
+  {
+      "id": "r78900400",
+      "name": "R78900400 TORQUÍMETRO DE ESTALO 3/4\" 80-400 Nm",
+      "brand": "gedore-red",
+      "brandLabel": "Gedore Red",
+      "itemType": "peca",
+      "itemTypeLabel": "Peça",
+      "category": "soquetes-chaves",
+      "categoryLabel": "Chaves & Soquetes",
+      "code": "R78900400",
+      "technicalCode": "3369941",
+      "description": "Torquímetro de estalo heavy duty 3/4\" GEDORE red de 80 a 400 N·m com alavanca de 685 mm para frotas pesadas e indústrias.",
+      "detailedDescription": "O Torquímetro de Estalo Heavy Duty GEDORE red R78900400 (Código 3369941) com encaixe robusto de 3/4\" e faixa de 80 a 400 N·m é construído para suportar as aplicações mais exigentes da linha diesel, caminhões, ônibus e montagens estruturais pesadas. Com alavanca de 685 mm, catraca integrada reversível e escala micrométrica sob lente com tolerância de +/- 3%, oferece total confiabilidade em conformidade com a norma DIN EN ISO 6789.",
+      "technicalSpecs": {
+          "codigoGedore": "3369941",
+          "referencia": "R78900400",
+          "pecas": "1",
+          "pesoKg": "2,390 kg",
+          "norma": "DIN EN ISO 6789"
+      },
+      "tableData": {
+          "headers": [
+              "Código GEDORE",
+              "Referência",
+              "Encaixe Quadrado",
+              "Faixa (N·m)",
+              "Escala (N·m)",
+              "Comprimento",
+              "Peso"
+          ],
+          "rows": [
+              [
+                  "3369941",
+                  "R78900400",
+                  "3/4\"",
+                  "80 - 400 N·m",
+                  "1,0 N·m",
+                  "685 mm",
+                  "2,390 kg"
+              ]
+          ]
+      },
+      "specs": [
+          "Código GEDORE: 3369941",
+          "Referência: R78900400",
+          "Quantidade: 1 peça",
+          "Encaixe quadrado: 3/4\" super reforçado",
+          "Faixa de torque: 80 a 400 N·m",
+          "Escala de resolução: 1,0 N·m",
+          "Precisão de disparo: +/- 3%",
+          "Comprimento total: 685 mm",
+          "Norma: DIN EN ISO 6789",
+          "Peso: 2,390 kg"
+      ],
+      "properties": [
+          "Estrutura forjada em aço Cromo-Vanádio para operação pesada ininterrupta",
+          "Disparo com estalo sonoro potente e alívio momentâneo de esforço ao atingir a carga programada",
+          "Visor com lente resistente a graxas minerais e solventes industriais"
+      ],
+      "instructions": [
+          "Destrave o anel traseiro, selecione o torque exato e trave firmemente antes de aplicar a carga.",
+          "Empregue exclusivamente soquetes industriais ou de impacto 3/4\" certificados."
+      ],
+      "application": "Caminhões Pesados, Frotas de Ônibus, Tratores Agrícolas, Eixos e Fixações Estruturais Industriais",
+      "featured": true,
+      "priceFormatted": "Consulte Valor",
+      "image": "/images/products/r78900400-1.jpg",
+      "images": [
+          "/images/products/r78900400-1.jpg",
+          "/images/products/r78900400-2.jpg",
+          "/images/products/r78900400-3.jpg"
+      ]
+  },
+  {
+      "id": "r17101000",
+      "name": "R17101000 CHAVE L PARA BUJÃO DE ÓLEO 8x10mm",
+      "brand": "gedore-red",
+      "brandLabel": "Gedore Red",
+      "itemType": "peca",
+      "itemTypeLabel": "Peça",
+      "category": "automotivo",
+      "categoryLabel": "Linha Automotiva",
+      "code": "R17101000",
+      "technicalCode": "3300374",
+      "description": "Chave especial em L GEDORE red com pontas quadradas macho de 8 e 10 mm (5/16\" x 3/8\") e ângulo de 115° para bujões de óleo.",
+      "detailedDescription": "A Chave tipo L para Bujão de Óleo GEDORE red R17101000 (Código 3300374) é a ferramenta automotiva desenvolvida especificamente para montagem e desmontagem de bujões de drenagem e abastecimento de óleo de cárter e transmissões. Conta com pontas quadradas macho nas medidas de 8 mm e 10 mm (5/16\" x 3/8\"), corpo em aço especial forjado cromado mate acetinado e exclusivo ângulo ergonômico de 115° que afasta a mão do operador do fluxo de óleo quente.",
+      "technicalSpecs": {
+          "codigoGedore": "3300374",
+          "referencia": "R17101000",
+          "pecas": "1",
+          "pesoKg": "0,330 kg"
+      },
+      "tableData": {
+          "headers": [
+              "Código GEDORE",
+              "Referência",
+              "Pontas Quadradas",
+              "Comprimento",
+              "Ângulo",
+              "Peso"
+          ],
+          "rows": [
+              [
+                  "3300374",
+                  "R17101000",
+                  "8 mm e 10 mm (5/16\" x 3/8\")",
+                  "265 mm",
+                  "115°",
+                  "0,330 kg"
+              ]
+          ]
+      },
+      "specs": [
+          "Código GEDORE: 3300374",
+          "Referência: R17101000",
+          "Quantidade: 1 peça",
+          "Pontas: Quadrados machos de 8 mm e 10 mm (5/16\" x 3/8\")",
+          "Comprimento: 265 mm",
+          "Ângulo de inclinação: 115°",
+          "Material: Aço especial temperado GEDORE red",
+          "Acabamento: Cromado mate acetinado antiferrugem",
+          "Peso: 0,330 kg"
+      ],
+      "properties": [
+          "Ângulo técnico de 115° que protege o operador contra queimaduras por óleo quente ao desapertar o bujão",
+          "Pontas usinadas com tolerância precisa que eliminam folgas e não arredondam os cantos do bujão",
+          "Corpo forjado monobloco com acabamento acetinado de alta durabilidade mecânica"
+      ],
+      "instructions": [
+          "Encaixe totalmente o quadrado correspondente (8 ou 10 mm) no bujão antes de aplicar força.",
+          "Sempre substitua o anel de vedação do bujão ao concluir a troca de óleo."
+      ],
+      "application": "Bujões de Cárter de Motor, Caixas de Câmbio e Diferenciais (Renault, Peugeot, Citroën, Fiat, Ford, Nissan)",
+      "priceFormatted": "Consulte Valor",
+      "image": "/images/products/r17101000-1.jpeg",
+      "images": [
+          "/images/products/r17101000-1.jpeg",
+          "/images/products/r17101000-2.jpeg",
+          "/images/products/r17101000-3.jpeg",
+          "/images/products/r17101000-4.jpeg"
+      ]
+  },
+  {
+      "id": "r69023024",
+      "name": "R69023024 JOGO DE SOQUETES ESTRIADOS 1/2\" COM CATRACA 24 Peças",
+      "brand": "gedore-red",
+      "brandLabel": "Gedore Red",
+      "itemType": "jogo",
+      "itemTypeLabel": "Jogo",
+      "category": "jogos-ferramentas",
+      "categoryLabel": "Jogos de Ferramentas",
+      "code": "R69023024",
+      "technicalCode": "3301970",
+      "description": "Jogo profissional com 20 soquetes estriados 1/2\" (10 a 32 mm), catraca 72 dentes, 2 extensões, adaptador 3 vias e maleta reforçada (24 peças).",
+      "detailedDescription": "O Jogo de Soquetes Estriados GEDORE red R69023024 (Código 3301970) reúne 24 peças forjadas em aço Cromo-Vanádio com encaixe de 1/2\". Seu perfil estriado de 12 faces permite encaixes rápidos a cada 30°, ideal para trabalhar em locais de acesso difícil. Acompanha catraca reversível de 72 dentes de alta velocidade com botão de liberação rápida, duas barras de extensão (125 e 250 mm), adaptador de 3 vias (1/2\"M x 3/8\"F) e maleta de alta resistência com fechos metálicos.",
+      "composition": [
+          "20 Soquetes estriados 1/2\": 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 26, 27, 28, 30 e 32 mm",
+          "1 Catraca reversível 1/2\" com 72 dentes e botão de engate rápido",
+          "2 Barras de extensão 1/2\": 125 mm (5\") e 250 mm (10\")",
+          "1 Adaptador 3 vias 1/2\"M x 3/8\"F (combina com extensão para formar cabo T)",
+          "1 Maleta plástica reforçada GEDORE red com fechos de metal"
+      ],
+      "technicalSpecs": {
+          "codigoGedore": "3301970",
+          "referencia": "R69023024",
+          "pecas": "24",
+          "pesoKg": "4,600 kg"
+      },
+      "tableData": {
+          "headers": [
+              "Código GEDORE",
+              "Referência",
+              "Peças",
+              "Composição",
+              "Encaixe",
+              "Acabamento"
+          ],
+          "rows": [
+              [
+                  "3301970",
+                  "R69023024",
+                  "24 peças",
+                  "20 soquetes estriados 10-32mm + Catraca 72T + 2 Extensões + Adaptador 3 vias",
+                  "1/2\"",
+                  "Cromado mate acetinado"
+              ]
+          ]
+      },
+      "specs": [
+          "Código GEDORE: 3301970",
+          "Referência: R69023024",
+          "Quantidade: 24 peças",
+          "Encaixe: 1/2\" quadrado com retenção esférica",
+          "Catraca reversível: 72 dentes com ângulo de trabalho de apenas 5°",
+          "Material: Aço Cromo-Vanádio GEDORE red",
+          "Acabamento: Cromado mate acetinado de alta resistência ao desgaste",
+          "Estojo: Maleta plástica com berço sob medida e fechos metálicos",
+          "Peso do jogo: 4,600 kg"
+      ],
+      "properties": [
+          "Perfil estriado (12 faces) que possibilita acoplamento duas vezes mais rápido do que sextavados em locais apertados",
+          "Catraca de 72 dentes que viabiliza avanços precisos em espaços exíguos",
+          "Adaptador 3 vias inteligente que transforma a extensão em cabo T deslizante de grande torque manual"
+      ],
+      "instructions": [
+          "Utilize o botão superior da catraca para engatar e desengatar soquetes com facilidade e segurança.",
+          "Não aplique marretas ou extensores de tubo no punho da catraca."
+      ],
+      "application": "Oficinas Mecânicas Automotivas, Linha Pesada, Manutenção Industrial e Serviços Mecânicos Gerais",
+      "featured": true,
+      "priceFormatted": "Consulte Valor",
+      "image": "/images/products/r69023024-1.jpeg",
+      "images": [
+          "/images/products/r69023024-1.jpeg",
+          "/images/products/r69023024-2.jpeg",
+          "/images/products/r69023024-3.jpeg"
+      ]
+  },
+  {
+      "id": "r11202000",
+      "name": "R11202000 EXTRATOR DE ARTICULAÇÃO ESFÉRICA E PIVÔ",
+      "brand": "gedore-red",
+      "brandLabel": "Gedore Red",
+      "itemType": "peca",
+      "itemTypeLabel": "Peça",
+      "category": "automotivo",
+      "categoryLabel": "Linha Automotiva",
+      "code": "R11202000",
+      "technicalCode": "3301971",
+      "description": "Extrator mecânico profissional GEDORE red para articulações esféricas, pivôs de suspensão e terminais de direção com encaixe de 20 mm, fuso com ponta esférica e corda de segurança antiqueda.",
+      "detailedDescription": "O Extrator de Articulação Esférica GEDORE red R11202000 (Código 3301971) é o equipamento específico para desencaixar com segurança pivôs de suspensão e terminais de direção automotivos sem recorrer a golpes de marreta que danificam a manga de eixo ou rasgam as coifas. Fabricado em aço Cromo-Vanádio reforçado com gancho de encaixe de 20 mm e comprimento de 160 mm, seu fuso mecânico conta com ponta esférica de baixo atrito e vem acompanhado de corda de segurança para retenção contra queda durante o desprendimento.",
+      "technicalSpecs": {
+          "codigoGedore": "3301971",
+          "referencia": "R11202000",
+          "pecas": "1",
+          "pesoKg": "1,200 kg"
+      },
+      "tableData": {
+          "headers": [
+              "Código GEDORE",
+              "Referência",
+              "Abertura do Gancho",
+              "Dimensões (mm)",
+              "Fuso Mecânico",
+              "Peso"
+          ],
+          "rows": [
+              [
+                  "3301971",
+                  "R11202000",
+                  "20 mm",
+                  "170 x 65 x 55 mm",
+                  "Ponta esférica de baixo atrito",
+                  "1,200 kg"
+              ]
+          ]
+      },
+      "specs": [
+          "Código GEDORE: 3301971",
+          "Referência: R11202000",
+          "Quantidade: 1 peça",
+          "Abertura do garfo: 20 mm",
+          "Comprimento: 160 mm",
+          "Dimensões totais: 170 x 65 x 55 mm",
+          "Material: Aço Cromo-Vanádio forjado de alta tenacidade",
+          "Fuso: Rosca tratada com ponta esférica de baixo atrito",
+          "Acessório: Corda de ancoragem de segurança inclusa",
+          "Peso: 1,200 kg"
+      ],
+      "properties": [
+          "Elimina marretadas na suspensão, preservando os componentes da direção e da manga de eixo",
+          "Ponta esférica do fuso que reduz o atrito e preserva as roscas contra deformações",
+          "Corda de amarração que garante a proteção do operador contra projeção ou queda da ferramenta no destravamento da junta"
+      ],
+      "instructions": [
+          "Amarre a corda de segurança na barra estabilizadora ou bandeja antes do início do aperto.",
+          "Posicione a forquilha de 20 mm sob a junta esférica e gire o fuso progressivamente com chave manual até o desencaixe."
+      ],
+      "application": "Suspensão Automotiva, Terminais de Direção, Pivôs de Bandejas e Articulações Esféricas",
+      "featured": true,
+      "priceFormatted": "Consulte Valor",
+      "image": "/images/products/r11202000-1.jpeg",
+      "images": [
+          "/images/products/r11202000-1.jpeg",
+          "/images/products/r11202000-2.jpeg",
+          "/images/products/r11202000-3.jpeg"
+      ]
   }
 ];
