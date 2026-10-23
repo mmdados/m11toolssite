@@ -44,11 +44,11 @@ export const BRANDS = [
 ] as const;
 
 export const CATEGORIES = [
-  { id: 'all', label: 'Todas as Categorias', count: 90 },
-  { id: 'jogos-ferramentas', label: 'Jogos de Ferramentas & Soquetes', count: 16 },
-  { id: 'soquetes-chaves', label: 'Chaves de Aperto, Estrela & Tubos', count: 40 },
-  { id: 'maletas-carrinhos', label: 'Carros, Bancadas & Mochilas', count: 9 },
-  { id: 'automotivo', label: 'Linha Automotiva & Oficina', count: 25 },
+  { id: 'all', label: 'Todas as Categorias', count: 130 },
+  { id: 'jogos-ferramentas', label: 'Jogos de Ferramentas & Soquetes', count: 23 },
+  { id: 'soquetes-chaves', label: 'Chaves de Aperto, Estrela & Tubos', count: 48 },
+  { id: 'maletas-carrinhos', label: 'Carros, Bancadas & Mochilas', count: 23 },
+  { id: 'automotivo', label: 'Linha Automotiva & Oficina', count: 36 },
 ] as const;
 
 export const PRODUCTS: Product[] = [
@@ -6717,5 +6717,2863 @@ export const PRODUCTS: Product[] = [
           "/images/products/r11202000-2.jpeg",
           "/images/products/r11202000-3.jpeg"
       ]
+  },
+  {
+    "id": "robust-5000r",
+    "name": "5000R JOGO DE FERRAMENTAS OFICINA MASTER 178 Peças",
+    "brand": "gedore-robust",
+    "brandLabel": "Robust",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "jogos-ferramentas",
+    "categoryLabel": "Jogos de Ferramentas",
+    "code": "5000R",
+    "technicalCode": "060370",
+    "description": "Jogo de ferramentas completo Oficina Master ROBUST 5000R com 178 peças em 3 encaixes (1/4\", 3/8\" e 1/2\"), chaves combinadas com catraca, bits e maleta reforçada.",
+    "detailedDescription": "O Jogo Oficina Master ROBUST 5000R (Código 060370) do Grupo GEDORE é uma das soluções mais completas do mercado para manutenção mecânica e automotiva. Reúne 178 peças de alta performance que englobam soquetes sextavados, longos, estriados e Torx em 3 encaixes quadrados (1/4\", 3/8\" e 1/2\"), catracas reversíveis de alto rendimento, 12 chaves combinadas com catraca rápida, chaves L hexagonais e Torx, bits especiais e soquetes de impacto para rodas de liga leve, tudo acondicionado em maleta plástica resistente de 500 x 360 x 100 mm.",
+    "composition": [
+      "Encaixe 1/4\": 13 soquetes sextavados (4 a 14mm), 7 longos (4 a 10mm), 5 Torx (E4 a E8), 33 chaves soquete (Hex, Fenda, PH, Torx e Guia), catraca, 2 extensões, cabo T, cabo quadrado e junta universal",
+      "Encaixe 3/8\": 10 soquetes sextavados (10 a 19mm), 6 longos (10 a 15mm), 6 Torx (E10 a E18), soquete para vela 18mm, catraca, extensão 125mm, junta universal e adaptador de bits",
+      "Encaixe 1/2\": 17 soquetes sextavados (10 a 32mm), 2 longos (16 e 18mm), 2 Torx (E20 e E24), 3 de impacto para liga leve (17, 19 e 21mm), 2 para vela (16 e 21mm), catraca, 2 extensões, junta e adaptador",
+      "24 Bits 5/16\" (Hex, Fenda, PH, Torx e Torx Guia) + 9 Chaves L Hexagonais abauladas (1,5 a 10mm) + 9 Chaves L Torx (T10 a T50)",
+      "12 Chaves combinadas com catraca rápida: 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 e 19 mm",
+      "Maleta plástica organizadora estruturada com fechos de metal reforçados (500 x 360 x 100 mm)"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "060370",
+      "referencia": "5000R",
+      "pecas": "178",
+      "dimensoes": "500 x 360 x 100 mm",
+      "pesoKg": "11,500 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Peças",
+        "Encaixes Quadrados",
+        "Dimensões Maleta",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "060370",
+          "5000R",
+          "178 peças",
+          "1/4\", 3/8\" e 1/2\"",
+          "500 x 360 x 100 mm",
+          "11,500 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 060370",
+      "Referência: 5000R",
+      "Quantidade de peças: 178 peças",
+      "Encaixes quadrados: 1/4\", 3/8\" e 1/2\"",
+      "Material: Aço Cromo-Vanádio e Aço Especial ROBUST / GEDORE",
+      "Acabamento: Cromado e polido com tratamento térmico temperado",
+      "Maleta: Estojo plástico de alta densidade 500 x 360 x 100 mm",
+      "Peso aproximado: 11,500 kg"
+    ],
+    "properties": [
+      "Conjunto ultra completo Oficina Master cobrindo mais de 95% das manutenções mecânicas veiculares",
+      "Inclui 12 chaves combinadas com catraca de acionamento ultrarrápido",
+      "3 soquetes de impacto coloridos protegidos para aperto e desaperto em rodas de liga leve sem riscos",
+      "Maleta com berço anatômico que mantém cada uma das 178 peças precisamente travada em sua posição"
+    ],
+    "instructions": [
+      "Selecione o encaixe e tamanho exatos do parafuso para evitar folgas ou desgaste das faces.",
+      "Limpe e seque as ferramentas após o trabalho e mantenha a maleta fechada com os fechos metálicos travados."
+    ],
+    "application": "Oficinas Mecânicas Automotivas, Centros Automotivos, Frotas, Indústrias e Manutenção Pesada",
+    "featured": true,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/robust_5000r_1.png",
+    "images": [
+      "/images/products/robust_5000r_1.png",
+      "/images/products/robust_5000r_2.jpg",
+      "/images/products/robust_5000r_3.jpg"
+    ]
+  },
+  {
+    "id": "s20102001",
+    "name": "S20102001 CARRO ABERTO PARA FERRAMENTAS COM 1 GAVETA",
+    "brand": "gedore-robust",
+    "brandLabel": "Robust",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "maletas-carrinhos",
+    "categoryLabel": "Carros & Bancadas",
+    "code": "S20102001",
+    "technicalCode": "3370213",
+    "description": "Carro oficina aberto para ferramentas ROBUST com 1 gaveta trancável com corrediças telescópicas, 2 prateleiras reforçadas e 4 rodas robustas.",
+    "detailedDescription": "O Carro Aberto para Ferramentas ROBUST S20102001 (Código 3370213) é construído em chapa de aço estrutural reforçada com pintura eletrostática a pó de alta durabilidade. Oferece 1 gaveta central espaçosa com fechadura a chave e corrediças telescópicas com esferas, complementada por 2 amplas bandejas/prateleiras com bordas anti-queda e 4 rodízios reforçados (2 giratórios com freio e 2 fixos) para movimentação ágil e segura em oficinas.",
+    "technicalSpecs": {
+      "codigoGedore": "3370213",
+      "referencia": "S20102001",
+      "dimensoes": "761 x 441 x 132 mm (embalagem) / montado ~ 800 x 450 x 860 mm",
+      "pesoKg": "21,500 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Descrição",
+        "Dimensões",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3370213",
+          "S20102001",
+          "Carro Aberto com 1 Gaveta",
+          "761 x 441 x 132 mm",
+          "21,5 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3370213",
+      "Referência: S20102001",
+      "Quantidade: 1 peça",
+      "Gaveta: 1 gaveta com corrediças telescópicas e fechadura com chave",
+      "Prateleiras: 2 bandejas reforçadas com bordas de proteção",
+      "Rodas: 4 rodas de alto rendimento (2 giratórias com freio e 2 fixas)",
+      "Pintura: Eletrostática a pó de alta resistência a riscos e solventes",
+      "Peso: 21,500 kg"
+    ],
+    "properties": [
+      "Corrediças telescópicas na gaveta que deslizam suavemente sob carga",
+      "Fechamento seguro com chave na gaveta para guarda de ferramentas sensíveis",
+      "Puxador ergonômico lateral e rodízios com trava que garantem estabilidade estática em piso irregular"
+    ],
+    "instructions": [
+      "Monte as rodas e prateleiras seguindo o manual com os parafusos devidamente apertados.",
+      "Distribua a carga de modo uniforme entre as bandejas e acione a trava das rodas ao trabalhar parado."
+    ],
+    "application": "Oficinas Mecânicas, Funilaria, Linhas de Montagem, Manutenção Industrial e Garagens Profissionais",
+    "featured": true,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/robust_s20102001_1.jpeg",
+    "images": [
+      "/images/products/robust_s20102001_1.jpeg",
+      "/images/products/robust_s20102001_2.jpeg",
+      "/images/products/robust_s20102001_3.jpeg",
+      "/images/products/robust_s20102001_4.jpeg",
+      "/images/products/robust_s20102001_5.jpeg"
+    ]
+  },
+  {
+    "id": "s36681239",
+    "name": "S36681239 JOGO DE ALICATES UNIVERSAL, CORTE E BICO 3 Peças",
+    "brand": "gedore-robust",
+    "brandLabel": "Robust",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "automotivo",
+    "categoryLabel": "Alicates & Oficina",
+    "code": "S36681239",
+    "technicalCode": "3370086",
+    "description": "Jogo de 3 alicates essenciais ROBUST forjados em aço especial composto por alicate universal 8\", corte diagonal 6\" e meia-cana bico reto 6\".",
+    "detailedDescription": "O Jogo de Alicates ROBUST S36681239 (Código 3370086) reúne as três ferramentas manuais de corte e preensão mais utilizadas em manutenções em geral: Alicate Universal de 8\", Alicate de Corte Diagonal de 6\" e Alicate Bico Meia-Cana Reto de 6\". Forjados em aço especial temperado por indução nos gumes de corte e equipados com empunhaduras ergonômicas bimatéria com abas protetoras.",
+    "composition": [
+      "1 Alicate universal 8\" (200 mm)",
+      "1 Alicate corte diagonal 6\" (160 mm)",
+      "1 Alicate bico meia-cana reto 6\" (160 mm)"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3370086",
+      "referencia": "S36681239",
+      "pecas": "3",
+      "pesoKg": "0,695 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Peças",
+        "Composição",
+        "Dimensões Embalagem",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3370086",
+          "S36681239",
+          "3 peças",
+          "Universal 8\", Corte 6\", Bico 6\"",
+          "250 x 230 x 34 mm",
+          "0,695 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3370086",
+      "Referência: S36681239",
+      "Quantidade: 3 peças",
+      "Material: Aço especial temperado",
+      "Empunhadura: Bimatéria antiderrapante ergonômica com abas protetoras",
+      "Tratamento dos gumes: Tratamento térmico por indução",
+      "Peso: 0,695 kg"
+    ],
+    "properties": [
+      "Gumes temperados por indução que cortam fios de cobre, arames e cabos elétricos com facilidade",
+      "Articulação suave com rebite de precisão que não folga com o uso",
+      "Cabos ergonômicos que proporcionam pega firme e proteção para as mãos"
+    ],
+    "instructions": [
+      "Use o alicate adequado para cada diâmetro de fio e nunca martele nos braços da ferramenta.",
+      "Mantenha a articulação lubrificada periodicamente com óleo fino para evitar corrosão."
+    ],
+    "application": "Oficinas Mecânicas, Manutenção Elétrica, Instalações Prediais e Reparos em Geral",
+    "featured": false,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/robust_s36681239_1.jpg",
+    "images": [
+      "/images/products/robust_s36681239_1.jpg",
+      "/images/products/robust_s36681239_2.jpeg",
+      "/images/products/robust_s36681239_3.jpeg"
+    ]
+  },
+  {
+    "id": "s38001004",
+    "name": "S38001004 JOGO DE CHAVES DE FENDA E PHILLIPS 4 Peças",
+    "brand": "gedore-robust",
+    "brandLabel": "Robust",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Chaves Manuais",
+    "code": "S38001004",
+    "technicalCode": "3370222",
+    "description": "Jogo de chaves de fenda simples e cruzada (Phillips) ROBUST com 4 peças em aço cromo-vanádio com ponta magnetizada e cabo ergonômico.",
+    "detailedDescription": "O Jogo de Chaves de Fenda e Phillips ROBUST S38001004 (Código 3370222) com 4 peças foi desenvolvido para fornecer torque máximo e conforto ergonômico. Fabricadas com hastes em liga de Cromo-Vanádio de alta tenacidade e pontas imantadas com acabamento escurecido, as chaves garantem encaixe preciso na fenda dos parafusos evitando espanamento.",
+    "composition": [
+      "2 Chaves de fenda simples: 5x100 mm e 6x150 mm",
+      "2 Chaves de fenda cruzada (Phillips): PH1x100 mm e PH2x150 mm"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3370222",
+      "referencia": "S38001004",
+      "pecas": "4",
+      "pesoKg": "0,350 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Peças",
+        "Medidas Inclusas",
+        "Material Haste"
+      ],
+      "rows": [
+        [
+          "3370222",
+          "S38001004",
+          "4 peças",
+          "Fenda 5x100, 6x150 | PH1x100, PH2x150",
+          "Aço Cromo-Vanádio"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3370222",
+      "Referência: S38001004",
+      "Quantidade: 4 peças",
+      "Haste: Aço cromo-vanádio temperado com ponta fosfatizada magnética",
+      "Cabo: Polipropileno anatômico de alto torque",
+      "Peso: 0,350 kg"
+    ],
+    "properties": [
+      "Pontas magnéticas escurecidas que seguram o parafuso facilitando a fixação em locais de difícil acesso",
+      "Cabo com perfil anatômico que transmite alto torque com menor esforço manual",
+      "Haste cilíndrica com resistência superior à torção"
+    ],
+    "instructions": [
+      "Utilize a ponta que corresponda exatamente à largura e espessura do parafuso.",
+      "Não utilize como talhadeira ou pé-de-cabra."
+    ],
+    "application": "Manutenção Automotiva, Montagem de Móveis, Eletrodomésticos e Serviços Gerais",
+    "featured": false,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/robust_s38001004_1.jpg",
+    "images": [
+      "/images/products/robust_s38001004_1.jpg",
+      "/images/products/robust_s38001004_2.jpg",
+      "/images/products/robust_s38001004_3.jpg",
+      "/images/products/robust_s38001004_4.jpg"
+    ]
+  },
+  {
+    "id": "s38001006",
+    "name": "S38001006 JOGO DE CHAVES DE FENDA E PHILLIPS 6 Peças",
+    "brand": "gedore-robust",
+    "brandLabel": "Robust",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Chaves Manuais",
+    "code": "S38001006",
+    "technicalCode": "3370223",
+    "description": "Jogo de chaves de fenda simples e Phillips ROBUST com 6 peças em aço cromo-vanádio com ponta magnetizada e ampla variedade de medidas.",
+    "detailedDescription": "O Jogo de Chaves ROBUST S38001006 (Código 3370223) com 6 peças oferece o conjunto essencial completo para profissionais e hobbistas. Composto por 4 chaves de fenda simples e 2 chaves Phillips com hastes forjadas em aço Cromo-Vanádio, pontas magnetizadas de precisão e cabos ergonômicos de alta aderência.",
+    "composition": [
+      "4 Chaves de fenda simples: 3x75 mm, 5x100 mm, 6x100 mm e 6x150 mm",
+      "2 Chaves de fenda cruzada (Phillips): PH1x75 mm e PH2x100 mm"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3370223",
+      "referencia": "S38001006",
+      "pecas": "6",
+      "pesoKg": "0,480 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Peças",
+        "Medidas Inclusas",
+        "Material Haste"
+      ],
+      "rows": [
+        [
+          "3370223",
+          "S38001006",
+          "6 peças",
+          "Fenda 3x75, 5x100, 6x100, 6x150 | PH1x75, PH2x100",
+          "Aço Cromo-Vanádio"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3370223",
+      "Referência: S38001006",
+      "Quantidade: 6 peças",
+      "Material da haste: Aço Cromo-Vanádio de alta tenacidade",
+      "Pontas: Magnetizadas e escurecidas de alta concentricidade",
+      "Cabos: Ergonômicos antiderrapantes com identificação de medida",
+      "Peso: 0,480 kg"
+    ],
+    "properties": [
+      "Cobre parafusos pequenos de 3 mm até parafusos estruturais de 6 mm e Phillips PH1/PH2",
+      "Magnetização de fábrica para posicionar parafusos sem queda",
+      "Cabo anatômico projetado para evitar calos e proporcionar torque uniforme"
+    ],
+    "instructions": [
+      "Mantenha a ponta da chave limpa e sem resíduos de graxa antes do aperto.",
+      "Não use em circuitos energizados."
+    ],
+    "application": "Oficinas Mecânicas, Marcenaria, Eletrodomésticos, Manutenção Predial e Hobby",
+    "featured": false,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/robust_s38001006_1.jpg",
+    "images": [
+      "/images/products/robust_s38001006_1.jpg",
+      "/images/products/robust_s38001006_2.jpg",
+      "/images/products/robust_s38001006_3.jpg",
+      "/images/products/robust_s38001006_4.jpg"
+    ]
+  },
+  {
+    "id": "s38990000",
+    "name": "S38990000 MAGNETIZADOR E DESMAGNETIZADOR DE CHAVES",
+    "brand": "gedore-robust",
+    "brandLabel": "Robust",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Acessórios de Aperto",
+    "code": "S38990000",
+    "technicalCode": "3370210",
+    "description": "Magnetizador e desmagnetizador compacto ROBUST para chaves de fenda, bits e pontas metálicas com ímãs de neodímio integrados.",
+    "detailedDescription": "O Magnetizador e Desmagnetizador ROBUST S38990000 (Código 3370210) é um dispositivo compacto indispensável para qualquer bancada ou caixa de ferramentas. Permite magnetizar instantaneamente chaves de fenda, chaves Torx e bits para reter parafusos, ou desmagnetizá-los quando for trabalhar próximo a componentes eletrônicos sensíveis à atração magnética.",
+    "technicalSpecs": {
+      "codigoGedore": "3370210",
+      "referencia": "S38990000",
+      "pecas": "1",
+      "pesoKg": "0,120 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Função",
+        "Material Corpo",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3370210",
+          "S38990000",
+          "Magnetizar (+) e Desmagnetizar (-)",
+          "Termoplástico de alto impacto",
+          "0,120 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3370210",
+      "Referência: S38990000",
+      "Quantidade: 1 peça",
+      "Mecanismo: Ímãs de alta densidade magnética permanentes (não requer pilhas ou energia)",
+      "Corpo: Termoplástico resistente a solventes e quedas",
+      "Peso: 0,120 kg"
+    ],
+    "properties": [
+      "Ação imediata: basta passar a haste da chave no canal (+) para magnetizar ou no canal (-) para desmagnetizar",
+      "Não consome bateria nem eletricidade; opera com magnetismo permanente",
+      "Tamanho de bolso prático para transporte em qualquer maleta ou cinto de ferramentas"
+    ],
+    "instructions": [
+      "Para magnetizar: deslize a ponta da ferramenta repetidamente pela cavidade (+).",
+      "Para desmagnetizar: passe a ponta pelas canaletas escalonadas da cavidade (-)."
+    ],
+    "application": "Montagem de Computadores, Eletrônica Automotiva, Painéis Elétricos e Oficinas",
+    "featured": false,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/robust_s38990000_1.jpeg",
+    "images": [
+      "/images/products/robust_s38990000_1.jpeg",
+      "/images/products/robust_s38990000_2.jpeg",
+      "/images/products/robust_s38990000_3.jpeg"
+    ]
+  },
+  {
+    "id": "s68900210",
+    "name": "S68900210 TORQUÍMETRO DE ESTALO 1/2\" 28-210 Nm",
+    "brand": "gedore-robust",
+    "brandLabel": "Robust",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Torquímetros",
+    "code": "S68900210",
+    "technicalCode": "3370171",
+    "description": "Torquímetro de estalo regulável 1/2\" ROBUST com capacidade de 28 a 210 N·m (2,9 a 21,4 kgf·m), catraca reversível e estojo plástico protetor.",
+    "detailedDescription": "O Torquímetro de Estalo 1/2\" ROBUST S68900210 (Código 3370171) do Grupo GEDORE é projetado para garantir o aperto com torque exato em rodas automotivas, parafusos de cabeçote, pivôs e mancais mecânicos. Com faixa ampla de 28 a 210 N·m, corpo em aço especial cromado, mecanismo de catraca reversível com alavanca de inversão e trava de ajuste na extremidade do cabo, acompanha estojo tipo estojo rígido para conservação.",
+    "technicalSpecs": {
+      "codigoGedore": "3370171",
+      "referencia": "S68900210",
+      "encaixe": "1/2\"",
+      "faixaNm": "28 - 210 N·m",
+      "dimensoes": "75 x 90 x 495 mm",
+      "pesoKg": "1,800 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Encaixe Quadrado",
+        "Faixa de Torque",
+        "Medidas (mm)",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3370171",
+          "S68900210",
+          "1/2\"",
+          "28 a 210 N·m (2,9 a 21,4 kgf·m)",
+          "75 x 90 x 495 mm",
+          "1,800 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3370171",
+      "Referência: S68900210",
+      "Quantidade: 1 peça",
+      "Encaixe quadrado: 1/2\" com esfera de retenção",
+      "Faixa de torque: 28 a 210 N·m",
+      "Catraca: Reversível integrada para agilizar operações",
+      "Estojo: Estojo de plástico rígido sob medida incluso",
+      "Peso: 1,800 kg"
+    ],
+    "properties": [
+      "Disparo sonoro e tátil perceptível ('clique') imediatamente ao atingir o torque configurado",
+      "Escala gravada no corpo com ajuste micrométrico no punho giratório",
+      "Trava de segurança na extremidade da empunhadura para retenção do ajuste"
+    ],
+    "instructions": [
+      "Solte a trava no pomo traseiro, gire a manopla até o torque indicado e trave novamente.",
+      "Após o uso, destrave e retorne ao valor mínimo de 28 N·m para preservar a mola interna."
+    ],
+    "application": "Troca de Pneus, Rodas Automotivas, Suspensão, Motores e Manutenção em Geral",
+    "featured": true,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/robust_s68900210_1.jpg",
+    "images": [
+      "/images/products/robust_s68900210_1.jpg",
+      "/images/products/robust_s68900210_2.jpeg",
+      "/images/products/robust_s68900210_3.jpeg",
+      "/images/products/robust_s68900210_4.jpeg",
+      "/images/products/robust_s68900210_5.jpg"
+    ]
+  },
+  {
+    "id": "s49001039",
+    "name": "S49001039 JOGO DE CHAVES, BITS E SOQUETES 1/4\" 39 Peças",
+    "brand": "gedore-robust",
+    "brandLabel": "Robust",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "jogos-ferramentas",
+    "categoryLabel": "Jogos de Ferramentas",
+    "code": "S49001039",
+    "technicalCode": "3370168",
+    "description": "Jogo de chaves de fenda, bits e soquetes 1/4\" ROBUST com 39 peças em estojo compacto com catraca de alta velocidade e chaves de precisão.",
+    "detailedDescription": "O Jogo ROBUST S49001039 (Código 3370168) com 39 peças é um conjunto multiuso ideal para apertos de precisão em informática, painéis elétricos, eletrodomésticos e mecânica leve. Contém mini catraca reversível para bits e soquetes 1/4\", soquetes sextavados de 4 a 12 mm, chaves de precisão, adaptador e ampla variedade de bits (Fenda, Phillips, Pozidriv e Torx) organizados em estojo transparente rígido.",
+    "composition": [
+      "Soquetes sextavados 1/4\": 4, 5, 6, 7, 8, 9, 10, 11 e 12 mm",
+      "Mini catraca reversível 1/4\" para bits e soquetes",
+      "Cabo com quadrado 1/4\" e adaptador para bits",
+      "Chaves de fenda de precisão e bits Phillips, Fenda, Pozidriv e Torx",
+      "Estojo organizador plástico com tampa transparente e trava"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3370168",
+      "referencia": "S49001039",
+      "pecas": "39",
+      "pesoKg": "0,850 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Peças",
+        "Encaixe Principal",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3370168",
+          "S49001039",
+          "39 peças",
+          "1/4\" sextavado e bits",
+          "0,850 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3370168",
+      "Referência: S49001039",
+      "Quantidade: 39 peças",
+      "Material: Aço Cromo-Vanádio e Aço S2",
+      "Estojo: Plástico rígido com compartimentos anatômicos",
+      "Peso: 0,850 kg"
+    ],
+    "properties": [
+      "Conjunto ultra versátil que cabe no porta-luvas, gaveta de bancada ou caixa de ferramentas",
+      "Mini catraca robusta com ângulo reduzido de manobra para espaços exíguos",
+      "Bits e soquetes tratados termicamente contra desgaste dos cantos"
+    ],
+    "instructions": [
+      "Encaixe o bit firmemente no adaptador magnético antes do aperto.",
+      "Guarde todas as peças nos compartimentos identificados após o uso."
+    ],
+    "application": "Montagem de Móveis, Eletrônica, Eletrodomésticos, Ciclismo e Pequenos Reparos",
+    "featured": false,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/robust_s49001039_1.jpeg",
+    "images": [
+      "/images/products/robust_s49001039_1.jpeg",
+      "/images/products/robust_s49001039_2.jpeg",
+      "/images/products/robust_s49001039_3.jpeg",
+      "/images/products/robust_s49001039_4.jpeg"
+    ]
+  },
+  {
+    "id": "s28202200",
+    "name": "S28202200 ALICATE DESENCAPADOR DE FIOS AUTOMÁTICO 8\"",
+    "brand": "gedore-robust",
+    "brandLabel": "Robust",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "automotivo",
+    "categoryLabel": "Alicates & Elétrica",
+    "code": "S28202200",
+    "technicalCode": "3370163",
+    "description": "Alicate automático desencapador, cortador e crimpador de fios 8\" ROBUST com ajuste automático de bitola para fios de 0,2 a 6,0 mm².",
+    "detailedDescription": "O Alicate Desencapador Automático 8\" ROBUST S28202200 (Código 3370163) executa 3 funções fundamentais com extrema rapidez: desencapar, cortar e crimpar terminais. Equipado com mordentes de aço temperado que se ajustam automaticamente à bitola do fio (de 0,2 a 6,0 mm² / 24 a 10 AWG) sem romper os filamentos de cobre, batente de comprimento ajustável e lâmina de corte integrada.",
+    "technicalSpecs": {
+      "codigoGedore": "3370163",
+      "referencia": "S28202200",
+      "capacidade": "0,2 a 6,0 mm² (24 a 10 AWG)",
+      "comprimento": "8\" (205 mm)",
+      "pesoKg": "0,320 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Capacidade de Decapagem",
+        "Funções",
+        "Tamanho",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3370163",
+          "S28202200",
+          "0,2 a 6,0 mm² (24-10 AWG)",
+          "Desencapar, Cortar e Crimpar",
+          "8\" (205 mm)",
+          "0,320 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3370163",
+      "Referência: S28202200",
+      "Quantidade: 1 peça",
+      "Capacidade de decapagem: Fios de 0,2 a 6,0 mm² (24 a 10 AWG)",
+      "Crimpagem: Terminais isolados e não isolados de 0,5 a 6,0 mm² (22 a 10 AWG)",
+      "Comprimento: 205 mm (8 pol)",
+      "Cabo: Ergonômico em termoplástico injetado antiderrapante",
+      "Peso: 0,320 kg"
+    ],
+    "properties": [
+      "Desencapa a capa isolante em um único movimento de aperto sem machucar os fios condutores",
+      "Batente limitador regulável para decapagens padronizadas na mesma extensão",
+      "Crimpa terminais elétricos automotivos comuns com matriz de prensagem integrada no cabo"
+    ],
+    "instructions": [
+      "Ajuste o limitador para o comprimento desejado, insira o fio entre os mordentes e aperte o cabo até o desarme.",
+      "Use o parafuso micrométrico superior se for trabalhar com cabos de isolação muito fina ou espessa."
+    ],
+    "application": "Instalação de Som e Acessórios Automotivos, Elétrica Predial, Chicotes e Painéis de Comando",
+    "featured": true,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/robust_s28202200_1.png",
+    "images": [
+      "/images/products/robust_s28202200_1.png",
+      "/images/products/robust_s28202200_2.png",
+      "/images/products/robust_s28202200_3.png",
+      "/images/products/robust_s28202200_4.png"
+    ]
+  },
+  {
+    "id": "s28904260",
+    "name": "S28904260 ALICATE REBITADOR MANUAL 9,5\"",
+    "brand": "gedore-robust",
+    "brandLabel": "Robust",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "automotivo",
+    "categoryLabel": "Fixação & Funilaria",
+    "code": "S28904260",
+    "technicalCode": "3370167",
+    "description": "Alicate rebitador manual profissional ROBUST tipo alavanca com 4 bicos intercambiáveis para rebites de repuxo de 2,4 a 4,8 mm e chave de troca.",
+    "detailedDescription": "O Alicate Rebitador Manual 9,5\" ROBUST S28904260 (Código 3370167) é a ferramenta ideal para unir chapas metálicas, perfis de alumínio, calhas e peças plásticas através de rebites de repuxo cegos. Forjado em chapa de aço de alta resistência com ponteira tratada e mordentes em aço endurecido, acompanha 4 pontas/bicos intercambiáveis (2,4; 3,2; 4,0 e 4,8 mm) alojadas no próprio corpo e chave de aperto.",
+    "technicalSpecs": {
+      "codigoGedore": "3370167",
+      "referencia": "S28904260",
+      "bicos": "2,4 mm, 3,2 mm, 4,0 mm e 4,8 mm",
+      "tamanho": "9,5\" (240 mm)",
+      "pesoKg": "0,520 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Bicos Inclusos",
+        "Comprimento",
+        "Material",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3370167",
+          "S28904260",
+          "2,4 mm (3/32\"), 3,2 mm (1/8\"), 4,0 mm (5/32\"), 4,8 mm (3/16\")",
+          "9,5\" (240 mm)",
+          "Aço estampado reforçado",
+          "0,520 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3370167",
+      "Referência: S28904260",
+      "Quantidade: 1 peça",
+      "Capacidade de rebites: Diâmetros de 2,4 mm, 3,2 mm, 4,0 mm e 4,8 mm",
+      "Comprimento: 240 mm (9,5 pol)",
+      "Acessórios: 4 bicos montados no corpo e chave especial de aperto inclusa",
+      "Empunhadura: Revestida em vinil plastificado antiderrapante com trava de fechamento",
+      "Peso: 0,520 kg"
+    ],
+    "properties": [
+      "Mordentes temperados de alta aderência que puxam o mandril do rebite sem escorregar",
+      "Troca rápida dos bicos com a chave acoplada no cabo da ferramenta",
+      "Trava na extremidade do cabo que mantém o alicate fechado para transporte seguro"
+    ],
+    "instructions": [
+      "Fure a chapa no diâmetro correto do rebite, instale o bico correspondente no alicate e insira a haste do rebite.",
+      "Pressione a alavanca até o rompimento do mandril de repuxo."
+    ],
+    "application": "Funilaria Automotiva, Esquadrias de Alumínio, Calhas, Toldos e Manutenção Geral",
+    "featured": false,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/robust_s28904260_1.jpeg",
+    "images": [
+      "/images/products/robust_s28904260_1.jpeg",
+      "/images/products/robust_s28904260_2.png",
+      "/images/products/robust_s28904260_3.png"
+    ]
+  },
+  {
+    "id": "s05125008",
+    "name": "S05125008 JOGO DE CHAVES FIXAS 8 Peças (6x7 a 20x22 mm)",
+    "brand": "gedore-robust",
+    "brandLabel": "Robust",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Chaves Fixas",
+    "code": "S05125008",
+    "technicalCode": "3370012",
+    "description": "Jogo de chaves fixas de duas bocas ROBUST com 8 peças de 6x7 a 20x22 mm forjadas em aço cromo-vanádio com acabamento fosco acetinado.",
+    "detailedDescription": "O Jogo de Chaves Fixas ROBUST S05125008 (Código 3370012) com 8 peças é fabricado em aço Cromo-Vanádio de alta qualidade pelo Grupo GEDORE. Cada chave possui duas bocas abertas com inclinação de 15° para facilitar o reposicionamento rápido em parafusos sextavados e quadrados em locais com restrição de giro.",
+    "composition": [
+      "8 Chaves fixas de duas bocas: 6x7, 8x9, 10x11, 12x13, 14x15, 16x17, 18x19 e 20x22 mm",
+      "Suporte organizador plástico tipo estojo com trava"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3370012",
+      "referencia": "S05125008",
+      "pecas": "8",
+      "faixaMedidas": "6x7 a 20x22 mm",
+      "pesoKg": "0,890 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Peças",
+        "Medidas",
+        "Acabamento"
+      ],
+      "rows": [
+        [
+          "3370012",
+          "S05125008",
+          "8 peças",
+          "6x7, 8x9, 10x11, 12x13, 14x15, 16x17, 18x19, 20x22 mm",
+          "Cromado mate acetinado"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3370012",
+      "Referência: S05125008",
+      "Quantidade: 8 peças",
+      "Medidas: 6x7, 8x9, 10x11, 12x13, 14x15, 16x17, 18x19 e 20x22 mm",
+      "Material: Aço Cromo-Vanádio forjado",
+      "Acabamento: Cromado fosco acetinado",
+      "Peso: 0,890 kg"
+    ],
+    "properties": [
+      "Bocas com perfil plano e inclinação de 15° que agiliza o encaixe e a reversão de giro",
+      "Gravação em relevo das medidas em ambas as extremidades para identificação imediata",
+      "Acompanha suporte plástico rígido com alça para pendurar em painel"
+    ],
+    "instructions": [
+      "Utilize a medida exata da porca para não arredondar as arestas.",
+      "Não prolongue a chave com tubos para evitar ultrapassar o torque nominal do aço."
+    ],
+    "application": "Oficinas Mecânicas, Tubulações Hidráulicas, Bicicletarias e Manutenção Industrial",
+    "featured": false,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/robust_s05125008_1.jpeg",
+    "images": [
+      "/images/products/robust_s05125008_1.jpeg",
+      "/images/products/robust_s05125008_2.jpeg"
+    ]
+  },
+  {
+    "id": "s01185008",
+    "name": "S01185008 JOGO DE CHAVES ESTRELA 8 Peças (6x7 a 20x22 mm)",
+    "brand": "gedore-robust",
+    "brandLabel": "Robust",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Chaves Estrela",
+    "code": "S01185008",
+    "technicalCode": "3370026",
+    "description": "Jogo de chaves estrela de duas bocas estriadas ROBUST com 8 peças de 6x7 a 20x22 mm forjadas em aço cromo-vanádio com cabeças inclinadas.",
+    "detailedDescription": "O Jogo de Chaves Estrela ROBUST S01185008 (Código 3370026) reúne 8 chaves com perfil estriado de 12 faces que abraça completamente o parafuso sextavado, distribuindo a força de aperto sem danificar as quinas. Com cabeças rebaixadas e inclinadas em relação ao corpo, protegem as mãos do mecânico contra atrito com a superfície de trabalho.",
+    "composition": [
+      "8 Chaves estrela: 6x7, 8x9, 10x11, 12x13, 14x15, 16x17, 18x19 e 20x22 mm",
+      "Suporte plástico organizador com trava de fixação"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3370026",
+      "referencia": "S01185008",
+      "pecas": "8",
+      "faixaMedidas": "6x7 a 20x22 mm",
+      "pesoKg": "1,150 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Peças",
+        "Medidas",
+        "Acabamento"
+      ],
+      "rows": [
+        [
+          "3370026",
+          "S01185008",
+          "8 peças",
+          "6x7, 8x9, 10x11, 12x13, 14x15, 16x17, 18x19, 20x22 mm",
+          "Cromado mate acetinado"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3370026",
+      "Referência: S01185008",
+      "Quantidade: 8 peças",
+      "Medidas: 6x7, 8x9, 10x11, 12x13, 14x15, 16x17, 18x19 e 20x22 mm",
+      "Perfil: Estriado 12 faces Unit Drive",
+      "Material: Aço Cromo-Vanádio forjado",
+      "Acabamento: Cromado mate acetinado",
+      "Peso: 1,150 kg"
+    ],
+    "properties": [
+      "Cabeças curvadas que desviam a mão de obstáculos planos e componentes quentes",
+      "Perfil estriado que permite aperto firme com alto torque em porcas flangeadas e sextavadas",
+      "Forjadas com espessura otimizada para entrar em locais de difícil acesso"
+    ],
+    "instructions": [
+      "Encaixe a boca estriada totalmente sobre a porca antes de exercer tração.",
+      "Armazene sempre no suporte para manter a identificação de medidas rápida."
+    ],
+    "application": "Oficinas Mecânicas Automotivas, Linha Pesada, Manutenção Industrial e Agrícola",
+    "featured": false,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/robust_s01185008_1.jpeg",
+    "images": [
+      "/images/products/robust_s01185008_1.jpeg",
+      "/images/products/robust_s01185008_2.jpeg"
+    ]
+  },
+  {
+    "id": "s09105012",
+    "name": "S09105012 JOGO DE CHAVES COMBINADAS 12 Peças (6 a 22 mm)",
+    "brand": "gedore-robust",
+    "brandLabel": "Robust",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Chaves Combinadas",
+    "code": "S09105012",
+    "technicalCode": "3370080",
+    "description": "Jogo de chaves combinadas (boca fixa e estrela estriada) ROBUST com 12 peças de 6 a 22 mm forjadas em aço cromo-vanádio.",
+    "detailedDescription": "O Jogo de Chaves Combinadas ROBUST S09105012 (Código 3370080) é um clássico de produtividade nas bancadas profissionais. Contém 12 chaves combinadas com uma ponta fixa aberta (para aproximação rápida) e uma ponta estrela estriada (para aperto final de alto torque), cobrindo de 6 mm até 22 mm forjadas em aço Cromo-Vanádio com suporte prático.",
+    "composition": [
+      "12 Chaves combinadas: 6, 7, 8, 9, 10, 11, 12, 13, 14, 17, 19 e 22 mm",
+      "Suporte plástico organizador com trava para parede ou bancada"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3370080",
+      "referencia": "S09105012",
+      "pecas": "12",
+      "faixaMedidas": "6 a 22 mm",
+      "pesoKg": "1,100 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Peças",
+        "Medidas Inclusas",
+        "Acabamento"
+      ],
+      "rows": [
+        [
+          "3370080",
+          "S09105012",
+          "12 peças",
+          "6, 7, 8, 9, 10, 11, 12, 13, 14, 17, 19 e 22 mm",
+          "Cromado mate acetinado"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3370080",
+      "Referência: S09105012",
+      "Quantidade: 12 peças",
+      "Medidas: 6, 7, 8, 9, 10, 11, 12, 13, 14, 17, 19 e 22 mm",
+      "Material: Aço Cromo-Vanádio de alta resistência mecânica",
+      "Acabamento: Cromado mate acetinado antiferrugem",
+      "Peso: 1,100 kg"
+    ],
+    "properties": [
+      "Combina velocidade na extremidade aberta com máxima segurança de aperto na extremidade estrela",
+      "Boca estrela com inclinação de 15° para facilitar o manuseio livre de obstáculos",
+      "Comprimento anatômico balanceado para aplicação de torque adequado à bitola do parafuso"
+    ],
+    "instructions": [
+      "Use o lado fixo para rosquear rápido e mude para o lado estrela para o aperto final com torque total.",
+      "Não utilize martelos nos cabos das chaves."
+    ],
+    "application": "Mecânica Automotiva, Motocicletas, Manutenção Predial, Máquinas e Equipamentos",
+    "featured": true,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/robust_s09105012_1.jpeg",
+    "images": [
+      "/images/products/robust_s09105012_1.jpeg",
+      "/images/products/robust_s09105012_2.jpeg",
+      "/images/products/robust_s09105012_3.jpeg",
+      "/images/products/robust_s09105012_4.jpeg"
+    ]
+  },
+  {
+    "id": "s09105025",
+    "name": "S09105025 JOGO DE CHAVES COMBINADAS 25 Peças (6 a 32 mm)",
+    "brand": "gedore-robust",
+    "brandLabel": "Robust",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "soquetes-chaves",
+    "categoryLabel": "Chaves Combinadas",
+    "code": "S09105025",
+    "technicalCode": "3370081",
+    "description": "Jogo completo de chaves combinadas ROBUST com 25 peças cobrindo de 6 a 32 mm forjadas em aço cromo-vanádio com estojo em lona reforçada.",
+    "detailedDescription": "O Jogo de Chaves Combinadas ROBUST S09105025 (Código 3370081) é o conjunto mais amplo e completo da linha, oferecendo 25 chaves combinadas em sequência contínua de 6 mm até a medida pesada de 32 mm. Acompanha bolsa/enrolador em lona reforçada com ilhoses metálicos para pendurar na parede da oficina ou enrolar para transporte fácil.",
+    "composition": [
+      "25 Chaves combinadas: 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 30 e 32 mm",
+      "Estojo enrolável em lona reforçada de alta durabilidade com bolsos individuais e ilhoses para fixação"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3370081",
+      "referencia": "S09105025",
+      "pecas": "25",
+      "faixaMedidas": "6 a 32 mm",
+      "pesoKg": "4,700 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Peças",
+        "Faixa de Medidas",
+        "Estojo Inclusivo",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3370081",
+          "S09105025",
+          "25 peças",
+          "6 a 32 mm (sem faltar nenhuma medida comum)",
+          "Bolsa em lona reforçada com ilhoses",
+          "4,700 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3370081",
+      "Referência: S09105025",
+      "Quantidade: 25 peças",
+      "Medidas: 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 30 e 32 mm",
+      "Material: Aço Cromo-Vanádio forjado",
+      "Acabamento: Cromado mate acetinado",
+      "Peso total: 4,700 kg"
+    ],
+    "properties": [
+      "Cobertura total de medidas métricas do 6 ao 32 mm para linhas leve, utilitária e pesada",
+      "Estojo de lona lavável com bolsos numerados que evita perda de chaves e facilita a inspeção visual",
+      "Extremidade estrela com perfil de 12 pontas inclinado a 15° para torque sem esforço"
+    ],
+    "instructions": [
+      "Mantenha as chaves organizadas na ordem crescente dentro do estojo para ganho de agilidade.",
+      "Seque as chaves antes de enrolar o estojo de lona caso tenham entrado em contato com água ou fluidos."
+    ],
+    "application": "Autocenters, Concessionárias, Frotas de Caminhões, Maquinário Pesado e Indústrias",
+    "featured": true,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/robust_s09105025_1.jpeg",
+    "images": [
+      "/images/products/robust_s09105025_1.jpeg",
+      "/images/products/robust_s09105025_2.jpeg",
+      "/images/products/robust_s09105025_3.jpeg",
+      "/images/products/robust_s09105025_4.jpeg"
+    ]
+  },
+  {
+    "id": "s45002094",
+    "name": "S45002094 JOGO DE SOQUETES E ACESSÓRIOS 1/4\" E 1/2\" 94 Peças",
+    "brand": "gedore-robust",
+    "brandLabel": "Robust",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "jogos-ferramentas",
+    "categoryLabel": "Jogos de Ferramentas",
+    "code": "S45002094",
+    "technicalCode": "3370224",
+    "description": "Jogo de soquetes sextavados e acessórios 1/4\" e 1/2\" ROBUST com 94 peças, 2 catracas reversíveis, soquetes longos e maleta de alto impacto.",
+    "detailedDescription": "O Jogo de Soquetes 94 Peças ROBUST S45002094 (Código 3370224) do Grupo GEDORE é um dos kits mais consagrados do mercado automotivo. Oferece cobertura dual de encaixes (1/4\" e 1/2\"), soquetes normais de 4 a 32 mm, soquetes longos de parede fina para velas e porcas profundas, chaves soquete e bits, acompanhado de 2 catracas reversíveis de alto rendimento com trava de liberação rápida em estojo termoplástico resistente.",
+    "composition": [
+      "Encaixe 1/4\": 13 soquetes sextavados (4 a 14mm), 8 longos (6 a 13mm), 18 chaves soquete (Hex, Fenda, PH, PZ e Torx), catraca reversível, 2 extensões (50 e 100mm), extensão flexível, cabo T, cabo com quadrado e junta universal",
+      "Encaixe 1/2\": 18 soquetes sextavados (10 a 32mm), 4 longos (14, 15, 17 e 19mm), 2 soquetes para vela (16 e 21mm), catraca reversível, 2 extensões (125 e 250mm), junta universal, adaptador 3 vias e adaptador para bits",
+      "15 Bits 5/16\" (Hex, Fenda, PH, PZ e Torx) + 3 Chaves L hexagonais (1,5, 2 e 2,5mm)",
+      "Maleta plástica reforçada com dobradiças e fechos de pressão metálicos"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3370224",
+      "referencia": "S45002094",
+      "pecas": "94",
+      "dimensoes": "380 x 280 x 75 mm",
+      "pesoKg": "6,200 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Peças",
+        "Encaixes",
+        "Dimensões Maleta",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3370224",
+          "S45002094",
+          "94 peças",
+          "1/4\" e 1/2\" sextavados",
+          "380 x 280 x 75 mm",
+          "6,200 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3370224",
+      "Referência: S45002094",
+      "Quantidade de peças: 94 peças",
+      "Encaixes quadrados: 1/4\" e 1/2\"",
+      "Material: Aço Cromo-Vanádio ROBUST / GEDORE",
+      "Acabamento: Cromado mate acetinado",
+      "Maleta: Termoplástico de alto impacto com fechos metálicos",
+      "Peso: 6,200 kg"
+    ],
+    "properties": [
+      "Duplo sistema de catracas rápidas para serviços leves e pesados em um único conjunto",
+      "Soquetes sextavados forjados com paredes reforçadas e perfil antiderrapante nos cantos",
+      "Maleta compacta e resistente que organiza perfeitamente todas as 94 ferramentas"
+    ],
+    "instructions": [
+      "Acione o botão traseiro da catraca para desacoplar soquetes e extensões com agilidade.",
+      "Não exceda a capacidade mecânica da catraca usando alavancas improvisadas."
+    ],
+    "application": "Oficinas Mecânicas Automotivas, Autocenters, Manutenção Industrial e Serviços em Campo",
+    "featured": true,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/robust_s45002094_1.jpeg",
+    "images": [
+      "/images/products/robust_s45002094_1.jpeg",
+      "/images/products/robust_s45002094_2.jpeg",
+      "/images/products/robust_s45002094_3.jpeg",
+      "/images/products/robust_s45002094_4.jpeg"
+    ]
+  },
+  {
+    "id": "s46002108",
+    "name": "S46002108 JOGO DE SOQUETES 1/4\" E 1/2\" COM PERFIL TORX 108 Peças",
+    "brand": "gedore-robust",
+    "brandLabel": "Robust",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "jogos-ferramentas",
+    "categoryLabel": "Jogos de Ferramentas",
+    "code": "S46002108",
+    "technicalCode": "3370226",
+    "description": "Jogo de soquetes 1/4\" e 1/2\" ROBUST com 108 peças incluindo perfil Torx fêmea (E-Torx), soquetes sextavados longos e normais até 32 mm em maleta.",
+    "detailedDescription": "O Jogo de Soquetes 108 Peças ROBUST S46002108 (Código 3370226) traz uma configuração ainda mais abrangente para a mecânica moderna ao incorporar 13 soquetes de perfil E-Torx (E4 a E24), fundamentais em motores de veículos europeus e modernos. Completo com catracas de 1/4\" e 1/2\", soquetes sextavados normais e longos, soquetes para velas, bits e acessórios forjados em aço Cromo-Vanádio.",
+    "composition": [
+      "Encaixe 1/4\": 13 soquetes sextavados (4 a 14mm), 8 longos (6 a 13mm), 5 E-Torx (E4, E5, E6, E7 e E8), 18 chaves soquete, catraca reversível, 2 extensões, cabo T, cabo quadrado e junta universal",
+      "Encaixe 1/2\": 17 soquetes sextavados (10 a 32mm), 5 longos (14, 15, 17, 19 e 22mm), 8 E-Torx (E10 a E24), 2 para vela (16 e 21mm), catraca, 2 extensões, junta universal, adaptador 3 vias e adaptador para bits",
+      "17 Bits 5/16\" (Hex, Fenda, PH, PZ e Torx) + 3 Chaves L hexagonais",
+      "Maleta plástica reforçada com travas de segurança"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3370226",
+      "referencia": "S46002108",
+      "pecas": "108",
+      "dimensoes": "380 x 287 x 76 mm",
+      "pesoKg": "6,330 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Peças",
+        "Destaque da Composição",
+        "Dimensões Maleta",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3370226",
+          "S46002108",
+          "108 peças",
+          "Inclui 13 Soquetes E-Torx (E4 a E24)",
+          "380 x 287 x 76 mm",
+          "6,330 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3370226",
+      "Referência: S46002108",
+      "Quantidade de peças: 108 peças",
+      "Encaixes quadrados: 1/4\" e 1/2\"",
+      "Soquetes especiais inclusos: Perfil Torx Fêmea E4, E5, E6, E7, E8, E10, E11, E12, E14, E16, E18, E20 e E24",
+      "Material: Aço Cromo-Vanádio forjado",
+      "Peso: 6,330 kg"
+    ],
+    "properties": [
+      "Excelente cobertura para motores modernos e suspensões que utilizam parafusos Torx externos",
+      "Soquetes longos de 1/2\" específicos para porcas de rodas e prisioneiros compridos",
+      "Mecanismos de catraca reversível precisos e resistentes"
+    ],
+    "instructions": [
+      "Utilize sempre a chave soquete correspondente ao perfil exato (sextavado ou Torx) para evitar desgaste prematuro.",
+      "Mantenha o conjunto armazenado na maleta original para controle visual das peças."
+    ],
+    "application": "Oficinas Mecânicas Automotivas, Linha Leve, Utilitários, SUVs e Manutenção Geral",
+    "featured": true,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/robust_s46002108_1.jpeg",
+    "images": [
+      "/images/products/robust_s46002108_1.jpeg",
+      "/images/products/robust_s46002108_2.png",
+      "/images/products/robust_s46002108_3.jpeg",
+      "/images/products/robust_s46002108_4.png"
+    ]
+  },
+  {
+    "id": "s45002138",
+    "name": "S45002138 JOGO DE SOQUETES E ACESSÓRIOS 1/4\", 3/8\" E 1/2\" 138 Peças",
+    "brand": "gedore-robust",
+    "brandLabel": "Robust",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "jogos-ferramentas",
+    "categoryLabel": "Jogos de Ferramentas",
+    "code": "S45002138",
+    "technicalCode": "3370225",
+    "description": "Jogo profissional de soquetes e acessórios ROBUST com 138 peças nos 3 encaixes quadrados (1/4\", 3/8\" e 1/2\"), chaves combinadas e maleta pesada.",
+    "detailedDescription": "O Jogo de Soquetes 138 Peças ROBUST S45002138 (Código 3370225) é a opção ideal para mecânicos e equipes de manutenção que necessitam de máxima flexibilidade operacional. Reúne três sistemas de catracas e soquetes (1/4\", 3/8\" e 1/2\"), chaves combinadas, soquetes para velas de ignição, perfil Torx E, bits variados e extensões de trabalho em maleta de alto impacto com fechos metálicos.",
+    "composition": [
+      "Encaixes 1/4\", 3/8\" e 1/2\" com 3 catracas reversíveis com botão de engate rápido",
+      "Ampla variedade de soquetes sextavados curtos e longos cobrindo de 4 a 32 mm",
+      "Soquetes de perfil E-Torx em diversas bitolas para motores modernos",
+      "Jogo de chaves combinadas forjadas em aço Cromo-Vanádio",
+      "Extensões, juntas universais, adaptadores de bits e chaves de vela magnéticas",
+      "Maleta plástica reforçada estruturada com dobradiças metálicas"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3370225",
+      "referencia": "S45002138",
+      "pecas": "138",
+      "dimensoes": "345 x 280 x 77 mm",
+      "pesoKg": "9,700 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Peças",
+        "Encaixes Quadrados",
+        "Dimensões Maleta",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3370225",
+          "S45002138",
+          "138 peças",
+          "1/4\", 3/8\" e 1/2\"",
+          "345 x 280 x 77 mm",
+          "9,700 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3370225",
+      "Referência: S45002138",
+      "Quantidade de peças: 138 peças",
+      "Encaixes: 1/4\", 3/8\" e 1/2\"",
+      "Material: Aço Cromo-Vanádio forjado de alto rendimento",
+      "Acabamento: Cromado fosco acetinado antiferrugem",
+      "Peso: 9,700 kg"
+    ],
+    "properties": [
+      "3 catracas independentes permitindo o trabalho em qualquer porte de componente sem adaptações",
+      "Combina soquetes com chaves combinadas em um único estojo móvel",
+      "Excelente durabilidade mecânica garantida pelo controle de qualidade do Grupo GEDORE"
+    ],
+    "instructions": [
+      "Use a catraca de 1/4\" para torques menores, 3/8\" para intermediários e 1/2\" para apertos pesados.",
+      "Mantenha a maleta travada durante o transporte para conservar a disposição das ferramentas."
+    ],
+    "application": "Oficinas Mecânicas, Manutenção de Frotas, Indústrias, Usinas e Socorro Mecânico Móvel",
+    "featured": true,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/robust_s45002138_1.jpeg",
+    "images": [
+      "/images/products/robust_s45002138_1.jpeg",
+      "/images/products/robust_s45002138_2.jpeg",
+      "/images/products/robust_s45002138_3.jpeg",
+      "/images/products/robust_s45002138_4.jpeg"
+    ]
+  },
+  {
+    "id": "robust-d26-22am",
+    "name": "D26-22 AM JOGO DE SOQUETES ESTRIADOS 1/2\" 22 Peças",
+    "brand": "gedore-robust",
+    "brandLabel": "Robust",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "jogos-ferramentas",
+    "categoryLabel": "Jogos de Ferramentas",
+    "code": "D26-22 AM",
+    "technicalCode": "060230",
+    "description": "Jogo de soquetes estriados 1/2\" ROBUST com 22 peças (18 soquetes de 10 a 32 mm + 4 acessórios) em estojo metálico de alta resistência.",
+    "detailedDescription": "O Jogo de Soquetes Estriados 1/2\" ROBUST D26-22 AM (Código 060230) é o tradicional kit de soquetes de 12 faces com estojo metálico em chapa de aço esmaltada. Composto por 18 soquetes estriados de 10 a 32 mm, catraca reversível de 1/2\", extensão, cabo T e junta universal, foi feito para durar décadas na rotina mais pesada de oficinas mecânicas e indústrias.",
+    "composition": [
+      "18 Soquetes estriados de 1/2\": 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 24, 27, 28, 30 e 32 mm",
+      "1 Catraca reversível de 1/2\"",
+      "1 Extensão de 1/2\" de 125 mm (5 pol)",
+      "1 Cabo T articulado de 1/2\"",
+      "1 Junta universal de 1/2\"",
+      "Estojo metálico reforçado em chapa de aço pintada com fecho"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "060230",
+      "referencia": "D26-22 AM",
+      "pecas": "22",
+      "estojo": "Metálico em chapa de aço",
+      "pesoKg": "4,800 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Peças",
+        "Composição Soquetes",
+        "Estojo",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "060230",
+          "D26-22 AM",
+          "22 peças",
+          "18 estriados 10 a 32 mm + 4 acessórios",
+          "Caixa metálica em chapa de aço",
+          "4,800 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 060230",
+      "Referência: D26-22 AM",
+      "Quantidade de peças: 22 peças",
+      "Encaixe quadrado: 1/2\"",
+      "Perfil dos soquetes: Estriado 12 faces",
+      "Material: Aço Cromo-Vanádio forjado",
+      "Estojo: Chapa de aço de alta espessura com berço metálico",
+      "Peso: 4,800 kg"
+    ],
+    "properties": [
+      "Estojo em chapa de aço de durabilidade incomparável que suporta quedas e solventes sem quebrar",
+      "Perfil estriado que agiliza o encaixe em parafusos sextavados a cada 30 graus",
+      "Acessórios forjados robustos com excelente resistência a altos torques manuais"
+    ],
+    "instructions": [
+      "Encaixe o soquete firmemente na catraca até o clique da esfera de trava.",
+      "Mantenha a caixa fechada e em local seco após o uso."
+    ],
+    "application": "Oficinas Mecânicas, Manutenção de Máquinas Agrícolas, Caminhões e Linha Industrial",
+    "featured": true,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/robust_d26_22_am_1.jpeg",
+    "images": [
+      "/images/products/robust_d26_22_am_1.jpeg",
+      "/images/products/robust_d26_22_am_2.jpeg",
+      "/images/products/robust_d26_22_am_3.jpeg"
+    ]
+  },
+  {
+    "id": "s38100619",
+    "name": "S38100619 CANETA MAGNÉTICA TELESCÓPICA COM LED",
+    "brand": "gedore-robust",
+    "brandLabel": "Robust",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "automotivo",
+    "categoryLabel": "Ferramentas Especiais",
+    "code": "S38100619",
+    "technicalCode": "3370182",
+    "description": "Pegador magnético telescópico com iluminação LED ROBUST com haste extensível de até 800 mm e capacidade magnética de até 2,2 kg.",
+    "detailedDescription": "A Caneta Magnética Telescópica com LED ROBUST S38100619 (Código 3370182) é a ferramenta indispensável para resgatar parafusos, porcas, arruelas e soquetes caídos em locais inacessíveis do motor ou debaixo do chassi. Equipada com haste retrátil de longo alcance (atingindo até 800 mm estendida), ímã de neodímio de alta potência e luz LED brilhante na ponta para iluminar cavidades escuras.",
+    "technicalSpecs": {
+      "codigoGedore": "3370182",
+      "referencia": "S38100619",
+      "alcance": "Até 800 mm estendida",
+      "capacidadeCarga": "Até 2,2 kg",
+      "pesoKg": "0,090 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Alcance Máximo",
+        "Capacidade de Atração",
+        "Iluminação",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3370182",
+          "S38100619",
+          "Até 800 mm",
+          "Até 2,2 kg",
+          "LED frontal de alta luminosidade",
+          "0,090 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3370182",
+      "Referência: S38100619",
+      "Quantidade: 1 peça",
+      "Haste: Aço inoxidável telescópica extensível de 190 a 800 mm",
+      "Ímã: Neodímio de alta força de atração (sustenta até 2,2 kg)",
+      "Iluminação: 1 LED de alta intensidade na cabeça do ímã (com baterias inclusas)",
+      "Empunhadura: Emborrachada anatômica antiderrapante",
+      "Peso: 0,090 kg"
+    ],
+    "properties": [
+      "Iluminação LED na ponta que permite enxergar o parafuso caído dentro do cofre do motor ou atrás de painéis",
+      "Haste telescópica que se retrai para 19 cm, cabendo no bolso da camisa ou avental com clipe",
+      "Ímã potente que resgata até ferramentas pesadas sem soltar"
+    ],
+    "instructions": [
+      "Gire o anel da cabeça para ligar/desligar a lanterna LED.",
+      "Puxe suavemente os gomos telescópicos até o comprimento necessário."
+    ],
+    "application": "Oficinas Mecânicas Automotivas, Elétrica, Funilaria, Linhas de Montagem e Manutenção Doméstica",
+    "featured": false,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/robust_s38100619_1.jpeg",
+    "images": [
+      "/images/products/robust_s38100619_1.jpeg",
+      "/images/products/robust_s38100619_2.jpeg",
+      "/images/products/robust_s38100619_3.jpeg",
+      "/images/products/robust_s38100619_4.jpeg"
+    ]
+  },
+  {
+    "id": "s15100001",
+    "name": "S15100001 CABO DE TRANSFERÊNCIA DE CARGA 350A 2,5M (CHUPETA)",
+    "brand": "gedore-robust",
+    "brandLabel": "Robust",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "automotivo",
+    "categoryLabel": "Auto Socorro & Elétrica",
+    "code": "S15100001",
+    "technicalCode": "3370195",
+    "description": "Cabo profissional para transferência de carga de bateria (chupeta) ROBUST com capacidade de 350A, 2,5 metros de comprimento, garras totalmente isoladas e bolsa protetora.",
+    "detailedDescription": "O Cabo de Transferência de Carga ROBUST S15100001 (Código 3370195) com capacidade nominal de 350 Amperes e extensão de 2,5 metros é o item de emergência automotiva obrigatório em qualquer veículo ou oficina mecânica. Equipado com condutores de alta condutibilidade de cobre e garras tipo jacaré bicolores totalmente isoladas com molas de alta pressão para garantir contato elétrico sem faíscas perigosas, vem em bolsa prática com zíper.",
+    "technicalSpecs": {
+      "codigoGedore": "3370195",
+      "referencia": "S15100001",
+      "amperagem": "350 Amperes",
+      "comprimento": "2,5 metros",
+      "pesoKg": "1,100 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Capacidade Elétrica",
+        "Comprimento",
+        "Garras",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3370195",
+          "S15100001",
+          "350 Amperes",
+          "2,5 metros",
+          "Garras tipo jacaré 100% isoladas",
+          "1,100 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3370195",
+      "Referência: S15100001",
+      "Quantidade: 1 jogo (cabos positivo vermelho e negativo preto)",
+      "Capacidade de corrente: 350 A",
+      "Comprimento dos cabos: 2,5 metros",
+      "Garras: Cobreadas com isolamento termoplástico e mola de alta retenção",
+      "Acompanha: Bolsa redonda com zíper e alça para transporte",
+      "Peso: 1,100 kg"
+    ],
+    "properties": [
+      "Condutor com bitola espessa que transfere corrente máxima sem superaquecimento ou perda de carga",
+      "Garras robustas que mordem firmemente os polos da bateria evitando solturas acidentais",
+      "Bolsa protetora que conserva o cabo organizado no porta-malas sem emaranhados"
+    ],
+    "instructions": [
+      "Conecte a garra vermelha no polo (+) da bateria descarregada e depois no polo (+) da bateria auxiliar.",
+      "Conecte a garra preta no polo (-) da auxiliar e a outra ponta em um ponto metálico do motor descarregado (massa).",
+      "Dê a partida no veículo auxiliar e depois ligue o veículo que estava sem carga."
+    ],
+    "application": "Carros de Passeio, SUVs, Pick-ups, Utilitários Leves, Barcos e Frotas de Manutenção",
+    "featured": true,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/robust_s15100001_1.jpg",
+    "images": [
+      "/images/products/robust_s15100001_1.jpg",
+      "/images/products/robust_s15100001_2.jpeg",
+      "/images/products/robust_s15100001_3.jpeg",
+      "/images/products/robust_s15100001_4.jpeg"
+    ]
+  },
+  {
+    "id": "s18001002",
+    "name": "S18001002 VENTOSA SIMPLES PARA VIDRO E FUNILARIA",
+    "brand": "gedore-robust",
+    "brandLabel": "Robust",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "automotivo",
+    "categoryLabel": "Vidraçaria & Funilaria",
+    "code": "S18001002",
+    "technicalCode": "3370205",
+    "description": "Ventosa simples de sucção manual ROBUST para manuseio de vidros, pára-brisas, chapas lisas e desamassamento leve em funilaria.",
+    "detailedDescription": "A Ventosa Simples ROBUST S18001002 (Código 3370205) é a ferramenta de vácuo indicada para movimentar placas de vidro automotivo, cerâmicas, porcelanatos, mármores e chapas metálicas com máxima segurança. Conta com disco de borracha de alta flexibilidade e alavanca plástica de travamento rápido que gera forte aderência sob superfícies limpas e não porosas.",
+    "technicalSpecs": {
+      "codigoGedore": "3370205",
+      "referencia": "S18001002",
+      "capacidade": "Até 30 kg na horizontal",
+      "pesoKg": "0,280 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Tipo",
+        "Capacidade Máxima",
+        "Material",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3370205",
+          "S18001002",
+          "Ventosa Simples (1 disco)",
+          "Até 30 kg",
+          "Polímero ABS e Borracha Vulcanizada",
+          "0,280 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3370205",
+      "Referência: S18001002",
+      "Quantidade: 1 peça",
+      "Diâmetro da ventosa: 115 mm",
+      "Capacidade de sucção: Até 30 kg (em superfícies planas e lisas)",
+      "Acionamento: Alavanca de liberação rápida",
+      "Peso: 0,280 kg"
+    ],
+    "properties": [
+      "Sucção firme por vácuo gerada com um único movimento da alavanca ergonômica",
+      "Borracha de alta maleabilidade que cria vedação estanque imediata",
+      "Corpo leve e resistente que não risca nem mancha as superfícies polidas"
+    ],
+    "instructions": [
+      "Certifique-se de que a superfície e a ventosa estejam limpas, secas e isentas de óleo ou poeira.",
+      "Pressione a ventosa contra o material e baixe a alavanca de sucção para travar."
+    ],
+    "application": "Instalação de Pára-brisas Automotivos, Vidraçarias, Instalação de Pisos e Martelinho de Ouro",
+    "featured": false,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/robust_s18001002_1.jpeg",
+    "images": [
+      "/images/products/robust_s18001002_1.jpeg",
+      "/images/products/robust_s18001002_2.jpeg",
+      "/images/products/robust_s18001002_3.jpeg"
+    ]
+  },
+  {
+    "id": "s18001001",
+    "name": "S18001001 VENTOSA DUPLA PARA VIDRO E CHAPAS",
+    "brand": "gedore-robust",
+    "brandLabel": "Robust",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "automotivo",
+    "categoryLabel": "Vidraçaria & Funilaria",
+    "code": "S18001001",
+    "technicalCode": "3370204",
+    "description": "Ventosa dupla de alta sucção ROBUST com capacidade de até 60 kg para transporte de vidros grandes, peças automotivas e chapas de aço.",
+    "detailedDescription": "A Ventosa Dupla ROBUST S18001001 (Código 3370204) conta com dois discos de sucção de 115 mm articulados em empunhadura central rígida. Oferece capacidade de carga de até 60 kg, permitindo que o operador carregue vidros laterais e pára-brisas de grande porte com precisão de alinhamento e total controle postural.",
+    "technicalSpecs": {
+      "codigoGedore": "3370204",
+      "referencia": "S18001001",
+      "capacidade": "Até 60 kg",
+      "discos": "2 discos de 115 mm",
+      "pesoKg": "0,560 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Tipo",
+        "Capacidade Máxima",
+        "Diâmetro dos Discos",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3370204",
+          "S18001001",
+          "Ventosa Dupla (2 discos)",
+          "Até 60 kg",
+          "2 x 115 mm",
+          "0,560 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3370204",
+      "Referência: S18001001",
+      "Quantidade: 1 peça",
+      "Diâmetro dos discos: 2 x 115 mm",
+      "Capacidade de sucção: Até 60 kg",
+      "Estrutura: Polímero de alta resistência mecânica com borracha vulcanizada",
+      "Peso: 0,560 kg"
+    ],
+    "properties": [
+      "Duplo ponto de fixação que distribui o peso da peça evitando torção durante o transporte",
+      "Duas alavancas individuais de travamento pneumático por pressão mecânica",
+      "Pegador anatômico grosso que acomoda a mão com luvas de proteção com firmeza"
+    ],
+    "instructions": [
+      "Limpe a peça antes da aplicação, pressione os dois discos e acione ambas as alavancas de trava.",
+      "Sempre teste a aderência com leve tração antes de levantar a carga do chão."
+    ],
+    "application": "Troca de Pára-brisas, Funilarias, Instalação de Portas de Vidro, Painéis Solares e Marcenaria",
+    "featured": false,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/robust_s18001001_1.jpeg",
+    "images": [
+      "/images/products/robust_s18001001_1.jpeg",
+      "/images/products/robust_s18001001_2.jpeg",
+      "/images/products/robust_s18001001_3.jpeg"
+    ]
+  },
+  {
+    "id": "s99200000",
+    "name": "S99200000 APLICADOR DE SILICONE TIPO ESQUELETO 9\"",
+    "brand": "gedore-robust",
+    "brandLabel": "Robust",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "automotivo",
+    "categoryLabel": "Aplicadores & Adesivos",
+    "code": "S99200000",
+    "technicalCode": "3370198",
+    "description": "Aplicador manual de silicone e selantes tipo esqueleto 9\" ROBUST em aço reforçado com alívio automático de pressão e alta durabilidade.",
+    "detailedDescription": "O Aplicador de Silicone 9\" ROBUST S99200000 (Código 3370198) é a pistola de calafetação em formato esqueleto ideal para aplicação limpa e homogênea de tubos de silicone, cola PU, vedantes e adesivos de montagem padrão de até 300 ml. Fabricada em chapa de aço estampada com pintura protetora, haste dentada de tração firme e lingueta traseira de alívio rápido de pressão para evitar vazamento contínuo.",
+    "technicalSpecs": {
+      "codigoGedore": "3370198",
+      "referencia": "S99200000",
+      "tamanho": "9 pol (tubos até 300 ml / 9\")",
+      "pesoKg": "0,380 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Capacidade",
+        "Tipo Estrutura",
+        "Comprimento",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3370198",
+          "S99200000",
+          "Tubos e cartuchos até 300 ml (9\")",
+          "Esqueleto em chapa de aço",
+          "310 mm",
+          "0,380 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3370198",
+      "Referência: S99200000",
+      "Quantidade: 1 peça",
+      "Compatibilidade: Cartuchos e tubos convencionais de até 300 ml (9 pol)",
+      "Material: Chapa de aço estampada reforçada",
+      "Gatilho: Alavanca de avanço progressivo com destravador instantâneo",
+      "Peso: 0,380 kg"
+    ],
+    "properties": [
+      "Sistema de alívio rápido por mola que estanca o fluxo de silicone assim que o gatilho é solto",
+      "Corpo vazado tipo esqueleto que facilita a troca e visualização do volume restante no cartucho",
+      "Haste dentada resistente que empurra o êmbolo mesmo em massas e selantes mais densos"
+    ],
+    "instructions": [
+      "Pressione a trava traseira e puxe a haste totalmente para trás antes de posicionar o cartucho.",
+      "Corte a ponta do bico aplicador e pressione o gatilho com cadência constante."
+    ],
+    "application": "Oficinas Mecânicas, Funilaria, Vedação de Motores, Pára-brisas, Construção Civil e Instalações Hidráulicas",
+    "featured": false,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/robust_s99200000_1.jpg",
+    "images": [
+      "/images/products/robust_s99200000_1.jpg",
+      "/images/products/robust_s99200000_2.jpg",
+      "/images/products/robust_s99200000_3.jpg",
+      "/images/products/robust_s99200000_4.jpg",
+      "/images/products/robust_s99200000_5.jpg"
+    ]
+  },
+  {
+    "id": "s21702015",
+    "name": "S21702015 KIT BOLSA EM LONA COM FERRAMENTAS DIY 15 Peças",
+    "brand": "gedore-robust",
+    "brandLabel": "Robust",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "jogos-ferramentas",
+    "categoryLabel": "Kits de Ferramentas",
+    "code": "S21702015",
+    "technicalCode": "3370212",
+    "description": "Kit de ferramentas manuais essenciais DIY ROBUST com 15 peças em bolsa de lona reforçada com alça tiracolo ajustável e múltiplos bolsos.",
+    "detailedDescription": "O Kit Bolsa em Lona com Ferramentas ROBUST S21702015 (Código 3370212) foi concebido para quem necessita de um kit móvel e completo para serviços externos, manutenções residenciais, montagem de estruturas e pequenos reparos automotivos. Acompanha bolsa espaçosa em lona de alta resistência com alça e divisórias, alicate universal, martelo, chaves de fenda e Phillips, trena, estilete e acessórios.",
+    "composition": [
+      "1 Bolsa em lona reforçada com alça de ombro tiracolo e bolsos externos organizadores",
+      "1 Alicate universal 8\" com empunhadura ergonômica",
+      "1 Martelo de unha com cabo em fibra",
+      "1 Trena métrica com trava",
+      "1 Estilete retrátil profissional",
+      "Chaves de fenda e chaves Phillips essenciais forjadas em Cromo-Vanádio",
+      "Chave ajustável e acessórios para manutenção rápida"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3370212",
+      "referencia": "S21702015",
+      "pecas": "15",
+      "dimensoesBolsa": "550 x 330 x 55 mm",
+      "pesoKg": "3,500 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Peças",
+        "Acondicionamento",
+        "Dimensões",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3370212",
+          "S21702015",
+          "15 peças",
+          "Bolsa em lona reforçada multi-bolsos",
+          "550 x 330 x 55 mm",
+          "3,500 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3370212",
+      "Referência: S21702015",
+      "Quantidade de peças: 15 peças",
+      "Material das ferramentas: Aço Cromo-Vanádio e Aço Especial forjado",
+      "Bolsa: Tecido poliéster/lona de alta tenacidade com costuras duplas e zíper reforçado",
+      "Peso: 3,500 kg"
+    ],
+    "properties": [
+      "Bolsa espaçosa que ainda comporta ferramentas extras do profissional",
+      "Seleção balanceada de ferramentas para atender as situações mais comuns do dia a dia",
+      "Alça de ombro ergonômica que distribui o peso confortavelmente durante caminhadas"
+    ],
+    "instructions": [
+      "Mantenha as ferramentas nos elásticos e bolsos internos para melhor organização.",
+      "Limpe as ferramentas antes de guardar na bolsa para preservar o tecido."
+    ],
+    "application": "Instaladores, Técnicos de Manutenção Predial, Eletricistas, Montadores e Uso Doméstico Avançado",
+    "featured": true,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/robust_s21702015_1.jpeg",
+    "images": [
+      "/images/products/robust_s21702015_1.jpeg",
+      "/images/products/robust_s21702015_2.jpeg",
+      "/images/products/robust_s21702015_3.jpeg",
+      "/images/products/robust_s21702015_4.jpeg",
+      "/images/products/robust_s21702015_5.jpeg"
+    ]
+  },
+  {
+    "id": "s36680830",
+    "name": "S36680830 JOGO DE FORMÕES PARA MADEIRA 4 Peças (1/4\" a 1\")",
+    "brand": "gedore-robust",
+    "brandLabel": "Robust",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "automotivo",
+    "categoryLabel": "Ferramentas Manuais",
+    "code": "S36680830",
+    "technicalCode": "3370085",
+    "description": "Jogo de formões chanfrados profissionais para marcenaria e carpintaria ROBUST com 4 peças (6, 12, 18 e 24 mm / 1/4\" a 1\") em aço cromo-vanádio com capa de proteção.",
+    "detailedDescription": "O Jogo de Formões ROBUST S36680830 (Código 3370085) traz 4 lâminas forjadas em aço Cromo-Vanádio de alta retenção de fio de corte para entalhes, encaixes e rebaixos precisos em madeiras duras e macias. Possui cabos ergonômicos bimatéria com batente traseiro em aço que aceita pancadas de macete ou martelo sem quebrar o cabo, acompanhando protetores plásticos individuais de lâmina.",
+    "composition": [
+      "1 Formão chanfrado 6 mm (1/4\")",
+      "1 Formão chanfrado 12 mm (1/2\")",
+      "1 Formão chanfrado 18 mm (3/4\")",
+      "1 Formão chanfrado 24 mm (1\")",
+      "4 Protetores plásticos de lâmina"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "3370085",
+      "referencia": "S36680830",
+      "pecas": "4",
+      "medidas": "6, 12, 18 e 24 mm",
+      "pesoKg": "0,780 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Peças",
+        "Medidas Inclusas",
+        "Material Lâmina",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "3370085",
+          "S36680830",
+          "4 peças",
+          "6 mm (1/4\"), 12 mm (1/2\"), 18 mm (3/4\"), 24 mm (1\")",
+          "Aço Cromo-Vanádio com batente metálico",
+          "0,780 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 3370085",
+      "Referência: S36680830",
+      "Quantidade: 4 peças",
+      "Medidas das lâminas: 6 mm, 12 mm, 18 mm e 24 mm",
+      "Material: Aço Cromo-Vanádio temperado com lâminas pré-afiadas",
+      "Cabo: Bimatéria resistente com reforço metálico na ponta para pancadas de martelo",
+      "Peso: 0,780 kg"
+    ],
+    "properties": [
+      "Lâminas chanfradas que facilitam o acesso em cantos vivos e ranhuras de encaixe",
+      "Batente de aço reforçado no topo do cabo que suporta impactos sem deformar",
+      "Protetores de fio plásticos individuais que preservam a afiação afiada e evitam acidentes"
+    ],
+    "instructions": [
+      "Trabalhe sempre com a lâmina direcionada para longe do corpo e das mãos de apoio.",
+      "Reafie periodicamente com pedra de amolar e mantenha uma fina película de óleo protetor sobre a lâmina."
+    ],
+    "application": "Marcenaria, Carpintaria, Instalação de Portas e Fechaduras, Artesanato e Entalhes em Madeira",
+    "featured": false,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/robust_s36680830_1.jpeg",
+    "images": [
+      "/images/products/robust_s36680830_1.jpeg",
+      "/images/products/robust_s36680830_2.jpeg",
+      "/images/products/robust_s36680830_3.jpeg",
+      "/images/products/robust_s36680830_4.jpeg"
+    ]
+  },
+  {
+    "id": "gedore-007373",
+    "name": "2400 A ARMÁRIO AÉREO MODULAR AZUL 750x250x470 mm",
+    "brand": "gedore-blue",
+    "brandLabel": "Gedore Industrial",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "maletas-carrinhos",
+    "categoryLabel": "Mobiliário Oficina",
+    "code": "2400 A",
+    "technicalCode": "007373",
+    "description": "Armário aéreo modular industrial GEDORE em chapa de aço reforçada com porta basculante equipada com pistão a gás e fechadura central com chave.",
+    "detailedDescription": "O Armário Aéreo Modular Azul GEDORE 2400 A (Código 007.373) é parte integrante do renomado sistema de mobiliário modular industrial para oficinas, centros automotivos e indústrias. Fabricado em chapa de aço especial reforçada de alta durabilidade com construção soldada estável, dispõe de porta basculante preta com pistão pneumático a gás suave, puxador ergonômico embutido, fechadura central com duas cópias de chaves e capacidade de carga estática de 30 kg.",
+    "technicalSpecs": {
+      "codigoGedore": "007.373",
+      "referencia": "2400 A",
+      "capacidadeCarga": "30 kg distribuídos",
+      "dimensoes": "750 x 250 x 470 mm",
+      "pesoKg": "15,000 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Descrição",
+        "Comprimento (mm)",
+        "Largura (mm)",
+        "Altura (mm)",
+        "Capacidade",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "007.373",
+          "2400 A",
+          "Armário aéreo Azul",
+          "750 mm",
+          "250 mm",
+          "470 mm",
+          "30 kg",
+          "15,000 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 007.373",
+      "Referência: 2400 A",
+      "Quantidade: 1 peça",
+      "Cores: Estrutura em Azul padrão GEDORE e porta basculante em Preto fosco",
+      "Dimensões (C x L x A): 750 x 250 x 470 mm",
+      "Capacidade de carga distribuída: 30 kg",
+      "Segurança: Fechadura com cilindro central e 2 chaves inclusas",
+      "Acessórios inclusos: 4 conjuntos de parafusos e buchas para fixação na parede",
+      "Peso: 15,000 kg"
+    ],
+    "properties": [
+      "Porta com pistão pneumático a gás que permanece aberta suavemente durante o manuseio das ferramentas",
+      "Construção soldada em chapa de aço reforçada com pintura eletrostática a pó anticorrosiva",
+      "Compatibilidade modular com bancadas, painéis perfurados e módulos gaveteiros GEDORE"
+    ],
+    "instructions": [
+      "Fixe firmemente em parede de alvenaria nivelada utilizando as 4 buchas e parafusos de ancoragem inclusos.",
+      "Respeite o limite máximo de 30 kg distribuídos uniformemente no interior do armário."
+    ],
+    "application": "Oficinas Mecânicas Industriais, Centros de Treinamento, Concessionárias e Garagens Premium",
+    "featured": true,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/gedore_blue_007373_1.png",
+    "images": [
+      "/images/products/gedore_blue_007373_1.png",
+      "/images/products/gedore_blue_007373_2.jpeg",
+      "/images/products/gedore_blue_007373_3.png",
+      "/images/products/gedore_blue_007373_4.png"
+    ]
+  },
+  {
+    "id": "gedore-007376",
+    "name": "2445 A ARMÁRIO AÉREO MODULAR DE CANTO AZUL",
+    "brand": "gedore-blue",
+    "brandLabel": "Gedore Industrial",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "maletas-carrinhos",
+    "categoryLabel": "Mobiliário Oficina",
+    "code": "2445 A",
+    "technicalCode": "007376",
+    "description": "Armário aéreo de canto modular industrial GEDORE em chapa de aço soldada para fechamento perfeito em L de bancadas de trabalho.",
+    "detailedDescription": "O Armário Aéreo de Canto GEDORE 2445 A (Código 007.376) é desenvolvido para otimizar 100% do espaço superior em cantos de paredes de oficinas e linhas industriais. Integra-se perfeitamente aos armários aéreos 2400 A formando layouts contínuos em formato de 'L', com porta basculante com pistão a gás, fechadura central com chave e estrutura reforçada com capacidade de carga de 30 kg.",
+    "technicalSpecs": {
+      "codigoGedore": "007.376",
+      "referencia": "2445 A",
+      "capacidadeCarga": "30 kg",
+      "dimensoes": "1350 x 750 x 470 mm",
+      "pesoKg": "31,000 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Descrição",
+        "Comprimento (mm)",
+        "Largura (mm)",
+        "Altura (mm)",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "007.376",
+          "2445 A",
+          "Armário aéreo de canto Azul",
+          "1350 mm",
+          "750 mm",
+          "470 mm",
+          "31,000 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 007.376",
+      "Referência: 2445 A",
+      "Quantidade: 1 peça",
+      "Estrutura: Chapa de aço de alta espessura com acabamento Azul GEDORE e porta preta",
+      "Dimensões: 1350 x 750 x 470 mm",
+      "Capacidade de carga: 30 kg distribuídos",
+      "Fechadura: Central com 2 chaves",
+      "Peso: 31,000 kg"
+    ],
+    "properties": [
+      "Aproveitamento inteligente de vértices e cantos de paredes sem pontos cegos",
+      "Abertura suave basculante assistida por pistão pneumático",
+      "Pintura eletrostática a pó de altíssima resistência química a óleos e combustíveis"
+    ],
+    "instructions": [
+      "Realize a fixação em conjunto com os módulos adjacentes para garantir perfeito alinhamento estético.",
+      "Mantenha a fechadura trancada ao final do expediente para segurança do ferramental."
+    ],
+    "application": "Mobiliário Modular Industrial, Oficinas de Concessionárias e Centros Técnicos Automotivos",
+    "featured": false,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/gedore_blue_007376_1.png",
+    "images": [
+      "/images/products/gedore_blue_007376_1.png",
+      "/images/products/gedore_blue_007376_2.png",
+      "/images/products/gedore_blue_007376_3.png",
+      "/images/products/gedore_blue_007376_4.png"
+    ]
+  },
+  {
+    "id": "gedore-007385",
+    "name": "4600 A MÓDULO GAVETEIRO INDUSTRIAL AZUL COM 6 GAVETAS",
+    "brand": "gedore-blue",
+    "brandLabel": "Gedore Industrial",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "maletas-carrinhos",
+    "categoryLabel": "Mobiliário Oficina",
+    "code": "4600 A",
+    "technicalCode": "007385",
+    "description": "Módulo gaveteiro para bancada de trabalho industrial GEDORE com 6 gavetas com corrediças telescópicas de esferas e fechamento central com chave.",
+    "detailedDescription": "O Módulo com 6 Gavetas GEDORE 4600 A (Código 007.385) serve como suporte estrutural de bancadas ou módulo independente para estocagem pesada de ferramentas industriais. Projetado com 6 gavetas de alturas escalonadas montadas sobre trilhos telescópicos de precisão que abrem 100%, estrutura soldada reforçada e fechamento centralizado com chave.",
+    "technicalSpecs": {
+      "codigoGedore": "007.385",
+      "referencia": "4600 A",
+      "gavetas": "6 gavetas com corrediças telescópicas",
+      "dimensoes": "705 x 600 x 870 mm",
+      "pesoKg": "63,600 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Descrição",
+        "Comprimento (mm)",
+        "Largura (mm)",
+        "Altura (mm)",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "007.385",
+          "4600 A",
+          "Módulo Azul com 6 gavetas",
+          "705 mm",
+          "600 mm",
+          "870 mm",
+          "63,600 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 007.385",
+      "Referência: 4600 A",
+      "Quantidade: 1 peça",
+      "Gavetas: 6 gavetas com trilhos telescópicos de rolamentos de esferas de aço",
+      "Dimensões externas: 705 x 600 x 870 mm (comprimento x largura x altura)",
+      "Capacidade de carga por gaveta: 30 kg distribuídos",
+      "Estrutura: Chapa de aço carbono de 0,90 mm a 1,20 mm soldada",
+      "Peso: 63,600 kg"
+    ],
+    "properties": [
+      "Abertura total da gaveta facilitando a visualização e retirada de berços e caixas de soquetes",
+      "Fechadura central que tranca simultaneamente as 6 gavetas com uma única chave",
+      "Suporta tampos de madeira maciça ou chapa de aço para composição de bancadas lineares"
+    ],
+    "instructions": [
+      "Abra apenas uma gaveta carregada por vez para manter o centro de gravidade estável.",
+      "Lubrifique as corrediças telescópicas anualmente com spray protetivo neutro."
+    ],
+    "application": "Bancadas Industriais, Oficinas Mecânicas de Alta Precisão, Salas de Metrologia e Ferramentaria",
+    "featured": true,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/gedore_blue_007385_1.png",
+    "images": [
+      "/images/products/gedore_blue_007385_1.png",
+      "/images/products/gedore_blue_007385_2.png",
+      "/images/products/gedore_blue_007385_3.png",
+      "/images/products/gedore_blue_007385_4.png"
+    ]
+  },
+  {
+    "id": "gedore-007379",
+    "name": "4045 A ARMÁRIO INFERIOR DE CANTO AZUL PARA BANCADA",
+    "brand": "gedore-blue",
+    "brandLabel": "Gedore Industrial",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "maletas-carrinhos",
+    "categoryLabel": "Mobiliário Oficina",
+    "code": "4045 A",
+    "technicalCode": "007379",
+    "description": "Armário inferior de canto modular GEDORE para bancada com ampla porta, prateleira interna reforçada e fechadura com chave.",
+    "detailedDescription": "O Armário Inferior de Canto GEDORE 4045 A (Código 007.379) compõe a base inferior em ângulo para bancadas industriais modulares. Oferece enorme volume interno para armazenamento de ferramentas elétricas volumosas, compressores, galões e caixas pesadas, com prateleira interna ajustável e porta com chave.",
+    "technicalSpecs": {
+      "codigoGedore": "007.379",
+      "referencia": "4045 A",
+      "dimensoes": "1310 x 755 x 870 mm",
+      "pesoKg": "45,400 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Descrição",
+        "Comprimento (mm)",
+        "Largura (mm)",
+        "Altura (mm)",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "007.379",
+          "4045 A",
+          "Armário inferior de canto Azul",
+          "1310 mm",
+          "755 mm",
+          "870 mm",
+          "45,400 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 007.379",
+      "Referência: 4045 A",
+      "Quantidade: 1 peça",
+      "Dimensões: 1310 x 755 x 870 mm",
+      "Acabamento: Estrutura em Azul GEDORE com portas pretas em pintura eletrostática",
+      "Prateleira: 1 prateleira interna reforçada",
+      "Fechamento: Fechadura com cilindro central e chaves",
+      "Peso: 45,400 kg"
+    ],
+    "properties": [
+      "Resolve o canto morto da oficina transformando-o em ampla área útil de guarda",
+      "Construção com pés ajustáveis para perfeito nivelamento com bancadas contíguas",
+      "Chapa de aço com dobras de rigidez que sustentam cargas pesadas de estocagem"
+    ],
+    "instructions": [
+      "Ajuste os sapatilhos reguláveis antes de fixar o tampo de madeira superior.",
+      "Respeite a capacidade de carga estática distribuída sobre a prateleira."
+    ],
+    "application": "Mobiliário Modular de Alto Padrão, Indústrias Mecânicas e Concessionárias",
+    "featured": false,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/gedore_blue_007379_1.png",
+    "images": [
+      "/images/products/gedore_blue_007379_1.png",
+      "/images/products/gedore_blue_007379_2.png",
+      "/images/products/gedore_blue_007379_3.png",
+      "/images/products/gedore_blue_007379_4.jpeg"
+    ]
+  },
+  {
+    "id": "gedore-007382",
+    "name": "4010 A SUPORTE AZUL (PÉ ESTRUTURAL PARA BANCADA)",
+    "brand": "gedore-blue",
+    "brandLabel": "Gedore Industrial",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "maletas-carrinhos",
+    "categoryLabel": "Mobiliário Oficina",
+    "code": "4010 A",
+    "technicalCode": "007382",
+    "description": "Suporte lateral e pé de apoio estrutural em chapa de aço reforçada para montagem de bancadas modulares GEDORE.",
+    "detailedDescription": "O Suporte / Pé para Bancada GEDORE 4010 A (Código 007.382) é o elemento de sustentação estrutural para a montagem de bancadas de trabalho modulares. Em conjunto com tampos de madeira (como a Ref. 3150) e gaveteiros, proporciona rigidez absoluta para trabalhos pesados de corte, morsa e conformação mecânica.",
+    "technicalSpecs": {
+      "codigoGedore": "007.382",
+      "referencia": "4010 A",
+      "dimensoes": "155 x 870 x 630 mm",
+      "pesoKg": "8,500 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Descrição",
+        "Comprimento (mm)",
+        "Largura (mm)",
+        "Altura (mm)",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "007.382",
+          "4010 A",
+          "Suporte Azul (pé para bancada)",
+          "155 mm",
+          "630 mm",
+          "870 mm",
+          "8,500 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 007.382",
+      "Referência: 4010 A",
+      "Quantidade: 1 peça",
+      "Dimensões: 155 x 630 x 870 mm",
+      "Material: Chapa de aço estrutural soldada de alta resistência",
+      "Acabamento: Pintura eletrostática a pó na cor Azul GEDORE",
+      "Peso: 8,500 kg"
+    ],
+    "properties": [
+      "Perfuração pré-moldada para fixação rápida do tampo superior e travessas inferiores",
+      "Sapata reforçada que distribui a carga estática sem marcar o piso da oficina",
+      "Tratamento superficial antiferrugem duradouro"
+    ],
+    "instructions": [
+      "Parafuse firmemente ao tampo de madeira na posição de borda especificada no projeto da bancada.",
+      "Verifique o prumo e o nível do piso durante a montagem."
+    ],
+    "application": "Montagem de Bancadas Industriais, Mesas de Trabalho Pesado e Áreas de Ajustagem Mecânica",
+    "featured": false,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/gedore_blue_007382_1.png",
+    "images": [
+      "/images/products/gedore_blue_007382_1.png",
+      "/images/products/gedore_blue_007382_2.png",
+      "/images/products/gedore_blue_007382_3.png",
+      "/images/products/gedore_blue_007382_4.png"
+    ]
+  },
+  {
+    "id": "gedore-007388",
+    "name": "3750 A CHAPA PERFURADA AZUL 750x540x30 mm",
+    "brand": "gedore-blue",
+    "brandLabel": "Gedore Industrial",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "maletas-carrinhos",
+    "categoryLabel": "Painéis & Bancadas",
+    "code": "3750 A",
+    "technicalCode": "007388",
+    "description": "Painel de chapa perfurada industrial GEDORE com furação quadrada padronizada para fixação de ganchos e organização vertical de ferramentas.",
+    "detailedDescription": "A Chapa Perfurada Azul GEDORE 3750 A (Código 007.388) é o painel de ferramentas essencial para organização visual (metodologia 5S) sobre bancadas industriais. Confeccionada em chapa de aço com furações quadradas padronizadas GEDORE para suporte de ganchos rápidos, permite que todas as chaves e soquetes fiquem visíveis e ao alcance imediato das mãos do mecânico.",
+    "technicalSpecs": {
+      "codigoGedore": "007.388",
+      "referencia": "3750 A",
+      "dimensoes": "750 x 30 x 540 mm",
+      "pesoKg": "4,300 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Descrição",
+        "Comprimento (mm)",
+        "Largura (mm)",
+        "Altura (mm)",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "007.388",
+          "3750 A",
+          "Chapa perfurada azul",
+          "750 mm",
+          "30 mm",
+          "540 mm",
+          "4,300 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 007.388",
+      "Referência: 3750 A",
+      "Quantidade: 1 peça",
+      "Dimensões: 750 x 30 x 540 mm",
+      "Furação: Quadrada padronizada para ganchos e suportes GEDORE",
+      "Acabamento: Azul clássico GEDORE em pintura a pó",
+      "Peso: 4,300 kg"
+    ],
+    "properties": [
+      "Dobra perimetral rígida que afasta a chapa da parede facilitando o encaixe e remoção dos ganchos",
+      "Superfície plana de alta resistência que não deforma sob o peso de chaves pesadas",
+      "Encaixe modular perfeito abaixo dos armários aéreos 2400 A"
+    ],
+    "instructions": [
+      "Parafuse na parede ou nas colunas verticais da bancada com buchas adequadas.",
+      "Distribua os ganchos conforme a rotina operacional da oficina."
+    ],
+    "application": "Organização de Ferramentas, Gestão Visual 5S, Concessionárias, Linhas de Montagem e Oficinas",
+    "featured": false,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/gedore_blue_007388_1.png",
+    "images": [
+      "/images/products/gedore_blue_007388_1.png",
+      "/images/products/gedore_blue_007388_2.png",
+      "/images/products/gedore_blue_007388_3.png",
+      "/images/products/gedore_blue_007388_4.png"
+    ]
+  },
+  {
+    "id": "gedore-007389",
+    "name": "3450 A CHAPA PERFURADA DE CANTO AZUL",
+    "brand": "gedore-blue",
+    "brandLabel": "Gedore Industrial",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "maletas-carrinhos",
+    "categoryLabel": "Painéis & Bancadas",
+    "code": "3450 A",
+    "technicalCode": "007389",
+    "description": "Painel de chapa perfurada de canto angular GEDORE para fechamento contínuo em bancadas modulares de canto.",
+    "detailedDescription": "A Chapa Perfurada de Canto GEDORE 3450 A (Código 007.389) proporciona acabamento e aproveitamento perfeito do vértice de parede quando a bancada é montada em formato de 'L'. Possui as mesmas furações padronizadas da chapa 3750 A, garantindo estética impecável e suporte contínuo para ganchos.",
+    "technicalSpecs": {
+      "codigoGedore": "007.389",
+      "referencia": "3450 A",
+      "dimensoes": "290 x 50 x 520 mm",
+      "pesoKg": "1,550 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Descrição",
+        "Comprimento (mm)",
+        "Largura (mm)",
+        "Altura (mm)",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "007.389",
+          "3450 A",
+          "Chapa perfurada de canto Azul",
+          "290 mm",
+          "50 mm",
+          "520 mm",
+          "1,550 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 007.389",
+      "Referência: 3450 A",
+      "Quantidade: 1 peça",
+      "Dimensões: 290 x 50 x 520 mm",
+      "Acabamento: Pintura eletrostática Azul GEDORE",
+      "Furação: Padronizada para ganchos GEDORE",
+      "Peso: 1,550 kg"
+    ],
+    "properties": [
+      "Geometria angular projetada para encaixe suave entre os módulos laterais",
+      "Aproveita o canto da parede para pendurar alicates, chaves de vela e acessórios leves",
+      "Fácil higienização e alta durabilidade mecânica"
+    ],
+    "instructions": [
+      "Instale nivelada com os painéis 3750 A para criar uma linha contínua de ferramentas.",
+      "Não sobrecarregue com ferramentas excessivamente pesadas além da capacidade dos ganchos."
+    ],
+    "application": "Bancadas de Canto Modulares, Oficinas de Concessionárias e Centros Técnicos",
+    "featured": false,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/gedore_blue_007389_1.jpeg",
+    "images": [
+      "/images/products/gedore_blue_007389_1.jpeg",
+      "/images/products/gedore_blue_007389_2.jpeg",
+      "/images/products/gedore_blue_007389_3.jpeg",
+      "/images/products/gedore_blue_007389_4.png"
+    ]
+  },
+  {
+    "id": "gedore-007341",
+    "name": "3150 TAMPO MODULAR DE MADEIRA MACIÇA 1500x700x30 mm",
+    "brand": "gedore-blue",
+    "brandLabel": "Gedore Industrial",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "maletas-carrinhos",
+    "categoryLabel": "Tampos & Bancadas",
+    "code": "3150",
+    "technicalCode": "007341",
+    "description": "Tampo modular de madeira maciça tratada GEDORE de 1500 x 700 x 30 mm para bancadas industriais de trabalho pesado.",
+    "detailedDescription": "O Tampo Modular de Madeira GEDORE 3150 (Código 007.341) é o tampo de alta resistência indicado para absorver impactos mecânicos, martelamento, montagem de morsas e trabalho com peças pesadas. Confeccionado em lâminas de madeira de alta densidade coladas sob alta pressão com 30 mm de espessura e acabamento impermeabilizado com verniz especial que resiste a óleos e graxas.",
+    "technicalSpecs": {
+      "codigoGedore": "007.341",
+      "referencia": "3150",
+      "dimensoes": "1500 x 700 x 30 mm",
+      "pesoKg": "20,600 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Descrição",
+        "Comprimento (mm)",
+        "Largura (mm)",
+        "Espessura (mm)",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "007.341",
+          "3150",
+          "Tampo em madeira maciça",
+          "1500 mm",
+          "700 mm",
+          "30 mm",
+          "20,600 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 007.341",
+      "Referência: 3150",
+      "Quantidade: 1 peça",
+      "Dimensões: 1500 mm de comprimento x 700 mm de profundidade x 30 mm de espessura",
+      "Material: Madeira maciça de alta densidade selecionada e tratada",
+      "Tratamento superficial: Verniz impermeabilizante resistente a produtos químicos leves",
+      "Peso: 20,600 kg"
+    ],
+    "properties": [
+      "Absorve vibrações e impactos diretos protegendo componentes usinados delicados",
+      "Espessura robusta de 30 mm que aceita furação e fixação de tornos de bancada (morsas)",
+      "Acabamento selado que não absorve óleos lubrificantes de forma imediata"
+    ],
+    "instructions": [
+      "Fixe sobre os pés estruturais 4010 A ou gaveteiros 4600 A com parafusos de madeira apropriados.",
+      "Limpe com pano seco ou umedecido com água e sabão neutro; evite solventes clorados abrasivos."
+    ],
+    "application": "Bancadas Industriais de Ajustagem, Montagem de Motores, Ferramentarias e Oficinas Automotivas",
+    "featured": true,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/gedore_blue_007341_1.png",
+    "images": [
+      "/images/products/gedore_blue_007341_1.png",
+      "/images/products/gedore_blue_007341_2.png",
+      "/images/products/gedore_blue_007341_3.png",
+      "/images/products/gedore_blue_007341_4.png"
+    ]
+  },
+  {
+    "id": "gedore-001155",
+    "name": "L 900 12 LANTERNA MAGNÉTICA LED RECARREGÁVEL 12W SLIM",
+    "brand": "gedore-blue",
+    "brandLabel": "Gedore Industrial",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "automotivo",
+    "categoryLabel": "Iluminação Profissional",
+    "code": "L 900 12",
+    "technicalCode": "001155",
+    "description": "Lanterna automotiva e industrial ultrafina LED recarregável 12W GEDORE com base magnética articulada de 360°, dimmer rotativo e gancho de suspensão.",
+    "detailedDescription": "A Lanterna Magnética LED Recarregável 12W GEDORE L 900 12 (Código 001.155) é a referência absoluta em iluminação para mecânicos automotivos e inspetores industriais. Possui perfil 'slim' ultrafino com lâmpada COB LED de 12 Watts de alta intensidade luminosa (ajustável por dimmer giratório), bateria recarregável de íons de lítio via USB, base com potente ímã articulado em 360° e gancho superior para fixação no capô ou sob o elevador.",
+    "technicalSpecs": {
+      "codigoGedore": "001.155",
+      "referencia": "L 900 12",
+      "potencia": "12 W LED COB",
+      "dimensoes": "510 x 43 x 43 mm",
+      "pesoKg": "0,500 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Potência",
+        "Articulação",
+        "Dimensões (mm)",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "001.155",
+          "L 900 12",
+          "12 W (LED regulável)",
+          "Base magnética 360°",
+          "510 x 43 x 43 mm",
+          "0,500 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 001.155",
+      "Referência: L 900 12",
+      "Quantidade: 1 peça",
+      "Potência: 12 Watts com tecnologia LED COB de alta durabilidade",
+      "Controle: Dimmer rotativo para ajuste fino de fluxo luminoso (de suave a ultrabrilhante)",
+      "Fixação: Base magnética com articulação esférica de 360° e gancho giratório escamoteável",
+      "Bateria: Íons de lítio recarregável via cabo USB (incluso)",
+      "Dimensões: 510 mm de comprimento x 43 mm x 43 mm",
+      "Peso: 0,500 kg"
+    ],
+    "properties": [
+      "Corpo esguio de apenas alguns milímetros de espessura que penetra em frestas profundas do motor",
+      "Ímã poderoso na base que fixa firmemente em qualquer longarina ou lataria sem cair",
+      "Luz branca uniforme e brilhante que não cansa a visão do mecânico durante horas de serviço"
+    ],
+    "instructions": [
+      "Recarregue completamente a bateria antes do primeiro uso com o cabo USB fornecido.",
+      "Não aponte a luz diretamente para os olhos."
+    ],
+    "application": "Inspeção Automotiva, Manutenção de Câmbio e Suspensão, Linhas de Produção e Socorro Noturno",
+    "featured": true,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/gedore_blue_001155_1.jpg",
+    "images": [
+      "/images/products/gedore_blue_001155_1.jpg",
+      "/images/products/gedore_blue_001155_2.jpg",
+      "/images/products/gedore_blue_001155_3.jpg",
+      "/images/products/gedore_blue_001155_4.jpg"
+    ]
+  },
+  {
+    "id": "gedore-007402",
+    "name": "1584-7P GI CARRO PARA FERRAMENTAS VEÍCULOS HÍBRIDOS E ELÉTRICOS 69 Peças VDE",
+    "brand": "gedore-blue",
+    "brandLabel": "Gedore Industrial",
+    "itemType": "jogo",
+    "itemTypeLabel": "Jogo",
+    "category": "maletas-carrinhos",
+    "categoryLabel": "Carros VDE & Elétricos",
+    "code": "1584-7P GI",
+    "technicalCode": "007402",
+    "description": "Carro para ferramentas GEDORE de 7 gavetas equipado com jogo profissional de 69 peças isoladas 1000V (VDE / NR-10) para manutenção em veículos híbridos e elétricos.",
+    "detailedDescription": "O Carro com Ferramentas para Veículos Híbridos e Elétricos GEDORE 1584-7P GI (Código 007.402) é a solução topo de linha da engenharia alemã para a nova era da mobilidade elétrica. Composto por um carro de ferramentas reforçado de 7 gavetas com berços em EVA personalizados e um sortimento de 69 ferramentas rigorosamente isoladas até 1000 Volts (em total conformidade com a norma internacional EN/IEC 60900 e NR-10): chaves fixas, estrela, soquetes isolados, alicates VDE, catracas e equipamentos de proteção.",
+    "composition": [
+      "Carro para ferramentas estrutural de 7 gavetas com capacidade estática para 300 kg",
+      "69 Ferramentas isoladas 1000V certificadas EN 60900 / NR-10 distribuídas em berços de EVA de alta densidade bicolores",
+      "Soquetes e catracas isoladas 1000V, extensões e cabos T",
+      "Chaves fixas e chaves estrela isoladas de alta segurança",
+      "Alicates universais, de bico e corte VDE 1000V",
+      "Acessórios de sinalização e ferramentas específicas para desconexão de baterias de alta tensão"
+    ],
+    "technicalSpecs": {
+      "codigoGedore": "007.402",
+      "referencia": "1584-7P GI",
+      "pecas": "69 ferramentas isoladas VDE + Carro 7 gavetas",
+      "normas": "EN 60900 / IEC 60900 / NR-10",
+      "capacidadeCarga": "300 kg estáticos (20 kg por gaveta)",
+      "pesoKg": "70,000 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Peças",
+        "Isolação",
+        "Capacidade Total",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "007.402",
+          "1584-7P GI",
+          "69 peças + Carro 7 gavetas",
+          "1000V AC / 1500V DC (VDE EN 60900)",
+          "300 kg estáticos",
+          "70,000 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 007.402",
+      "Referência: 1584-7P GI",
+      "Quantidade: 69 ferramentas isoladas + Carro 7 gavetas",
+      "Certificação: Testadas individualmente a 10.000V para trabalho seguro em até 1.000V AC e 1.500V DC conforme EN/IEC 60900",
+      "Carro: 7 gavetas com corrediças telescópicas, trava individual e fechadura central",
+      "Berços: EVA bicolor que evidencia instantaneamente a falta de qualquer ferramenta",
+      "Peso total: 70,000 kg"
+    ],
+    "properties": [
+      "Equipamento homologado pelas principais montadoras para manutenção em veículos elétricos e híbridos",
+      "Protege a vida do técnico contra arcos elétricos e choques em barramentos de alta voltagem",
+      "Rodas de alta resistência de 125 mm que deslizam suavemente com sistema de freio total"
+    ],
+    "instructions": [
+      "Inspecione visualmente o isolamento das ferramentas antes de cada uso em circuitos de alta tensão.",
+      "Utilize sempre os EPIs e EPCs adequados conforme a NR-10."
+    ],
+    "application": "Concessionárias de Veículos Elétricos e Híbridos, Oficinas Especializadas, Linhas de Trem, Metrô e Subestações de Energia",
+    "featured": true,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/gedore_blue_007402_1.png",
+    "images": [
+      "/images/products/gedore_blue_007402_1.png",
+      "/images/products/gedore_blue_007402_2.png",
+      "/images/products/gedore_blue_007402_3.png",
+      "/images/products/gedore_blue_007402_4.png"
+    ]
+  },
+  {
+    "id": "gedore-041008",
+    "name": "921P REBITADOR INDUSTRIAL TIPO TESOURA / ALAVANCA 21\"",
+    "brand": "gedore-blue",
+    "brandLabel": "Gedore Industrial",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "automotivo",
+    "categoryLabel": "Fixação & Funilaria Pesada",
+    "code": "921P",
+    "technicalCode": "041008",
+    "description": "Rebitador manual industrial pesado tipo tesoura 21\" GEDORE para rebites de repuxo de até 6,4 mm em aço inox e alumínio com reservatório de mandris.",
+    "detailedDescription": "O Rebitador Industrial 21\" GEDORE 921P (Código 041.008) é a ferramenta de máxima potência para rebitagem manual pesada. Seu sistema de alavancas articuladas tipo tesoura multiplica enormemente a força aplicada, permitindo romper mandris de rebites grossos de até 6,4 mm (1/4\") em aço e aço inoxidável com mínimo esforço do operador. Possui reservatório plástico coletor de mandris descartados.",
+    "technicalSpecs": {
+      "codigoGedore": "041.008",
+      "referencia": "921 P",
+      "comprimento": "540 mm (21 pol)",
+      "dimensoes": "540 x 45 x 180 mm",
+      "pesoKg": "1,730 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Capacidade Máxima",
+        "Dimensões (mm)",
+        "Tipo Alavanca",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "041.008",
+          "921 P",
+          "Rebites até 6,4 mm (alumínio e inox)",
+          "540 x 45 x 180 mm",
+          "Tesoura mecânica de alta potência",
+          "1,730 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 041.008",
+      "Referência: 921 P",
+      "Quantidade: 1 peça",
+      "Comprimento: 540 mm (21 pol)",
+      "Capacidade: Rebites de 3,2 mm, 4,0 mm, 4,8 mm e 6,4 mm (inclusive em aço inoxidável)",
+      "Acessórios: 4 bicos de diferentes medidas, chave de ajuste e copo coletor de mandril",
+      "Peso: 1,730 kg"
+    ],
+    "properties": [
+      "Mecanismo de alavanca de longo braço que rompe rebites de aço inox sem fadiga muscular",
+      "Recipiente coletor transparente que recolhe as hastes cortadas evitando acidentes no piso da fábrica",
+      "Corpo em liga especial de alumínio forjado de alta leveza e tenacidade"
+    ],
+    "instructions": [
+      "Escolha o bico adequado ao diâmetro do rebite e aperte com a chave fornecida.",
+      "Esvazie periodicamente o copo coletor de mandris para evitar entupimento do canal de ejeção."
+    ],
+    "application": "Implementos Rodoviários, Fabricação de Ônibus, Caldeiraria, Indústria Náutica e Estruturas Metálicas",
+    "featured": true,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/gedore_blue_041008_1.jpg",
+    "images": [
+      "/images/products/gedore_blue_041008_1.jpg",
+      "/images/products/gedore_blue_041008_2.jpg",
+      "/images/products/gedore_blue_041008_3.png",
+      "/images/products/gedore_blue_041008_4.png"
+    ]
+  },
+  {
+    "id": "gedore-001114",
+    "name": "1560 A CARRO AZUL PARA FERRAMENTAS COM SUPORTE PARA MORSA",
+    "brand": "gedore-blue",
+    "brandLabel": "Gedore Industrial",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "maletas-carrinhos",
+    "categoryLabel": "Carros Industriais",
+    "code": "1560 A",
+    "technicalCode": "001114",
+    "description": "Carro oficina aberto para ferramentas GEDORE com 3 bandejas reforçadas, suporte rebatível para torno de bancada (morsa) e capacidade estática de 300 kg.",
+    "detailedDescription": "O Carro para Ferramentas GEDORE 1560 A (Código 001.114) é o consagrado carro de 3 prateleiras do Grupo GEDORE, equipado com um exclusivo suporte lateral reforçado desenvolvido especificamente para ancoragem de torno de bancada (morsa). Construído em chapa de aço estrutural soldada, oferece capacidade de carga estática de 300 kg e rodas de alto rendimento.",
+    "technicalSpecs": {
+      "codigoGedore": "001.114",
+      "referencia": "1560 A",
+      "capacidadeCarga": "300 kg estáticos",
+      "pesoKg": "24,400 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Descrição",
+        "Bandejas",
+        "Capacidade de Carga",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "001.114",
+          "1560 A",
+          "Carro azul com suporte para morsa",
+          "3 bandejas com bordas",
+          "300 kg estáticos",
+          "24,400 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 001.114",
+      "Referência: 1560 A",
+      "Quantidade: 1 peça",
+      "Estrutura: 3 bandejas em chapa de aço especial com rebites de alta resistência",
+      "Suporte: Base especial preparada para montagem de morsa de bancada",
+      "Rodas: 4 rodas de 100 mm (2 fixas e 2 giratórias)",
+      "Capacidade de carga estática: 300 kg distribuídos",
+      "Peso: 24,400 kg"
+    ],
+    "properties": [
+      "Permite levar uma mini estação de usinagem e ajustagem com morsa diretamente ao lado do veículo ou máquina",
+      "Bandejas com bordas profundas que evitam a queda de peças e fluidos no chão",
+      "Pintura padrão Azul GEDORE de longa durabilidade"
+    ],
+    "instructions": [
+      "Monte a morsa firmemente no suporte lateral utilizando parafusos e porcas autobravantes.",
+      "Distribua as ferramentas mais pesadas na bandeja inferior para abaixar o centro de gravidade."
+    ],
+    "application": "Oficinas Mecânicas Automotivas, Manutenção em Pátio, Ferramentaria e Indústrias",
+    "featured": true,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/gedore_blue_001114_1.jpeg",
+    "images": [
+      "/images/products/gedore_blue_001114_1.jpeg",
+      "/images/products/gedore_blue_001114_2.jpeg",
+      "/images/products/gedore_blue_001114_3.jpeg",
+      "/images/products/gedore_blue_001114_4.jpeg"
+    ]
+  },
+  {
+    "id": "gedore-007258",
+    "name": "1585-8P CARRO PARA FERRAMENTAS COM 8 GAVETAS PRETO/AZUL",
+    "brand": "gedore-blue",
+    "brandLabel": "Gedore Industrial",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "maletas-carrinhos",
+    "categoryLabel": "Carros Industriais",
+    "code": "1585-8P",
+    "technicalCode": "007258",
+    "description": "Carro fechado para ferramentas industrial GEDORE com 8 gavetas telescópicas (7 pequenas e 1 grande), topo de polímero com porta-objetos e capacidade para 300 kg.",
+    "detailedDescription": "O Carro para Ferramentas GEDORE 1585-8P (Código 007.258) oferece altíssima capacidade de compartimentação com 8 gavetas montadas sobre guias telescópicas com esferas. Seu tampo superior de trabalho em ABS moldado de alta resistência conta com divisórias para parafusos e soquetes, rodízios de alta performance com freio e sistema de travamento central com chave cilíndrica escamoteável.",
+    "technicalSpecs": {
+      "codigoGedore": "007.258",
+      "referencia": "1585 - 8 P",
+      "gavetas": "8 gavetas (7 pequenas e 1 grande)",
+      "capacidadeCarga": "300 kg estáticos (20 kg por gaveta)",
+      "pesoKg": "70,000 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Gavetas",
+        "Composição Gavetas",
+        "Capacidade",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "007.258",
+          "1585 - 8 P",
+          "8 gavetas",
+          "7 gavetas pequenas (75mm) + 1 grande (153mm)",
+          "300 kg estáticos",
+          "70,000 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 007.258",
+      "Referência: 1585-8P",
+      "Quantidade: 1 peça",
+      "Gavetas: 7 pequenas (615 x 345 x 75 mm) e 1 grande (615 x 345 x 153 mm)",
+      "Guias: Corrediças telescópicas de rolamentos de esferas de aço",
+      "Capacidade: 20 kg por gaveta / 300 kg estáticos totais",
+      "Rodas: 4 rodízios de 125 mm de baixo atrito (2 giratórios com freio)",
+      "Peso: 70,000 kg"
+    ],
+    "properties": [
+      "8 gavetas que acomodam os mais variados berços de ferramentas organizados por tipo",
+      "Tampo em termoplástico que resiste a óleos e serve como bancada de apoio imediato",
+      "Puxador lateral integrado na estrutura que proporciona manobrabilidade precisa"
+    ],
+    "instructions": [
+      "Abra apenas uma gaveta por vez quando o carro estiver carregado para evitar risco de tombamento.",
+      "Mantenha sempre travado durante o transporte entre setores."
+    ],
+    "application": "Oficinas Mecânicas de Concessionárias, Aviação, Centros de Manutenção Industrial e Autocenters",
+    "featured": true,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/gedore_blue_007258_1.jpg",
+    "images": [
+      "/images/products/gedore_blue_007258_1.jpg",
+      "/images/products/gedore_blue_007258_2.jpg",
+      "/images/products/gedore_blue_007258_3.jpg",
+      "/images/products/gedore_blue_007258_4.jpg"
+    ]
+  },
+  {
+    "id": "gedore-001566",
+    "name": "1586-6A CARRO PARA FERRAMENTAS COM 6 GAVETAS E PORTA LATERAL",
+    "brand": "gedore-blue",
+    "brandLabel": "Gedore Industrial",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "maletas-carrinhos",
+    "categoryLabel": "Carros Industriais",
+    "code": "1586-6A",
+    "technicalCode": "001566",
+    "description": "Carro para ferramentas industrial GEDORE com 6 gavetas telescópicas e armário com porta lateral com chave para itens compridos e volumosos.",
+    "detailedDescription": "O Carro para Ferramentas GEDORE 1586-6A (Código 001.566) une a conveniência de 6 gavetas telescópicas à versatilidade de um compartimento vertical com porta trancável com chave. Ideal para armazenar torquímetros longos, chaves de cano, ferramentas pneumáticas, sprays e itens que não cabem em gavetas convencionais.",
+    "technicalSpecs": {
+      "codigoGedore": "001.566",
+      "referencia": "1586 - 6 A",
+      "gavetas": "6 gavetas + 1 compartimento vertical com porta",
+      "capacidadeCarga": "300 kg estáticos",
+      "pesoKg": "67,200 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Gavetas",
+        "Compartimentos",
+        "Capacidade",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "001.566",
+          "1586 - 6 A",
+          "6 gavetas",
+          "6 gavetas telescópicas + 1 armário lateral com porta",
+          "300 kg estáticos",
+          "67,200 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 001.566",
+      "Referência: 1586-6A",
+      "Quantidade: 1 peça",
+      "Gavetas: 3 pequenas (461 x 345 x 75 mm) e 3 grandes (461 x 345 x 153 mm)",
+      "Porta lateral: Compartimento vertical com fechadura independente para itens altos",
+      "Tampo superior: Emborrachado antiderrapante com bordas de contenção",
+      "Rodas: 4 rodas reforçadas (2 fixas e 2 giratórias com freio)",
+      "Peso: 67,200 kg"
+    ],
+    "properties": [
+      "Porta lateral exclusiva para guardar torquímetros, estojos longos e produtos químicos em pé",
+      "Construção soldada robusta em chapa de aço especial na clássica cor Azul GEDORE",
+      "Chaves independentes para gavetas e armário lateral"
+    ],
+    "instructions": [
+      "Certifique-se de que a porta lateral esteja travada durante o deslocamento do carro.",
+      "Não sobrecarregue gavetas individuais acima do limite de 20 kg."
+    ],
+    "application": "Oficinas Mecânicas de Precisão, Ferramentaria, Indústrias Metalúrgicas e Manutenção Predial",
+    "featured": true,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/gedore_blue_001566_1.jpg",
+    "images": [
+      "/images/products/gedore_blue_001566_1.jpg",
+      "/images/products/gedore_blue_001566_2.jpg",
+      "/images/products/gedore_blue_001566_3.jpg",
+      "/images/products/gedore_blue_001566_4.jpg"
+    ]
+  },
+  {
+    "id": "gedore-001099",
+    "name": "1335E CAIXA METÁLICA TIPO SANFONA COM 5 GAVETAS E 2 ALÇAS",
+    "brand": "gedore-blue",
+    "brandLabel": "Gedore Industrial",
+    "itemType": "peca",
+    "itemTypeLabel": "Peça",
+    "category": "maletas-carrinhos",
+    "categoryLabel": "Caixas Sanfona",
+    "code": "1335E",
+    "technicalCode": "001099",
+    "description": "Caixa para ferramentas em chapa de aço esmaltada tipo sanfona GEDORE com 5 gavetas desdobráveis, 2 alças articuladas e orifício para cadeado.",
+    "detailedDescription": "A Caixa Sanfona GEDORE 1335E (Código 001.099) é a ferramenta de transporte portátil mais famosa e durável da história das oficinas brasileiras. Construída em chapa de aço reforçada de 0,60 mm com pintura azul clássica e tratamento anticorrosivo, abre-se em sanfona revelando 5 compartimentos simultaneamente com acesso imediato a todas as ferramentas.",
+    "technicalSpecs": {
+      "codigoGedore": "001.099",
+      "referencia": "1335 E",
+      "gavetas": "5 compartimentos desdobráveis",
+      "capacidadeCarga": "25 kg distribuídos",
+      "pesoKg": "4,154 kg"
+    },
+    "tableData": {
+      "headers": [
+        "Código",
+        "Referência",
+        "Gavetas",
+        "Capacidade de Carga",
+        "Material",
+        "Peso"
+      ],
+      "rows": [
+        [
+          "001.099",
+          "1335 E",
+          "5 gavetas (sanfona)",
+          "25 kg distribuídos",
+          "Chapa de aço esmaltada azul",
+          "4,154 kg"
+        ]
+      ]
+    },
+    "specs": [
+      "Código GEDORE: 001.099",
+      "Referência: 1335E",
+      "Quantidade: 1 peça",
+      "Compartimentos: 1 gaveta inferior grande e 4 gavetas superiores desdobráveis",
+      "Alças: 2 alças tubulares articuladas que facilitam o transporte equilibrado",
+      "Segurança: Olhal reforçado integrado na tampa para fechamento com cadeado",
+      "Acabamento: Pintura eletrostática na clássica cor Azul GEDORE",
+      "Peso: 4,154 kg"
+    ],
+    "properties": [
+      "Abertura total tipo sanfona que permite visualizar e pegar qualquer ferramenta sem precisar esvaziar os níveis",
+      "Duas alças que ao se encontrarem fecham a caixa naturalmente evitando abertura acidental",
+      "Resistência lendária à deformação e amassados no transporte em caçambas de veículos"
+    ],
+    "instructions": [
+      "Utilize um cadeado no olhal central se for transportar em locais públicos ou canteiros de obras.",
+      "Mantenha as articulações dos braços pantográficos lubrificadas com óleo fino."
+    ],
+    "application": "Manutenção Volante, Mecânicos, Eletricistas, Encanadores e Uso Profissional Contínuo",
+    "featured": true,
+    "priceFormatted": "Consulte Valor",
+    "image": "/images/products/gedore_blue_001099_1.png",
+    "images": [
+      "/images/products/gedore_blue_001099_1.png",
+      "/images/products/gedore_blue_001099_2.png",
+      "/images/products/gedore_blue_001099_3.png",
+      "/images/products/gedore_blue_001099_4.png"
+    ]
   }
 ];
