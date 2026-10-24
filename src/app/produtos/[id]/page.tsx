@@ -150,18 +150,40 @@ export default function ProductDetailPage() {
           fontSize: '0.82rem',
           color: '#64748b'
         }}>
-          <div className="container" style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
-            <Link href="/" style={{ color: '#475569', textDecoration: 'none' }}>
-              Início
+          <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '8px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+              <Link href="/" style={{ color: '#475569', textDecoration: 'none' }}>
+                Início
+              </Link>
+              <ChevronRight size={13} />
+              <Link href={`/?marca=${product.brand}#catalogo`} style={{ color: '#64748b', textDecoration: 'none' }}>
+                {product.brandLabel}
+              </Link>
+              <ChevronRight size={13} />
+              <span style={{ color: '#0f172a', fontWeight: 700 }}>
+                {product.code}
+              </span>
+            </div>
+
+            <Link 
+              href="/#catalogo" 
+              style={{ 
+                display: 'inline-flex', 
+                alignItems: 'center', 
+                gap: '5px', 
+                fontSize: '0.78rem', 
+                fontWeight: 700, 
+                color: '#475569', 
+                textDecoration: 'none',
+                background: '#ffffff',
+                border: '1px solid #cbd5e1',
+                padding: '4px 10px',
+                borderRadius: '4px'
+              }}
+            >
+              <ArrowLeft size={13} />
+              <span>Voltar ao Catálogo</span>
             </Link>
-            <ChevronRight size={13} />
-            <span style={{ color: '#64748b' }}>
-              {product.brandLabel}
-            </span>
-            <ChevronRight size={13} />
-            <span style={{ color: '#0f172a', fontWeight: 700 }}>
-              {product.code}
-            </span>
           </div>
         </div>
 

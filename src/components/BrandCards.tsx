@@ -118,11 +118,7 @@ export default function BrandCards({ selectedBrand, onSelectBrand }: BrandCardsP
               <div
                 key={brand.id}
                 onClick={() => {
-                  if (active) {
-                    onSelectBrand('all');
-                  } else {
-                    onSelectBrand(brand.id);
-                  }
+                  onSelectBrand(brand.id);
                   const el = document.getElementById('catalogo');
                   if (el) el.scrollIntoView({ behavior: 'smooth' });
                 }}
@@ -233,7 +229,7 @@ export default function BrandCards({ selectedBrand, onSelectBrand }: BrandCardsP
                     fontWeight: 700,
                     color: active ? brand.accentColor : '#475569'
                   }}>
-                    <span>{active ? 'Filtro ativado (limpar)' : 'Ver produtos'}</span>
+                    <span>{active ? 'Linha selecionada' : 'Ver produtos da linha'}</span>
                     <ArrowRight size={14} color={active ? brand.accentColor : '#94a3b8'} />
                   </div>
                 </div>

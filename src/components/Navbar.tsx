@@ -1,8 +1,9 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useQuote } from '@/context/QuoteContext';
 import { SITE_CONFIG, buildWhatsAppUrl } from '@/config/site';
 import { BRANDS, PRODUCTS } from '@/data/products';
@@ -17,28 +18,79 @@ import {
   Layers,
   Home,
   Flame,
-  ShoppingBag,
-  ExternalLink
+  ShoppingBag
 } from 'lucide-react';
 
 interface NavbarProps {
-  onSearchFocus?: () => void;
+  searchTerm?: string;
+  onSearchChange?: (term: string) => void;
   onSelectBrand?: (brand: Brand | 'all') => void;
   selectedBrand?: Brand | 'all';
 }
 
-export default function Navbar({ onSearchFocus, onSelectBrand, selectedBrand = 'all' }: NavbarProps) {
+export default function Navbar({ 
+  searchTerm = '', 
+  onSearchChange, 
+  onSelectBrand, 
+  selectedBrand = 'all' 
+}: NavbarProps) {
+  const router = useRouter();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [localSearch, setLocalSearch] = useState(searchTerm);
   const { totalItems, setIsDrawerOpen } = useQuote();
+
+  // Mantém o input sincronizado com o termo vindo das props
+  useEffect(() => {
+    setLocalSearch(searchTerm);
+  }, [searchTerm]);
+
+  const handleSearchChange = (val: string) => {
+    setLocalSearch(val);
+    if (onSearchChange) {
+      onSearchChange(val);
+      if (val.trim().length > 0) {
+        const el = document.getElementById('catalogo');
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top > window.innerHeight) {
+            el.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      }
+    }
+  };
+
+  const handleSearchKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      if (!onSearchChange) {
+        // Redireciona para o catálogo na página inicial
+        router.push(`/?busca=${encodeURIComponent(localSearch.trim())}#catalogo`);
+      } else {
+        const el = document.getElementById('catalogo');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
+  const handleClearSearch = () => {
+    setLocalSearch('');
+    if (onSearchChange) {
+      onSearchChange('');
+    }
+  };
 
   const handleBrandClick = (brandId: Brand | 'all') => {
     if (onSelectBrand) {
       onSelectBrand(brandId);
-    }
-    setMobileMenuOpen(false);
-    const el = document.getElementById('catalogo') || document.getElementById('mais-buscados');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
+      setMobileMenuOpen(false);
+      const el = document.getElementById('catalogo') || document.getElementById('mais-buscados');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      setMobileMenuOpen(false);
+      const url = brandId === 'all' ? '/#catalogo' : `/?marca=${brandId}#catalogo`;
+      router.push(url);
     }
   };
 
@@ -52,8 +104,8 @@ export default function Navbar({ onSearchFocus, onSelectBrand, selectedBrand = '
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          paddingTop: '12px',
-          paddingBottom: '12px',
+          paddingTop: '10px',
+          paddingBottom: '10px',
           gap: '12px'
         }}>
           {/* Logo M11 Tools */}
@@ -76,12 +128,76 @@ export default function Navbar({ onSearchFocus, onSelectBrand, selectedBrand = '
             </div>
           </Link>
 
+          {/* Campo de Busca Ativo no Desktop (Clique e Digite Diretamente Aqui) */}
+          <div className="hide-on-mobile" style={{
+            flex: 1,
+            maxWidth: '380px',
+            margin: '0 10px',
+            position: 'relative'
+          }}>
+            <Search 
+              size={15} 
+              color="#64748b" 
+              style={{ position: 'absolute', left: '11px', top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }} 
+            />
+            <input
+              type="text"
+              placeholder="Buscar por código ou nome (ex: R46023100)..."
+              value={localSearch}
+              onChange={(e) => handleSearchChange(e.target.value)}
+              onKeyDown={handleSearchKeyDown}
+              style={{
+                width: '100%',
+                background: '#f8fafc',
+                border: '1px solid #cbd5e1',
+                borderRadius: '4px',
+                padding: '8px 32px 8px 34px',
+                fontSize: '0.84rem',
+                color: '#0f172a',
+                outline: 'none',
+                boxSizing: 'border-box',
+                transition: 'border-color 0.15s ease, background 0.15s ease'
+              }}
+              onFocus={(e) => {
+                e.currentTarget.style.borderColor = '#0f172a';
+                e.currentTarget.style.background = '#ffffff';
+              }}
+              onBlur={(e) => {
+                e.currentTarget.style.borderColor = '#cbd5e1';
+                e.currentTarget.style.background = '#f8fafc';
+              }}
+            />
+            {localSearch && (
+              <button
+                type="button"
+                onClick={handleClearSearch}
+                style={{
+                  position: 'absolute',
+                  right: '8px',
+                  top: '50%',
+                  transform: 'translateY(-50%)',
+                  background: 'none',
+                  border: 'none',
+                  color: '#94a3b8',
+                  cursor: 'pointer',
+                  padding: '2px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}
+                title="Limpar busca"
+              >
+                <X size={14} />
+              </button>
+            )}
+          </div>
+
           {/* Desktop Nav Links */}
           <div style={{
             display: 'none',
             alignItems: 'center',
-            gap: '24px',
-            fontSize: '0.9rem',
+            gap: '20px',
+            fontSize: '0.88rem',
             fontWeight: 600,
             color: '#374151',
           }} className="desktop-nav">
@@ -93,31 +209,6 @@ export default function Navbar({ onSearchFocus, onSelectBrand, selectedBrand = '
 
           {/* Right Action Buttons */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexShrink: 0 }}>
-            {/* Search Button (Desktop) */}
-            {onSearchFocus && (
-              <button
-                onClick={onSearchFocus}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '6px',
-                  background: '#f8fafc',
-                  border: '1px solid #cbd5e1',
-                  padding: '8px 12px',
-                  borderRadius: '4px',
-                  color: '#475569',
-                  fontSize: '0.84rem',
-                  fontWeight: 600,
-                  cursor: 'pointer'
-                }}
-                className="hide-on-mobile"
-                title="Buscar no catálogo"
-              >
-                <Search size={15} />
-                <span>Buscar por código...</span>
-              </button>
-            )}
-
             {/* Direct WhatsApp Action (Desktop) */}
             <a
               href={buildWhatsAppUrl('Olá M11 Tools! Gostaria de informações sobre produtos e atendimento comercial.')}
@@ -196,7 +287,63 @@ export default function Navbar({ onSearchFocus, onSelectBrand, selectedBrand = '
           </div>
         </div>
 
-        {/* Mobile Drawer (Menu Sanduíche Profissional com Logos Oficiais) */}
+        {/* Faixa de Busca Mobile Direta (Sempre Acessível no Celular para Digitação Imediata) */}
+        <div className="hide-on-desktop" style={{
+          padding: '6px 14px 10px',
+          background: '#ffffff',
+          borderTop: '1px solid #f1f5f9'
+        }}>
+          <div style={{ position: 'relative', width: '100%' }}>
+            <Search 
+              size={15} 
+              color="#64748b" 
+              style={{ position: 'absolute', left: '11px', top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }} 
+            />
+            <input
+              type="text"
+              placeholder="Buscar código (ex: R46023100, S38001004)..."
+              value={localSearch}
+              onChange={(e) => handleSearchChange(e.target.value)}
+              onKeyDown={handleSearchKeyDown}
+              style={{
+                width: '100%',
+                background: '#f8fafc',
+                border: '1px solid #cbd5e1',
+                borderRadius: '4px',
+                padding: '8px 32px 8px 34px',
+                fontSize: '0.85rem',
+                color: '#0f172a',
+                outline: 'none',
+                boxSizing: 'border-box'
+              }}
+            />
+            {localSearch && (
+              <button
+                type="button"
+                onClick={handleClearSearch}
+                style={{
+                  position: 'absolute',
+                  right: '8px',
+                  top: '50%',
+                  transform: 'translateY(-50%)',
+                  background: 'none',
+                  border: 'none',
+                  color: '#94a3b8',
+                  cursor: 'pointer',
+                  padding: '2px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}
+                title="Limpar busca"
+              >
+                <X size={14} />
+              </button>
+            )}
+          </div>
+        </div>
+
+        {/* Mobile Drawer (Menu Sanduíche com Logos Oficiais) */}
         {mobileMenuOpen && (
           <div style={{
             background: '#ffffff',
@@ -206,40 +353,10 @@ export default function Navbar({ onSearchFocus, onSelectBrand, selectedBrand = '
             flexDirection: 'column',
             gap: '16px',
             boxShadow: '0 8px 24px rgba(0,0,0,0.08)',
-            maxHeight: 'calc(100vh - 70px)',
+            maxHeight: 'calc(100vh - 110px)',
             overflowY: 'auto'
           }}>
-            {/* Campo de Busca Rápida Mobile */}
-            {onSearchFocus && (
-              <div>
-                <button
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    onSearchFocus();
-                  }}
-                  style={{
-                    width: '100%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '10px',
-                    background: '#f8fafc',
-                    border: '1px solid #cbd5e1',
-                    borderRadius: '4px',
-                    padding: '10px 14px',
-                    color: '#64748b',
-                    fontSize: '0.88rem',
-                    fontWeight: 500,
-                    cursor: 'pointer',
-                    textAlign: 'left'
-                  }}
-                >
-                  <Search size={16} color="#64748b" />
-                  <span>Buscar código (ex: R46023100)...</span>
-                </button>
-              </div>
-            )}
-
-            {/* Links Principais de Navegação com Ícones Profissionais */}
+            {/* Links Principais de Navegação */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
               <div style={{ fontSize: '0.72rem', fontWeight: 800, color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '6px', paddingLeft: '8px' }}>
                 Navegação
@@ -319,7 +436,7 @@ export default function Navbar({ onSearchFocus, onSelectBrand, selectedBrand = '
               </a>
             </div>
 
-            {/* SEÇÃO PRINCIPAL: LINHAS OFICIAIS COM OS LOGOS REAIS */}
+            {/* SEÇÃO: FILTRAR POR LINHAS OFICIAIS COM LOGOS REAIS */}
             <div style={{ background: '#f8fafc', padding: '14px', borderRadius: '6px', border: '1px solid #e2e8f0' }}>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '10px' }}>
                 <span style={{ fontSize: '0.74rem', fontWeight: 800, color: '#475569', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
@@ -358,7 +475,7 @@ export default function Navbar({ onSearchFocus, onSelectBrand, selectedBrand = '
                 {selectedBrand === 'all' ? (
                   <CheckCircle2 size={15} color="#ffffff" />
                 ) : (
-                  <span style={{ fontSize: '0.7rem', color: '#64748b' }}>Ver tudo</span>
+                  <span style={{ fontSize: '0.7rem', color: '#64748b' }}>Ver tudo ({PRODUCTS.length})</span>
                 )}
               </button>
 
@@ -366,7 +483,7 @@ export default function Navbar({ onSearchFocus, onSelectBrand, selectedBrand = '
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '8px' }}>
                 {officialBrands.map((brand) => {
                   const isSelected = selectedBrand === brand.id;
-                  const isGedoreRed = brand.id === 'gedore-red';
+                  const count = PRODUCTS.filter(p => p.brand === brand.id).length;
 
                   return (
                     <button
@@ -428,10 +545,10 @@ export default function Navbar({ onSearchFocus, onSelectBrand, selectedBrand = '
                         <div style={{
                           fontSize: '0.66rem',
                           fontWeight: 600,
-                          color: isGedoreRed ? '#15803d' : '#94a3b8',
+                          color: count > 0 ? '#15803d' : '#94a3b8',
                           marginTop: '2px'
                         }}>
-                          {isGedoreRed ? `${PRODUCTS.filter(p => p.brand === 'gedore-red').length} produtos` : 'Em breve'}
+                          {count > 0 ? `${count} produtos` : 'Em breve'}
                         </div>
                       </div>
                     </button>
@@ -470,7 +587,7 @@ export default function Navbar({ onSearchFocus, onSelectBrand, selectedBrand = '
               </button>
             </div>
 
-            {/* Ação WhatsApp Mobile com Atendimento Oficial */}
+            {/* Ação WhatsApp Mobile */}
             <div>
               <a
                 href={buildWhatsAppUrl('Olá M11 Tools! Gostaria de informações sobre produtos e atendimento comercial.')}
